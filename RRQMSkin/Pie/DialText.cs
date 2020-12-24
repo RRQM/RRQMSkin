@@ -1,0 +1,183 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+
+namespace RRQMSkin
+{
+    /// <summary>
+    /// 环形文字
+    /// </summary>
+    public class DialText : Control
+    {
+        /// <summary>
+        ///
+        /// </summary>
+        public DialText()
+        {
+            this.SizeChanged += Sector_SizeChanged;
+        }
+
+        private void Sector_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            this.InvalidateVisual();
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="drawingContext"></param>
+        protected sealed override void OnRender(DrawingContext drawingContext)
+        {
+            double radius = Math.Min(this.ActualHeight, this.ActualWidth) / 2;
+            if (radius > 0)
+            {
+                double widthRadius = this.RadiusRatio * this.ActualWidth / 2;
+                double heightRadius = this.RadiusRatio * this.ActualHeight / 2;
+
+                string[] texts;
+                if (this.TextShowStyle == TextShowStyle.Split)
+                {
+                    texts = this.Text.Split(',');
+                }
+                else
+                {
+                    List<string> str = new List<string>();
+                    foreach (var item in this.Text)
+                    {
+                        str.Add(item.ToString());
+                    }
+                    texts = str.ToArray();
+                }
+
+                Canvas canvas = new Canvas();
+                canvas.Width = this.ActualWidth;
+                canvas.Height = this.ActualHeight;
+                canvas.Background = Brushes.Transparent;
+                for (int i = 0; i < texts.Length; i++)
+                {
+                    double width = GetTextDisplayWidth(texts[i], this.FontFamily, this.FontStyle, this.FontWeight, FontStretches.Normal, this.FontSize);
+
+                    TextBlock textBlock = new TextBlock();
+                    textBlock.Foreground = this.Foreground;
+                    textBlock.FontFamily = this.FontFamily;
+                    textBlock.FontStyle = this.FontStyle;
+                    textBlock.FontWeight = this.FontWeight;
+                    textBlock.FontSize = this.FontSize;
+                    textBlock.Text = texts[i];
+                    textBlock.SetValue(Canvas.LeftProperty, widthRadius * Math.Cos((StartAngle + TickAngle * i) * Math.PI / 180) + radius - width / 2);
+                    textBlock.SetValue(Canvas.TopProperty, heightRadius * Math.Sin((StartAngle + TickAngle * i) * Math.PI / 180) + radius - this.FontSize / 2);
+                    canvas.Children.Add(textBlock);
+                }
+
+                GeometryDrawing geometryDrawing = new GeometryDrawing();
+
+                geometryDrawing.Geometry = new RectangleGeometry(new Rect(0, 0, this.ActualWidth, this.ActualHeight));
+
+                VisualBrush visualBrush = new VisualBrush();
+                visualBrush.Visual = canvas;
+
+                geometryDrawing.Brush = visualBrush;
+
+                drawingContext.DrawDrawing(geometryDrawing);
+            }
+        }
+
+        /// <summary>
+        /// 半径比例
+        /// </summary>
+        public double RadiusRatio
+        {
+            get { return (double)GetValue(RadiusRatioProperty); }
+            set { SetValue(RadiusRatioProperty, value); }
+        }
+
+        /// <summary>
+        /// 半径比例属性
+        /// </summary>
+        public static readonly DependencyProperty RadiusRatioProperty =
+            DependencyProperty.Register("RadiusRatio", typeof(double), typeof(DialText), new PropertyMetadata(0.3, OnChanged));
+
+        /// <summary>
+        /// 单位角度
+        /// </summary>
+        public double TickAngle
+        {
+            get { return (double)GetValue(TickAngleProperty); }
+            set { SetValue(TickAngleProperty, value); }
+        }
+
+        /// <summary>
+        /// 单位角度属性
+        /// </summary>
+        public static readonly DependencyProperty TickAngleProperty =
+            DependencyProperty.Register("TickAngle", typeof(double), typeof(DialText), new PropertyMetadata(30.0, OnChanged));
+
+        /// <summary>
+        /// 文字显示样式
+        /// </summary>
+        public TextShowStyle TextShowStyle
+        {
+            get { return (TextShowStyle)GetValue(TextShowStyleProperty); }
+            set { SetValue(TextShowStyleProperty, value); }
+        }
+
+        /// <summary>
+        /// 文字显示样式属性
+        /// </summary>
+        public static readonly DependencyProperty TextShowStyleProperty =
+            DependencyProperty.Register("TextShowStyle", typeof(TextShowStyle), typeof(DialText), new PropertyMetadata(TextShowStyle.Split, OnChanged));
+
+        /// <summary>
+        /// 显示文本
+        /// </summary>
+        public string Text
+        {
+            get { return (string)GetValue(TextProperty); }
+            set { SetValue(TextProperty, value); }
+        }
+
+        /// <summary>
+        /// 显示文本属性
+        /// </summary>
+        public static readonly DependencyProperty TextProperty =
+            DependencyProperty.Register("Text", typeof(string), typeof(DialText), new PropertyMetadata("1,2,3", OnChanged));
+
+        /// <summary>
+        /// 开始角度
+        /// </summary>
+        public double StartAngle
+        {
+            get { return (double)GetValue(StartAngleProperty); }
+            set { SetValue(StartAngleProperty, value); }
+        }
+
+        /// <summary>
+        /// 开始角度属性
+        /// </summary>
+        public static readonly DependencyProperty StartAngleProperty =
+            DependencyProperty.Register("StartAngle", typeof(double), typeof(DialText), new PropertyMetadata(0.0, OnChanged));
+
+        private static void OnChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((DialText)d).InvalidateVisual();
+        }
+
+        [Obsolete]
+        private static double GetTextDisplayWidth(string str, FontFamily fontFamily, FontStyle fontStyle, FontWeight fontWeight, FontStretch fontStretch, double FontSize)
+        {
+            var formattedText = new FormattedText(
+                                str,
+                                CultureInfo.CurrentUICulture,
+                                FlowDirection.LeftToRight,
+                                new Typeface(fontFamily, fontStyle, fontWeight, fontStretch),
+                                FontSize,
+                                Brushes.Black
+                                );
+            Size size = new Size(formattedText.Width, formattedText.Height);
+            return size.Width;
+        }
+    }
+}

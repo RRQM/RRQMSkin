@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <Authors>若汝棋茗</Authors>
+    <PackageIcon>RRQM.png</PackageIcon>
+    <Description>
+      此程序集是一个WPF控件库，交流联系作者QQ:505554090
+
+      更新内容：
+      1.添加Windows控件
+      2.添加提示文本框控件，添加属性输入筛选，可筛选数字，汉字，手机号，身份证号,IP等
+      3.完善窗体设置"
+    </Description>
+    <PackageProjectUrl>http://若汝棋茗.online/RRQMSkinDemo.zip</PackageProjectUrl>
+    <Copyright>Copyright © 2020 若汝棋茗</Copyright>
+    <Version>2.0.3</Version>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
+    <ApplicationIcon>RRQM.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\RRQM.ico" />
+    <None Remove="Icons\关闭.png" />
+    <None Remove="Icons\最大化.png" />
+    <None Remove="Icons\最小化.png" />
+    <None Remove="Icons\正常.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\" />
+    <Folder Include="Text\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="RRQM.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="RRQM.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\RRQM.ico" />
+    <Resource Include="Icons\关闭.png" />
+    <Resource Include="Icons\最大化.png" />
+    <Resource Include="Icons\最小化.png" />
+    <Resource Include="Icons\正常.png" />
+  </ItemGroup>
+
+</Project>

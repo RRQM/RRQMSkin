@@ -1,0 +1,14 @@
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\bin\Release\netcoreapp3.1\RRQMSkin.deps.json
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\bin\Release\netcoreapp3.1\RRQMSkin.dll
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\bin\Release\netcoreapp3.1\RRQMSkin.pdb
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin_MarkupCompile.cache
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin_MarkupCompile.lref
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\Themes\Generic.baml
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin.g.resources
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin.AssemblyInfoInputs.cache
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin.AssemblyInfo.cs
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin.csproj.CoreCompileInputs.cache
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin.dll
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin.pdb
+E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin.csprojAssemblyReference.cache
