@@ -11,3 +11,15 @@ E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csproj.CoreCompil
 E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.dll
 E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.pdb
 E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csprojAssemblyReference.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\bin\Debug\net45\RRQMSkin.dll
+E:\CodeOpen\RRQMSkin\RRQMSkin\bin\Debug\net45\RRQMSkin.pdb
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\GeneratedInternalTypeHelper.g.cs
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin_MarkupCompile.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin_MarkupCompile.lref
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\Themes\Generic.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.g.resources
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.AssemblyInfoInputs.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.AssemblyInfo.cs
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csproj.CoreCompileInputs.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.dll
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.pdb

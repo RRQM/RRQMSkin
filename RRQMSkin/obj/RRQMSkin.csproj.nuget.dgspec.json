@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\C#ClassLibraries\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {}
+    "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {}
   },
   "projects": {
-    "E:\\C#ClassLibraries\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {
+    "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {
       "version": "2.0.3",
       "restore": {
-        "projectUniqueName": "E:\\C#ClassLibraries\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+        "projectUniqueName": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
         "projectName": "RRQMSkin",
-        "projectPath": "E:\\C#ClassLibraries\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+        "projectPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
         "packagesPath": "C:\\Users\\17516\\.nuget\\packages\\",
-        "outputPath": "E:\\C#ClassLibraries\\RRQMSkin\\RRQMSkin\\obj\\",
+        "outputPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

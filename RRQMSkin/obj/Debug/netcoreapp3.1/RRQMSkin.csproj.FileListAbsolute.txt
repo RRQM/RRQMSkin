@@ -11,3 +11,16 @@ E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.AssemblyI
 E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.AssemblyInfo.cs
 E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csproj.CoreCompileInputs.cache
 E:\C#ClassLibraries\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+E:\CodeOpen\RRQMSkin\RRQMSkin\bin\Debug\netcoreapp3.1\RRQMSkin.deps.json
+E:\CodeOpen\RRQMSkin\RRQMSkin\bin\Debug\netcoreapp3.1\RRQMSkin.dll
+E:\CodeOpen\RRQMSkin\RRQMSkin\bin\Debug\netcoreapp3.1\RRQMSkin.pdb
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin_MarkupCompile.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin_MarkupCompile.lref
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Generic.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.g.resources
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.AssemblyInfoInputs.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.AssemblyInfo.cs
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csproj.CoreCompileInputs.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.dll
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.pdb
