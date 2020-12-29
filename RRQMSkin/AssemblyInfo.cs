@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Markup;
 
 [assembly: XmlnsDefinitionAttribute("若汝棋茗_RRQMSkin", "RRQMSkin")]
+[assembly: XmlnsDefinitionAttribute("若汝棋茗_DragDrop", "RRQMSkin.DragDrop")]
 [assembly: XmlnsDefinitionAttribute("若汝棋茗_XML", "RRQMSkin.Xml")]
 
 [assembly: ThemeInfo(

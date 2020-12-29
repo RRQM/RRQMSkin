@@ -1,10 +1,10 @@
 ﻿RRQMSkin
-2.0.3.0
+2.0.4.0
 
 library
 C#
 .cs
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\
 RRQMSkin
 none
 false
@@ -12,7 +12,15 @@ TRACE;DEBUG;NETFRAMEWORK;NET45;
 
 1-731644535
 
-36503863859
+<<<<<<< HEAD
+<<<<<<< HEAD
+371840712962
+=======
+38-1067700775
+>>>>>>> ce082c9a48a1fe1f65fab0e6249f911b382194e6
+=======
+38-1067700775
+>>>>>>> ce082c9a48a1fe1f65fab0e6249f911b382194e6
 19-1315729206
 Themes\Generic.xaml;
 

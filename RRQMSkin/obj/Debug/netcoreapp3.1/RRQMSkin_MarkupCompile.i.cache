@@ -1,10 +1,10 @@
 ﻿RRQMSkin
-2.0.3.0
+2.0.4.0
 
 library
 C#
 .cs
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\
 RRQMSkin
 none
 false
@@ -12,7 +12,15 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 
 1-731644535
 
-36-1010240717
+<<<<<<< HEAD
+<<<<<<< HEAD
+37326608386
+=======
+381713161945
+>>>>>>> ce082c9a48a1fe1f65fab0e6249f911b382194e6
+=======
+381713161945
+>>>>>>> ce082c9a48a1fe1f65fab0e6249f911b382194e6
 1921654412462
 Themes\Generic.xaml;
 

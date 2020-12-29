@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "Yy47+q7puhHXHnVD5bf9Jbgq1ZHH0Y/NVIl7m8ffmsHqRtTCPm9EKbQ/BJFxAPkOwja+q/noO4VJ7upjqumhew==",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "dgSpecHash": "zix8NdcReVdGl7MqX+km0U/zi1B57Ym3cv+XTqpEbry2NL+gXrYzkXhJ9SGEsr86uZ4EdUAYsp9RfrbJ5u/k2g==",
+=======
+  "dgSpecHash": "e8De6paq0D0j72rNpZy8DkCKp24xNrTtRStG/o2bx55gfZcjD+WshIs4XOHhZfXDxXMmWVYbEzWIMnZv4Ar/Jg==",
+>>>>>>> ce082c9a48a1fe1f65fab0e6249f911b382194e6
+=======
+  "dgSpecHash": "e8De6paq0D0j72rNpZy8DkCKp24xNrTtRStG/o2bx55gfZcjD+WshIs4XOHhZfXDxXMmWVYbEzWIMnZv4Ar/Jg==",
+>>>>>>> ce082c9a48a1fe1f65fab0e6249f911b382194e6
   "success": true,
-  "projectFilePath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+  "projectFilePath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

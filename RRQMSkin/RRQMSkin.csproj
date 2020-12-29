@@ -12,10 +12,11 @@
       1.添加Windows控件
       2.添加提示文本框控件，添加属性输入筛选，可筛选数字，汉字，手机号，身份证号,IP等
       3.完善窗体设置"
+      4.增加双击可编辑的TextBlock"
     </Description>
-    <PackageProjectUrl>http://若汝棋茗.online/RRQMSkinDemo.zip</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/RRQM/RRQMSkinDemo</PackageProjectUrl>
     <Copyright>Copyright © 2020 若汝棋茗</Copyright>
-    <Version>2.0.3</Version>
+    <Version>2.0.4</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>
