@@ -1,24 +1,37 @@
-<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:RRQMSkin"
-    xmlns:xmlEditor="clr-namespace:RRQMSkin.Xml">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RRQMSkin"
+                    xmlns:xmlEditor="clr-namespace:RRQMSkin.Xml">
 
+    <Style x:Key="noneButtom" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="Transparent">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     <Style TargetType="{x:Type local:CorrugatedButton}">
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:CorrugatedButton}">
-                    <Border  Background="{TemplateBinding Background}"
+                    <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                           CornerRadius="{TemplateBinding CornerRadius}">
+                            CornerRadius="{TemplateBinding CornerRadius}">
                         <Grid Name="mainGrid">
                             <Canvas Panel.ZIndex="-1">
-                                <Ellipse x:Name="CorrugatedEllipse" Fill="{TemplateBinding CorrugatedBrush}" Width="1" Height="1" />
+                                <Ellipse x:Name="CorrugatedEllipse" Height="1" Width="1"
+                                         Fill="{TemplateBinding CorrugatedBrush}" />
                             </Canvas>
-                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            <ContentPresenter Content="{TemplateBinding Content}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                         </Grid>
                     </Border>
                 </ControlTemplate>
@@ -32,31 +45,37 @@
                 <ControlTemplate TargetType="{x:Type local:SpeedDial}">
                     <Grid MinWidth="200" MinHeight="200">
                         <Ellipse />
-                        <local:Sector Fill="#00BE8B" StartAngle="149" EndAngle="230" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" />
-                        <local:Sector Fill="#14BEFF" StartAngle="230" EndAngle="320" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" />
-                        <local:Sector Fill="#FF2975" StartAngle="320" EndAngle="391" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" />
-                        <local:Sector Fill="Orange" StartAngle="149" EndAngle="{TemplateBinding PointerAngle}" MaxRadiusRatio="0.8" MinRadiusRatio="0.7" />
+                        <local:Sector EndAngle="230" Fill="#00BE8B" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="149" />
+                        <local:Sector EndAngle="320" Fill="#14BEFF" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="230" />
+                        <local:Sector EndAngle="391" Fill="#FF2975" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="320" />
+                        <local:Sector EndAngle="{TemplateBinding PointerAngle}"
+                                      Fill="Orange" MaxRadiusRatio="0.8" MinRadiusRatio="0.7" StartAngle="149" />
 
-                        <local:Dial StartAngle="150" TickAngle="30" TickCount="9" StrokeThickness="3" Stroke="Black" MinRadiusRatio="0.7" MaxRadiusRatio="0.95" />
-                        <local:Dial StartAngle="165" TickAngle="30" TickCount="8" StrokeThickness="2" Stroke="Black" MinRadiusRatio="0.8" MaxRadiusRatio="0.95" />
-                        <local:Dial StartAngle="157.5" TickAngle="15" TickCount="16" StrokeThickness="1" Stroke="Black" MinRadiusRatio="0.8" MaxRadiusRatio="0.95" />
-                        <local:DialText Text="0,20,40,60,80,100,120,140,160"  StartAngle="150" FontSize="20" RadiusRatio="0.6" TickAngle="30" />
+                        <local:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.7" StartAngle="150" Stroke="Black" StrokeThickness="3"
+                                    TickAngle="30" TickCount="9" />
+                        <local:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="165" Stroke="Black" StrokeThickness="2"
+                                    TickAngle="30" TickCount="8" />
+                        <local:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="157.5" Stroke="Black" StrokeThickness="1"
+                                    TickAngle="15" TickCount="16" />
+                        <local:DialText Text="0,20,40,60,80,100,120,140,160" FontSize="20" RadiusRatio="0.6" StartAngle="150" TickAngle="30" />
 
-                        <local:DialText Text="10,30,50,70,90,110,130,150" StartAngle="165" TickAngle="30" FontSize="12" RadiusRatio="0.7" />
+                        <local:DialText Text="10,30,50,70,90,110,130,150" FontSize="12" RadiusRatio="0.7" StartAngle="165" TickAngle="30" />
 
-                        <local:Pointer x:Name="pointer"  RatioCenter="0.2,0.5" RatioAngle="{TemplateBinding PointerAngle}">
+                        <local:Pointer x:Name="pointer"
+                                       RatioAngle="{TemplateBinding PointerAngle}"
+                                       RatioCenter="0.2,0.5">
                             <local:Pointer.Fill>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FF3C57F5" Offset="0" />
-                                    <GradientStop Color="#FFF38F8A" Offset="1" />
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Offset="0" Color="#FF3C57F5" />
+                                    <GradientStop Offset="1" Color="#FFF38F8A" />
                                 </LinearGradientBrush>
                             </local:Pointer.Fill>
                             <local:Pointer.Effect>
-                                <DropShadowEffect ShadowDepth="0" Color="Blue" BlurRadius="10" />
+                                <DropShadowEffect BlurRadius="10" ShadowDepth="0" Color="Blue" />
                             </local:Pointer.Effect>
                         </local:Pointer>
-                        <Ellipse Width="10" Height="10" Fill="White" />
-                        <Ellipse Width="8" Height="8" Stroke="DarkCyan" StrokeThickness="1" />
+                        <Ellipse Height="10" Width="10" Fill="White" />
+                        <Ellipse Height="8" Width="8" Stroke="DarkCyan" StrokeThickness="1" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -67,15 +86,20 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:Clock}">
-                    <Grid MinHeight="100" MinWidth="100">
-                        <local:Dial x:Name="hourDial" Stroke="Black" StrokeThickness="6" TickCount="12" MaxRadiusRatio="1" MinRadiusRatio="0.9" />
-                        <local:Dial x:Name="minuteDial" Stroke="Black" StrokeThickness="1" TickAngle="6" TickCount="60"  MaxRadiusRatio="1" MinRadiusRatio="0.9" />
-                        <local:DialText x:Name="dialText" Text="3,4,5,6,7,8,9,10,11,12,1,2" FontWeight="Bold" StartAngle="0" TickAngle="30" FontSize="20" RadiusRatio="0.8" />
-                        <local:Pointer x:Name="minutePointer" RatioAngle="190" RatioCenter="0,0.5" PointerHeight="5" PointerWidth="130" Fill="Black" />
-                        <local:Pointer x:Name="hourPointer" RatioAngle="130" PointerWidth="80" RatioCenter="0,0.5" Fill="Black" />
-                        <local:Pointer x:Name="secondPointer" RatioAngle="340" PointerWidth="160" PointerHeight="3" RatioCenter="0.2,0.5" Fill="Red" />
-                        <Ellipse Fill="White" Width="10" Height="10" />
-                        <Ellipse Width="8" Height="8" Stroke="DarkCyan" StrokeThickness="1" />
+                    <Grid MinWidth="100" MinHeight="100">
+                        <local:Dial x:Name="hourDial" MaxRadiusRatio="1" MinRadiusRatio="0.9" Stroke="Black" StrokeThickness="6"
+                                    TickCount="12" />
+                        <local:Dial x:Name="minuteDial" MaxRadiusRatio="1" MinRadiusRatio="0.9" Stroke="Black" StrokeThickness="1"
+                                    TickAngle="6" TickCount="60" />
+                        <local:DialText x:Name="dialText" Text="3,4,5,6,7,8,9,10,11,12,1,2" FontSize="20" FontWeight="Bold" RadiusRatio="0.8"
+                                        StartAngle="0" TickAngle="30" />
+                        <local:Pointer x:Name="minutePointer" Fill="Black" PointerHeight="5" PointerWidth="130" RatioAngle="190"
+                                       RatioCenter="0,0.5" />
+                        <local:Pointer x:Name="hourPointer" Fill="Black" PointerWidth="80" RatioAngle="130" RatioCenter="0,0.5" />
+                        <local:Pointer x:Name="secondPointer" Fill="Red" PointerHeight="3" PointerWidth="160" RatioAngle="340"
+                                       RatioCenter="0.2,0.5" />
+                        <Ellipse Height="10" Width="10" Fill="White" />
+                        <Ellipse Height="8" Width="8" Stroke="DarkCyan" StrokeThickness="1" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -87,19 +111,23 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:RoundProgressBar}">
                     <Grid Background="{TemplateBinding Background}">
-                        <local:Sector    StartAngle="0" EndAngle="360" Fill="#CED0CF" MinRadiusRatio="0.7" MaxRadiusRatio="1" Stroke="Transparent" />
-                        <local:Sector    StartAngle="0" EndAngle="{TemplateBinding Angle}"  RoundStyle="Both" MinRadiusRatio="0.7" MaxRadiusRatio="1" Stroke="Transparent">
+                        <local:Sector EndAngle="360" Fill="#CED0CF" MaxRadiusRatio="1" MinRadiusRatio="0.7" StartAngle="0"
+                                      Stroke="Transparent" />
+                        <local:Sector EndAngle="{TemplateBinding Angle}"
+                                      MaxRadiusRatio="1" MinRadiusRatio="0.7" RoundStyle="Both" StartAngle="0" Stroke="Transparent">
                             <local:Sector.Fill>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FF2B65F0" Offset="0" />
-                                    <GradientStop Color="#FFFF3BA4" Offset="1" />
+                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Offset="0" Color="#FF2B65F0" />
+                                    <GradientStop Offset="1" Color="#FFFF3BA4" />
                                 </LinearGradientBrush>
                             </local:Sector.Fill>
                         </local:Sector>
-                        <TextBlock FontFamily="{TemplateBinding FontFamily}"
-                                   Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Progress,StringFormat=0.00%}"
-                                   HorizontalAlignment="Center"  VerticalAlignment="Center"
-                                   FontSize="{TemplateBinding FontSize}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" />
+                        <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Progress, StringFormat=0.00%}"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   FontFamily="{TemplateBinding FontFamily}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   FontStyle="{TemplateBinding FontStyle}"
+                                   FontWeight="{TemplateBinding FontWeight}" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -111,10 +139,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:Loading}">
                     <Grid Background="{TemplateBinding Background}">
-                        <local:Sector StartAngle="0" EndAngle="360" Fill="#E8E8E7" MinRadiusRatio="0.8" MaxRadiusRatio="1" />
-                        <local:Sector x:Name="sector" StartAngle="0" Fill="{TemplateBinding Foreground}"
-                                      MinRadiusRatio="0.8" MaxRadiusRatio="1" RoundStyle="Both"
-                                      EndAngle="{TemplateBinding EndAngle}" />
+                        <local:Sector EndAngle="360" Fill="#E8E8E7" MaxRadiusRatio="1" MinRadiusRatio="0.8" StartAngle="0" />
+                        <local:Sector x:Name="sector"
+                                      EndAngle="{TemplateBinding EndAngle}"
+                                      Fill="{TemplateBinding Foreground}"
+                                      MaxRadiusRatio="1" MinRadiusRatio="0.8" RoundStyle="Both" StartAngle="0" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -126,12 +155,12 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:FanChart}">
                     <Grid>
-                        <local:Sector Fill="Aqua" StartAngle="0" EndAngle="30"    MinRadiusRatio="0" MaxRadiusRatio="0.8" />
-                        <local:Sector Fill="SeaGreen" StartAngle="30" EndAngle="90"   MinRadiusRatio="0" MaxRadiusRatio="0.8" />
-                        <local:Sector Fill="Bisque" StartAngle="90" EndAngle="110"  MinRadiusRatio="0" MaxRadiusRatio="0.8" />
-                        <local:Sector Fill="CornflowerBlue" StartAngle="110" EndAngle="190" MinRadiusRatio="0" MaxRadiusRatio="0.8" />
-                        <local:Sector Fill="DarkGoldenrod" StartAngle="190" EndAngle="250" MinRadiusRatio="0" MaxRadiusRatio="0.8" />
-                        <local:Sector Fill="IndianRed" StartAngle="250" EndAngle="360" MinRadiusRatio="0" MaxRadiusRatio="0.8" />
+                        <local:Sector EndAngle="30" Fill="Aqua" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="0" />
+                        <local:Sector EndAngle="90" Fill="SeaGreen" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="30" />
+                        <local:Sector EndAngle="110" Fill="Bisque" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="90" />
+                        <local:Sector EndAngle="190" Fill="CornflowerBlue" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="110" />
+                        <local:Sector EndAngle="250" Fill="DarkGoldenrod" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="190" />
+                        <local:Sector EndAngle="360" Fill="IndianRed" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="250" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -142,7 +171,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Name="border" BorderThickness="1" Margin="3,0" Width="25" Height="25">
+                    <Border Name="border" Height="25" Width="25" Margin="3,0" BorderThickness="1">
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                     </Border>
                     <ControlTemplate.Triggers>
@@ -165,10 +194,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:RRQMEffectWindow}">
                     <Grid Name="windowGrid">
-                        <Border Name="mainBorder" Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="{TemplateBinding CornerRadius}">
+                        <Border Name="mainBorder"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding CornerRadius}">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="30" />
@@ -184,38 +214,52 @@
                                             <ColumnDefinition Width="30" />
                                             <ColumnDefinition />
                                         </Grid.ColumnDefinitions>
-                                        <Image Name="ico" Source="{TemplateBinding Icon}" Margin="3,0" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                        <ContentPresenter Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,0,0,0" VerticalAlignment="Center" Content="{TemplateBinding  TitleContent}" />
+                                        <Image Name="ico" Height="20" Width="20" Margin="3,0" HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Source="{TemplateBinding Icon}" />
+                                        <ContentPresenter Content="{TemplateBinding TitleContent}"
+                                                          Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
                                     </Grid>
                                     <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                        <Button Name="minButton" Style="{StaticResource  toolButtom}"  Command="{Binding MinWindowCommand,RelativeSource={RelativeSource Mode=TemplatedParent}}"         Content="{TemplateBinding MinButtonContent}" />
-                                        <Button Name="maxOrNormalButton" Style="{StaticResource  toolButtom}"  Command="{Binding MaxOrNormalWindowCommand,RelativeSource={RelativeSource Mode=TemplatedParent}}" Content="{TemplateBinding MaxOrNormalContent}" />
-                                        <Button Name="closeButton" Style="{StaticResource  toolButtom}"  Command="{Binding CloseWindowCommand,RelativeSource={RelativeSource Mode=TemplatedParent}}"       Content="{TemplateBinding CloseButtonContent}" />
+                                        <Button Name="minButton"
+                                                Content="{TemplateBinding MinButtonContent}"
+                                                Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                Style="{StaticResource toolButtom}" />
+                                        <Button Name="maxOrNormalButton"
+                                                Content="{TemplateBinding MaxOrNormalContent}"
+                                                Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                Style="{StaticResource toolButtom}" />
+                                        <Button Name="closeButton"
+                                                Content="{TemplateBinding CloseButtonContent}"
+                                                Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                Style="{StaticResource toolButtom}" />
                                     </StackPanel>
                                 </Grid>
-                                <ContentPresenter x:Name="content" Grid.Row="1" Grid.RowSpan="2" Content="{TemplateBinding Content}" HorizontalAlignment="Stretch"
-                                          VerticalAlignment="Stretch"
-                                          Margin="{TemplateBinding Padding}" />
+                                <ContentPresenter x:Name="content"
+                                                  Content="{TemplateBinding Content}"
+                                                  Grid.Row="1" Grid.RowSpan="2"
+                                                  Margin="{TemplateBinding Padding}"
+                                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                             </Grid>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="WindowStyle" Value="SingleBorderWindow">
-                            <Setter Property="Visibility" TargetName="minButton" Value="Visible" />
-                            <Setter Property="Visibility" TargetName="maxOrNormalButton" Value="Visible" />
-                            <Setter Property="Visibility" TargetName="closeButton" Value="Visible" />
+                            <Setter TargetName="minButton" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="maxOrNormalButton" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="closeButton" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <Trigger Property="WindowStyle" Value="ToolWindow">
-                            <Setter Property="Visibility" TargetName="minButton" Value="Collapsed" />
-                            <Setter Property="Visibility" TargetName="maxOrNormalButton" Value="Collapsed" />
-                            <Setter Property="Visibility" TargetName="closeButton" Value="Visible" />
-                            <Setter Property="Visibility" TargetName="ico" Value="Collapsed" />
+                            <Setter TargetName="minButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="maxOrNormalButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="closeButton" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="ico" Property="Visibility" Value="Collapsed" />
                         </Trigger>
                         <Trigger Property="ContentFill" Value="true">
-                            <Setter Property="Grid.Row" TargetName="content" Value="0" />
+                            <Setter TargetName="content" Property="Grid.Row" Value="0" />
                         </Trigger>
                         <Trigger Property="ContentFill" Value="false">
-                            <Setter Property="Grid.Row" TargetName="content" Value="1" />
+                            <Setter TargetName="content" Property="Grid.Row" Value="1" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -240,21 +284,26 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border x:Name="border" CornerRadius="{Binding CornerRadius,RelativeSource={RelativeSource Mode=TemplatedParent}}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                            SnapsToDevicePixels="True">
                         <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Opacity" TargetName="border" Value="0.56" />
+                            <Setter TargetName="border" Property="Opacity" Value="0.56" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TextBox.MouseOver.Border}" />
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="true">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TextBox.Focus.Border}" />
                         </Trigger>
                         <Trigger Property="local:InputBox.IsComplies" Value="false">
-                            <Setter Property="BorderBrush" TargetName="border" Value="Red" />
+                            <Setter TargetName="border" Property="BorderBrush" Value="Red" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -270,12 +319,13 @@
             </MultiTrigger>
         </Style.Triggers>
     </Style>
-   
+
     <Style TargetType="{x:Type local:RRQMWindow}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:RRQMWindow}">
-                    <Border Name="mainBorder" Background="{TemplateBinding Background}"
+                    <Border Name="mainBorder"
+                            Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid>
@@ -293,36 +343,51 @@
                                         <ColumnDefinition Width="30" />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    <Image Name="ico" Source="{TemplateBinding Icon}" Margin="3,0" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                                    <ContentPresenter Grid.Column="1" HorizontalAlignment="Stretch" Margin="3,0,0,0" VerticalAlignment="Center" Content="{TemplateBinding  TitleContent}" />
+                                    <Image Name="ico" Height="20" Width="20" Margin="3,0" HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Source="{TemplateBinding Icon}" />
+                                    <ContentPresenter Content="{TemplateBinding TitleContent}"
+                                                      Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
                                 </Grid>
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                    <Button Name="minButton" Style="{StaticResource  toolButtom}"  Command="{Binding MinWindowCommand,RelativeSource={RelativeSource Mode=TemplatedParent}}"         Content="{TemplateBinding MinButtonContent}" />
-                                    <Button Name="maxOrNormalButton" Style="{StaticResource  toolButtom}"  Command="{Binding MaxOrNormalWindowCommand,RelativeSource={RelativeSource Mode=TemplatedParent}}" Content="{TemplateBinding MaxOrNormalContent}" />
-                                    <Button Name="closeButton" Style="{StaticResource  toolButtom}"  Command="{Binding CloseWindowCommand,RelativeSource={RelativeSource Mode=TemplatedParent}}"       Content="{TemplateBinding CloseButtonContent}" />
+                                    <Button Name="minButton"
+                                            Content="{TemplateBinding MinButtonContent}"
+                                            Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Style="{StaticResource toolButtom}" />
+                                    <Button Name="maxOrNormalButton"
+                                            Content="{TemplateBinding MaxOrNormalContent}"
+                                            Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Style="{StaticResource toolButtom}" />
+                                    <Button Name="closeButton"
+                                            Content="{TemplateBinding CloseButtonContent}"
+                                            Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Style="{StaticResource toolButtom}" />
                                 </StackPanel>
                             </Grid>
-                            <ContentPresenter x:Name="content" Grid.Row="1" Grid.RowSpan="2" Content="{TemplateBinding Content}"
-                                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="{TemplateBinding Padding}" />
+                            <ContentPresenter x:Name="content"
+                                              Content="{TemplateBinding Content}"
+                                              Grid.Row="1" Grid.RowSpan="2"
+                                              Margin="{TemplateBinding Padding}"
+                                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="WindowStyle" Value="SingleBorderWindow">
-                            <Setter Property="Visibility" TargetName="minButton" Value="Visible" />
-                            <Setter Property="Visibility" TargetName="maxOrNormalButton" Value="Visible" />
-                            <Setter Property="Visibility" TargetName="closeButton" Value="Visible" />
+                            <Setter TargetName="minButton" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="maxOrNormalButton" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="closeButton" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <Trigger Property="WindowStyle" Value="ToolWindow">
-                            <Setter Property="Visibility" TargetName="minButton" Value="Collapsed" />
-                            <Setter Property="Visibility" TargetName="maxOrNormalButton" Value="Collapsed" />
-                            <Setter Property="Visibility" TargetName="closeButton" Value="Visible" />
-                            <Setter Property="Visibility" TargetName="ico" Value="Collapsed" />
+                            <Setter TargetName="minButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="maxOrNormalButton" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="closeButton" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="ico" Property="Visibility" Value="Collapsed" />
                         </Trigger>
                         <Trigger Property="ContentFill" Value="true">
-                            <Setter Property="Grid.Row" TargetName="content" Value="0" />
+                            <Setter TargetName="content" Property="Grid.Row" Value="0" />
                         </Trigger>
                         <Trigger Property="ContentFill" Value="false">
-                            <Setter Property="Grid.Row" TargetName="content" Value="1" />
+                            <Setter TargetName="content" Property="Grid.Row" Value="1" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -334,36 +399,36 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Grid x:Name="border"  Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid x:Name="border" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Ellipse Fill="Red">
                             <Ellipse.Effect>
                                 <DropShadowEffect ShadowDepth="0" Color="Black" />
                             </Ellipse.Effect>
                         </Ellipse>
-                        <Path Data="M 0,0 L10,0" VerticalAlignment="Center" HorizontalAlignment="Center" Stroke="White" StrokeThickness="2" />
+                        <Path HorizontalAlignment="Center" VerticalAlignment="Center" Data="M 0,0 L10,0" Stroke="White" StrokeThickness="2" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <EventTrigger RoutedEvent="MouseEnter">
                             <BeginStoryboard>
-                                <Storyboard  Storyboard.TargetName="border" Storyboard.TargetProperty="Width">
-                                    <DoubleAnimation Duration="0:0:0.2" To="23" />
+                                <Storyboard Storyboard.TargetName="border" Storyboard.TargetProperty="Width">
+                                    <DoubleAnimation To="23" Duration="0:0:0.2" />
                                 </Storyboard>
                             </BeginStoryboard>
                             <BeginStoryboard>
-                                <Storyboard  Storyboard.TargetName="border" Storyboard.TargetProperty="Height">
-                                    <DoubleAnimation Duration="0:0:0.2" To="23" />
+                                <Storyboard Storyboard.TargetName="border" Storyboard.TargetProperty="Height">
+                                    <DoubleAnimation To="23" Duration="0:0:0.2" />
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
                         <EventTrigger RoutedEvent="MouseLeave">
                             <BeginStoryboard>
-                                <Storyboard  Storyboard.TargetName="border" Storyboard.TargetProperty="Width">
-                                    <DoubleAnimation Duration="0:0:0.2" To="20" />
+                                <Storyboard Storyboard.TargetName="border" Storyboard.TargetProperty="Width">
+                                    <DoubleAnimation To="20" Duration="0:0:0.2" />
                                 </Storyboard>
                             </BeginStoryboard>
                             <BeginStoryboard>
-                                <Storyboard  Storyboard.TargetName="border" Storyboard.TargetProperty="Height">
-                                    <DoubleAnimation Duration="0:0:0.2" To="20" />
+                                <Storyboard Storyboard.TargetName="border" Storyboard.TargetProperty="Height">
+                                    <DoubleAnimation To="20" Duration="0:0:0.2" />
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
@@ -378,14 +443,15 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Grid>
-                        <Ellipse  Width="25" Height="25" x:Name="ellipse" Fill="#C2C3C9" StrokeThickness="2" Stroke="Beige" />
-                        <TextBlock Text="✚" Foreground="Black" Opacity="0.6" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Ellipse x:Name="ellipse" Height="25" Width="25" Fill="#C2C3C9" Stroke="Beige"
+                                 StrokeThickness="2" />
+                        <TextBlock Text="✚" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" Opacity="0.6" />
                         <!--<Path Data="M 0,0 L10,0" VerticalAlignment="Center" Stroke="Black" StrokeThickness="2"  HorizontalAlignment="Center" />
                                                     <Path Data="M 0,0 L0,10" VerticalAlignment="Center" Stroke="Black" StrokeThickness="2"   HorizontalAlignment="Center" />-->
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Fill" TargetName="ellipse" Value="#BCE8FF" />
+                            <Setter TargetName="ellipse" Property="Fill" Value="#BCE8FF" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -397,23 +463,27 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border Padding="{TemplateBinding Padding}" Width="20" Height="20">
+                    <Border Height="20" Width="20"
+                            Padding="{TemplateBinding Padding}">
                         <Grid SnapsToDevicePixels="False">
-                            <Ellipse x:Name="circle" Fill="AliceBlue" HorizontalAlignment="Center" Height="20"  VerticalAlignment="Center" Width="20" />
-                            <Path x:Name="arrow" Panel.ZIndex="1" Data="M 0,1 L 5,5 L 10,1" HorizontalAlignment="Center"  SnapsToDevicePixels="false" Stroke="Black" StrokeThickness="2" VerticalAlignment="Center" />
-                            <ContentPresenter  HorizontalAlignment="Stretch" Margin="4,0,0,0" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Center" />
+                            <Ellipse x:Name="circle" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                     Fill="AliceBlue" />
+                            <Path x:Name="arrow" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1" Data="M 0,1 L 5,5 L 10,1"
+                                  SnapsToDevicePixels="false" Stroke="Black" StrokeThickness="2" />
+                            <ContentPresenter Margin="4,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" RecognizesAccessKey="True"
+                                              SnapsToDevicePixels="True" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="true">
-                            <Setter Property="Data" TargetName="arrow" Value="M 0,6  L 5,0  L 10,6" />
+                            <Setter TargetName="arrow" Property="Data" Value="M 0,6  L 5,0  L 10,6" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="red" />
-                            <Setter Property="Fill" TargetName="circle" Value="green" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="red" />
+                            <Setter TargetName="circle" Property="Fill" Value="green" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Stroke" TargetName="arrow" Value="blue" />
+                            <Setter TargetName="arrow" Property="Stroke" Value="blue" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -421,7 +491,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="attributeListBox"  TargetType="{x:Type ItemsControl}">
+    <Style x:Key="attributeListBox" TargetType="{x:Type ItemsControl}">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
@@ -437,7 +507,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ItemsControl}">
-                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                    <Border x:Name="Bd"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            SnapsToDevicePixels="true">
                         <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                     </Border>
                 </ControlTemplate>
@@ -449,11 +522,12 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <TextBlock x:Name="delete" Text="✖" FontSize="10" Opacity="0.3" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock x:Name="delete" Text="✖" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10"
+                               Foreground="Black" Opacity="0.3" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="FontSize" TargetName="delete" Value="13" />
-                            <Setter Property="Opacity" TargetName="delete" Value="0.7" />
+                            <Setter TargetName="delete" Property="FontSize" Value="13" />
+                            <Setter TargetName="delete" Property="Opacity" Value="0.7" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -462,28 +536,35 @@
     </Style>
 
     <DataTemplate x:Key="attributeList">
-        <Border Margin="10,0" Height="30" Background="#ADE62F" CornerRadius="5">
-            <Grid  VerticalAlignment="Center" Margin="5,0">
+        <Border Height="30" Margin="10,0" Background="#ADE62F" CornerRadius="5">
+            <Grid Margin="5,0" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="auto" MinWidth="60" />
                     <ColumnDefinition Width="20" />
                 </Grid.ColumnDefinitions>
-                <TextBlock VerticalAlignment="Center" Text="{Binding Key}" />
-                <TextBlock VerticalAlignment="Center" Grid.Column="1" Text=":" Margin="3,0" />
-                <ComboBox IsEnabled="{Binding  IsEditable}" IsEditable="True" Grid.Column="2" Text="{Binding Value,UpdateSourceTrigger=LostFocus}" Background="Transparent" />
-                <Button x:Name="deleteAttributeButton" Style="{StaticResource deleteAttributeButton}" IsEnabled="{Binding IsEditable}"  Visibility="Hidden" Grid.Column="3" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding RemoveCommand}" />
+                <TextBlock Text="{Binding Key}" VerticalAlignment="Center" />
+                <TextBlock Text=":" Grid.Column="1" Margin="3,0" VerticalAlignment="Center" />
+                <ComboBox Text="{Binding Value, UpdateSourceTrigger=LostFocus}"
+                          Grid.Column="2" Background="Transparent" IsEditable="True"
+                          IsEnabled="{Binding IsEditable}" />
+                <Button x:Name="deleteAttributeButton" Height="20" Width="20" Grid.Column="3" HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Command="{Binding RemoveCommand}"
+                        IsEnabled="{Binding IsEditable}"
+                        Style="{StaticResource deleteAttributeButton}"
+                        Visibility="Hidden" />
             </Grid>
         </Border>
         <DataTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Visibility" TargetName="deleteAttributeButton" Value="Visible" />
+                <Setter TargetName="deleteAttributeButton" Property="Visibility" Value="Visible" />
             </Trigger>
         </DataTemplate.Triggers>
     </DataTemplate>
 
-    <Style  TargetType="{x:Type xmlEditor:XmlTreeView}">
+    <Style TargetType="{x:Type xmlEditor:XmlTreeView}">
         <Setter Property="Background" Value="GreenYellow" />
         <Setter Property="Foreground" Value="Black" />
         <Setter Property="IsExpanded" Value="False" />
@@ -492,9 +573,8 @@
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
-                    <VirtualizingStackPanel VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.CacheLength="20,20"
-                                            VirtualizingPanel.VirtualizationMode="Recycling" VirtualizingPanel.ScrollUnit="Item"
-                                            Orientation="Vertical" IsItemsHost="True" />
+                    <VirtualizingStackPanel IsItemsHost="True" Orientation="Vertical" VirtualizingPanel.CacheLength="20,20" VirtualizingPanel.IsVirtualizing="True"
+                                            VirtualizingPanel.ScrollUnit="Item" VirtualizingPanel.VirtualizationMode="Recycling" />
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
@@ -506,7 +586,12 @@
                             <RowDefinition Height="40" />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                        <Border x:Name="Bd"
+                                Padding="{TemplateBinding Padding}"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                SnapsToDevicePixels="true">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="50" />
@@ -514,25 +599,41 @@
                                     <ColumnDefinition />
                                     <ColumnDefinition Width="20" />
                                 </Grid.ColumnDefinitions>
-                                <Button x:Name="deleteButton" Style="{StaticResource deleteButton}" IsEnabled="{TemplateBinding IsEditable}" Opacity="{Binding ElementName=addButton, Path=Opacity}"  Command="{Binding RemoveNodeCommand,RelativeSource={RelativeSource Mode=TemplatedParent}}" />
-                                <ContentPresenter VerticalAlignment="Center"  Grid.Column="1" x:Name="PART_Header" ContentSource="Header" HorizontalAlignment="Stretch" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                <Button x:Name="deleteButton"
+                                        Command="{Binding RemoveNodeCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                        IsEnabled="{TemplateBinding IsEditable}"
+                                        Opacity="{Binding ElementName=addButton, Path=Opacity}"
+                                        Style="{StaticResource deleteButton}" />
+                                <ContentPresenter x:Name="PART_Header" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" ContentSource="Header"
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                                 <StackPanel Grid.Column="2" Orientation="Horizontal">
-                                    <ItemsControl ItemsSource="{TemplateBinding AttributeCollection}" Style="{StaticResource attributeListBox}"   ItemTemplate="{StaticResource attributeList }"  BorderThickness="0" />
-                                    <Button x:Name="addButton" Style="{StaticResource addButton}" Margin="5,0" IsEnabled="{TemplateBinding IsEditable}" Command="{Binding AddCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}" Visibility="Visible" Opacity="0" Width="25" Height="25" />
+                                    <ItemsControl BorderThickness="0"
+                                                  ItemTemplate="{StaticResource attributeList}"
+                                                  ItemsSource="{TemplateBinding AttributeCollection}"
+                                                  Style="{StaticResource attributeListBox}" />
+                                    <Button x:Name="addButton" Height="25" Width="25" Margin="5,0"
+                                            Command="{Binding AddCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            IsEnabled="{TemplateBinding IsEditable}"
+                                            Opacity="0"
+                                            Style="{StaticResource addButton}"
+                                            Visibility="Visible" />
                                 </StackPanel>
-                                <ToggleButton Grid.Column="3" Style="{StaticResource isExpandedButton}" Visibility="{TemplateBinding ExpanderVisibility}" Panel.ZIndex="1" HorizontalAlignment="Center" x:Name="Expander" ClickMode="Press" IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <ToggleButton x:Name="Expander" Grid.Column="3" HorizontalAlignment="Center" Panel.ZIndex="1" ClickMode="Press"
+                                              IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}}"
+                                              Style="{StaticResource isExpandedButton}"
+                                              Visibility="{TemplateBinding ExpanderVisibility}" />
                             </Grid>
                         </Border>
-                        <ItemsPresenter  x:Name="ItemsHost" Margin="0"  Grid.Row="1" />
+                        <ItemsPresenter x:Name="ItemsHost" Grid.Row="1" Margin="0" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsExpanded" Value="false">
-                            <Setter Property="Visibility" TargetName="ItemsHost" Value="Collapsed" />
+                            <Setter TargetName="ItemsHost" Property="Visibility" Value="Collapsed" />
                         </Trigger>
 
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="BorderBrush" TargetName="Bd"  Value="Black" />
-                            <Setter Property="BorderThickness" TargetName="Bd"  Value="1" />
+                            <Setter TargetName="Bd" Property="BorderBrush" Value="Black" />
+                            <Setter TargetName="Bd" Property="BorderThickness" Value="1" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -540,7 +641,7 @@
         </Setter>
     </Style>
 
-    <Style  TargetType="{x:Type xmlEditor:XmlEditor}">
+    <Style TargetType="{x:Type xmlEditor:XmlEditor}">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
@@ -554,17 +655,24 @@
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
-                    <VirtualizingStackPanel VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.CacheLength="20,20"
-                                            VirtualizingPanel.VirtualizationMode="Recycling" VirtualizingPanel.ScrollUnit="Item"
-                                            Orientation="Vertical" IsItemsHost="True" />
+                    <VirtualizingStackPanel IsItemsHost="True" Orientation="Vertical" VirtualizingPanel.CacheLength="20,20" VirtualizingPanel.IsVirtualizing="True"
+                                            VirtualizingPanel.ScrollUnit="Item" VirtualizingPanel.VirtualizationMode="Recycling" />
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TreeView}">
-                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
-                        <ScrollViewer x:Name="_tv_scrollviewer_"  CanContentScroll="True" Focusable="false" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                    <Border x:Name="Bd"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            SnapsToDevicePixels="true">
+                        <ScrollViewer x:Name="_tv_scrollviewer_"
+                                      Padding="{TemplateBinding Padding}"
+                                      CanContentScroll="True" Focusable="false"
+                                      HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                      VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
                             <ItemsPresenter />
                         </ScrollViewer>
                     </Border>
@@ -582,7 +690,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            SnapsToDevicePixels="True">
                         <Decorator x:Name="PART_ContentHost" Focusable="false" />
                     </Border>
                     <ControlTemplate.Triggers>
@@ -596,6 +708,36 @@
                             <Setter Property="BorderThickness" Value="1" />
                         </Trigger>
                     </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:SearchBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:SearchBox}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="50" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="{Binding Text, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                     Margin="20,0" VerticalAlignment="Center"
+                                     Style="{StaticResource noneTextBox}" />
+                            <Button x:Name="commandButton" Width="30" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                    Style="{StaticResource noneButtom}">
+                                <Viewbox>
+                                    <Path Data="M864 800l-179.2-179.2c32-44.8 51.2-99.2 51.2-156.8C736 313.6 614.4 192 464 192S192 313.6 192 464 313.6 736 464                                            736c57.6 0 112-19.2 156.8-51.2L800 864c16 16 44.8 16 64 0l0 0C883.2 844.8 883.2 819.2 864 800zM464 672C348.8 672 256                                           579.2 256 464S348.8 256 464 256s208 92.8 208 208S579.2 672 464 672z" Fill="#C2C3C9" />
+                                </Viewbox>
+                            </Button>
+
+                        </Grid>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

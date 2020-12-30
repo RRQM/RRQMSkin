@@ -17,7 +17,7 @@
     <PackageProjectUrl>https://github.com/RRQM/RRQMSkinDemo</PackageProjectUrl>
     <Copyright>Copyright © 2020 若汝棋茗</Copyright>
     <Version>2.0.4</Version>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>
   </PropertyGroup>
