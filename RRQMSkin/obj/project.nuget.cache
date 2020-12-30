@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "vhiSdryektlgUw0IWQN/VM+s7BoJwFacos3g2hmAXstnG1vAcH8HiPF5ViSgpUUlLXSmVsdDG5g/S4I57/9B7Q==",
+=======
+  "dgSpecHash": "zix8NdcReVdGl7MqX+km0U/zi1B57Ym3cv+XTqpEbry2NL+gXrYzkXhJ9SGEsr86uZ4EdUAYsp9RfrbJ5u/k2g==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
   "expectedPackageFiles": [],

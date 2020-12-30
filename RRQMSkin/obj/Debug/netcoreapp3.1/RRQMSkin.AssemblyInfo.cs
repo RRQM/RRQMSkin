@@ -15,10 +15,17 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © 2020 若汝棋茗")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("\r\n      此程序集是一个WPF控件库，交流联系作者QQ:505554090\r\n\r\n      更新内容：\r\n      1.添加Windows控件\r\n   " +
+<<<<<<< Updated upstream
     "   2.添加提示文本框控件，添加属性输入筛选，可筛选数字，汉字，手机号，身份证号,IP等\r\n      3.完善窗体设置\r\n      4.增加双击可编辑的T" +
     "extBlock\r\n      5.增加SearchBox控件\r\n    ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.6.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.6")]
+=======
+    "   2.添加提示文本框控件，添加属性输入筛选，可筛选数字，汉字，手机号，身份证号,IP等\r\n      3.完善窗体设置\"\r\n      4.增加双击可编辑的" +
+    "TextBlock\"\r\n    ")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.4.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.4")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("RRQMSkin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RRQMSkin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.0.6.0")]

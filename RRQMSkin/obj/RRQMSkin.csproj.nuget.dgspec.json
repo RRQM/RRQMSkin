@@ -5,7 +5,11 @@
   },
   "projects": {
     "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {
+<<<<<<< Updated upstream
       "version": "2.0.6",
+=======
+      "version": "2.0.4",
+>>>>>>> Stashed changes
       "restore": {
         "projectUniqueName": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
         "projectName": "RRQMSkin",
