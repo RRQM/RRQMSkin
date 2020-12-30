@@ -1,5 +1,5 @@
 ﻿RRQMSkin
-2.0.4.0
+2.0.6.0
 
 library
 C#
@@ -12,9 +12,9 @@ TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
 
 1-731644535
 
-371917640494
+40-1048760227
 1921654412462
 Themes\Generic.xaml;
 
-False
+True
 

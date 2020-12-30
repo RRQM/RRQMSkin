@@ -35,3 +35,4 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.g.resources
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.AssemblyInfoInputs.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.AssemblyInfo.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csproj.CoreCompileInputs.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csprojAssemblyReference.cache

@@ -11,13 +11,14 @@
       更新内容：
       1.添加Windows控件
       2.添加提示文本框控件，添加属性输入筛选，可筛选数字，汉字，手机号，身份证号,IP等
-      3.完善窗体设置"
-      4.增加双击可编辑的TextBlock"
+      3.完善窗体设置
+      4.增加双击可编辑的TextBlock
+      5.增加SearchBox控件
     </Description>
     <PackageProjectUrl>https://github.com/RRQM/RRQMSkinDemo</PackageProjectUrl>
     <Copyright>Copyright © 2020 若汝棋茗</Copyright>
-    <Version>2.0.4</Version>
-    <SignAssembly>false</SignAssembly>
+    <Version>2.0.6</Version>
+    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>
   </PropertyGroup>

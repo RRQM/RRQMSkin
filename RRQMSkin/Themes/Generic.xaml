@@ -26,12 +26,12 @@
                             CornerRadius="{TemplateBinding CornerRadius}">
                         <Grid Name="mainGrid">
                             <Canvas Panel.ZIndex="-1">
-                                <Ellipse x:Name="CorrugatedEllipse" Height="1" Width="1"
+                                <Ellipse x:Name="CorrugatedEllipse" Width="1" Height="1"
                                          Fill="{TemplateBinding CorrugatedBrush}" />
                             </Canvas>
-                            <ContentPresenter Content="{TemplateBinding Content}"
-                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              Content="{TemplateBinding Content}" />
                         </Grid>
                     </Border>
                 </ControlTemplate>
@@ -57,9 +57,9 @@
                                     TickAngle="30" TickCount="8" />
                         <local:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="157.5" Stroke="Black" StrokeThickness="1"
                                     TickAngle="15" TickCount="16" />
-                        <local:DialText Text="0,20,40,60,80,100,120,140,160" FontSize="20" RadiusRatio="0.6" StartAngle="150" TickAngle="30" />
+                        <local:DialText FontSize="20" RadiusRatio="0.6" StartAngle="150" Text="0,20,40,60,80,100,120,140,160" TickAngle="30" />
 
-                        <local:DialText Text="10,30,50,70,90,110,130,150" FontSize="12" RadiusRatio="0.7" StartAngle="165" TickAngle="30" />
+                        <local:DialText FontSize="12" RadiusRatio="0.7" StartAngle="165" Text="10,30,50,70,90,110,130,150" TickAngle="30" />
 
                         <local:Pointer x:Name="pointer"
                                        RatioAngle="{TemplateBinding PointerAngle}"
@@ -74,8 +74,8 @@
                                 <DropShadowEffect BlurRadius="10" ShadowDepth="0" Color="Blue" />
                             </local:Pointer.Effect>
                         </local:Pointer>
-                        <Ellipse Height="10" Width="10" Fill="White" />
-                        <Ellipse Height="8" Width="8" Stroke="DarkCyan" StrokeThickness="1" />
+                        <Ellipse Width="10" Height="10" Fill="White" />
+                        <Ellipse Width="8" Height="8" Stroke="DarkCyan" StrokeThickness="1" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -91,15 +91,15 @@
                                     TickCount="12" />
                         <local:Dial x:Name="minuteDial" MaxRadiusRatio="1" MinRadiusRatio="0.9" Stroke="Black" StrokeThickness="1"
                                     TickAngle="6" TickCount="60" />
-                        <local:DialText x:Name="dialText" Text="3,4,5,6,7,8,9,10,11,12,1,2" FontSize="20" FontWeight="Bold" RadiusRatio="0.8"
-                                        StartAngle="0" TickAngle="30" />
+                        <local:DialText x:Name="dialText" FontSize="20" FontWeight="Bold" RadiusRatio="0.8" StartAngle="0"
+                                        Text="3,4,5,6,7,8,9,10,11,12,1,2" TickAngle="30" />
                         <local:Pointer x:Name="minutePointer" Fill="Black" PointerHeight="5" PointerWidth="130" RatioAngle="190"
                                        RatioCenter="0,0.5" />
                         <local:Pointer x:Name="hourPointer" Fill="Black" PointerWidth="80" RatioAngle="130" RatioCenter="0,0.5" />
                         <local:Pointer x:Name="secondPointer" Fill="Red" PointerHeight="3" PointerWidth="160" RatioAngle="340"
                                        RatioCenter="0.2,0.5" />
-                        <Ellipse Height="10" Width="10" Fill="White" />
-                        <Ellipse Height="8" Width="8" Stroke="DarkCyan" StrokeThickness="1" />
+                        <Ellipse Width="10" Height="10" Fill="White" />
+                        <Ellipse Width="8" Height="8" Stroke="DarkCyan" StrokeThickness="1" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -122,12 +122,12 @@
                                 </LinearGradientBrush>
                             </local:Sector.Fill>
                         </local:Sector>
-                        <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Progress, StringFormat=0.00%}"
-                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                                    FontFamily="{TemplateBinding FontFamily}"
                                    FontSize="{TemplateBinding FontSize}"
                                    FontStyle="{TemplateBinding FontStyle}"
-                                   FontWeight="{TemplateBinding FontWeight}" />
+                                   FontWeight="{TemplateBinding FontWeight}"
+                                   Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Progress, StringFormat=0.00%}" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -171,7 +171,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Name="border" Height="25" Width="25" Margin="3,0" BorderThickness="1">
+                    <Border Name="border" Width="25" Height="25" Margin="3,0" BorderThickness="1">
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
                     </Border>
                     <ControlTemplate.Triggers>
@@ -214,32 +214,31 @@
                                             <ColumnDefinition Width="30" />
                                             <ColumnDefinition />
                                         </Grid.ColumnDefinitions>
-                                        <Image Name="ico" Height="20" Width="20" Margin="3,0" HorizontalAlignment="Center"
+                                        <Image Name="ico" Width="20" Height="20" Margin="3,0" HorizontalAlignment="Center"
                                                VerticalAlignment="Center"
                                                Source="{TemplateBinding Icon}" />
-                                        <ContentPresenter Content="{TemplateBinding TitleContent}"
-                                                          Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+                                        <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                                          Content="{TemplateBinding TitleContent}" />
                                     </Grid>
                                     <StackPanel Grid.Column="1" Orientation="Horizontal">
                                         <Button Name="minButton"
-                                                Content="{TemplateBinding MinButtonContent}"
                                                 Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                Content="{TemplateBinding MinButtonContent}"
                                                 Style="{StaticResource toolButtom}" />
                                         <Button Name="maxOrNormalButton"
-                                                Content="{TemplateBinding MaxOrNormalContent}"
                                                 Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                Content="{TemplateBinding MaxOrNormalContent}"
                                                 Style="{StaticResource toolButtom}" />
                                         <Button Name="closeButton"
-                                                Content="{TemplateBinding CloseButtonContent}"
                                                 Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                Content="{TemplateBinding CloseButtonContent}"
                                                 Style="{StaticResource toolButtom}" />
                                     </StackPanel>
                                 </Grid>
-                                <ContentPresenter x:Name="content"
-                                                  Content="{TemplateBinding Content}"
-                                                  Grid.Row="1" Grid.RowSpan="2"
+                                <ContentPresenter x:Name="content" Grid.Row="1" Grid.RowSpan="2"
                                                   Margin="{TemplateBinding Padding}"
-                                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                                  Content="{TemplateBinding Content}" />
                             </Grid>
                         </Border>
                     </Grid>
@@ -343,32 +342,31 @@
                                         <ColumnDefinition Width="30" />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    <Image Name="ico" Height="20" Width="20" Margin="3,0" HorizontalAlignment="Center"
+                                    <Image Name="ico" Width="20" Height="20" Margin="3,0" HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
                                            Source="{TemplateBinding Icon}" />
-                                    <ContentPresenter Content="{TemplateBinding TitleContent}"
-                                                      Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+                                    <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                                      Content="{TemplateBinding TitleContent}" />
                                 </Grid>
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                     <Button Name="minButton"
-                                            Content="{TemplateBinding MinButtonContent}"
                                             Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Content="{TemplateBinding MinButtonContent}"
                                             Style="{StaticResource toolButtom}" />
                                     <Button Name="maxOrNormalButton"
-                                            Content="{TemplateBinding MaxOrNormalContent}"
                                             Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Content="{TemplateBinding MaxOrNormalContent}"
                                             Style="{StaticResource toolButtom}" />
                                     <Button Name="closeButton"
-                                            Content="{TemplateBinding CloseButtonContent}"
                                             Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Content="{TemplateBinding CloseButtonContent}"
                                             Style="{StaticResource toolButtom}" />
                                 </StackPanel>
                             </Grid>
-                            <ContentPresenter x:Name="content"
-                                              Content="{TemplateBinding Content}"
-                                              Grid.Row="1" Grid.RowSpan="2"
+                            <ContentPresenter x:Name="content" Grid.Row="1" Grid.RowSpan="2"
                                               Margin="{TemplateBinding Padding}"
-                                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                              Content="{TemplateBinding Content}" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -399,7 +397,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Grid x:Name="border" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid x:Name="border" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Ellipse Fill="Red">
                             <Ellipse.Effect>
                                 <DropShadowEffect ShadowDepth="0" Color="Black" />
@@ -443,9 +441,9 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Grid>
-                        <Ellipse x:Name="ellipse" Height="25" Width="25" Fill="#C2C3C9" Stroke="Beige"
+                        <Ellipse x:Name="ellipse" Width="25" Height="25" Fill="#C2C3C9" Stroke="Beige"
                                  StrokeThickness="2" />
-                        <TextBlock Text="✚" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" Opacity="0.6" />
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" Opacity="0.6" Text="✚" />
                         <!--<Path Data="M 0,0 L10,0" VerticalAlignment="Center" Stroke="Black" StrokeThickness="2"  HorizontalAlignment="Center" />
                                                     <Path Data="M 0,0 L0,10" VerticalAlignment="Center" Stroke="Black" StrokeThickness="2"   HorizontalAlignment="Center" />-->
                     </Grid>
@@ -463,10 +461,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border Height="20" Width="20"
+                    <Border Width="20" Height="20"
                             Padding="{TemplateBinding Padding}">
                         <Grid SnapsToDevicePixels="False">
-                            <Ellipse x:Name="circle" Height="20" Width="20" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            <Ellipse x:Name="circle" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"
                                      Fill="AliceBlue" />
                             <Path x:Name="arrow" HorizontalAlignment="Center" VerticalAlignment="Center" Panel.ZIndex="1" Data="M 0,1 L 5,5 L 10,1"
                                   SnapsToDevicePixels="false" Stroke="Black" StrokeThickness="2" />
@@ -522,8 +520,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <TextBlock x:Name="delete" Text="✖" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10"
-                               Foreground="Black" Opacity="0.3" />
+                    <TextBlock x:Name="delete" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10" Foreground="Black"
+                               Opacity="0.3" Text="✖" />
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="delete" Property="FontSize" Value="13" />
@@ -544,12 +542,12 @@
                     <ColumnDefinition Width="auto" MinWidth="60" />
                     <ColumnDefinition Width="20" />
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="{Binding Key}" VerticalAlignment="Center" />
-                <TextBlock Text=":" Grid.Column="1" Margin="3,0" VerticalAlignment="Center" />
-                <ComboBox Text="{Binding Value, UpdateSourceTrigger=LostFocus}"
-                          Grid.Column="2" Background="Transparent" IsEditable="True"
-                          IsEnabled="{Binding IsEditable}" />
-                <Button x:Name="deleteAttributeButton" Height="20" Width="20" Grid.Column="3" HorizontalAlignment="Center"
+                <TextBlock VerticalAlignment="Center" Text="{Binding Key}" />
+                <TextBlock Grid.Column="1" Margin="3,0" VerticalAlignment="Center" Text=":" />
+                <ComboBox Grid.Column="2" Background="Transparent" IsEditable="True"
+                          IsEnabled="{Binding IsEditable}"
+                          Text="{Binding Value, UpdateSourceTrigger=LostFocus}" />
+                <Button x:Name="deleteAttributeButton" Grid.Column="3" Width="20" Height="20" HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Command="{Binding RemoveCommand}"
                         IsEnabled="{Binding IsEditable}"
@@ -611,7 +609,7 @@
                                                   ItemTemplate="{StaticResource attributeList}"
                                                   ItemsSource="{TemplateBinding AttributeCollection}"
                                                   Style="{StaticResource attributeListBox}" />
-                                    <Button x:Name="addButton" Height="25" Width="25" Margin="5,0"
+                                    <Button x:Name="addButton" Width="25" Height="25" Margin="5,0"
                                             Command="{Binding AddCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                             IsEnabled="{TemplateBinding IsEditable}"
                                             Opacity="0"
@@ -726,10 +724,10 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition Width="50" />
                             </Grid.ColumnDefinitions>
-                            <TextBox Text="{Binding Text, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                     Margin="20,0" VerticalAlignment="Center"
-                                     Style="{StaticResource noneTextBox}" />
-                            <Button x:Name="commandButton" Width="30" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"
+                            <local:InputBox Margin="20,0" VerticalAlignment="Center" Background="Transparent" BorderThickness="0"
+                                            InputFilter="{TemplateBinding InputFilter}"
+                                            Text="{Binding Text, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                            <Button x:Name="commandButton" Grid.Column="1" Width="30" HorizontalAlignment="Left" VerticalAlignment="Center"
                                     Style="{StaticResource noneButtom}">
                                 <Viewbox>
                                     <Path Data="M864 800l-179.2-179.2c32-44.8 51.2-99.2 51.2-156.8C736 313.6 614.4 192 464 192S192 313.6 192 464 313.6 736 464                                            736c57.6 0 112-19.2 156.8-51.2L800 864c16 16 44.8 16 64 0l0 0C883.2 844.8 883.2 819.2 864 800zM464 672C348.8 672 256                                           579.2 256 464S348.8 256 464 256s208 92.8 208 208S579.2 672 464 672z" Fill="#C2C3C9" />

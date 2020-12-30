@@ -1,22 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {}
+    "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {}
   },
   "projects": {
-    "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {
-      "version": "2.0.4",
+    "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {
+      "version": "2.0.6",
       "restore": {
-        "projectUniqueName": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+        "projectUniqueName": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
         "projectName": "RRQMSkin",
-        "projectPath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
-        "packagesPath": "C:\\Users\\carywang\\.nuget\\packages\\",
-        "outputPath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\obj\\",
+        "projectPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+        "packagesPath": "C:\\Users\\17516\\.nuget\\packages\\",
+        "outputPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\carywang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\17516\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net45",

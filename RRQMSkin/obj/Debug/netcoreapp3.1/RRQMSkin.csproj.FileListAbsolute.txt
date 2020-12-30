@@ -37,3 +37,4 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.g.resources
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.AssemblyInfoInputs.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.AssemblyInfo.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csproj.CoreCompileInputs.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csprojAssemblyReference.cache
