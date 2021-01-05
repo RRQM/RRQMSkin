@@ -17,7 +17,7 @@ namespace RRQMSkin.DragDrop
         public FrameworkElement[] DraggedElements { get; set; }
         public double VerticalOffset { get; set; } = 5;
         public double HorizontalOffset { get; set; } = 5;
-        
+
         protected override void OnRender(DrawingContext drawingContext)
         {
             base.OnRender(drawingContext);
@@ -32,7 +32,7 @@ namespace RRQMSkin.DragDrop
                     foreach (var item in DraggedElements)
                     {
                         i++;
-                        Rect rect = new Rect(pos.X - item.ActualWidth / 2+i*HorizontalOffset, pos.Y - item.ActualHeight / 2 + i *VerticalOffset, item.ActualWidth, item.ActualHeight);
+                        Rect rect = new Rect(pos.X - item.ActualWidth / 2 + i * HorizontalOffset, pos.Y - item.ActualHeight / 2 + i * VerticalOffset, item.ActualWidth, item.ActualHeight);
                         drawingContext.PushOpacity(1);
                         // Brush highlight = item.TryFindResource(SystemColors.HighlightBrushKey) as Brush;
                         Brush highlight = Brushes.Transparent;
@@ -43,7 +43,6 @@ namespace RRQMSkin.DragDrop
                             drawingContext.Pop();
                         }
                     }
-
                 }
             }
             else if (mDraggedElement != null)

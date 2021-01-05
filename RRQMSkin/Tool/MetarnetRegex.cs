@@ -15,7 +15,7 @@ namespace RRQMSkin
             Regex regex = new Regex("^[\u4e00-\u9fa5]+$");
             return regex.IsMatch(input);
         }
-        
+
         ///// <summary>
         ///// 判断输入的字符串只包含汉字
         ///// </summary>

@@ -1,0 +1,12 @@
+D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMSkin.dll
+D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMSkin.pdb
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\GeneratedInternalTypeHelper.g.cs
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin_MarkupCompile.cache
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin_MarkupCompile.lref
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Generic.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.g.resources
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.AssemblyInfoInputs.cache
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.AssemblyInfo.cs
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CoreCompileInputs.cache
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.dll
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.pdb

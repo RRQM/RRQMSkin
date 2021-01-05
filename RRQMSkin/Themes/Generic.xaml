@@ -1,7 +1,8 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:RRQMSkin"
-                    xmlns:xmlEditor="clr-namespace:RRQMSkin.Xml">
+                    xmlns:windows="clr-namespace:RRQMSkin.Windows"
+                    xmlns:control="clr-namespace:RRQMSkin.Controls"
+                    xmlns:primitive="clr-namespace:RRQMSkin.Charts.Primitives">
 
     <Style x:Key="noneButtom" TargetType="{x:Type Button}">
         <Setter Property="Template">
@@ -14,12 +15,12 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type local:CorrugatedButton}">
+    <Style TargetType="{x:Type control:CorrugatedButton}">
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:CorrugatedButton}">
+                <ControlTemplate TargetType="{x:Type control:CorrugatedButton}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
@@ -39,41 +40,41 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type local:SpeedDial}">
+    <Style TargetType="{x:Type control:SpeedDial}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:SpeedDial}">
+                <ControlTemplate TargetType="{x:Type control:SpeedDial}">
                     <Grid MinWidth="200" MinHeight="200">
                         <Ellipse />
-                        <local:Sector EndAngle="230" Fill="#00BE8B" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="149" />
-                        <local:Sector EndAngle="320" Fill="#14BEFF" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="230" />
-                        <local:Sector EndAngle="391" Fill="#FF2975" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="320" />
-                        <local:Sector EndAngle="{TemplateBinding PointerAngle}"
+                        <primitive:Sector EndAngle="230" Fill="#00BE8B" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="149" />
+                        <primitive:Sector EndAngle="320" Fill="#14BEFF" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="230" />
+                        <primitive:Sector EndAngle="391" Fill="#FF2975" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="320" />
+                        <primitive:Sector EndAngle="{TemplateBinding PointerAngle}"
                                       Fill="Orange" MaxRadiusRatio="0.8" MinRadiusRatio="0.7" StartAngle="149" />
 
-                        <local:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.7" StartAngle="150" Stroke="Black" StrokeThickness="3"
+                        <primitive:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.7" StartAngle="150" Stroke="Black" StrokeThickness="3"
                                     TickAngle="30" TickCount="9" />
-                        <local:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="165" Stroke="Black" StrokeThickness="2"
+                        <primitive:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="165" Stroke="Black" StrokeThickness="2"
                                     TickAngle="30" TickCount="8" />
-                        <local:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="157.5" Stroke="Black" StrokeThickness="1"
+                        <primitive:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="157.5" Stroke="Black" StrokeThickness="1"
                                     TickAngle="15" TickCount="16" />
-                        <local:DialText FontSize="20" RadiusRatio="0.6" StartAngle="150" Text="0,20,40,60,80,100,120,140,160" TickAngle="30" />
+                        <primitive:DialText FontSize="20" RadiusRatio="0.6" StartAngle="150" Text="0,20,40,60,80,100,120,140,160" TickAngle="30" />
 
-                        <local:DialText FontSize="12" RadiusRatio="0.7" StartAngle="165" Text="10,30,50,70,90,110,130,150" TickAngle="30" />
+                        <primitive:DialText FontSize="12" RadiusRatio="0.7" StartAngle="165" Text="10,30,50,70,90,110,130,150" TickAngle="30" />
 
-                        <local:Pointer x:Name="pointer"
+                        <primitive:Pointer x:Name="pointer"
                                        RatioAngle="{TemplateBinding PointerAngle}"
                                        RatioCenter="0.2,0.5">
-                            <local:Pointer.Fill>
+                            <primitive:Pointer.Fill>
                                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                     <GradientStop Offset="0" Color="#FF3C57F5" />
                                     <GradientStop Offset="1" Color="#FFF38F8A" />
                                 </LinearGradientBrush>
-                            </local:Pointer.Fill>
-                            <local:Pointer.Effect>
+                            </primitive:Pointer.Fill>
+                            <primitive:Pointer.Effect>
                                 <DropShadowEffect BlurRadius="10" ShadowDepth="0" Color="Blue" />
-                            </local:Pointer.Effect>
-                        </local:Pointer>
+                            </primitive:Pointer.Effect>
+                        </primitive:Pointer>
                         <Ellipse Width="10" Height="10" Fill="White" />
                         <Ellipse Width="8" Height="8" Stroke="DarkCyan" StrokeThickness="1" />
                     </Grid>
@@ -82,21 +83,21 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type local:Clock}">
+    <Style TargetType="{x:Type control:Clock}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:Clock}">
+                <ControlTemplate TargetType="{x:Type control:Clock}">
                     <Grid MinWidth="100" MinHeight="100">
-                        <local:Dial x:Name="hourDial" MaxRadiusRatio="1" MinRadiusRatio="0.9" Stroke="Black" StrokeThickness="6"
+                        <primitive:Dial x:Name="hourDial" MaxRadiusRatio="1" MinRadiusRatio="0.9" Stroke="Black" StrokeThickness="6"
                                     TickCount="12" />
-                        <local:Dial x:Name="minuteDial" MaxRadiusRatio="1" MinRadiusRatio="0.9" Stroke="Black" StrokeThickness="1"
+                        <primitive:Dial x:Name="minuteDial" MaxRadiusRatio="1" MinRadiusRatio="0.9" Stroke="Black" StrokeThickness="1"
                                     TickAngle="6" TickCount="60" />
-                        <local:DialText x:Name="dialText" FontSize="20" FontWeight="Bold" RadiusRatio="0.8" StartAngle="0"
+                        <primitive:DialText x:Name="dialText" FontSize="20" FontWeight="Bold" RadiusRatio="0.8" StartAngle="0"
                                         Text="3,4,5,6,7,8,9,10,11,12,1,2" TickAngle="30" />
-                        <local:Pointer x:Name="minutePointer" Fill="Black" PointerHeight="5" PointerWidth="130" RatioAngle="190"
+                        <primitive:Pointer x:Name="minutePointer" Fill="Black" PointerHeight="5" PointerWidth="130" RatioAngle="190"
                                        RatioCenter="0,0.5" />
-                        <local:Pointer x:Name="hourPointer" Fill="Black" PointerWidth="80" RatioAngle="130" RatioCenter="0,0.5" />
-                        <local:Pointer x:Name="secondPointer" Fill="Red" PointerHeight="3" PointerWidth="160" RatioAngle="340"
+                        <primitive:Pointer x:Name="hourPointer" Fill="Black" PointerWidth="80" RatioAngle="130" RatioCenter="0,0.5" />
+                        <primitive:Pointer x:Name="secondPointer" Fill="Red" PointerHeight="3" PointerWidth="160" RatioAngle="340"
                                        RatioCenter="0.2,0.5" />
                         <Ellipse Width="10" Height="10" Fill="White" />
                         <Ellipse Width="8" Height="8" Stroke="DarkCyan" StrokeThickness="1" />
@@ -106,22 +107,22 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type local:RoundProgressBar}">
+    <Style TargetType="{x:Type control:RoundProgressBar}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:RoundProgressBar}">
+                <ControlTemplate TargetType="{x:Type control:RoundProgressBar}">
                     <Grid Background="{TemplateBinding Background}">
-                        <local:Sector EndAngle="360" Fill="#CED0CF" MaxRadiusRatio="1" MinRadiusRatio="0.7" StartAngle="0"
+                        <primitive:Sector EndAngle="360" Fill="#CED0CF" MaxRadiusRatio="1" MinRadiusRatio="0.7" StartAngle="0"
                                       Stroke="Transparent" />
-                        <local:Sector EndAngle="{TemplateBinding Angle}"
+                        <primitive:Sector EndAngle="{TemplateBinding Angle}"
                                       MaxRadiusRatio="1" MinRadiusRatio="0.7" RoundStyle="Both" StartAngle="0" Stroke="Transparent">
-                            <local:Sector.Fill>
+                            <primitive:Sector.Fill>
                                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                     <GradientStop Offset="0" Color="#FF2B65F0" />
                                     <GradientStop Offset="1" Color="#FFFF3BA4" />
                                 </LinearGradientBrush>
-                            </local:Sector.Fill>
-                        </local:Sector>
+                            </primitive:Sector.Fill>
+                        </primitive:Sector>
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                                    FontFamily="{TemplateBinding FontFamily}"
                                    FontSize="{TemplateBinding FontSize}"
@@ -134,13 +135,13 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type local:Loading}">
+    <Style TargetType="{x:Type control:Loading}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:Loading}">
+                <ControlTemplate TargetType="{x:Type control:Loading}">
                     <Grid Background="{TemplateBinding Background}">
-                        <local:Sector EndAngle="360" Fill="#E8E8E7" MaxRadiusRatio="1" MinRadiusRatio="0.8" StartAngle="0" />
-                        <local:Sector x:Name="sector"
+                        <primitive:Sector EndAngle="360" Fill="#E8E8E7" MaxRadiusRatio="1" MinRadiusRatio="0.8" StartAngle="0" />
+                        <primitive:Sector x:Name="sector"
                                       EndAngle="{TemplateBinding EndAngle}"
                                       Fill="{TemplateBinding Foreground}"
                                       MaxRadiusRatio="1" MinRadiusRatio="0.8" RoundStyle="Both" StartAngle="0" />
@@ -150,23 +151,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type local:FanChart}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:FanChart}">
-                    <Grid>
-                        <local:Sector EndAngle="30" Fill="Aqua" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="0" />
-                        <local:Sector EndAngle="90" Fill="SeaGreen" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="30" />
-                        <local:Sector EndAngle="110" Fill="Bisque" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="90" />
-                        <local:Sector EndAngle="190" Fill="CornflowerBlue" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="110" />
-                        <local:Sector EndAngle="250" Fill="DarkGoldenrod" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="190" />
-                        <local:Sector EndAngle="360" Fill="IndianRed" MaxRadiusRatio="0.8" MinRadiusRatio="0" StartAngle="250" />
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
+    
     <Style x:Key="toolButtom" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>
@@ -189,10 +174,10 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type local:RRQMEffectWindow}">
+    <Style TargetType="{x:Type windows:RRQMEffectWindow}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:RRQMEffectWindow}">
+                <ControlTemplate TargetType="{x:Type windows:RRQMEffectWindow}">
                     <Grid Name="windowGrid">
                         <Border Name="mainBorder"
                                 Background="{TemplateBinding Background}"
@@ -269,7 +254,7 @@
     <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3" />
     <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA" />
     <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5" />
-    <Style TargetType="{x:Type local:InputBox}">
+    <Style TargetType="{x:Type control:InputBox}">
         <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
         <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}" />
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
@@ -282,7 +267,7 @@
         <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TextBox}">
+                <ControlTemplate TargetType="{x:Type control:InputBox}">
                     <Border x:Name="border"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
@@ -301,7 +286,7 @@
                         <Trigger Property="IsKeyboardFocused" Value="true">
                             <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TextBox.Focus.Border}" />
                         </Trigger>
-                        <Trigger Property="local:InputBox.IsComplies" Value="false">
+                        <Trigger Property="control:InputBox.IsComplies" Value="false">
                             <Setter TargetName="border" Property="BorderBrush" Value="Red" />
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -319,10 +304,10 @@
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="{x:Type local:RRQMWindow}">
+    <Style TargetType="{x:Type windows:RRQMWindow}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:RRQMWindow}">
+                <ControlTemplate TargetType="{x:Type windows:RRQMWindow}">
                     <Border Name="mainBorder"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
@@ -562,7 +547,7 @@
         </DataTemplate.Triggers>
     </DataTemplate>
 
-    <Style TargetType="{x:Type xmlEditor:XmlTreeView}">
+    <Style TargetType="{x:Type control:XmlTreeView}">
         <Setter Property="Background" Value="GreenYellow" />
         <Setter Property="Foreground" Value="Black" />
         <Setter Property="IsExpanded" Value="False" />
@@ -578,7 +563,7 @@
         </Setter>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type xmlEditor:XmlTreeView}">
+                <ControlTemplate TargetType="{x:Type control:XmlTreeView}">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="40" />
@@ -639,7 +624,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type xmlEditor:XmlEditor}">
+    <Style TargetType="{x:Type control:XmlEditor}">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="0" />
@@ -660,7 +645,7 @@
         </Setter>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TreeView}">
+                <ControlTemplate TargetType="{x:Type control:XmlEditor}">
                     <Border x:Name="Bd"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
@@ -679,7 +664,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type local:DoubleEditTextBlock}">
+    <Style TargetType="{x:Type control:DoubleEditTextBlock}">
         <Setter Property="Focusable" Value="True" />
         <Setter Property="IsReadOnly" Value="True" />
         <Setter Property="BorderThickness" Value="0" />
@@ -711,10 +696,10 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type local:SearchBox}">
+    <Style TargetType="{x:Type control:SearchBox}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:SearchBox}">
+                <ControlTemplate TargetType="{x:Type control:SearchBox}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
@@ -724,7 +709,7 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition Width="50" />
                             </Grid.ColumnDefinitions>
-                            <local:InputBox Margin="20,0" VerticalAlignment="Center" Background="Transparent" BorderThickness="0"
+                            <control:InputBox Margin="20,0" VerticalAlignment="Center" Background="Transparent" BorderThickness="0"
                                             InputFilter="{TemplateBinding InputFilter}"
                                             Text="{Binding Text, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                             <Button x:Name="commandButton" Grid.Column="1" Width="30" HorizontalAlignment="Left" VerticalAlignment="Center"

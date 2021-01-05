@@ -1,11 +1,10 @@
-﻿using System.Reflection;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Markup;
 
-[assembly: XmlnsDefinitionAttribute("若汝棋茗_RRQMSkin", "RRQMSkin")]
+[assembly: XmlnsDefinitionAttribute("若汝棋茗_Controls", "RRQMSkin.Controls")]
 [assembly: XmlnsDefinitionAttribute("若汝棋茗_DragDrop", "RRQMSkin.DragDrop")]
-[assembly: XmlnsDefinitionAttribute("若汝棋茗_XML", "RRQMSkin.Xml")]
-
+[assembly: XmlnsDefinitionAttribute("若汝棋茗_Charts", "RRQMSkin.Charts")]
+[assembly: XmlnsDefinitionAttribute("若汝棋茗_Primitives", "RRQMSkin.Charts.Primitives")]
 [assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
                                      //(used if a resource is not found in the page,

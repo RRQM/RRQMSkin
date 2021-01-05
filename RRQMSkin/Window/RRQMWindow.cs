@@ -6,9 +6,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shell;
 
-namespace RRQMSkin
+namespace RRQMSkin.Windows
 {
-    public class RRQMWindow : Window
+    public class RRQMWindow :System.Windows.Window
     {
         static RRQMWindow()
         {

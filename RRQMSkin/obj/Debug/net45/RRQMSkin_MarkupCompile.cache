@@ -4,7 +4,7 @@
 library
 C#
 .cs
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\
 RRQMSkin
 none
 false
@@ -12,11 +12,7 @@ TRACE;DEBUG;NETFRAMEWORK;NET45;
 
 1-731644535
 
-<<<<<<< Updated upstream
-38-81595078
-=======
-38-900811851
->>>>>>> Stashed changes
+35934845323
 19-1315729206
 Themes\Generic.xaml;
 

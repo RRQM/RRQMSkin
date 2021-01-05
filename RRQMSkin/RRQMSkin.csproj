@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net45;net461;netcoreapp3.1</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <Authors>若汝棋茗</Authors>
     <PackageIcon>RRQM.png</PackageIcon>
@@ -18,10 +18,21 @@
     <PackageProjectUrl>https://github.com/RRQM/RRQMSkinDemo</PackageProjectUrl>
     <Copyright>Copyright © 2020 若汝棋茗</Copyright>
     <Version>2.0.6</Version>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MVVM\**" />
+    <Compile Remove="Text\**" />
+    <EmbeddedResource Remove="MVVM\**" />
+    <EmbeddedResource Remove="Text\**" />
+    <None Remove="MVVM\**" />
+    <None Remove="Text\**" />
+    <Page Remove="MVVM\**" />
+    <Page Remove="Text\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="Icons\RRQM.ico" />
@@ -29,11 +40,6 @@
     <None Remove="Icons\最大化.png" />
     <None Remove="Icons\最小化.png" />
     <None Remove="Icons\正常.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="MVVM\" />
-    <Folder Include="Text\" />
   </ItemGroup>
 
   <ItemGroup>

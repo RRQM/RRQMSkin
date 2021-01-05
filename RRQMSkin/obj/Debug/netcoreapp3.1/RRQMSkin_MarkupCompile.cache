@@ -4,7 +4,7 @@
 library
 C#
 .cs
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\
 RRQMSkin
 none
 false
@@ -12,11 +12,7 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 
 1-731644535
 
-<<<<<<< Updated upstream
-38-81595078
-=======
-38-900811851
->>>>>>> Stashed changes
+35934845323
 1921654412462
 Themes\Generic.xaml;
 

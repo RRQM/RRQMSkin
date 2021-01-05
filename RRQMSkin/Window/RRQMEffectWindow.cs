@@ -9,7 +9,7 @@ using System.Windows.Media.Effects;
 using System.Windows.Shapes;
 using System.Windows.Shell;
 
-namespace RRQMSkin
+namespace RRQMSkin.Windows
 {
     /// <summary>
     /// 自定义窗口
