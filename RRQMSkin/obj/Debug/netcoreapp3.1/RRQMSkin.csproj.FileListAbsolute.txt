@@ -24,7 +24,6 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.AssemblyInfo.cs
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csproj.CoreCompileInputs.cache
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.dll
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.pdb
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csprojAssemblyReference.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\netcoreapp3.1\RRQMSkin.deps.json
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\netcoreapp3.1\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\netcoreapp3.1\RRQMSkin.pdb
@@ -38,4 +37,15 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.AssemblyInfo.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csproj.CoreCompileInputs.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.pdb
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Charts.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Button.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Controls.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\DataTemplate.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\ItemsControl.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csprojAssemblyReference.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Button.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Charts.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Controls.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\DataTemplate.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\ItemsControl.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csprojAssemblyReference.cache

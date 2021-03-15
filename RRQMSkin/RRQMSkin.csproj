@@ -17,8 +17,8 @@
     </Description>
     <PackageProjectUrl>https://github.com/RRQM/RRQMSkinDemo</PackageProjectUrl>
     <Copyright>Copyright © 2020 若汝棋茗</Copyright>
-    <Version>2.0.6</Version>
-    <SignAssembly>false</SignAssembly>
+    <Version>2.0.8</Version>
+    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>
   </PropertyGroup>
@@ -35,11 +35,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\iconfont.ttf" />
     <None Remove="Icons\RRQM.ico" />
-    <None Remove="Icons\关闭.png" />
-    <None Remove="Icons\最大化.png" />
-    <None Remove="Icons\最小化.png" />
-    <None Remove="Icons\正常.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,11 +51,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="RRQMMVVM" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\iconfont.ttf" />
     <Resource Include="Icons\RRQM.ico" />
-    <Resource Include="Icons\关闭.png" />
-    <Resource Include="Icons\最大化.png" />
-    <Resource Include="Icons\最小化.png" />
-    <Resource Include="Icons\正常.png" />
   </ItemGroup>
 
 </Project>

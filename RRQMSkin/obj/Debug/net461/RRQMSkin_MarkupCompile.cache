@@ -4,17 +4,17 @@
 library
 C#
 .cs
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\
 RRQMSkin
 none
 false
 TRACE;DEBUG;NETFRAMEWORK;NET461;
 
-1-731644535
+6180429531
 
-35934845323
-191402361642
-Themes\Generic.xaml;
+46-1191675805
+20981810100
+Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
 
-False
+True
 

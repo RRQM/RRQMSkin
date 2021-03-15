@@ -1,20 +1,20 @@
 ﻿RRQMSkin
-2.0.6.0
+2.0.8.0
 
 library
 C#
 .cs
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net45\
 RRQMSkin
 none
 false
 TRACE;RELEASE;NETFRAMEWORK;NET45;
 
-1-731644535
+6575418305
 
-37484098936
-19-1315729206
-Themes\Generic.xaml;
+42-1685092845
+20-1516152862
+Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
 
 False
 

@@ -1,4 +1,14 @@
-﻿using System;
+//------------------------------------------------------------------------------
+//  此代码版权归作者本人若汝棋茗所有
+//  源代码使用协议遵循本仓库的开源协议，若本仓库没有设置，则按MIT开源协议授权
+//  CSDN博客：https://blog.csdn.net/qq_40374647
+//  哔哩哔哩视频：https://space.bilibili.com/94253567
+//  源代码仓库：https://gitee.com/RRQM_Home
+//  交流QQ群：234762506
+//  感谢您的下载和使用
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+using System;
 using System.Windows;
 using System.Windows.Media;
 
@@ -9,18 +19,7 @@ namespace RRQMSkin.Charts.Primitives
     /// </summary>
     public class Sector : RRQMShape
     {
-        /// <summary>
-        ///
-        /// </summary>
-        public Sector()
-        {
-            this.SizeChanged += Sector_SizeChanged;
-        }
 
-        private void Sector_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            this.InvalidateVisual();
-        }
 
         /// <summary>
         /// 最大环比例
@@ -113,21 +112,42 @@ namespace RRQMSkin.Charts.Primitives
         public static readonly DependencyProperty FillRuleProperty =
             DependencyProperty.Register("FillRule", typeof(FillRule), typeof(Sector), new PropertyMetadata(FillRule.Nonzero, OnChanged));
 
+
+
+
+        public double Offset
+        {
+            get { return (double)GetValue(OffsetProperty); }
+            set { SetValue(OffsetProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Offset.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty OffsetProperty =
+            DependencyProperty.Register("Offset", typeof(double), typeof(Sector), new PropertyMetadata(0.0, OnChanged));
+
+
+
         /// <summary>
         /// 获取绘图类型
         /// </summary>
         /// <returns></returns>
         protected override Geometry CreatGeometry()
         {
+            if (this.EndAngle<=this.StartAngle)
+            {
+                return null;
+            }
             double radius = Math.Min(this.ActualHeight, this.ActualWidth) / 2;
 
-            double widthRadius = this.ActualWidth / 2;
-            double heightRadius = this.ActualHeight / 2;
+            double meanAngle = (this.EndAngle - this.StartAngle)/2+this.StartAngle;
+
+            double widthRadius = this.ActualWidth / 2+(Offset* Math.Cos(meanAngle * Math.PI / 180)) ;
+            double heightRadius = this.ActualHeight / 2+ (Offset * Math.Sin(meanAngle * Math.PI / 180));
 
             if (radius > 0 && this.EndAngle - this.StartAngle < 360)
             {
-                double minRadius = this.MinRadiusRatio * radius;
-                double maxRadius = this.MaxRadiusRatio * radius;
+                double minRadius = this.MinRadiusRatio * radius ;
+                double maxRadius = this.MaxRadiusRatio * radius ;
 
                 Point p1 = new Point(minRadius * Math.Cos(StartAngle * Math.PI / 180) + widthRadius, minRadius * Math.Sin(StartAngle * Math.PI / 180) + heightRadius);
                 Point p2 = new Point(minRadius * Math.Cos(EndAngle * Math.PI / 180) + widthRadius, minRadius * Math.Sin(EndAngle * Math.PI / 180) + heightRadius);

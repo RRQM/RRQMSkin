@@ -1,17 +1,30 @@
-﻿namespace RRQMSkin.Controls
+//------------------------------------------------------------------------------
+//  此代码版权归作者本人若汝棋茗所有
+//  源代码使用协议遵循本仓库的开源协议，若本仓库没有设置，则按MIT开源协议授权
+//  CSDN博客：https://blog.csdn.net/qq_40374647
+//  哔哩哔哩视频：https://space.bilibili.com/94253567
+//  源代码仓库：https://gitee.com/RRQM_Home
+//  交流QQ群：234762506
+//  感谢您的下载和使用
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+using System.Windows.Input;
+using RRQMMVVM;
+
+namespace RRQMSkin.Controls
 {
-    public class XmlKeyAndValue : ModelBase
+    public class XmlKeyAndValue : ObservableObject
     {
         public XmlKeyAndValue()
         {
-            this.RemoveCommand = new Command(Remove);
+            this.RemoveCommand = new ExecuteCommand(Remove);
         }
 
         public event XmlEdit XmlEdited;
 
         public XmlTreeView Parent { get; set; }
 
-        public Command RemoveCommand { get; set; }
+        public ExecuteCommand RemoveCommand { get; set; }
 
         private string key;
 

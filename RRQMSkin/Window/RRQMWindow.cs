@@ -1,10 +1,21 @@
-﻿using System;
+//------------------------------------------------------------------------------
+//  此代码版权归作者本人若汝棋茗所有
+//  源代码使用协议遵循本仓库的开源协议，若本仓库没有设置，则按MIT开源协议授权
+//  CSDN博客：https://blog.csdn.net/qq_40374647
+//  哔哩哔哩视频：https://space.bilibili.com/94253567
+//  源代码仓库：https://gitee.com/RRQM_Home
+//  交流QQ群：234762506
+//  感谢您的下载和使用
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shell;
+using RRQMMVVM;
 
 namespace RRQMSkin.Windows
 {
@@ -23,29 +34,9 @@ namespace RRQMSkin.Windows
             this.Loaded += Windows_Loaded;
             base.Icon = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/Icons/RRQM.ico", UriKind.RelativeOrAbsolute));
 
-            Image minImage = new Image();
-            minImage.Width = minImage.Height = 15;
-            minImage.Source = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/icons/最小化.png", UriKind.RelativeOrAbsolute));
-            this.MinButtonContent = minImage;
-
-            Image maxImage = new Image();
-            maxImage.Width = maxImage.Height = 15;
-            maxImage.Source = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/icons/正常.png", UriKind.RelativeOrAbsolute));
-            this.MaxButtonContent = maxImage;
-
-            Image norImage = new Image();
-            norImage.Width = norImage.Height = 15;
-            norImage.Source = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/icons/最大化.png", UriKind.RelativeOrAbsolute));
-            this.NormalButtonContent = norImage;
-
-            Image cloImage = new Image();
-            cloImage.Width = cloImage.Height = 15;
-            cloImage.Source = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/icons/关闭.png", UriKind.RelativeOrAbsolute));
-            this.CloseButtonContent = cloImage;
-
-            MinWindowCommand = new Command(() => { this.WindowState = WindowState.Minimized; });
-            MaxOrNormalWindowCommand = new Command(() => { WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized; });
-            CloseWindowCommand = new Command(() => { this.Close(); });
+            MinWindowCommand = new ExecuteCommand(() => { this.WindowState = WindowState.Minimized; });
+            MaxOrNormalWindowCommand = new ExecuteCommand(() => { WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized; });
+            CloseWindowCommand = new ExecuteCommand(() => { this.Close(); });
 
             WindowChrome windowChrome = new WindowChrome();
             windowChrome.CaptionHeight = 0;
@@ -58,9 +49,9 @@ namespace RRQMSkin.Windows
             OnStateChanged(e);
         }
 
-        protected bool mRestoreForDragMove;
-        protected Grid titleGrid;
-        protected Border mainBorder;
+        private bool mRestoreForDragMove;
+        private Grid titleGrid;
+        private Border mainBorder;
 
         public override void OnApplyTemplate()
         {
@@ -105,68 +96,6 @@ namespace RRQMSkin.Windows
                 }
             }
         }
-
-        /// <summary>
-        /// 最小化按钮
-        /// </summary>
-        public object MinButtonContent
-        {
-            get { return (object)GetValue(MinButtonContentProperty); }
-            set { SetValue(MinButtonContentProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for MinButtonContent.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty MinButtonContentProperty =
-            DependencyProperty.Register("MinButtonContent", typeof(object), typeof(RRQMWindow), new PropertyMetadata("最小"));
-
-        /// <summary>
-        /// 最大化按钮
-        /// </summary>
-        public object MaxButtonContent
-        {
-            get { return (object)GetValue(MaxButtonContentProperty); }
-            set { SetValue(MaxButtonContentProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for MaxOrNormalButtonContent.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty MaxButtonContentProperty =
-            DependencyProperty.Register("MaxButtonContent", typeof(object), typeof(RRQMWindow), new PropertyMetadata("最大"));
-
-        /// <summary>
-        /// 正常化按钮
-        /// </summary>
-        public object NormalButtonContent
-        {
-            get { return (object)GetValue(NormalButtonContentProperty); }
-            set { SetValue(NormalButtonContentProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for NormalButtonContent.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty NormalButtonContentProperty =
-            DependencyProperty.Register("NormalButtonContent", typeof(object), typeof(RRQMWindow), new PropertyMetadata("正常"));
-
-        public object MaxOrNormalContent
-        {
-            get { return (object)GetValue(MaxOrNormalContentProperty); }
-            private set { SetValue(MaxOrNormalContentProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for MaxOrNormalContent.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty MaxOrNormalContentProperty =
-            DependencyProperty.Register("MaxOrNormalContent", typeof(object), typeof(RRQMWindow), new PropertyMetadata(null));
-
-        /// <summary>
-        /// 关闭按钮
-        /// </summary>
-        public object CloseButtonContent
-        {
-            get { return (object)GetValue(CloseButtonContentProperty); }
-            set { SetValue(CloseButtonContentProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for CloseButtonContent.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty CloseButtonContentProperty =
-            DependencyProperty.Register("CloseButtonContent", typeof(object), typeof(RRQMWindow), new PropertyMetadata("关闭"));
 
         /// <summary>
         /// 窗口头信息
@@ -233,9 +162,9 @@ namespace RRQMSkin.Windows
 
         #region Command
 
-        public Command MinWindowCommand { get; set; }
-        public Command MaxOrNormalWindowCommand { get; set; }
-        public Command CloseWindowCommand { get; set; }
+        public ExecuteCommand MinWindowCommand { get; set; }
+        public ExecuteCommand MaxOrNormalWindowCommand { get; set; }
+        public ExecuteCommand CloseWindowCommand { get; set; }
 
         #endregion Command
 
@@ -248,14 +177,12 @@ namespace RRQMSkin.Windows
                     this.MaxHeight = SystemParameters.WorkArea.Height + 16;
                     this.BorderThickness = new Thickness(5); //最大化后需要调整
 
-                    this.MaxOrNormalContent = this.MaxButtonContent;
                     break;
 
                 case WindowState.Normal:
                     this.BorderThickness = new Thickness(0);
                     this.MaxWidth = SystemParameters.WorkArea.Width + 16;
                     this.MaxHeight = SystemParameters.WorkArea.Height + 16;
-                    this.MaxOrNormalContent = this.NormalButtonContent;
                     break;
             }
         }
