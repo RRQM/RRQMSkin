@@ -38,4 +38,3 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.dll
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.pdb
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csprojAssemblyReference.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMCore.dll
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csprojAssemblyReference.cache

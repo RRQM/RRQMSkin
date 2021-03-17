@@ -48,4 +48,3 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Controls.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\DataTemplate.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\ItemsControl.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csprojAssemblyReference.cache
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csprojAssemblyReference.cache
