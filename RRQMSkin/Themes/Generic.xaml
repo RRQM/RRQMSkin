@@ -126,14 +126,14 @@
                                 </Grid>
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
                                     <Button Name="minButton" Content="&#xe622;"
-                                                Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                Style="{StaticResource iconButtom}" />
+                                            Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Style="{StaticResource iconButtom}" />
                                     <Button Name="maxOrNormalButton"
-                                                Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                Style="{StaticResource iconButtom}" />
+                                            Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Style="{StaticResource iconButtom}" />
                                     <Button Name="closeButton" Content="&#xe62c;"
-                                                Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                Style="{StaticResource iconButtom}" />
+                                            Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Style="{StaticResource iconButtom}" />
                                 </StackPanel>
                             </Grid>
                             <AdornerDecorator x:Name="content" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

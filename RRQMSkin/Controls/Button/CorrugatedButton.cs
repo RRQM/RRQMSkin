@@ -30,9 +30,6 @@ namespace RRQMSkin.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(CorrugatedButton), new FrameworkPropertyMetadata(typeof(CorrugatedButton)));
         }
 
-        /// <summary>
-        ///
-        /// </summary>
         public CorrugatedButton()
         {
             this.Click += CorrugatedButton_Click;

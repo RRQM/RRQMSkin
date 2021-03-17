@@ -116,7 +116,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type control:RoundProgressBar}">
                     <Viewbox>
-                        <Grid Width="100" Height="100">
+                        <Grid Height="100" Width="100">
                             <primitive:Sector EndAngle="360"
                                               Fill="{TemplateBinding Background}"
                                               MaxRadiusRatio="1" MinRadiusRatio="0.7" StartAngle="0" Stroke="Transparent" />
@@ -376,7 +376,8 @@
                             <control:InputBox Text="{Binding Text, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                               Margin="20,0" VerticalAlignment="Center" Background="Transparent" BorderThickness="0"
                                               InputFilter="{TemplateBinding InputFilter}" />
-                            <Button x:Name="commandButton" Width="25" Margin="0,-3,0,0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"
+                            <Button x:Name="commandButton" Width="25" Grid.Column="1" Margin="0,-3,0,0" HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
                                     Style="{StaticResource noneButtom}">
                                 <Viewbox>
                                     <Path Data="M864 800l-179.2-179.2c32-44.8 51.2-99.2 51.2-156.8C736 313.6 614.4 192 464 192S192 313.6 192 464 313.6 736 464                                            736c57.6 0 112-19.2 156.8-51.2L800 864c16 16 44.8 16 64 0l0 0C883.2 844.8 883.2 819.2 864 800zM464 672C348.8 672 256                                           579.2 256 464S348.8 256 464 256s208 92.8 208 208S579.2 672 464 672z" Fill="#C2C3C9" />
