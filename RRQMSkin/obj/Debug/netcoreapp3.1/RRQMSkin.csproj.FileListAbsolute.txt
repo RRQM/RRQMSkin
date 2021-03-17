@@ -42,7 +42,6 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Button.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Controls.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\DataTemplate.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\ItemsControl.baml
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csprojAssemblyReference.cache
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Button.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Charts.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Themes\Controls.baml

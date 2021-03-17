@@ -8,12 +8,7 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -32,6 +27,10 @@ namespace RRQMSkin.Controls
             this.InvalidateMeasure();
             this.InvalidateVisual();
         }
+
+        /// <summary>
+        /// 是否在设计器模式
+        /// </summary>
         public bool IsInDesignMode
         {
             get { return DesignerProperties.GetIsInDesignMode(this); }

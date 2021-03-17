@@ -8,7 +8,6 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls.Primitives;
 using RRQMSkin.Charts.Primitives;
@@ -25,14 +24,15 @@ namespace RRQMSkin.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(RoundProgressBar), new FrameworkPropertyMetadata(typeof(RoundProgressBar)));
         }
 
-        Sector sector;
+        private Sector sector;
+
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
 
             sector = (Sector)this.Template.FindName("sector", this);
-
         }
+
         /// <summary>
         ///
         /// </summary>

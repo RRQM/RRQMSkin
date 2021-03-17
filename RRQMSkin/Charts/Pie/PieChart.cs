@@ -9,11 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using System;
-using System.Collections;
-using System.Collections.Specialized;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Media.Animation;
 using RRQMSkin.Charts.Primitives;
 
@@ -34,6 +30,7 @@ namespace RRQMSkin.Charts
         {
             Console.WriteLine(this.ItemContainerStyle);
         }
+
         static PieChart()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(PieChart), new FrameworkPropertyMetadata(typeof(PieChart)));
@@ -61,6 +58,7 @@ namespace RRQMSkin.Charts
         {
             return item is PieChartItem;
         }
+
         protected override void PrepareContainerForItemOverride(DependencyObject element, object item)
         {
             base.PrepareContainerForItemOverride(element, item);
@@ -143,7 +141,6 @@ namespace RRQMSkin.Charts
                 sum += item.Value;
             }
 
-
             double start = this.StartAngle;
 
             for (int i = 0; i < this.Items.Count; i++)
@@ -183,7 +180,6 @@ namespace RRQMSkin.Charts
                         item.sector.StartAngle = 0;
                         item.sector.EndAngle = 360;
                     }
-
                 }
             }
         }
@@ -198,8 +194,6 @@ namespace RRQMSkin.Charts
         public static readonly DependencyProperty StartAngleProperty =
             DependencyProperty.Register("StartAngle", typeof(double), typeof(PieChart), new PropertyMetadata(0.0, OnStartAngleChanged));
 
-
-
         public bool IsAnimation
         {
             get { return (bool)GetValue(IsAnimationProperty); }
@@ -209,7 +203,6 @@ namespace RRQMSkin.Charts
         // Using a DependencyProperty as the backing store for IsAnimation.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty IsAnimationProperty =
             DependencyProperty.Register("IsAnimation", typeof(bool), typeof(PieChart), new PropertyMetadata(true));
-
 
         private static void OnStartAngleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {

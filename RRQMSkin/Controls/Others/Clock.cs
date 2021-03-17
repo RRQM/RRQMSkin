@@ -11,7 +11,6 @@
 using System;
 using System.ComponentModel;
 using System.Windows;
-using System.Windows.Controls;
 using RRQMSkin.Charts.Primitives;
 
 namespace RRQMSkin.Controls
@@ -26,17 +25,12 @@ namespace RRQMSkin.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Clock), new FrameworkPropertyMetadata(typeof(Clock)));
         }
 
-        /// <summary>
-        ///
-        /// </summary>
-      
-
+     
         private Pointer secondPointer;
         private Pointer minutePointer;
         private Pointer hourPointer;
-        /// <summary>
-        ///
-        /// </summary>
+
+      
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();

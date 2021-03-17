@@ -8,10 +8,7 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System;
 using System.ComponentModel;
-using System.Threading.Tasks;
-using System.Timers;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Shapes;
@@ -40,6 +37,7 @@ namespace RRQMSkin.Charts.Primitives
         {
             this.InvalidateVisual();
         }
+
         /// <summary>
         ///
         /// </summary>

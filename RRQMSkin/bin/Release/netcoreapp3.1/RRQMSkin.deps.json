@@ -6,36 +6,54 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "RRQMSkin/2.0.8": {
+      "RRQMSkin/2.1.0": {
         "dependencies": {
-          "RRQMMVVM": "2.0.3"
+          "RRQMMVVM": "2.1.0"
         },
         "runtime": {
           "RRQMSkin.dll": {}
         }
       },
-      "RRQMMVVM/2.0.3": {
+      "RRQMCore/1.2.2": {
+        "runtime": {
+          "lib/netcoreapp3.1/RRQMCore.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.2.2.0"
+          }
+        }
+      },
+      "RRQMMVVM/2.1.0": {
+        "dependencies": {
+          "RRQMCore": "1.2.2"
+        },
         "runtime": {
           "lib/netcoreapp3.1/RRQMMVVM.dll": {
-            "assemblyVersion": "2.0.3.0",
-            "fileVersion": "2.0.3.0"
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       }
     }
   },
   "libraries": {
-    "RRQMSkin/2.0.8": {
+    "RRQMSkin/2.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "RRQMMVVM/2.0.3": {
+    "RRQMCore/1.2.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sSofn6aIkvhEVN0tEuUVeWniZ6Rl3NGZBSjzlWzcCS7sHAxWCKN1Iw/0XK/FXrHNv+nhoqAgZT2DyPmAq+EgxA==",
-      "path": "rrqmmvvm/2.0.3",
-      "hashPath": "rrqmmvvm.2.0.3.nupkg.sha512"
+      "sha512": "sha512-ncWOOpRvCmXzq7Hvo1VcG261f5YZwu0YS7ao3Q05PfEe5twaoqEBfEQKXWXU/lRk9sEKhd0mUSp/VdQRFhditQ==",
+      "path": "rrqmcore/1.2.2",
+      "hashPath": "rrqmcore.1.2.2.nupkg.sha512"
+    },
+    "RRQMMVVM/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jPMs/6UCImQvOvgr8fzAVtmqqfaGdwHPUqSYXEfGDA9HTDuow/re3bWXcg0B9o7PvXwqPy8MkU1EgZNtSpHkGA==",
+      "path": "rrqmmvvm/2.1.0",
+      "hashPath": "rrqmmvvm.2.1.0.nupkg.sha512"
     }
   }
 }

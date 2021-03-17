@@ -6,8 +6,6 @@
     <Authors>若汝棋茗</Authors>
     <PackageIcon>RRQM.png</PackageIcon>
     <Description>
-      此程序集是一个WPF控件库，交流联系作者QQ:505554090
-
       更新内容：
       1.添加Windows控件
       2.添加提示文本框控件，添加属性输入筛选，可筛选数字，汉字，手机号，身份证号,IP等
@@ -16,11 +14,13 @@
       5.增加SearchBox控件
     </Description>
     <PackageProjectUrl>https://github.com/RRQM/RRQMSkinDemo</PackageProjectUrl>
-    <Copyright>Copyright © 2020 若汝棋茗</Copyright>
-    <Version>2.0.8</Version>
+    <Copyright>Copyright © 2021 若汝棋茗</Copyright>
+    <Version>2.1.0</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +30,10 @@
     <EmbeddedResource Remove="Text\**" />
     <None Remove="MVVM\**" />
     <None Remove="Text\**" />
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
     <Page Remove="MVVM\**" />
     <Page Remove="Text\**" />
   </ItemGroup>
@@ -51,7 +55,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="RRQMMVVM" Version="2.0.3" />
+    <PackageReference Include="RRQMMVVM" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -23,14 +23,13 @@ namespace RRQMSkin.Charts.Primitives
     /// </summary>
     public class DialText : RRQMControl
     {
-
         /// <summary>
         ///
         /// </summary>
         /// <param name="drawingContext"></param>
         protected sealed override void OnRender(DrawingContext drawingContext)
         {
-            if (this.Text == null||this.Text.Length==0)
+            if (this.Text == null || this.Text.Length == 0)
             {
                 return;
             }

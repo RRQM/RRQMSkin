@@ -4,16 +4,16 @@
 library
 C#
 .cs
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net45\
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\
 RRQMSkin
 none
 false
 TRACE;RELEASE;NETFRAMEWORK;NET45;
 
-6575418305
+6180429531
 
-40-1234346458
-20-1516152862
+42-1260439438
+211115163625
 Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
 
 False

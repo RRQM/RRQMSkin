@@ -8,10 +8,7 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System;
 using System.Windows;
-using System.Windows.Controls;
-using RRQMSkin.Charts.Primitives;
 
 namespace RRQMSkin.Controls
 {
@@ -25,14 +22,12 @@ namespace RRQMSkin.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SpeedDial), new FrameworkPropertyMetadata(typeof(SpeedDial)));
         }
 
-       
         /// <summary>
         ///
         /// </summary>
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-          
         }
 
         /// <summary>

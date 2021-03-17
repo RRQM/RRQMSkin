@@ -8,15 +8,8 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 using RRQMSkin.Charts.Primitives;
 using RRQMSkin.DragDrop;
 
@@ -32,7 +25,6 @@ namespace RRQMSkin.Charts
         public PieChartItem()
         {
             this.Loaded += this.PieChartItem_Loaded;
-
         }
 
         private void PieChartItem_Loaded(object sender, RoutedEventArgs e)
@@ -42,6 +34,7 @@ namespace RRQMSkin.Charts
 
         internal Sector sector;
         internal DialText dialText;
+
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
@@ -59,9 +52,6 @@ namespace RRQMSkin.Charts
         public static readonly DependencyProperty ValueProperty =
             DependencyProperty.Register("Value", typeof(double), typeof(PieChartItem), new PropertyMetadata(1.0, OnValueChanged));
 
-
-
-
         public string Text
         {
             get { return (string)GetValue(TextProperty); }
@@ -71,8 +61,6 @@ namespace RRQMSkin.Charts
         // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextProperty =
             DependencyProperty.Register("Text", typeof(string), typeof(PieChartItem), new PropertyMetadata(null));
-
-
 
         private static void OnValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -89,7 +77,6 @@ namespace RRQMSkin.Charts
             {
                 pieChart.UpdataChart();
             }
-
         }
     }
 }

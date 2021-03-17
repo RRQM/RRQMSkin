@@ -50,3 +50,5 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\Themes\DataTemplate.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\Themes\ItemsControl.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csproj.CopyComplete
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csprojAssemblyReference.cache
+D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net45\RRQMCore.dll
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csprojAssemblyReference.cache

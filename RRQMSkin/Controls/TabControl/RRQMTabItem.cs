@@ -9,7 +9,6 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using System.Windows.Controls;
-using System.Windows.Input;
 using RRQMMVVM;
 
 namespace RRQMSkin.Controls

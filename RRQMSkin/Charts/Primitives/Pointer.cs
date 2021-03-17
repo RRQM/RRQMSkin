@@ -19,7 +19,6 @@ namespace RRQMSkin.Charts.Primitives
     /// </summary>
     public class Pointer : RRQMShape
     {
-       
         /// <summary>
         ///
         /// </summary>

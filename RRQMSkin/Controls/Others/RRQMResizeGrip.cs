@@ -8,11 +8,6 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -20,7 +15,6 @@ namespace RRQMSkin.Controls
 {
     public class RRQMResizeGrip : Decorator
     {
-
         public bool ResizeGripEnable
         {
             get { return (bool)GetValue(ResizeGripEnableProperty); }
@@ -30,7 +24,5 @@ namespace RRQMSkin.Controls
         // Using a DependencyProperty as the backing store for ResizeGripEnable.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ResizeGripEnableProperty =
             DependencyProperty.Register("ResizeGripEnable", typeof(bool), typeof(RRQMResizeGrip), new PropertyMetadata(false));
-
-
     }
 }

@@ -25,7 +25,6 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.dll
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.pdb
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Release\net45\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Release\net45\RRQMSkin.pdb
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.csprojAssemblyReference.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\GeneratedInternalTypeHelper.g.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin_MarkupCompile.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin_MarkupCompile.lref
@@ -51,3 +50,4 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net45\Themes\DataTemplate.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net45\Themes\ItemsControl.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.csproj.CopyComplete
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net45\RRQMSkin.csprojAssemblyReference.cache
+D:\OpenCode\RRQMSkin\RRQMSkin\bin\Release\net45\RRQMCore.dll

@@ -2,8 +2,23 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "RRQMMVVM/2.0.3": {
+      "RRQMCore/1.2.2": {
         "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/RRQMCore.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/RRQMCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "RRQMMVVM/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "RRQMCore": "1.2.2"
+        },
         "compile": {
           "lib/netcoreapp3.1/RRQMMVVM.dll": {}
         },
@@ -16,8 +31,20 @@
       }
     },
     ".NETFramework,Version=v4.5": {
-      "RRQMMVVM/2.0.3": {
+      "RRQMCore/1.2.2": {
         "type": "package",
+        "compile": {
+          "lib/net45/RRQMCore.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RRQMCore.dll": {}
+        }
+      },
+      "RRQMMVVM/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "RRQMCore": "1.2.2"
+        },
         "compile": {
           "lib/net45/RRQMMVVM.dll": {}
         },
@@ -27,8 +54,20 @@
       }
     },
     ".NETFramework,Version=v4.6.1": {
-      "RRQMMVVM/2.0.3": {
+      "RRQMCore/1.2.2": {
         "type": "package",
+        "compile": {
+          "lib/net45/RRQMCore.dll": {}
+        },
+        "runtime": {
+          "lib/net45/RRQMCore.dll": {}
+        }
+      },
+      "RRQMMVVM/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "RRQMCore": "1.2.2"
+        },
         "compile": {
           "lib/net45/RRQMMVVM.dll": {}
         },
@@ -39,53 +78,76 @@
     }
   },
   "libraries": {
-    "RRQMMVVM/2.0.3": {
-      "sha512": "sSofn6aIkvhEVN0tEuUVeWniZ6Rl3NGZBSjzlWzcCS7sHAxWCKN1Iw/0XK/FXrHNv+nhoqAgZT2DyPmAq+EgxA==",
+    "RRQMCore/1.2.2": {
+      "sha512": "ncWOOpRvCmXzq7Hvo1VcG261f5YZwu0YS7ao3Q05PfEe5twaoqEBfEQKXWXU/lRk9sEKhd0mUSp/VdQRFhditQ==",
       "type": "package",
-      "path": "rrqmmvvm/2.0.3",
+      "path": "rrqmcore/1.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "LICENSE",
+        "RRQM.png",
+        "lib/net45/RRQMCore.dll",
+        "lib/net45/RRQMCore.xml",
+        "lib/netcoreapp3.1/RRQMCore.dll",
+        "lib/netcoreapp3.1/RRQMCore.xml",
+        "lib/netstandard2.0/RRQMCore.dll",
+        "lib/netstandard2.0/RRQMCore.xml",
+        "rrqmcore.1.2.2.nupkg.sha512",
+        "rrqmcore.nuspec"
+      ]
+    },
+    "RRQMMVVM/2.1.0": {
+      "sha512": "jPMs/6UCImQvOvgr8fzAVtmqqfaGdwHPUqSYXEfGDA9HTDuow/re3bWXcg0B9o7PvXwqPy8MkU1EgZNtSpHkGA==",
+      "type": "package",
+      "path": "rrqmmvvm/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
         "RRQM.png",
         "lib/net45/RRQMMVVM.dll",
         "lib/netcoreapp3.1/RRQMMVVM.dll",
-        "rrqmmvvm.2.0.3.nupkg.sha512",
+        "rrqmmvvm.2.1.0.nupkg.sha512",
         "rrqmmvvm.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "RRQMMVVM >= 2.0.3"
+      "RRQMMVVM >= 2.1.0"
     ],
     ".NETFramework,Version=v4.5": [
-      "RRQMMVVM >= 2.0.3"
+      "RRQMMVVM >= 2.1.0"
     ],
     ".NETFramework,Version=v4.6.1": [
-      "RRQMMVVM >= 2.0.3"
+      "RRQMMVVM >= 2.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\17516\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\carywang\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "2.0.8",
+    "version": "2.1.0",
     "restore": {
-      "projectUniqueName": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+      "projectUniqueName": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
       "projectName": "RRQMSkin",
-      "projectPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
-      "packagesPath": "C:\\Users\\17516\\.nuget\\packages\\",
-      "outputPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\obj\\",
+      "projectPath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+      "packagesPath": "C:\\Users\\carywang\\.nuget\\packages\\",
+      "outputPath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\17516\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\carywang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net45",
@@ -122,7 +184,7 @@
         "dependencies": {
           "RRQMMVVM": {
             "target": "Package",
-            "version": "[2.0.3, )"
+            "version": "[2.1.0, )"
           }
         },
         "imports": [
@@ -150,7 +212,7 @@
         "dependencies": {
           "RRQMMVVM": {
             "target": "Package",
-            "version": "[2.0.3, )"
+            "version": "[2.1.0, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
@@ -160,7 +222,7 @@
         "dependencies": {
           "RRQMMVVM": {
             "target": "Package",
-            "version": "[2.0.3, )"
+            "version": "[2.1.0, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"

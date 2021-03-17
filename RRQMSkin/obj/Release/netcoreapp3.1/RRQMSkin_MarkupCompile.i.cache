@@ -1,19 +1,19 @@
 ﻿RRQMSkin
-2.0.8.0
+2.1.0.0
 
 library
 C#
 .cs
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\
 RRQMSkin
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
 
-6575418305
+6180429531
 
-422093455689
-1931769626244
+441759845397
+194-1852926616
 Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
 
 False

@@ -19,7 +19,7 @@ using RRQMMVVM;
 
 namespace RRQMSkin.Windows
 {
-    public class RRQMWindow :System.Windows.Window
+    public class RRQMWindow : System.Windows.Window
     {
         static RRQMWindow()
         {

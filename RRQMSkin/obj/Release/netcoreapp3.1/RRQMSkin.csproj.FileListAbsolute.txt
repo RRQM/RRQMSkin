@@ -28,7 +28,6 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin.pdb
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Release\netcoreapp3.1\RRQMSkin.deps.json
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Release\netcoreapp3.1\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Release\netcoreapp3.1\RRQMSkin.pdb
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin.csprojAssemblyReference.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin_MarkupCompile.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Release\netcoreapp3.1\RRQMSkin_MarkupCompile.lref

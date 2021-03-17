@@ -133,6 +133,7 @@ namespace RRQMSkin.Windows
         #region Methods
 
         private Border mainBorder;
+
         /// <summary>
         ///
         /// </summary>

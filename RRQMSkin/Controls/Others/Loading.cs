@@ -9,9 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using System;
-using System.ComponentModel;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using RRQMSkin.Charts.Primitives;
@@ -38,8 +36,6 @@ namespace RRQMSkin.Controls
             base.OnApplyTemplate();
             this.sector = (Sector)this.Template.FindName("sector", this);
         }
-
-
 
         /// <summary>
         /// 前景色
@@ -132,14 +128,14 @@ namespace RRQMSkin.Controls
                         animation.Duration = loading.Duration;
 
                         RotateTransform rotateTransform = new RotateTransform();
-                        rotateTransform.CenterX = loading.ActualWidth/2;
-                        rotateTransform.CenterY = loading.ActualHeight/2;
+                        rotateTransform.CenterX = loading.ActualWidth / 2;
+                        rotateTransform.CenterY = loading.ActualHeight / 2;
                         loading.sector.RenderTransform = rotateTransform;
-                        rotateTransform.BeginAnimation(RotateTransform.AngleProperty,animation);
+                        rotateTransform.BeginAnimation(RotateTransform.AngleProperty, animation);
                     }
                     else
                     {
-                        loading.sector.RenderTransform=null;
+                        loading.sector.RenderTransform = null;
                     }
                 }
             }

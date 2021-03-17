@@ -36,3 +36,4 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net461\RRQMSkin.csproj.CoreCompileInpu
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net461\RRQMSkin.csproj.CopyComplete
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net461\RRQMSkin.dll
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Release\net461\RRQMSkin.pdb
+D:\OpenCode\RRQMSkin\RRQMSkin\bin\Release\net461\RRQMCore.dll
