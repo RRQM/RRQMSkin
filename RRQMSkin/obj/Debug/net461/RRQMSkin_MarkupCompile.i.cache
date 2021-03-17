@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\
 RRQMSkin
 none
 false
@@ -13,7 +13,7 @@ TRACE;DEBUG;NETFRAMEWORK;NET461;
 6180429531
 
 45-830267455
-211918795244
+21-1317785548
 Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
 
 False
