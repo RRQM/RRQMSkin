@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {}
+    "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {}
   },
   "projects": {
-    "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {
+    "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj": {
       "version": "2.1.0",
       "restore": {
-        "projectUniqueName": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+        "projectUniqueName": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
         "projectName": "RRQMSkin",
-        "projectPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
-        "packagesPath": "C:\\Users\\17516\\.nuget\\packages\\",
-        "outputPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\obj\\",
+        "projectPath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+        "packagesPath": "C:\\Users\\carywang\\.nuget\\packages\\",
+        "outputPath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\17516\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carywang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
