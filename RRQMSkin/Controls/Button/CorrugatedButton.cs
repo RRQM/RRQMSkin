@@ -34,7 +34,7 @@ namespace RRQMSkin.Controls
         {
             this.Click += CorrugatedButton_Click;
             this.Loaded += CorrugatedButton_Loaded;
-            this.SizeChanged += CorrugatedButton_SizeChanged; 
+            this.SizeChanged += CorrugatedButton_SizeChanged;  
             this.MouseLeave += CorrugatedButton_MouseLeave;
             this.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#05BBFB"));
             this.Content = "按钮";
