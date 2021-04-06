@@ -4,7 +4,7 @@
 library
 C#
 .cs
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\
 RRQMSkin
 none
 false
@@ -13,8 +13,8 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 6180429531
 
 451044783569
-194-122232365
+192-1533232326
 Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
 
-False
+True
 
