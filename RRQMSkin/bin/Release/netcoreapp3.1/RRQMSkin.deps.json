@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "RRQMSkin/2.1.1": {
+      "RRQMSkin/2.1.2": {
         "dependencies": {
           "RRQMMVVM": "2.1.0"
         },
@@ -36,7 +36,7 @@
     }
   },
   "libraries": {
-    "RRQMSkin/2.1.1": {
+    "RRQMSkin/2.1.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
