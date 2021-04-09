@@ -12,10 +12,11 @@
       3.完善窗体设置
       4.增加双击可编辑的TextBlock
       5.增加SearchBox控件
+      6.增加样式资源
     </Description>
-    <PackageProjectUrl>https://github.com/RRQM/RRQMSkinDemo</PackageProjectUrl>
+    <PackageProjectUrl>https://gitee.com/RRQM_OS/WPFSkinSharer</PackageProjectUrl>
     <Copyright>Copyright © 2021 若汝棋茗</Copyright>
-    <Version>2.1.0</Version>
+    <Version>2.1.1</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>

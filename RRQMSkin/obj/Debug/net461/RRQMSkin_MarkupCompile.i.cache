@@ -1,5 +1,5 @@
 ﻿RRQMSkin
-2.1.0.0
+2.1.1.0
 
 library
 C#
@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETFRAMEWORK;NET461;
 
-6180429531
+7-1645681098
 
 45-830267455
 211918795244
-Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
+Style\TextBox.xaml;Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
 
-True
+False
 
