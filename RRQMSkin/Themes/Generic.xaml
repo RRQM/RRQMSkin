@@ -1,15 +1,13 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:control="clr-namespace:RRQMSkin.Controls"
-                    xmlns:primitive="clr-namespace:RRQMSkin.Charts.Primitives"
                     xmlns:windows="clr-namespace:RRQMSkin.Windows">
-    <ResourceDictionary.MergedDictionaries>
+    <!--<ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/RRQMSkin;component/Themes/Charts.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RRQMSkin;component/Themes/Button.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RRQMSkin;component/Themes/Controls.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RRQMSkin;component/Themes/DataTemplate.xaml" />
         <ResourceDictionary Source="pack://application:,,,/RRQMSkin;component/Themes/ItemsControl.xaml" />
-    </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary.MergedDictionaries>-->
 
 
     <Style TargetType="{x:Type windows:RRQMEffectWindow}">

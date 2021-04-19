@@ -33,11 +33,10 @@ namespace RRQMSkin.Controls
         /// </summary>
         public override void OnApplyTemplate()
         {
-            if (this.Template!=null)
+            if (this.Template != null)
             {
                 this.sector = (Sector)this.Template.FindName("sector", this);
             }
-           
         }
 
         /// <summary>

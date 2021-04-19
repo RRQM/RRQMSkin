@@ -10,9 +10,6 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
@@ -26,7 +23,6 @@ namespace RRQMSkin.Controls
         /// </summary>
         private void ShowGifByAnimate(string filePath)
         {
-
             List<BitmapFrame> frameList = new List<BitmapFrame>();
             GifBitmapDecoder decoder = new GifBitmapDecoder(
                               new Uri(filePath, UriKind.RelativeOrAbsolute),
@@ -51,8 +47,6 @@ namespace RRQMSkin.Controls
                 Storyboard.SetTargetProperty(objKeyAnimate, new PropertyPath("(Image.Source)"));
                 board.Begin();
             }
-
         }
-
     }
 }

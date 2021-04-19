@@ -24,7 +24,6 @@
         ],
         "originalTargetFrameworks": [
           "net45",
-          "net461",
           "netcoreapp3.1"
         ],
         "sources": {
@@ -38,10 +37,6 @@
           },
           "net45": {
             "targetAlias": "net45",
-            "projectReferences": {}
-          },
-          "net461": {
-            "targetAlias": "net461",
             "projectReferences": {}
           }
         },
@@ -78,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         },
         "net45": {
           "targetAlias": "net45",
@@ -88,17 +83,7 @@
               "version": "[2.1.0, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
-        },
-        "net461": {
-          "targetAlias": "net461",
-          "dependencies": {
-            "RRQMMVVM": {
-              "target": "Package",
-              "version": "[2.1.0, )"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

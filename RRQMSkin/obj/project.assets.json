@@ -52,29 +52,6 @@
           "lib/net45/RRQMMVVM.dll": {}
         }
       }
-    },
-    ".NETFramework,Version=v4.6.1": {
-      "RRQMCore/1.2.2": {
-        "type": "package",
-        "compile": {
-          "lib/net45/RRQMCore.dll": {}
-        },
-        "runtime": {
-          "lib/net45/RRQMCore.dll": {}
-        }
-      },
-      "RRQMMVVM/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "RRQMCore": "1.2.2"
-        },
-        "compile": {
-          "lib/net45/RRQMMVVM.dll": {}
-        },
-        "runtime": {
-          "lib/net45/RRQMMVVM.dll": {}
-        }
-      }
     }
   },
   "libraries": {
@@ -119,9 +96,6 @@
     ],
     ".NETFramework,Version=v4.5": [
       "RRQMMVVM >= 2.1.0"
-    ],
-    ".NETFramework,Version=v4.6.1": [
-      "RRQMMVVM >= 2.1.0"
     ]
   },
   "packageFolders": {
@@ -148,7 +122,6 @@
       ],
       "originalTargetFrameworks": [
         "net45",
-        "net461",
         "netcoreapp3.1"
       ],
       "sources": {
@@ -162,10 +135,6 @@
         },
         "net45": {
           "targetAlias": "net45",
-          "projectReferences": {}
-        },
-        "net461": {
-          "targetAlias": "net461",
           "projectReferences": {}
         }
       },
@@ -202,7 +171,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       },
       "net45": {
         "targetAlias": "net45",
@@ -212,17 +181,7 @@
             "version": "[2.1.0, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
-      },
-      "net461": {
-        "targetAlias": "net461",
-        "dependencies": {
-          "RRQMMVVM": {
-            "target": "Package",
-            "version": "[2.1.0, )"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

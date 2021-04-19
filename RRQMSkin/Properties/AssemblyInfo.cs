@@ -8,14 +8,15 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Markup;
 
-[assembly: XmlnsDefinitionAttribute("若汝棋茗_Windows", "RRQMSkin.Windows")]
-[assembly: XmlnsDefinitionAttribute("若汝棋茗_Controls", "RRQMSkin.Controls")]
-[assembly: XmlnsDefinitionAttribute("若汝棋茗_DragDrop", "RRQMSkin.DragDrop")]
-[assembly: XmlnsDefinitionAttribute("若汝棋茗_Charts", "RRQMSkin.Charts")]
-[assembly: XmlnsDefinitionAttribute("若汝棋茗_Primitives", "RRQMSkin.Charts.Primitives")]
+[assembly: XmlnsDefinitionAttribute("RRQM_Windows", "RRQMSkin.Windows")]
+[assembly: XmlnsDefinitionAttribute("RRQM_Controls", "RRQMSkin.Controls")]
+[assembly: XmlnsDefinitionAttribute("RRQM_DragDrop", "RRQMSkin.DragDrop")]
+[assembly: XmlnsDefinitionAttribute("RRQM_Charts", "RRQMSkin.Charts")]
+[assembly: XmlnsDefinitionAttribute("RRQM_Primitives", "RRQMSkin.Charts.Primitives")]
 [assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
                                      //(used if a resource is not found in the page,
@@ -24,3 +25,6 @@ using System.Windows.Markup;
                                               //(used if a resource is not found in the page,
                                               // app, or any theme specific resource dictionaries)
 )]
+[assembly: ComVisible(false)]
+
+[assembly: Guid("d27dd63d-6040-4713-985d-6e799e09d651")]

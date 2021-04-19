@@ -23,6 +23,7 @@ D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net45\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net45\RRQMSkin.pdb
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net45\RRQMCore.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net45\RRQMMVVM.dll
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Style\TextBox.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\GeneratedInternalTypeHelper.g.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin_MarkupCompile.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin_MarkupCompile.lref
@@ -39,4 +40,3 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csproj.CoreCompileInputs.
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csproj.CopyComplete
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.pdb
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Style\TextBox.baml

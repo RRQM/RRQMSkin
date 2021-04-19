@@ -25,12 +25,10 @@ namespace RRQMSkin.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Clock), new FrameworkPropertyMetadata(typeof(Clock)));
         }
 
-     
         private Pointer secondPointer;
         private Pointer minutePointer;
         private Pointer hourPointer;
 
-      
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();

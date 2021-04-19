@@ -20,6 +20,7 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csprojAssemblyRef
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\netcoreapp3.1\RRQMSkin.deps.json
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\netcoreapp3.1\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\netcoreapp3.1\RRQMSkin.pdb
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Style\TextBox.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin_MarkupCompile.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin_MarkupCompile.lref
@@ -35,4 +36,3 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.AssemblyInfo.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.csproj.CoreCompileInputs.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\RRQMSkin.pdb
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\netcoreapp3.1\Style\TextBox.baml

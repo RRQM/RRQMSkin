@@ -1,7 +1,5 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:control="clr-namespace:RRQMSkin.Controls"
-                    xmlns:local="clr-namespace:RRQMSkin.Themes">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="noneButtom" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>
