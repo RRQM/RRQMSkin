@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 
-7-1645681098
+7-2011389207
 
-45750948451
-194-1852926616
-Style\TextBox.xaml;Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
+431822975680
+192-1533232326
+Style\Button.xaml;Style\Charts.xaml;Style\Controls.xaml;Style\DataTemplate.xaml;Style\ItemsControl.xaml;Style\TextBox.xaml;Themes\Generic.xaml;
 
 False
 

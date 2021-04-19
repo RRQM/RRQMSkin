@@ -1,36 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "RRQMCore/1.2.2": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/RRQMCore.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/RRQMCore.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
-      },
-      "RRQMMVVM/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "RRQMCore": "1.2.2"
-        },
-        "compile": {
-          "lib/netcoreapp3.1/RRQMMVVM.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/RRQMMVVM.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
-      }
-    },
-    ".NETFramework,Version=v4.5": {
+    ".NETFramework,Version=v4.6.1": {
       "RRQMCore/1.2.2": {
         "type": "package",
         "compile": {
@@ -40,7 +11,7 @@
           "lib/net45/RRQMCore.dll": {}
         }
       },
-      "RRQMMVVM/2.1.0": {
+      "RRQMMVVM/2.1.2": {
         "type": "package",
         "dependencies": {
           "RRQMCore": "1.2.2"
@@ -74,28 +45,27 @@
         "rrqmcore.nuspec"
       ]
     },
-    "RRQMMVVM/2.1.0": {
-      "sha512": "jPMs/6UCImQvOvgr8fzAVtmqqfaGdwHPUqSYXEfGDA9HTDuow/re3bWXcg0B9o7PvXwqPy8MkU1EgZNtSpHkGA==",
+    "RRQMMVVM/2.1.2": {
+      "sha512": "GdNO/Xy8GQMsD9jnOgOAft2qbs/xWcBBJAgdXcYA6/LM0EKu5W5AicMB72By7BxakN0p2ZzAaceJ1w4s/qAfjQ==",
       "type": "package",
-      "path": "rrqmmvvm/2.1.0",
+      "path": "rrqmmvvm/2.1.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "RRQM.png",
         "lib/net45/RRQMMVVM.dll",
+        "lib/net45/RRQMMVVM.xml",
         "lib/netcoreapp3.1/RRQMMVVM.dll",
-        "rrqmmvvm.2.1.0.nupkg.sha512",
+        "lib/netcoreapp3.1/RRQMMVVM.xml",
+        "rrqmmvvm.2.1.2.nupkg.sha512",
         "rrqmmvvm.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "RRQMMVVM >= 2.1.0"
-    ],
-    ".NETFramework,Version=v4.5": [
-      "RRQMMVVM >= 2.1.0"
+    ".NETFramework,Version=v4.6.1": [
+      "RRQMMVVM >= 2.1.2"
     ]
   },
   "packageFolders": {
@@ -121,20 +91,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net45",
-        "netcoreapp3.1"
+        "net461"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
-        },
-        "net45": {
-          "targetAlias": "net45",
+        "net461": {
+          "targetAlias": "net461",
           "projectReferences": {}
         }
       },
@@ -145,40 +110,12 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net461": {
+        "targetAlias": "net461",
         "dependencies": {
           "RRQMMVVM": {
             "target": "Package",
-            "version": "[2.1.0, )"
-          }
-        },
-        "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
-        ],
-        "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WPF": {
-            "privateAssets": "none"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-      },
-      "net45": {
-        "targetAlias": "net45",
-        "dependencies": {
-          "RRQMMVVM": {
-            "target": "Package",
-            "version": "[2.1.0, )"
+            "version": "[2.1.2, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"

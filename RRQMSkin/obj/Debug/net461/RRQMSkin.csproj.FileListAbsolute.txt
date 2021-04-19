@@ -23,15 +23,16 @@ D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMSkin.pdb
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMCore.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMMVVM.dll
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\Button.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\TextBox.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\GeneratedInternalTypeHelper.g.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin_MarkupCompile.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin_MarkupCompile.lref
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Button.baml
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Charts.baml
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Controls.baml
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\DataTemplate.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\Charts.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\Controls.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\DataTemplate.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\ItemsControl.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Generic.baml
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\ItemsControl.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.g.resources
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.AssemblyInfoInputs.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.AssemblyInfo.cs
@@ -39,4 +40,4 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CoreCompileInputs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CopyComplete
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.pdb
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\TextBox.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csprojAssemblyReference.cache

@@ -1,10 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:control="clr-namespace:RRQMSkin.Controls"
-                    xmlns:local="clr-namespace:RRQMSkin.Themes"
                     xmlns:primitive="clr-namespace:RRQMSkin.Charts.Primitives">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/RRQMSkin;component/Themes/Button.xaml" />
+        <ResourceDictionary Source="/Style/Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <Style TargetType="{x:Type control:CorrugatedButton}">
         <Setter Property="VerticalContentAlignment" Value="Center" />

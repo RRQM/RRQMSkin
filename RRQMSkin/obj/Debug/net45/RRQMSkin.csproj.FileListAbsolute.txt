@@ -27,12 +27,7 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Style\TextBox.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\GeneratedInternalTypeHelper.g.cs
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin_MarkupCompile.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin_MarkupCompile.lref
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Themes\Button.baml
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Themes\Charts.baml
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Themes\Controls.baml
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Themes\DataTemplate.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Themes\Generic.baml
-D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Themes\ItemsControl.baml
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.g.resources
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.AssemblyInfoInputs.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.AssemblyInfo.cs
@@ -40,3 +35,8 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csproj.CoreCompileInputs.
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.csproj.CopyComplete
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\RRQMSkin.pdb
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Style\Button.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Style\Charts.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Style\Controls.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Style\DataTemplate.baml
+D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net45\Style\ItemsControl.baml

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETFRAMEWORK;NET45;
 
-7-1645681098
+7-2011389207
 
 43-1634712405
-211115163625
-Style\TextBox.xaml;Themes\Button.xaml;Themes\Charts.xaml;Themes\Controls.xaml;Themes\DataTemplate.xaml;Themes\Generic.xaml;Themes\ItemsControl.xaml;
+21-616171410
+Style\Button.xaml;Style\Charts.xaml;Style\Controls.xaml;Style\DataTemplate.xaml;Style\ItemsControl.xaml;Style\TextBox.xaml;Themes\Generic.xaml;
 
 False
 

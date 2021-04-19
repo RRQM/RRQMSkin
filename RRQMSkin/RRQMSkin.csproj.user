@@ -5,22 +5,22 @@
     <Page Update="Style\TextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Button.xaml">
+    <Page Update="Style\Button.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Charts.xaml">
+    <Page Update="Style\Charts.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Controls.xaml">
+    <Page Update="Style\Controls.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\DataTemplate.xaml">
+    <Page Update="Style\DataTemplate.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Generic.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\ItemsControl.xaml">
+    <Page Update="Style\ItemsControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
