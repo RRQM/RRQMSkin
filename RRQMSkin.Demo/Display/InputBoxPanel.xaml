@@ -44,8 +44,7 @@
             <controls:InputBox Height="30" Width="150" Margin="10" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"
                                Background="Transparent" CornerRadius="5" InputFilter="IPv4" TipText="判断IPV4" />
 
-            <controls:DoubleEditTextBlock Text="双击编辑" Margin="10" VerticalAlignment="Center" DoubleEditEnable="True"
-                                          />
+            <controls:DoubleEditTextBlock Text="双击编辑" Margin="10" VerticalAlignment="Center" DoubleEditEnable="True" />
 
             <controls:SearchBox Text="支持绑定Command" Height="30" Width="200" Margin="10" Background="AliceBlue"
                                 BorderBrush="Black" BorderThickness="1" CornerRadius="15" />

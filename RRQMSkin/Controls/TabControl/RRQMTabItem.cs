@@ -8,8 +8,8 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System.Windows.Controls;
 using RRQMMVVM;
+using System.Windows.Controls;
 
 namespace RRQMSkin.Controls
 {

@@ -26,5 +26,4 @@ using System.Windows.Markup;
                                               // app, or any theme specific resource dictionaries)
 )]
 [assembly: ComVisible(false)]
-
 [assembly: Guid("d27dd63d-6040-4713-985d-6e799e09d651")]

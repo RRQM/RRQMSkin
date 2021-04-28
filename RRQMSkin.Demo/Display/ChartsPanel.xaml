@@ -13,12 +13,13 @@
             <RowDefinition />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <charts:PieChart Name="pieChart" IsAnimation="True" StartAngle="90" FontSize="20" ValuePath="Value" DisplayMemberPath="Text" PieBrushPath="PieBrush">
+        <charts:PieChart Name="pieChart" IsAnimation="True" StartAngle="90" FontSize="20" ValuePath="Value"
+                         DisplayMemberPath="Text" PieBrushPath="PieBrush">
             <!--<charts:PieChartItem Foreground="Red" Value="2" Text="1" />
             <charts:PieChartItem Foreground="Blue" Value="2" Text="2" />
             <charts:PieChartItem Foreground="Green" Value="2" Text="3" />-->
         </charts:PieChart>
-        <Slider Grid.Row="1" VerticalAlignment="Top"  Maximum="100" Minimum="0"
-                Value="{Binding Path=Value, Mode=TwoWay,ElementName=pie1}" />
+        <Slider Grid.Row="1" VerticalAlignment="Top" Maximum="100" Minimum="0"
+                Value="{Binding Path=Value, Mode=TwoWay, ElementName=pie1}" />
     </Grid>
 </WrapPanel>

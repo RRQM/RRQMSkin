@@ -8,13 +8,13 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using RRQMSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using RRQMSkin.Controls;
 
 namespace RRQMSkin.Charts.Primitives
 {

@@ -8,9 +8,9 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using RRQMSkin.Charts.Primitives;
 using System.Windows;
 using System.Windows.Controls.Primitives;
-using RRQMSkin.Charts.Primitives;
 
 namespace RRQMSkin.Controls
 {

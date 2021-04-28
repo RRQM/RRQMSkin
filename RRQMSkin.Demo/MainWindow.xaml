@@ -23,8 +23,8 @@
     </windows:RRQMWindow.Background>
 
     <Grid>
-
-        <controls:RRQMTabControl TabStripPlacement="Left" Margin="5" Background="Transparent" Style="{DynamicResource RRQMTabControlStyle}">
+        <controls:RRQMTabControl TabStripPlacement="Left" Margin="5" Background="Transparent"
+                                 Style="{DynamicResource RRQMTabControlStyle}">
             <controls:RRQMTabItem Header="主页">
                 <display:MainPanel />
             </controls:RRQMTabItem>
@@ -73,7 +73,7 @@
                 </StackPanel>
             </controls:RRQMTabItem>
 
-            <controls:RRQMTabItem  Header="扇环">
+            <controls:RRQMTabItem Header="扇环">
                 <StackPanel>
                     <primitives:Sector Height="100" Width="100" Margin="10" Offset="10"
                                        EndAngle="{Binding ElementName=endAngle1, Path=Text}"
