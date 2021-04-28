@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/RRQMSkin.Demo;component/Resource/Styles/TabControl.xaml" />
+        <ResourceDictionary Source="/RRQMSkin.Demo;component/Resource/Styles/PieChart.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

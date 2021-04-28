@@ -3,7 +3,7 @@
                     xmlns:control="clr-namespace:RRQMSkin.Controls"
                     xmlns:primitive="clr-namespace:RRQMSkin.Charts.Primitives">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Style/Button.xaml" />
+        <ResourceDictionary Source="Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <Style TargetType="{x:Type control:CorrugatedButton}">
         <Setter Property="VerticalContentAlignment" Value="Center" />

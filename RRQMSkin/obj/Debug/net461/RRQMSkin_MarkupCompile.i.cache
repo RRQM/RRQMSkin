@@ -16,5 +16,5 @@ TRACE;DEBUG;NETFRAMEWORK;NET461;
 21-1202235618
 Style\Button.xaml;Style\Charts.xaml;Style\Controls.xaml;Style\DataTemplate.xaml;Style\ItemsControl.xaml;Style\TextBox.xaml;Themes\Generic.xaml;
 
-True
+False
 

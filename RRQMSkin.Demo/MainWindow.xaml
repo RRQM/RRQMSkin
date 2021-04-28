@@ -1,27 +1,170 @@
 ﻿<windows:RRQMWindow x:Class="RRQMSkin.Demo.MainWindow"
                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                    xmlns:local="clr-namespace:RRQMSkin.Demo"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                    xmlns:windows="RRQM_Windows"
-                    xmlns:windows1="若汝棋茗_Windows"
-                    Title="MainWindow"
-                    Height="450"
-                    Width="800"
-                    Style="{DynamicResource RRQMWindowStyle1}"
+                    xmlns:display="clr-namespace:RRQMSkin.Demo.Display"
+                    xmlns:windows="clr-namespace:RRQMSkin.Windows;assembly=RRQMSkin"
+                    xmlns:controls="RRQM_Controls"
+                    xmlns:primitives="RRQM_Primitives"
+                    Title="123"
+                    Height="700"
+                    Width="1200"
+                    BorderBrush="Black"
+                    ContentFill="False"
+                    ResizeMode="CanResize"
+                    WindowStyle="SingleBorderWindow"
                     mc:Ignorable="d">
-    <windows:RRQMWindow.Resources>
-        <Style x:Key="RRQMWindowStyle1" TargetType="{x:Type windows:RRQMWindow}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type windows:RRQMWindow}">
-                        <ContentPresenter />
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </windows:RRQMWindow.Resources>
+    <windows:RRQMWindow.Background>
+        <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+            <GradientStop Offset="0" Color="#FF1EE4E8" />
+            <GradientStop Offset="1" Color="#FFCE61C1" />
+        </LinearGradientBrush>
+    </windows:RRQMWindow.Background>
 
-    <Grid />
+    <Grid>
+
+        <controls:RRQMTabControl TabStripPlacement="Left" Margin="5" Background="Transparent" Style="{DynamicResource RRQMTabControlStyle}">
+            <controls:RRQMTabItem Header="主页">
+                <display:MainPanel />
+            </controls:RRQMTabItem>
+            <controls:RRQMTabItem Width="150" Header="按钮">
+                <display:ButtonPanel />
+            </controls:RRQMTabItem>
+            <controls:RRQMTabItem Width="150" Header="文本框">
+                <display:InputBoxPanel />
+            </controls:RRQMTabItem>
+
+            <controls:RRQMTabItem Width="150" Header="刻度盘">
+                <StackPanel>
+                    <primitives:Dial Height="100" Width="100" Margin="10" Fill="#FFF4F4F5"
+                                     MaxRadiusRatio="{Binding ElementName=maxRadiusRatio, Path=Text}"
+                                     MinRadiusRatio="{Binding ElementName=minRadiusRatio, Path=Text}"
+                                     StartAngle="{Binding ElementName=startAngle, Path=Text}"
+                                     Stroke="Red" StrokeThickness="4"
+                                     TickAngle="{Binding ElementName=angleTb, Path=Text, Mode=TwoWay}"
+                                     TickCount="{Binding ElementName=countTb, Path=Text, Mode=TwoWay}" />
+
+                    <TextBlock Text="描述：这是一个扇形刻度盘，用于显示扇形刻度" Margin="20,10" />
+                    <TextBlock Text="属性:" Margin="20,10" FontWeight="Bold" />
+                    <TextBlock Text="StartAngle(起始角度)：用于设置刻度盘的起始角度，水平向右为0度，顺时针递增" Margin="20,10" />
+                    <TextBlock Text="MinRadiusRatio(内半径比例)：用于设置刻度盘的内半径的比例，范围大于0" Margin="20,10" />
+                    <TextBlock Text="MaxRadiusRatio(外半径比例)：用于设置刻度盘的外半径的比例，范围大于0" Margin="20,10" />
+                    <TextBlock Text="TickCount(刻度数量)：用于设置刻度盘的刻度数量，范围大于0" Margin="20,10" />
+                    <TextBlock Text="TickAngle(刻度单位角度)：用于设置刻度盘的相邻刻度之间的角度，范围大于0" Margin="20,10" />
+
+                    <TextBlock Text="属性测试:" Margin="20,10" FontWeight="Bold" />
+                    <StackPanel Margin="20,0,0,0" Orientation="Horizontal">
+                        <TextBlock Text="起始角度" VerticalAlignment="Center" />
+                        <TextBox Name="startAngle" Text="0" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="内半径比例" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="minRadiusRatio" Text="0.3" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="外半径比例" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="maxRadiusRatio" Text="0.7" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="数量" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="countTb" Text="5" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="刻度单位角" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="angleTb" Text="30" Width="50" VerticalAlignment="Center" />
+                    </StackPanel>
+                </StackPanel>
+            </controls:RRQMTabItem>
+
+            <controls:RRQMTabItem  Header="扇环">
+                <StackPanel>
+                    <primitives:Sector Height="100" Width="100" Margin="10" Offset="10"
+                                       EndAngle="{Binding ElementName=endAngle1, Path=Text}"
+                                       Fill="Red"
+                                       MaxRadiusRatio="{Binding ElementName=maxRadiusRatio1, Path=Text}"
+                                       MinRadiusRatio="{Binding ElementName=minRadiusRatio1, Path=Text}"
+                                       RoundStyle="{Binding ElementName=roundStyle1, Path=SelectedValue, Mode=TwoWay}"
+                                       StartAngle="{Binding ElementName=startAngle1, Path=Text}"
+                                       Stroke="Black" StrokeThickness="2" />
+
+                    <TextBlock Text="描述：这是一个扇形环，用于显示环状扇形" Margin="20,10" RenderTransformOrigin="0.5,0.5" />
+                    <TextBlock Text="属性:" Margin="20,10" FontWeight="Bold" />
+                    <TextBlock Text="StartAngle(起始角度)：用于设置扇环的起始角度，水平向右为0度，顺时针递增" Margin="20,10" />
+                    <TextBlock Text="EndAngle(起始角度)：用于设置扇环的起始角度，水平向右为0度，顺时针递增" Margin="20,10" />
+                    <TextBlock Text="MinRadiusRatio(内半径比例)：用于设置扇环的内半径的比例，范围大于0" Margin="20,10" />
+                    <TextBlock Text="MaxRadiusRatio(外半径比例)：用于设置扇环的外半径的比例，范围大于0" Margin="20,10" />
+
+                    <TextBlock Text="属性测试:" Margin="20,10" FontWeight="Bold" />
+                    <StackPanel Margin="20,0,0,0" Orientation="Horizontal">
+                        <TextBlock Text="起始角度" VerticalAlignment="Center" />
+                        <TextBox Name="startAngle1" Text="100" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="结束角度" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="endAngle1" Text="200" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="内半径比例" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="minRadiusRatio1" Text="0.3" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="外半径比例" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="maxRadiusRatio1" Text="0.7" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="扇环两端显示类型" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <ComboBox Name="roundStyle1" Text="0.7" Width="100" VerticalAlignment="Center" SelectedIndex="0">
+                            <ComboBox.Items>
+                                <primitives:RoundStyle>Nono</primitives:RoundStyle>
+                                <primitives:RoundStyle>Start</primitives:RoundStyle>
+                                <primitives:RoundStyle>End</primitives:RoundStyle>
+                                <primitives:RoundStyle>Both</primitives:RoundStyle>
+                            </ComboBox.Items>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+            </controls:RRQMTabItem>
+
+            <controls:RRQMTabItem Width="150" Header="弧形文字">
+                <StackPanel>
+                    <primitives:DialText Text="{Binding ElementName=text, Path=Text}"
+                                         Height="150" Width="150" Margin="10"
+                                         RadiusRatio="{Binding ElementName=radiusRatio2, Path=Text}"
+                                         StartAngle="{Binding ElementName=startAngle2, Path=Text}"
+                                         TextShowStyle="{Binding ElementName=textStyle2, Path=SelectedValue, Mode=TwoWay}"
+                                         TickAngle="{Binding ElementName=tickAngle2, Path=Text}" />
+
+                    <TextBlock Text="描述：这是一个扇形文字，用于显示环状文字" Margin="20,10" />
+                    <TextBlock Text="属性:" Margin="20,10" FontWeight="Bold" />
+                    <TextBlock Text="Text(显示文本)：用于设置显示的弧形文字" Margin="20,10" />
+                    <TextBlock Text="StartAngle(起始角度)：用于设置扇环的起始角度，水平向右为0度，顺时针递增" Margin="20,10" />
+                    <TextBlock Text="TickAngle(单位角度)：用于设置弧形文字的单位角度，范围大于0" Margin="20,10" />
+                    <TextBlock Text="RadiusRatio(文字弧形半径比例)：用于设置弧形文字的半径的比例，范围大于0" Margin="20,10" />
+                    <TextBlock Text="TextShowStyle(文字显示模式)：用于设置弧形文字的显示模式，Split表示按照英文逗号对文字进行分割显示，Every表示逐字符显示" Margin="20,10" TextWrapping="Wrap" />
+
+                    <TextBlock Text="属性测试:" Margin="20,10" FontWeight="Bold" />
+                    <StackPanel Margin="20,0,0,0" Orientation="Horizontal">
+                        <TextBlock Text="显示文本" VerticalAlignment="Center" />
+                        <TextBox Name="text" Text="0,1,2,3,4,5" Width="100" VerticalAlignment="Center" />
+
+                        <TextBlock Text="起始角度" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="startAngle2" Text="0" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="单位角度" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="tickAngle2" Text="40" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="文字半径比例" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <TextBox Name="radiusRatio2" Text="0.8" Width="50" VerticalAlignment="Center" />
+
+                        <TextBlock Text="文字显示模式" Margin="20,0,0,0" VerticalAlignment="Center" />
+                        <ComboBox Name="textStyle2" Text="0.8" Width="100" VerticalAlignment="Center" SelectedIndex="0">
+                            <ComboBox.Items>
+                                <primitives:TextShowStyle>Split</primitives:TextShowStyle>
+                                <primitives:TextShowStyle>Every</primitives:TextShowStyle>
+                            </ComboBox.Items>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+            </controls:RRQMTabItem>
+            <controls:RRQMTabItem Header="列表拖拽效果">
+                <display:DragDropPanel />
+            </controls:RRQMTabItem>
+            <controls:RRQMTabItem Header="图表">
+                <display:ChartsPanel />
+            </controls:RRQMTabItem>
+        </controls:RRQMTabControl>
+    </Grid>
 </windows:RRQMWindow>

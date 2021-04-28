@@ -2,11 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:windows="clr-namespace:RRQMSkin.Windows">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Style/Charts.xaml" />
-        <ResourceDictionary Source="/Style/Button.xaml" />
-        <ResourceDictionary Source="/Style/Controls.xaml" />
-        <ResourceDictionary Source="/Style/DataTemplate.xaml" />
-        <ResourceDictionary Source="/Style/ItemsControl.xaml" />
+        <ResourceDictionary Source="RRQMSkin;component/Style/Charts.xaml" />
+        <ResourceDictionary Source="RRQMSkin;component/Style/Button.xaml" />
+        <ResourceDictionary Source="RRQMSkin;component/Style/DataTemplate.xaml" />
+        <ResourceDictionary Source="RRQMSkin;component/Style/ItemsControl.xaml" />
+        <ResourceDictionary Source="RRQMSkin;component/Style/Controls.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 

@@ -4,9 +4,10 @@
              xmlns:local="clr-namespace:RRQMSkin.Demo"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Style/Dictionary1.xaml" />
+                <ResourceDictionary Source="Resource/Skin/Default.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
