@@ -1,20 +1,22 @@
-﻿<windows:RRQMWindow Style="{DynamicResource RRQMWindowStyle1}" xmlns:windows1="若汝棋茗_Windows" x:Class="RRQMSkin.Demo.MainWindow"
+﻿<windows:RRQMWindow x:Class="RRQMSkin.Demo.MainWindow"
                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                     xmlns:local="clr-namespace:RRQMSkin.Demo"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:windows="RRQM_Windows"
+                    xmlns:windows1="若汝棋茗_Windows"
                     Title="MainWindow"
                     Height="450"
                     Width="800"
+                    Style="{DynamicResource RRQMWindowStyle1}"
                     mc:Ignorable="d">
     <windows:RRQMWindow.Resources>
         <Style x:Key="RRQMWindowStyle1" TargetType="{x:Type windows:RRQMWindow}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type windows:RRQMWindow}">
-                        <ContentPresenter/>
+                        <ContentPresenter />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
