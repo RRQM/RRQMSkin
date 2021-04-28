@@ -5,12 +5,7 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMMVVM.dll
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\GeneratedInternalTypeHelper.g.cs
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin_MarkupCompile.cache
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin_MarkupCompile.lref
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Button.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Charts.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Controls.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\DataTemplate.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\Generic.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Themes\ItemsControl.baml
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.g.resources
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.AssemblyInfoInputs.cache
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.AssemblyInfo.cs
@@ -18,7 +13,6 @@ E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CoreCompileInputs
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CopyComplete
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.dll
 E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.pdb
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csprojAssemblyReference.cache
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMSkin.pdb
 D:\OpenCode\RRQMSkin\RRQMSkin\bin\Debug\net461\RRQMCore.dll
@@ -41,3 +35,9 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CopyComplete
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.pdb
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csprojAssemblyReference.cache
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\Button.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\TextBox.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\Charts.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\Controls.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\DataTemplate.baml
+E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\ItemsControl.baml

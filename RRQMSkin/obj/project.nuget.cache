@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mPFU1ApuTUQkOSLCVoyxw+uymlfsB1XN7xJ/amjA+7GXh83CMvZs9bcDxNPwXJxmf4AaCQUkKpO3mxo15n1t7w==",
+  "dgSpecHash": "xi+QeyYhTw2Ezm6AamWGWpWNVcjy5JkWxaJh1LmZOrncOUxpLfRugCO3HfoKLe3GGSt8ZVcThoFMQ3u53VUXOA==",
   "success": true,
-  "projectFilePath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+  "projectFilePath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\carywang\\.nuget\\packages\\rrqmcore\\1.2.2\\rrqmcore.1.2.2.nupkg.sha512",
-    "C:\\Users\\carywang\\.nuget\\packages\\rrqmmvvm\\2.1.2\\rrqmmvvm.2.1.2.nupkg.sha512"
+    "C:\\Users\\17516\\.nuget\\packages\\rrqmcore\\1.2.2\\rrqmcore.1.2.2.nupkg.sha512",
+    "C:\\Users\\17516\\.nuget\\packages\\rrqmmvvm\\2.1.2\\rrqmmvvm.2.1.2.nupkg.sha512"
   ],
   "logs": []
 }
