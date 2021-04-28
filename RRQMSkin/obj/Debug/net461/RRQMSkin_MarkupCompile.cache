@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETFRAMEWORK;NET461;
 
-7-2011389207
+1204305769
 
 41-562685176
 21-1202235618
-Style\Button.xaml;Style\Charts.xaml;Style\Controls.xaml;Style\DataTemplate.xaml;Style\ItemsControl.xaml;Style\TextBox.xaml;Themes\Generic.xaml;
+Themes\Generic.xaml;
 
 False
 

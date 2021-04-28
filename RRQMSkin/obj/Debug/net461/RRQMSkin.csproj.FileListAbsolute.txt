@@ -35,10 +35,3 @@ D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csproj.CopyComplete
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.dll
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.pdb
 D:\OpenCode\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csprojAssemblyReference.cache
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\Button.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\TextBox.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\Charts.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\Controls.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\DataTemplate.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\Style\ItemsControl.baml
-E:\CodeOpen\RRQMSkin\RRQMSkin\obj\Debug\net461\RRQMSkin.csprojAssemblyReference.cache

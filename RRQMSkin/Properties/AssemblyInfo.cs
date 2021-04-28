@@ -18,7 +18,7 @@ using System.Windows.Markup;
 [assembly: XmlnsDefinitionAttribute("RRQM_Charts", "RRQMSkin.Charts")]
 [assembly: XmlnsDefinitionAttribute("RRQM_Primitives", "RRQMSkin.Charts.Primitives")]
 [assembly: ThemeInfo(
-    ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
+    ResourceDictionaryLocation.ExternalAssembly, //where theme specific resource dictionaries are located
                                      //(used if a resource is not found in the page,
                                      // or application resource dictionaries)
     ResourceDictionaryLocation.SourceAssembly //where the generic resource dictionary is located

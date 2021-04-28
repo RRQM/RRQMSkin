@@ -23,12 +23,12 @@ namespace RRQMSkin.Demo.Display
         {
             InitializeComponent();
 
-            List<Pie> vs = new List<Pie>();
-            vs.Add(new Pie() { Value = 1, PieBrush = Brushes.Red, Text = "张三" });
-            vs.Add(new Pie() { Value = 2, PieBrush = Brushes.Blue, Text = "李四" });
-            vs.Add(new Pie() { Value = 3, PieBrush = Brushes.Green, Text = "王五" });
-            vs.Add(new Pie() { Value = 4, PieBrush = Brushes.Yellow, Text = "赵六" });
-            this.pieChart.ItemsSource = vs;
+            //List<Pie> vs = new List<Pie>();
+            //vs.Add(new Pie() { Value = 1, PieBrush = Brushes.Red, Text = "张三" });
+            //vs.Add(new Pie() { Value = 2, PieBrush = Brushes.Blue, Text = "李四" });
+            //vs.Add(new Pie() { Value = 3, PieBrush = Brushes.Green, Text = "王五" });
+            //vs.Add(new Pie() { Value = 4, PieBrush = Brushes.Yellow, Text = "赵六" });
+            //this.pieChart.ItemsSource = vs;
         }
     }
 

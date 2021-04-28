@@ -1,10 +1,10 @@
-﻿<windows:RRQMWindow x:Class="RRQMSkin.Demo.MainWindow"
+﻿<windows:RRQMWindow xmlns:windows="RRQM_Windows"
+                    x:Class="RRQMSkin.Demo.MainWindow"
                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                     xmlns:display="clr-namespace:RRQMSkin.Demo.Display"
-                    xmlns:windows="clr-namespace:RRQMSkin.Windows;assembly=RRQMSkin"
                     xmlns:controls="RRQM_Controls"
                     xmlns:primitives="RRQM_Primitives"
                     Title="123"
@@ -14,13 +14,7 @@
                     ContentFill="False"
                     ResizeMode="CanResize"
                     WindowStyle="SingleBorderWindow"
-                    mc:Ignorable="d">
-    <windows:RRQMWindow.Background>
-        <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
-            <GradientStop Offset="0" Color="#FF1EE4E8" />
-            <GradientStop Offset="1" Color="#FFCE61C1" />
-        </LinearGradientBrush>
-    </windows:RRQMWindow.Background>
+                    mc:Ignorable="d" Style="{DynamicResource RRQMWindowStyle}">
 
     <Grid>
         <controls:RRQMTabControl TabStripPlacement="Left" Margin="5" Background="Transparent"

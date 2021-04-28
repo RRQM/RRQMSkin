@@ -64,4 +64,8 @@
     <Resource Include="Icons\RRQM.ico" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Style\" />
+  </ItemGroup>
+
 </Project>
