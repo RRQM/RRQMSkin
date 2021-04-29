@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RRQMCore, Version=1.2.18.0, Culture=neutral, PublicKeyToken=1691c0176f5d64c0, processorArchitecture=MSIL">
+      <HintPath>..\packages\RRQMCore.1.2.18\lib\net45\RRQMCore.dll</HintPath>
+    </Reference>
+    <Reference Include="RRQMMVVM, Version=2.1.2.0, Culture=neutral, PublicKeyToken=1691c0176f5d64c0, processorArchitecture=MSIL">
+      <HintPath>..\packages\RRQMMVVM.2.1.2\lib\net45\RRQMMVVM.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows" />
@@ -138,6 +144,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -154,14 +161,6 @@
       <Project>{4dc02806-ed78-4ef0-81a2-b652e388fe46}</Project>
       <Name>RRQMSkin</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="RRQMCore">
-      <Version>1.2.18</Version>
-    </PackageReference>
-    <PackageReference Include="RRQMMVVM">
-      <Version>2.1.2</Version>
-    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
