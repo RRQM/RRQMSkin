@@ -42,6 +42,6 @@
     </Grid>
 
     <Grid Width="400" Height="50">
-        <controls:ValidationSlider />
+        <controls:ValidationSlider Background="AliceBlue" ShadeBackground="#D0E11A" Content="控件内容" ThumbContent="H"/>
     </Grid>
 </WrapPanel>

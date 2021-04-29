@@ -32,13 +32,13 @@ namespace RRQMSkin.Controls
             {
                 this.grid.HorizontalAlignment = HorizontalAlignment.Right;
                 double thumbWidth = (this.thumb == null ? 0 : this.thumb.ActualWidth);
-                this.grid.Width = (1 - (this.Value / this.Maximum)) * (this.ActualWidth - thumbWidth)+ thumbWidth;
+                this.grid.Width = (1 - (this.Value / this.Maximum)) * (this.ActualWidth - thumbWidth) + thumbWidth;
             }
 
             if (newValue == this.Maximum)
             {
                 this.Verification = true;
-                if (this.thumb!=null)
+                if (this.thumb != null)
                 {
                     this.thumb.IsEnabled = false;
                 }
@@ -105,7 +105,7 @@ namespace RRQMSkin.Controls
         public bool Verification
         {
             get { return (bool)GetValue(VerificationProperty); }
-            set { SetValue(VerificationProperty, value); }
+            private set { SetValue(VerificationProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for Verification.  This enables animation, styling, binding, etc...
