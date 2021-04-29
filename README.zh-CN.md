@@ -54,7 +54,36 @@
 | [RRQMSocket](https://gitee.com/dotnetchina/RRQMSocket) | [![NuGet version (RRQMSocket)](https://img.shields.io/nuget/v/RRQMSocket.svg?style=flat-square)](https://www.nuget.org/packages/RRQMSocket/) | [![Download](https://img.shields.io/nuget/dt/RRQMSocket)](https://www.nuget.org/packages/RRQMSocket/) | RRQMSocket是一个整合性网络通信框架，特点是支持高并发、事件驱动、易用性强、二次开发难度低等。其中主要内容包括:TCP服务通信框架、文件传输、RPC等内容|  
 
 ## 一、窗体
+
+#### 1.1 增强性普通窗体（RRQMWindow）
+ **说明：** 
+
+增强性普通窗体是在**无边框窗体**的基础之上实现的自定义Icon（绿色区）、TitleContent（红色区）、ToolCommand（蓝色区）、Content（紫色区）。
+
+ **特点：** 
+1. 窗体响应鼠标全指令，包括拖动最大化、最小化、左右分屏、改变尺寸等。
+2. TitleContent区内容可填充object。
+3. 最小化、最大化切换、关闭均采用Command绑定形式，可以很自由的实现个性化功能。
+4. 可重写母模板。
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0429/090158_405db863_8553710.png "屏幕截图.png")
+
+#### 1.2 增强性效果窗体（RRQMEffectWindow）
+ **说明：** 
+
+增强性效果窗体是在继承自**RRQMWindow**的可自定义实现特效的窗体，其功能区布局和RRQMWindow一样。
+
+ **特点：** 
+1. 窗体响应鼠标全指令，包括拖动最大化、最小化、左右分屏、改变尺寸等。
+2. TitleContent区内容可填充object。
+3. 最小化、最大化切换、关闭均采用Command绑定形式，可以很自由的实现个性化功能。
+4. 可重写母模板。
+5. 使用属性直接设置 **窗体圆角** 、 **阴影扩散度** 、 **阴影颜色** 等。
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0429/091244_b0abd404_8553710.png "屏幕截图.png")
 ## 二、元素
+
+
 ## 三、自定义控件
 ## 四、控件样式资源
 
