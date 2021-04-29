@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
+    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <Authors>若汝棋茗</Authors>
     <PackageIcon>RRQM.png</PackageIcon>
@@ -14,9 +14,9 @@
       5.增加SearchBox控件
       6.增加样式资源
     </Description>
-    <PackageProjectUrl>https://gitee.com/RRQM_OS/WPFSkinSharer</PackageProjectUrl>
+    <PackageProjectUrl>https://gitee.com/RRQM_OS/RRQMSkin</PackageProjectUrl>
     <Copyright>Copyright © 2021 若汝棋茗</Copyright>
-    <Version>2.1.2</Version>
+    <Version>2.1.3</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>
@@ -56,16 +56,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="RRQMMVVM" Version="2.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Fonts\iconfont.ttf" />
     <Resource Include="Icons\RRQM.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Style\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RRQMMVVM" Version="2.1.2" />
   </ItemGroup>
 
 </Project>

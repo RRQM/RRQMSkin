@@ -1,7 +1,36 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.6.1": {
+    ".NETCoreApp,Version=v3.1": {
+      "RRQMCore/1.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/RRQMCore.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/RRQMCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "RRQMMVVM/2.1.2": {
+        "type": "package",
+        "dependencies": {
+          "RRQMCore": "1.2.2"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/RRQMMVVM.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/RRQMMVVM.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    },
+    ".NETFramework,Version=v4.5": {
       "RRQMCore/1.2.2": {
         "type": "package",
         "compile": {
@@ -64,42 +93,50 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.6.1": [
+    ".NETCoreApp,Version=v3.1": [
+      "RRQMMVVM >= 2.1.2"
+    ],
+    ".NETFramework,Version=v4.5": [
       "RRQMMVVM >= 2.1.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\17516\\.nuget\\packages\\": {},
+    "C:\\Users\\carywang\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "2.1.2",
+    "version": "2.1.3",
     "restore": {
-      "projectUniqueName": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+      "projectUniqueName": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
       "projectName": "RRQMSkin",
-      "projectPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
-      "packagesPath": "C:\\Users\\17516\\.nuget\\packages\\",
-      "outputPath": "E:\\CodeOpen\\RRQMSkin\\RRQMSkin\\obj\\",
+      "projectPath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\RRQMSkin.csproj",
+      "packagesPath": "C:\\Users\\carywang\\.nuget\\packages\\",
+      "outputPath": "D:\\OpenCode\\RRQMSkin\\RRQMSkin\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\17516\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\carywang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net461"
+        "net45",
+        "netcoreapp3.1"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net461": {
-          "targetAlias": "net461",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        },
+        "net45": {
+          "targetAlias": "net45",
           "projectReferences": {}
         }
       },
@@ -110,15 +147,43 @@
       }
     },
     "frameworks": {
-      "net461": {
-        "targetAlias": "net461",
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "RRQMMVVM": {
             "target": "Package",
             "version": "[2.1.2, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+      },
+      "net45": {
+        "targetAlias": "net45",
+        "dependencies": {
+          "RRQMMVVM": {
+            "target": "Package",
+            "version": "[2.1.2, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
