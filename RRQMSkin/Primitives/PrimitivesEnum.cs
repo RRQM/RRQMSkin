@@ -8,45 +8,48 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System.ComponentModel;
-using System.Windows;
-using System.Windows.Media;
-using System.Windows.Shapes;
 
-namespace RRQMSkin.Charts.Primitives
+namespace RRQMSkin.Primitives
 {
     /// <summary>
-    /// 若汝棋茗绘图基础类
+    /// 圆角样式
     /// </summary>
-    public abstract class RRQMShape : Shape
+    public enum RoundStyle
     {
         /// <summary>
-        ///
+        /// 无样式
         /// </summary>
-        public RRQMShape()
-        {
-            this.SizeChanged += Sector_SizeChanged;
-        }
-
-        public bool IsInDesignMode
-        {
-            get { return DesignerProperties.GetIsInDesignMode(this); }
-        }
-
-        private void Sector_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            this.InvalidateVisual();
-        }
+        Nono,
 
         /// <summary>
-        ///
+        /// 开端
         /// </summary>
-        protected override Geometry DefiningGeometry { get { return CreatGeometry(); } }
+        Start,
 
         /// <summary>
-        ///
+        /// 结束
         /// </summary>
-        /// <returns></returns>
-        protected abstract Geometry CreatGeometry();
+        End,
+
+        /// <summary>
+        /// 首尾都圆角
+        /// </summary>
+        Both
+    }
+
+    /// <summary>
+    /// 文字显示样式
+    /// </summary>
+    public enum TextShowStyle
+    {
+        /// <summary>
+        /// 分割类型显示
+        /// </summary>
+        Split,
+
+        /// <summary>
+        /// 按字符显示
+        /// </summary>
+        Every
     }
 }

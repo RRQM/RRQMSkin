@@ -12,7 +12,7 @@ using System;
 using System.Windows;
 using System.Windows.Media;
 
-namespace RRQMSkin.Charts.Primitives
+namespace RRQMSkin.Primitives
 {
     /// <summary>
     /// 刻度类型

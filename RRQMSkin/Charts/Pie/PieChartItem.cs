@@ -8,10 +8,10 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using RRQMSkin.Charts.Primitives;
-using RRQMSkin.DragDrop;
 using System.Windows;
 using System.Windows.Controls;
+using RRQMSkin.DragDrop;
+using RRQMSkin.Primitives;
 
 namespace RRQMSkin.Charts
 {
