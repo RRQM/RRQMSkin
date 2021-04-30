@@ -45,5 +45,11 @@ namespace RRQMSkin.Demo.Display
             {
             }
         }
+
+        private void MyTag_CloseClick(object sender, RoutedEventArgs e)
+        {
+            var temp = sender as Controls.LabelTag;
+            temp.Text = $"我被点击了 我的ID是:{temp.TagID}";
+        }
     }
 }

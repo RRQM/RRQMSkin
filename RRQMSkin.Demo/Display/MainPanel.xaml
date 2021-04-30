@@ -44,4 +44,10 @@
     <Grid Width="400" Height="50">
         <controls:ValidationSlider Background="AliceBlue" ShadeBackground="#D0E11A" Content="控件内容" ThumbContent="H"/>
     </Grid>
+    <Grid>
+        <controls:LabelTag TagID="0" Text="标签内容与ID均可绑定" Height="50"  CloseBtnVisibility="Collapsed" />
+    </Grid>
+    <Grid>
+        <controls:LabelTag TagID="0" Text="标签内容与ID均可绑定"  Height="50" CloseBtnVisibility="Visible" CloseClick="MyTag_CloseClick" />
+    </Grid>
 </WrapPanel>
