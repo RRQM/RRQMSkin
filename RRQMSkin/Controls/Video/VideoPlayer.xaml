@@ -1,0 +1,157 @@
+﻿<UserControl x:Class="RRQMSkin.Controls.Video.VideoPlayer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RRQMSkin.Controls.Video" 
+             xmlns:converter="clr-namespace:RRQMSkin.Converter"
+             MinHeight="300" MinWidth="300"  Loaded="Window_Loaded">
+    <UserControl.Resources>
+        <!--BOOL转显示属性 转换器-->
+        <converter:BoolConvertVisibility x:Key="boolToVisibility"/>
+        <!--视频播放样式 滑动块-->
+        <Style TargetType="{x:Type Thumb}" x:Key="SliderThumbStyle">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Ellipse x:Name="Element" Width="15" Height="15" Fill="#FFFFFF" Margin="-8 0 -8 0" Opacity="0.5"/>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Element" Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="RepeatButton" x:Key="Slider_DecreaseRepeatBtnStyle">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RepeatButton">
+                        <Border SnapsToDevicePixels="True" Margin="0 0 0 0" Background="#FFFFFF" BorderThickness="1" 
+                                  Height="5"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MySlider" TargetType="{x:Type Slider}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Slider">
+                        <Grid Margin="0 0 -8 0">
+                            <Border Name="PART_Border" BorderBrush="Transparent" BorderThickness="1" 
+                                    Padding="0" Width="{TemplateBinding Width}" Height="5" Background="#FFFFFF" Opacity="0.5"
+                                    HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                            </Border>
+                            <Track Name="PART_Track">
+                                <Track.DecreaseRepeatButton>
+                                    <RepeatButton Style="{StaticResource Slider_DecreaseRepeatBtnStyle}">
+                                    </RepeatButton>
+                                </Track.DecreaseRepeatButton>
+                                <Track.Thumb>
+                                    <Thumb Style="{StaticResource SliderThumbStyle}" />
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--视频播放样式 按钮样式-->
+        <Style x:Key="volume" TargetType="{x:Type CheckBox}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Border Background="{TemplateBinding Background}" Opacity="0.7" x:Name="MyBackgroundElement" BorderThickness="0">
+                            <Viewbox Width="22" Height="22">
+                                <Canvas Width="24" Height="24">
+                                    <Path x:Name="MyPathDatas" Fill="#FFFFFF" Data="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+                                </Canvas>
+                            </Viewbox>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="MyBackgroundElement" Property="Opacity" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="MyPathDatas" Property="Data" Value="M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="Play" TargetType="{x:Type CheckBox}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Border Background="{TemplateBinding Background}" Opacity="0.7" x:Name="MyBackgroundElement" BorderThickness="0">
+                            <Viewbox Width="22" Height="22">
+                                <Canvas Width="24" Height="24">
+                                    <Path x:Name="MyPathDatas" Fill="#FFFFFF" Data="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                                </Canvas>
+                            </Viewbox>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="MyBackgroundElement" Property="Opacity" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="MyPathDatas" Property="Data" Value="M14,19H18V5H14M6,19H10V5H6V19Z"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="FormPlay" TargetType="{x:Type CheckBox}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Border Background="{TemplateBinding Background}" Opacity="0.7" CornerRadius="5" x:Name="MyBackgroundElement" BorderThickness="0">
+                            <Viewbox Width="48" Height="48">
+                                <Canvas Width="24" Height="24">
+                                    <Path Fill="#FFFFFF" x:Name="MyPathDatas" Data="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
+                                </Canvas>
+                            </Viewbox>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="MyBackgroundElement" Property="Opacity" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="MyPathDatas" Property="Data" Value="M14,19H18V5H14M6,19H10V5H6V19Z"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="VideoGrid" Background="#FFFFFF" MouseMove="video_MouseMove"  MouseLeave="video_MouseLeave">
+        <MediaElement MouseMove="video_MouseMove" MouseLeave="video_MouseLeave" MediaOpened="video_MediaOpened" LoadedBehavior="Manual" Margin="0 10 0 0" x:Name="video" Stretch="Uniform"/>
+        <Border x:Name="control_bor" MouseLeave="video_MouseLeave" Height="35"  Background="#000000" Opacity="0.5" BorderThickness="0" BorderBrush="Transparent" VerticalAlignment="Bottom"/>
+        <Border x:Name="control_btn" MouseLeave="video_MouseLeave" Height="40"  Background="Transparent" VerticalAlignment="Bottom">
+            <Grid Margin="10 5 0 5" VerticalAlignment="Bottom">
+                <CheckBox x:Name="Muted" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" Style="{StaticResource volume}" Background="Transparent"  Width="22" Height="22" Margin="5 0 0 0" HorizontalAlignment="Left" />
+                <CheckBox Checked="PlayCheck_Checked" Unchecked="PlayCheck_Checked" x:Name="PlayCheck" Style="{StaticResource Play}" Background="Transparent" Width="22" Height="22" Margin="35 0 0 0" HorizontalAlignment="Left" />
+                <TextBlock x:Name="StartTimer" Text="00:00"  FontSize="14" Foreground="#FFFFFF" FontFamily="微软雅黑" Margin="70 5 0 0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <Slider Thumb.DragStarted="Press_DragStarted" Thumb.DragCompleted="Press_DragCompleted" IsMoveToPointEnabled="True"  ValueChanged="Press_ValueChanged" x:Name="Press" Style="{StaticResource MySlider}" Margin="125 5 75 0"  />
+                <TextBlock x:Name="EndTimer" Text="-00:00"  FontSize="14" Foreground="#FFFFFF" FontFamily="微软雅黑" Margin="0 5 10 0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            </Grid>
+        </Border>
+        <CheckBox Visibility="{Binding ElementName=PlayCheck,Path=IsChecked,Converter={StaticResource boolToVisibility}}" IsChecked="{Binding ElementName=PlayCheck,Path=IsChecked}" Style="{StaticResource FormPlay}" Background="Transparent"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</UserControl>

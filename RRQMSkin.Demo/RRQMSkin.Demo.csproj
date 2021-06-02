@@ -163,5 +163,10 @@
       <Version>2.1.2</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Video\DemoVideo.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

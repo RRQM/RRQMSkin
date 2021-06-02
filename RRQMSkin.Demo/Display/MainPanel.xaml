@@ -4,7 +4,7 @@
            xmlns:controls="RRQM_Controls"
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
            xmlns:local="clr-namespace:RRQMSkin.Demo.Display"
-           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:video="clr-namespace:RRQMSkin.Controls.Video;assembly=RRQMSkin"
            d:DesignHeight="800"
            d:DesignWidth="1200"
            mc:Ignorable="d">
@@ -49,5 +49,8 @@
     </Grid>
     <Grid>
         <controls:LabelTag TagID="0" Text="标签内容与ID均可绑定"  Height="50" CloseBtnVisibility="Visible" CloseClick="MyTag_CloseClick" />
+    </Grid>
+    <Grid Margin="20 0 0 0">
+        <video:VideoPlayer Width="100" Height="100" Source="/Video/DemoVideo.mp4"/>
     </Grid>
 </WrapPanel>
