@@ -141,7 +141,7 @@
         </Style>
     </UserControl.Resources>
     <Grid x:Name="VideoGrid" Background="#FFFFFF" MouseMove="video_MouseMove"  MouseLeave="video_MouseLeave">
-        <MediaElement MouseMove="video_MouseMove" MouseLeave="video_MouseLeave" MediaOpened="video_MediaOpened" LoadedBehavior="Manual" Margin="0 10 0 0" x:Name="video" Stretch="Uniform"/>
+        <MediaElement MouseLeftButtonUp="video_MouseLeftButtonUp" MouseMove="video_MouseMove" MouseLeave="video_MouseLeave" MediaOpened="video_MediaOpened" LoadedBehavior="Manual" Margin="0 10 0 0" x:Name="video" Stretch="Uniform"/>
         <Border x:Name="control_bor" MouseLeave="video_MouseLeave" Height="35"  Background="#000000" Opacity="0.5" BorderThickness="0" BorderBrush="Transparent" VerticalAlignment="Bottom"/>
         <Border x:Name="control_btn" MouseLeave="video_MouseLeave" Height="40"  Background="Transparent" VerticalAlignment="Bottom">
             <Grid Margin="10 5 0 5" VerticalAlignment="Bottom">

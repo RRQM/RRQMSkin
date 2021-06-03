@@ -258,5 +258,11 @@ namespace RRQMSkin.Controls.Video
             }
 
         }
+
+        private void video_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            video.Pause();
+            PlayCheck.IsChecked = false;
+        }
     }
 }
