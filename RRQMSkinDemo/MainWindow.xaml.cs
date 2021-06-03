@@ -5,11 +5,15 @@
 //  哔哩哔哩视频：https://space.bilibili.com/94253567
 //  源代码仓库：https://gitee.com/RRQM_Home
 //  交流QQ群：234762506
+//  本仓库其他贡献者：
+//  Mr:牧影：https://gitee.com/fuck666
+//  火狼：https://gitee.com/wudiliang
 //  感谢您的下载和使用
+//------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using RRQMSkin.Windows;
 
-namespace RRQMSkin.Demo
+namespace RRQMSkinDemo
 {  
     /// <summary>
     /// MainWindow.xaml 的交互逻辑

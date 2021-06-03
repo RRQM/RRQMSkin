@@ -12,7 +12,7 @@ using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace RRQMSkin.Demo.Display
+namespace RRQMSkinDemo.Display
 {
     /// <summary>
     /// MainPanel.xaml 的交互逻辑
@@ -48,7 +48,7 @@ namespace RRQMSkin.Demo.Display
 
         private void MyTag_CloseClick(object sender, RoutedEventArgs e)
         {
-            var temp = sender as Controls.LabelTag;
+            var temp = sender as RRQMSkin.Controls.LabelTag;
             temp.Text = $"我被点击了 我的ID是:{temp.TagID}";
         }
     }

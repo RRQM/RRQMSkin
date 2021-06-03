@@ -2,9 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:Custom="RRQM_Controls">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/RRQMSkin.Demo;component/Resource/Styles/TabControl.xaml" />
-        <ResourceDictionary Source="/RRQMSkin.Demo;component/Resource/Styles/PieChart.xaml" />
-        <ResourceDictionary Source="/RRQMSkin.Demo;component/Resource/Styles/Windows.xaml" />
+        <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/TabControl.xaml" />
+        <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/PieChart.xaml" />
+        <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/Windows.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <SolidColorBrush x:Key="foreColor" Color="#ECE2E2" />

@@ -1,4 +1,4 @@
-﻿<WrapPanel x:Class="RRQMSkin.Demo.Display.ChartsPanel"
+﻿<WrapPanel x:Class="RRQMSkinDemo.Display.ChartsPanel"
            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
            xmlns:charts="RRQM_Charts"
