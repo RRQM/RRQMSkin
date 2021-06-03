@@ -9,7 +9,7 @@ using System.Windows.Input;
 using System.Windows.Threading;
 
 
-namespace RRQMSkin.Controls.Video
+namespace RRQMSkin.Controls
 {
     /// <summary>
     /// VideoPlayer.xaml 的交互逻辑

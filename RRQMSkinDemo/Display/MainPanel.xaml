@@ -3,7 +3,7 @@
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
            xmlns:controls="RRQM_Controls"
            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:video="clr-namespace:RRQMSkin.Controls.Video;assembly=RRQMSkin"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
            d:DesignHeight="800"
            d:DesignWidth="1200"
            mc:Ignorable="d">
@@ -40,16 +40,16 @@
         </StackPanel>
     </Grid>
 
-    <Grid Width="400" Height="50">
-        <controls:ValidationSlider Background="AliceBlue" ShadeBackground="#D0E11A" Content="控件内容" ThumbContent="H"/>
+    <Grid Height="50" Width="400">
+        <controls:ValidationSlider Content="控件内容" Background="AliceBlue" ShadeBackground="#D0E11A" ThumbContent="H" />
     </Grid>
     <Grid>
-        <controls:LabelTag TagID="0" Text="标签内容与ID均可绑定" Height="50"  CloseBtnVisibility="Collapsed" />
+        <controls:LabelTag Text="标签内容与ID均可绑定" Height="50" CloseBtnVisibility="Collapsed" TagID="0" />
     </Grid>
     <Grid>
-        <controls:LabelTag TagID="0" Text="标签内容与ID均可绑定"  Height="50" CloseBtnVisibility="Visible" CloseClick="MyTag_CloseClick" />
+        <controls:LabelTag Text="标签内容与ID均可绑定" Height="50" CloseBtnVisibility="Visible" CloseClick="MyTag_CloseClick" TagID="0" />
     </Grid>
-    <Grid Margin="20 0 0 0">
-        <video:VideoPlayer Width="100" Height="100" Source="/Video/DemoVideo.mp4"/>
+    <Grid Margin="20,0,0,0">
+        <controls:VideoPlayer Height="100" Width="100" Source="/Video/DemoVideo.mp4" />
     </Grid>
 </WrapPanel>

@@ -1,9 +1,6 @@
-﻿<UserControl x:Class="RRQMSkin.Controls.Video.VideoPlayer"
+﻿<UserControl x:Class="RRQMSkin.Controls.VideoPlayer"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:RRQMSkin.Controls.Video" 
              xmlns:converter="clr-namespace:RRQMSkin.Converter"
              MinHeight="300" MinWidth="300"  Loaded="Window_Loaded">
     <UserControl.Resources>

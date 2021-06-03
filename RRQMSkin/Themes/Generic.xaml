@@ -5,7 +5,7 @@
                     xmlns:primitives="clr-namespace:RRQMSkin.Primitives"
                     xmlns:windows="clr-namespace:RRQMSkin.Windows">
 
-    
+
 
     <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3" />
     <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA" />
@@ -1000,7 +1000,7 @@
                                 <Track.Thumb>
                                     <primitives:ContentThumb x:Name="Thumb"
                                                              Content="{TemplateBinding ThumbContent}"
-                                                             Width="50"  VerticalAlignment="Stretch" Focusable="False" />
+                                                             Width="50" VerticalAlignment="Stretch" Focusable="False" />
                                 </Track.Thumb>
                             </Track>
                         </Grid>
@@ -1025,34 +1025,32 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:ClearSearchBox}">
-                    <Border x:Name="Bor"
-                            CornerRadius="{TemplateBinding CornerRadius}"
-                            >
+                    <Border x:Name="Bor" CornerRadius="{TemplateBinding CornerRadius}">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <!--文本内容区域-->
-                            <ScrollViewer x:Name="PART_ContentHost" Grid.Column="1" HorizontalAlignment="{TemplateBinding TextHorizontalContentAlignment}" VerticalAlignment="{TemplateBinding TextVerticalContentAlignment}"/>
+                            <!--  文本内容区域  -->
+                            <ScrollViewer x:Name="PART_ContentHost" Grid.Column="1"
+                                          HorizontalAlignment="{TemplateBinding TextHorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding TextVerticalContentAlignment}" />
 
-                            <Image Margin="6 0 0 0" Width="12" Height="12" Source="/RRQMSkin;component/Icons/放大镜.png" />
-                            <Label x:Name="inputhint" Grid.Column="1"
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"
-                                        Content="{TemplateBinding InputHint}"
-                                        IsHitTestVisible="False"
-                                        Foreground="{TemplateBinding InputForeground}"
-                                        Visibility="Collapsed"  />
+                            <Image Height="12" Width="12" Margin="6,0,0,0" Source="/RRQMSkin;component/Icons/放大镜.png" />
+                            <Label x:Name="inputhint"
+                                   Content="{TemplateBinding InputHint}"
+                                   Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Foreground="{TemplateBinding InputForeground}"
+                                   IsHitTestVisible="False" Visibility="Collapsed" />
 
-                            <!--水印区域-->
+                            <!--  水印区域  -->
 
-                            <!--清除按钮-->
-                            <Button x:Name="PART_ClearButtonHost" Grid.Column="2" 
-                                    Padding="2,-1,6,0" IsHitTestVisible="False" Visibility="Collapsed" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" Height="Auto">
-                                <Path Fill="#10000000" Data="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" />
+                            <!--  清除按钮  -->
+                            <Button x:Name="PART_ClearButtonHost" Height="Auto" Grid.Column="2" Padding="2,-1,6,0" Background="Transparent"
+                                    BorderBrush="Transparent" BorderThickness="0" IsHitTestVisible="False" Visibility="Collapsed">
+                                <Path Data="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" Fill="#10000000" />
                             </Button>
                         </Grid>
 
@@ -1061,48 +1059,48 @@
 
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="UIElement.IsEnabled" Value="True"/>
+                                <Condition Property="UIElement.IsEnabled" Value="True" />
                             </MultiTrigger.Conditions>
                             <MultiTrigger.Setters>
-                                <Setter Property="Background" Value="#FFF" TargetName="Bor"/>
-                                <Setter Property="BorderBrush" Value="#459EFF" TargetName="Bor"/>
-                                <Setter Property="BorderThickness" Value="1" TargetName="Bor"/>
+                                <Setter TargetName="Bor" Property="Background" Value="#FFF" />
+                                <Setter TargetName="Bor" Property="BorderBrush" Value="#459EFF" />
+                                <Setter TargetName="Bor" Property="BorderThickness" Value="1" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
 
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="UIElement.IsEnabled" Value="True"/>
-                                <Condition Property="UIElement.IsFocused" Value="False"/>
-                                <Condition Property="TextBox.Text" Value=""/>
+                                <Condition Property="UIElement.IsEnabled" Value="True" />
+                                <Condition Property="UIElement.IsFocused" Value="False" />
+                                <Condition Property="TextBox.Text" Value="" />
                             </MultiTrigger.Conditions>
                             <MultiTrigger.Setters>
-                                <Setter Property="Background" Value="#FFFFFF" TargetName="Bor"/>
-                                <Setter Property="BorderBrush" Value="#000000" TargetName="Bor"/>
-                                <Setter Property="BorderThickness" Value="1" TargetName="Bor"/>
-                                <Setter TargetName="inputhint" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="Bor" Property="Background" Value="#FFFFFF" />
+                                <Setter TargetName="Bor" Property="BorderBrush" Value="#000000" />
+                                <Setter TargetName="Bor" Property="BorderThickness" Value="1" />
+                                <Setter TargetName="inputhint" Property="Visibility" Value="Visible" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
 
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="UIElement.IsEnabled" Value="True"/>
-                                <Condition Property="IsHasText" Value="True"/>
+                                <Condition Property="UIElement.IsEnabled" Value="True" />
+                                <Condition Property="IsHasText" Value="True" />
                             </MultiTrigger.Conditions>
                             <MultiTrigger.Setters>
-                                <Setter TargetName="PART_ClearButtonHost" Property="IsHitTestVisible" Value="True"/>
-                                <Setter TargetName="PART_ClearButtonHost" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="PART_ClearButtonHost" Property="IsHitTestVisible" Value="True" />
+                                <Setter TargetName="PART_ClearButtonHost" Property="Visibility" Value="Visible" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
 
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
+                                <Condition Property="IsMouseOver" Value="true" />
                             </MultiTrigger.Conditions>
                             <MultiTrigger.Setters>
-                                <Setter Property="Background" Value="#FFF" TargetName="Bor"/>
-                                <Setter Property="BorderBrush" Value="#459EFF" TargetName="Bor"/>
-                                <Setter Property="BorderThickness" Value="1" TargetName="Bor"/>
+                                <Setter TargetName="Bor" Property="Background" Value="#FFF" />
+                                <Setter TargetName="Bor" Property="BorderBrush" Value="#459EFF" />
+                                <Setter TargetName="Bor" Property="BorderThickness" Value="1" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
 
@@ -1119,17 +1117,21 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:LabelTag}">
                     <Border x:Name="Bor" Background="Transparent" BorderBrush="Transparent">
-                        <Grid Margin="0 10 10 0">
-                            <Border BorderBrush ="#D7D7D7"  Background ="#F2F2F2" BorderThickness="1" CornerRadius="5">
+                        <Grid Margin="0,10,10,0">
+                            <Border Background="#F2F2F2" BorderBrush="#D7D7D7" BorderThickness="1" CornerRadius="5">
                                 <Grid>
-                                    <!--文本区域-->
-                                    <Label Content="{TemplateBinding Text}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground ="#6691C6"/>
+                                    <!--  文本区域  -->
+                                    <Label Content="{TemplateBinding Text}"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#6691C6" />
                                 </Grid>
                             </Border>
-                            <!--删除按钮-->
-                            <Button HorizontalAlignment="Right" Cursor="Hand" VerticalAlignment="Top" Width="25" Height="25" x:Name="PART_CloseButtonHost"
-                                    Padding="0,0,0,0" Margin="-12 -12" Visibility="{TemplateBinding CloseBtnVisibility}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
-                                <Path  Fill="#008000" Stroke="Transparent" Data="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" />
+                            <!--  删除按钮  -->
+                            <Button x:Name="PART_CloseButtonHost" Height="25" Width="25" Margin="-12,-12" Padding="0,0,0,0"
+                                    HorizontalAlignment="Right" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent"
+                                    BorderThickness="0" Cursor="Hand"
+                                    Visibility="{TemplateBinding CloseBtnVisibility}">
+                                <Path Data="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z"
+                                      Fill="#008000" Stroke="Transparent" />
                             </Button>
                         </Grid>
 
@@ -1137,10 +1139,10 @@
                     <ControlTemplate.Triggers>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="IsMouseOver" Value="true"/>
+                                <Condition Property="IsMouseOver" Value="true" />
                             </MultiTrigger.Conditions>
                             <MultiTrigger.Setters>
-                                <Setter Property="Background" Value="Transparent" TargetName="PART_CloseButtonHost"/>
+                                <Setter TargetName="PART_CloseButtonHost" Property="Background" Value="Transparent" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
                     </ControlTemplate.Triggers>
