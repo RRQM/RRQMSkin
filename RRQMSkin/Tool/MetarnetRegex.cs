@@ -240,20 +240,28 @@ namespace RRQMSkin
         /// <returns>是IP地址则为True</returns>
         internal static bool IsIPv4(string input)
         {
-            string[] IPs = input.Split('.');
-            Regex regex = new Regex(@"^\d+$");
-            for (int i = 0; i < IPs.Length; i++)
+            try
             {
-                if (!regex.IsMatch(IPs[i]))
+                string[] IPs = input.Split('.');
+                Regex regex = new Regex(@"^\d+$");
+                for (int i = 0; i < IPs.Length; i++)
                 {
-                    return false;
+                    if (!regex.IsMatch(IPs[i]))
+                    {
+                        return false;
+                    }
+                    if (Convert.ToUInt16(IPs[i]) > 255)
+                    {
+                        return false;
+                    }
                 }
-                if (Convert.ToUInt16(IPs[i]) > 255)
-                {
-                    return false;
-                }
+                return true;
             }
-            return true;
+            catch
+            {
+                return false;
+            }
+            
         }
 
         /// <summary>
