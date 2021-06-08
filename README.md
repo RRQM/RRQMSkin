@@ -1,7 +1,7 @@
 <p></p>
 <p></p>
 <p align="center">
-<img src="https://img-blog.csdnimg.cn/20210406140816743.png" width = "100" height = "100" alt="图片名称" align=center />
+<img src="https://ftp.bmp.ovh/imgs/2021/06/351eeccfadc07014.png" width = "100" height = "100" alt="图片名称" align=center />
 </p>
 
  <div align="center"> 
@@ -25,81 +25,81 @@
 
 </div>
 
-## 💿description
-&emsp;&emsp;Rrqmskin is a skin library developed by the RRQM_OS organization, which contains a variety of custom controls, user controls, style resources, and more. If you like, please support more。
+## 💿描述
+&emsp;&emsp;RRQMSkin是由RRQM_OS组织成员开发的一个皮肤库，其中包含多款自定义控件、用户控件、样式资源等。如果大家喜欢请多多支持。
 
-## 🖥Support environment
-- .NET Framework4.5 and above。
-- .NET CORE3.1 and above。
+## 🖥支持环境
+- .NET Framework4.5及以上。
+- .NET Core3.1及以上。
 
-## 🥪Support framework
+## 🥪支持框架
 - WPF
 
-## 🔗Contact organization
+## 🔗联系组织
 
- - [Source code warehouse homepage](https://gitee.com/RRQM_OS) 
- - Communication QQ group: 234762506
+ - [源代码仓库主页](https://gitee.com/RRQM_OS) 
+ - 交流QQ群：234762506
 
  
-## 📦 installation
+## 📦 安装
 
 - [Nuget RRQMSkin](https://www.nuget.org/packages/RRQMSkin/)
-- [Microsoft NuGet Installation Tutorial](https://docs.microsoft.com/zh-cn/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+- [微软Nuget安装教程](https://docs.microsoft.com/zh-cn/nuget/quickstart/install-and-use-a-package-in-visual-studio)
 
-## 🍻RRQM products
-| name                                           | Nuget version                                                                                                                              | download                                                                                              | description                                                                                                                                                                                          |
+## 🍻RRQM系产品
+| 名称                                           | Nuget版本                                                                                                                              | 下载                                                                                              | 描述                                                                                                                                                                                          |
 |------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [RRQMCore](https://gitee.com/RRQM_OS/RRQMCore) | [![NuGet version (RRQMCore)](https://img.shields.io/nuget/v/RRQMCore.svg?style=flat-square)](https://www.nuget.org/packages/RRQMCore/) | [![Download](https://img.shields.io/nuget/dt/RRQMCore)](https://www.nuget.org/packages/RRQMCore/) | Rrqmcore is a library that provides the basic service function for the RRQM system, which contains: <br> Memory pool, object pool, wait logic pool, AppMessenger, 3DES encryption, <br> XML fast storage, running time measuring machine, file shortcut, high Performance sequencer, <br> Specification log interface, etc.|
-| [RRQMMVVM](https://gitee.com/RRQM_OS/RRQMMVVM) | [![NuGet version (RRQMMVVM)](https://img.shields.io/nuget/v/RRQMMVVM.svg?style=flat-square)](https://www.nuget.org/packages/RRQMMVVM/) | [![Download](https://img.shields.io/nuget/dt/RRQMMVVM)](https://www.nuget.org/packages/RRQMMVVM/) | RRQMMVVM is a super-lighting MVVM framework, but the sparrow is small, and the fifty is full.                                                                                                                                          |
-| [RRQMSocket](https://gitee.com/dotnetchina/RRQMSocket) | [![NuGet version (RRQMSocket)](https://img.shields.io/nuget/v/RRQMSocket.svg?style=flat-square)](https://www.nuget.org/packages/RRQMSocket/) | [![Download](https://img.shields.io/nuget/dt/RRQMSocket)](https://www.nuget.org/packages/RRQMSocket/) | Rrqmsocket is an integrated network communication framework. It is characterized by supporting high concurrency, event driver, ease of use, and second development difficulty. The main contents include: TCP service communication framework, file transfer, RPC and other content|  
+| [RRQMCore](https://gitee.com/RRQM_OS/RRQMCore) | [![NuGet version (RRQMCore)](https://img.shields.io/nuget/v/RRQMCore.svg?style=flat-square)](https://www.nuget.org/packages/RRQMCore/) | [![Download](https://img.shields.io/nuget/dt/RRQMCore)](https://www.nuget.org/packages/RRQMCore/) | RRQMCore是为RRQM系提供基础服务功能的库，其中包含：<br>内存池、对象池、等待逻辑池、AppMessenger、3DES加密、<br>Xml快速存储、运行时间测量器、文件快捷操作、高性能序列化器、<br>规范日志接口等。 |
+| [RRQMMVVM](https://gitee.com/RRQM_OS/RRQMMVVM) | [![NuGet version (RRQMMVVM)](https://img.shields.io/nuget/v/RRQMMVVM.svg?style=flat-square)](https://www.nuget.org/packages/RRQMMVVM/) | [![Download](https://img.shields.io/nuget/dt/RRQMMVVM)](https://www.nuget.org/packages/RRQMMVVM/) | RRQMMVVM是超轻简的MVVM框架，但是麻雀虽小，五脏俱全。                                                                                                                                          |
+| [RRQMSocket](https://gitee.com/dotnetchina/RRQMSocket) | [![NuGet version (RRQMSocket)](https://img.shields.io/nuget/v/RRQMSocket.svg?style=flat-square)](https://www.nuget.org/packages/RRQMSocket/) | [![Download](https://img.shields.io/nuget/dt/RRQMSocket)](https://www.nuget.org/packages/RRQMSocket/) | RRQMSocket是一个整合性网络通信框架，特点是支持高并发、事件驱动、易用性强、二次开发难度低等。其中主要内容包括:TCP服务通信框架、文件传输、RPC等内容|  
 
-## First, the form
+## 一、窗体
 
-#### 1.1 Enhanced ordinary form (RRQMWindow)
-**Description:**
+#### 1.1 增强性普通窗体（RRQMWindow）
+ **说明：** 
 
-Enhanced ordinary forms are custom ICON (green zones), TitleContent (red area), ToolCommand, and Content (purple area), ToolCommand, and Content (purple area), ToolCommand, ToolCommand.
+增强性普通窗体是在**无边框窗体**的基础之上实现的自定义Icon（绿色区）、TitleContent（红色区）、ToolCommand（蓝色区）、Content（紫色区）。
 
- **Features:** 
-1. Forms respond to mouse full instructions, including drag maximizing, minimizing, left and right scales, changing sizes, etc.
-2. The TitleContent zone can populate Object.
-3. Minimize, maximize switching, close, all use Command binding form, which can be freely realized.
-4. Reactive master template.
+ **特点：** 
+1. 窗体响应鼠标全指令，包括拖动最大化、最小化、左右分屏、改变尺寸等。
+2. TitleContent区内容可填充object。
+3. 最小化、最大化切换、关闭均采用Command绑定形式，可以很自由的实现个性化功能。
+4. 可重写母模板。
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0429/090158_405db863_8553710.png "屏幕截图.png")
 
-#### 1.2 Enhanced Effect Forms (RRQMEFFECTWINDOW)
- **Description:** 
+#### 1.2 增强性效果窗体（RRQMEffectWindow）
+ **说明：** 
 
-Enhanced Effect Forms are a form of customizable effects that inherited from **RRQMWindow**, which is the same as RRQMWindow.
+增强性效果窗体是在继承自**RRQMWindow**的可自定义实现特效的窗体，其功能区布局和RRQMWindow一样。
 
- **Features:** 
-1. Forms respond to mouse full instructions, including drag maximizing, minimizing, left and right scales, changing sizes, etc.
-2. The TitleContent zone can populate Object.
-3. Minimize, maximize switching, close, all use Command binding form, which can be freely realized.
-4. Reactive master template.
-5. Use properties directly to set **Form Rounded**, **shadow spread**, **shadow color**, etc.
+ **特点：** 
+1. 窗体响应鼠标全指令，包括拖动最大化、最小化、左右分屏、改变尺寸等。
+2. TitleContent区内容可填充object。
+3. 最小化、最大化切换、关闭均采用Command绑定形式，可以很自由的实现个性化功能。
+4. 可重写母模板。
+5. 使用属性直接设置 **窗体圆角** 、 **阴影扩散度** 、 **阴影颜色** 等。
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0429/091244_b0abd404_8553710.png "屏幕截图.png")
-## Second, the element
+## 二、元素
 
 
-## Third, custom control
-## Fourth, control style resources
+## 三、自定义控件
+## 四、控件样式资源
 
-## Thank you
+## 致谢
 
-Thank you for your support, if there are other problems, please add group QQ: 234762506.
+谢谢大家对我的支持，如果还有其他问题，请加群QQ：234762506讨论。
 
 
-## 💕 Support this item (for organization)
-Your support is our unremitting efforts. Please leave your name when you are rewarding, and Rrqmskin comments.
+## 💕 支持本项目（为组织）
+您的支持就是我们不懈努力的动力。打赏时请一定留下您的称呼，以及RRQMSkin注释。
 
- **Sponsorship total amount: 0 ¥** 
+ **赞助总金额:0￥** 
 
-**Sponsored list:** 
+**赞助名单：** 
 
-(The following ranking is only in the order of rewards)
+（以下排名只按照打赏时间顺序）
 
 
 <img src="https://images.gitee.com/uploads/images/2021/0330/234046_7662fb8c_8553710.png" width = "600" height = "400" alt="图片名称" align=center />
