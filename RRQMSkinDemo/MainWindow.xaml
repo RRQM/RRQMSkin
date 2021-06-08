@@ -14,7 +14,8 @@
                     ContentFill="False"
                     ResizeMode="CanResize"
                     WindowStyle="SingleBorderWindow"
-                    mc:Ignorable="d" Style="{DynamicResource RRQMWindowStyle}">
+                    mc:Ignorable="d"
+                    Style="{DynamicResource RRQMWindowStyle}">
 
     <Grid>
         <controls:RRQMTabControl TabStripPlacement="Left" Margin="5" Background="Transparent"
