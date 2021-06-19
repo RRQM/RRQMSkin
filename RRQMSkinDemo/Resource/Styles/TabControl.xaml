@@ -1,6 +1,7 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:controls="RRQM_Controls">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="RRQM_Controls">
     <Style x:Key="RRQMTabControlStyle" TargetType="{x:Type controls:RRQMTabControl}">
         <Setter Property="Padding" Value="2" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -21,21 +22,10 @@
                             <RowDefinition x:Name="RowDefinition1" Height="*" />
                         </Grid.RowDefinitions>
                         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-                            <VirtualizingStackPanel x:Name="HeaderPanel" Grid.Row="0" Grid.Column="0" Margin="2,2,2,0" Panel.ZIndex="1"
-                                                    Background="Transparent" IsItemsHost="True" KeyboardNavigation.TabIndex="1" Orientation="Vertical" />
+                            <VirtualizingStackPanel x:Name="HeaderPanel" Grid.Row="0" Grid.Column="0" Margin="2,2,2,0" Panel.ZIndex="1" Background="Transparent" IsItemsHost="True" KeyboardNavigation.TabIndex="1" Orientation="Vertical" />
                         </ScrollViewer>
-                        <Border x:Name="ContentPanel" Grid.Row="1" Grid.Column="0" Margin="3"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="2" KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2"
-                                KeyboardNavigation.TabNavigation="Local">
-                            <ContentPresenter x:Name="PART_SelectedContentHost"
-                                              Content="{TemplateBinding SelectedContent}"
-                                              Margin="{TemplateBinding Padding}"
-                                              ContentSource="SelectedContent"
-                                              ContentStringFormat="{TemplateBinding SelectedContentStringFormat}"
-                                              ContentTemplate="{TemplateBinding SelectedContentTemplate}"
-                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        <Border x:Name="ContentPanel" Grid.Row="1" Grid.Column="0" Margin="3" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="2" KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+                            <ContentPresenter x:Name="PART_SelectedContentHost" Margin="{TemplateBinding Padding}" Content="{TemplateBinding SelectedContent}" ContentSource="SelectedContent" ContentStringFormat="{TemplateBinding SelectedContentStringFormat}" ContentTemplate="{TemplateBinding SelectedContentTemplate}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -73,12 +63,7 @@
                                 <GradientStop x:Name="gradientStop" Offset="1" Color="#FFEDC717" />
                             </LinearGradientBrush>
                         </Border.Background>
-                        <ContentPresenter x:Name="contentPresenter"
-                                          Content="{TemplateBinding Header}"
-                                          HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}"
-                                          VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}"
-                                          ContentSource="Header" Focusable="False" RecognizesAccessKey="True"
-                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}" Content="{TemplateBinding Header}" ContentSource="Header" Focusable="False" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
