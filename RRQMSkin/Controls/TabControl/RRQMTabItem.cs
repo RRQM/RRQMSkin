@@ -8,8 +8,9 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using RRQMSkin.MVVM;
 using System.Windows.Controls;
-using RRQMMVVM;
+using System.Windows.Input;
 
 namespace RRQMSkin.Controls
 {
@@ -20,7 +21,7 @@ namespace RRQMSkin.Controls
             this.CloseItemCommand = new ExecuteCommand(CloseItem);
         }
 
-        public ExecuteCommand CloseItemCommand { get; set; }
+        public ICommand CloseItemCommand { get; set; }
 
         private void CloseItem()
         {

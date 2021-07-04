@@ -39,7 +39,7 @@ namespace RRQMSkin.Controls
                 case InputFilter.Nono:
                     this.IsComplies = true;
                     break;
-
+                    
                 case InputFilter.Uint:
                     this.IsComplies = MetarnetRegex.IsNotNagtive(textBox.Text);
                     break;

@@ -34,12 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RRQMCore">
-      <HintPath>..\RRQMSkin\bin\Debug\net45\RRQMCore.dll</HintPath>
-    </Reference>
-    <Reference Include="RRQMMVVM">
-      <HintPath>..\RRQMSkin\bin\Debug\net45\RRQMMVVM.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -60,6 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Display\SpeedDialPanel.xaml.cs">
+      <DependentUpon>SpeedDialPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="Display\ButtonPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,6 +77,10 @@
     <Page Include="Display\MainPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Display\SpeedDialPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

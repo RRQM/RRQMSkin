@@ -15,7 +15,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shell;
-using RRQMMVVM;
+using RRQMSkin.MVVM;
 
 namespace RRQMSkin.Windows
 {
@@ -162,9 +162,9 @@ namespace RRQMSkin.Windows
 
         #region Command
 
-        public ExecuteCommand MinWindowCommand { get; set; }
-        public ExecuteCommand MaxOrNormalWindowCommand { get; set; }
-        public ExecuteCommand CloseWindowCommand { get; set; }
+        public ICommand MinWindowCommand { get; set; }
+        public ICommand MaxOrNormalWindowCommand { get; set; }
+        public ICommand CloseWindowCommand { get; set; }
 
         #endregion Command
 

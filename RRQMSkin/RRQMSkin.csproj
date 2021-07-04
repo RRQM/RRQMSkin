@@ -8,10 +8,10 @@
     <Description>这是一个WPF控件库。
 
 更新内容：
-1.添加滑动验证</Description>
+修改依赖</Description>
     <PackageProjectUrl>https://gitee.com/RRQM_OS/RRQMSkin</PackageProjectUrl>
     <Copyright>Copyright © 2021 若汝棋茗</Copyright>
-    <Version>3.0.0</Version>
+    <Version>3.1.0</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>
@@ -20,17 +20,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="MVVM\**" />
+    <Compile Remove="Style\**" />
     <Compile Remove="Text\**" />
-    <EmbeddedResource Remove="MVVM\**" />
+    <EmbeddedResource Remove="Style\**" />
     <EmbeddedResource Remove="Text\**" />
-    <None Remove="MVVM\**" />
+    <None Remove="Style\**" />
     <None Remove="Text\**" />
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <Page Remove="MVVM\**" />
+    <Page Remove="Style\**" />
     <Page Remove="Text\**" />
   </ItemGroup>
 
@@ -55,14 +55,6 @@
     <Resource Include="Fonts\iconfont.ttf" />
     <Resource Include="Icons\RRQM.ico" />
     <Resource Include="Icons\放大镜.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Style\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="RRQMMVVM" Version="3.0.0" />
   </ItemGroup>
 
 </Project>

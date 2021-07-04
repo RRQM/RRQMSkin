@@ -14,7 +14,7 @@
 using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Media;
-using RRQMMVVM;
+using RRQMSkin.MVVM;
 
 namespace RRQMSkinDemo.Display
 {

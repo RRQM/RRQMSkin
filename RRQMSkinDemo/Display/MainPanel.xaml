@@ -7,11 +7,7 @@
            d:DesignHeight="800"
            d:DesignWidth="1200"
            mc:Ignorable="d">
-    <Grid Height="300" Width="300" Margin="10">
-        <controls:SpeedDial Name="speedDial" />
-        <Slider VerticalAlignment="Bottom" Maximum="160" Minimum="0"
-                Value="{Binding ElementName=speedDial, Path=Speed}" />
-    </Grid>
+    
 
     <Grid Height="300" Width="300" Grid.Row="0" Grid.Column="1" Margin="10">
         <controls:Clock Name="clock" Margin="10" Background="Red" />
