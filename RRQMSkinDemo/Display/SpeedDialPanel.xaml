@@ -1,14 +1,19 @@
-﻿<UserControl x:Class="RRQMSkinDemo.Display.SpeedDialPanel"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:RRQMSkinDemo.Display" xmlns:controls="RRQM_Controls"
-             mc:Ignorable="d" 
-             Height="200" Width="200">
+﻿<UserControl
+    x:Class="RRQMSkinDemo.Display.SpeedDialPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="RRQM_Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:RRQMSkinDemo.Display"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="200"
+    Height="200"
+    mc:Ignorable="d">
     <Grid Margin="10">
         <controls:SpeedDial Name="speedDial" />
-        <Slider VerticalAlignment="Bottom" Maximum="160" Minimum="0"
-                Value="{Binding ElementName=speedDial, Path=Speed}" />
+        <Slider
+            VerticalAlignment="Bottom" Maximum="160"
+            Minimum="0"
+            Value="{Binding ElementName=speedDial, Path=Speed}" />
     </Grid>
 </UserControl>
