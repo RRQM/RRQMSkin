@@ -10,6 +10,6 @@
     Height="200"
     mc:Ignorable="d">
     <Grid>
-        <controls:SpeedDial Name="speedDial"/>
+        <controls:SpeedDial Name="speedDial" />
     </Grid>
 </UserControl>
