@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Display\ClockPanel.xaml.cs">
+      <DependentUpon>ClockPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Display\SpeedDialPanel.xaml.cs">
       <DependentUpon>SpeedDialPanel.xaml</DependentUpon>
     </Compile>
@@ -65,6 +68,10 @@
     <Page Include="Display\ChartsPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Display\ClockPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Display\DragDropPanel.xaml">
       <Generator>MSBuild:Compile</Generator>

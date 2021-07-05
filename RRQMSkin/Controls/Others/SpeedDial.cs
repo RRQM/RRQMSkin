@@ -122,7 +122,7 @@ namespace RRQMSkin.Controls
 
         private static void OnChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            // ((SpeedDial)d).InvalidateVisual();
+            //((SpeedDial)d).InvalidateVisual();
             SpeedDial speedDial = (SpeedDial)d;
             if (speedDial.Speed >= speedDial.MinValue)
             {

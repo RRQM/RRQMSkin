@@ -14,9 +14,7 @@
         Grid.Row="0" Grid.Column="1"
         Width="300" Height="300"
         Margin="10">
-        <controls:Clock
-            Name="clock" Margin="10"
-            Background="Red" />
+       
     </Grid>
 
     <controls:BorderImage

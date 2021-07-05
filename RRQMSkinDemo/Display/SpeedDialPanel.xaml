@@ -9,11 +9,7 @@
     Width="200"
     Height="200"
     mc:Ignorable="d">
-    <Grid Margin="10">
-        <controls:SpeedDial Name="speedDial" />
-        <Slider
-            VerticalAlignment="Bottom" Maximum="160"
-            Minimum="0"
-            Value="{Binding ElementName=speedDial, Path=Speed}" />
+    <Grid>
+        <controls:SpeedDial Name="speedDial"/>
     </Grid>
 </UserControl>

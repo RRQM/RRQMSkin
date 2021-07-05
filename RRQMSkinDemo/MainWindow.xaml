@@ -11,14 +11,12 @@
     Title="123"
     Width="1200"
     Height="700"
-    BorderBrush="Black"
-    ContentFill="False"
     ResizeMode="CanResize"
-    Style="{DynamicResource RRQMWindowStyle}"
-    WindowStyle="SingleBorderWindow"
+    Background="White"
     mc:Ignorable="d">
 
-    <WrapPanel>
-        <display:SpeedDialPanel />
+    <WrapPanel Orientation="Horizontal">
+        <display:SpeedDialPanel/>
+        <display:ClockPanel/>
     </WrapPanel>
 </windows:RRQMWindow>

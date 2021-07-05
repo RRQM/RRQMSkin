@@ -38,7 +38,7 @@ namespace RRQMSkinDemo.Display
             {
                 this.Dispatcher.Invoke(() =>
                 {
-                    this.clock.Time = new TimeSpan(DateTime.Now.Ticks); ;
+                    //this.clock.Time = new TimeSpan(DateTime.Now.Ticks); ;
                 });
             }
             catch (Exception)
