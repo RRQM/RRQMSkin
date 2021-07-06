@@ -20,6 +20,7 @@
             <display:SpeedDialDisplay Width="200" Height="200" Margin="10" />
             <display:ClockDisplay Width="200" Height="200" Margin="10" />
             <display:CorrugatedButtonDisplay Width="200" Height="200" Margin="10" />
+            <display:InputBoxDisplay Width="200" Height="200" Margin="10" />
         </WrapPanel>
     </ScrollViewer>
 

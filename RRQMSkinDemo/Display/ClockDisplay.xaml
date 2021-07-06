@@ -12,12 +12,21 @@
         BorderThickness="{StaticResource displayBorderThiness}"
         CornerRadius="{StaticResource displayCornerRadius}"
         mc:Ignorable="d">
-    <controls:RadioPanel>
-        <controls:RadioPanel.Content>
-            <controls:Clock Name="speedDial" Margin="10" />
-        </controls:RadioPanel.Content>
-        <controls:RadioPanel.RadioContent>
-            这是一个时钟表盘
-        </controls:RadioPanel.RadioContent>
-    </controls:RadioPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="5,5,0,0" Background="#E740D5">
+            <TextBlock Text="Clock" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+        </Border>
+        <controls:RadioPanel Grid.Row="1">
+            <controls:RadioPanel.Content>
+                <controls:Clock Margin="10" />
+            </controls:RadioPanel.Content>
+            <controls:RadioPanel.RadioContent>
+                这是一个速度表盘
+            </controls:RadioPanel.RadioContent>
+        </controls:RadioPanel>
+    </Grid>
 </Border>

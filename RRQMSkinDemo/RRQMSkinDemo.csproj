@@ -57,6 +57,12 @@
     <Compile Include="Display\ClockDisplay.xaml.cs">
       <DependentUpon>ClockDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Display\DoubleEditTextBlockDisplay.xaml.cs">
+      <DependentUpon>DoubleEditTextBlockDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Display\InputBoxDisplay.xaml.cs">
+      <DependentUpon>InputBoxDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Display\SpeedDialDisplay.xaml.cs">
       <DependentUpon>SpeedDialDisplay.xaml</DependentUpon>
     </Compile>
@@ -65,15 +71,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Display\ChartsPanel.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Display\ClockDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Display\DragDropPanel.xaml">
+    <Page Include="Display\DoubleEditTextBlockDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Display\InputBoxDisplay.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -99,12 +105,6 @@
     </Compile>
     <Compile Include="Display\CorrugatedButtonDisplay.xaml.cs">
       <DependentUpon>CorrugatedButtonDisplay.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Display\ChartsPanel.xaml.cs">
-      <DependentUpon>ChartsPanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Display\DragDropPanel.xaml.cs">
-      <DependentUpon>DragDropPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Display\InputBoxPanel.xaml.cs">
       <DependentUpon>InputBoxPanel.xaml</DependentUpon>

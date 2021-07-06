@@ -24,25 +24,7 @@
                 Margin="10" HorizontalContentAlignment="Left"
                 VerticalContentAlignment="Center" Background="Transparent"
                 CornerRadius="5" TipText="我能提示" />
-            <controls:InputBox
-                Width="100" Height="30"
-                Margin="10" HorizontalContentAlignment="Left"
-                VerticalContentAlignment="Center" Background="Transparent"
-                CornerRadius="5">
-                <controls:InputBox.TipText>
-                    <TextBlock
-                        VerticalAlignment="Center" FontSize="16"
-                        FontStyle="Italic" FontWeight="Bold"
-                        Opacity="1" Text="七彩提示">
-                        <TextBlock.Foreground>
-                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                <GradientStop Offset="0" Color="#FF0715EF" />
-                                <GradientStop Offset="1" Color="#FFED1717" />
-                            </LinearGradientBrush>
-                        </TextBlock.Foreground>
-                    </TextBlock>
-                </controls:InputBox.TipText>
-            </controls:InputBox>
+            
             <controls:InputBox
                 Width="150" Height="30"
                 Margin="10" HorizontalContentAlignment="Left"

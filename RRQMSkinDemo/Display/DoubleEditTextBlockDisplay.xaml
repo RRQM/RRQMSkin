@@ -22,12 +22,15 @@
         </Border>
         <controls:RadioPanel Grid.Row="1">
             <controls:RadioPanel.Content>
-                <controls:SpeedDial Name="speedDial" Margin="10" />
+                <Grid>
+                    <controls:DoubleEditTextBlock Text="双击编辑" Width="100"  VerticalAlignment="Center" />
+                </Grid>
+               
             </controls:RadioPanel.Content>
             <controls:RadioPanel.RadioContent>
                 这是一个速度表盘
             </controls:RadioPanel.RadioContent>
         </controls:RadioPanel>
     </Grid>
-    
+
 </Border>

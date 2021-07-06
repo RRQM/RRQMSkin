@@ -11,12 +11,23 @@
         BorderThickness="{StaticResource displayBorderThiness}"
         CornerRadius="{StaticResource displayCornerRadius}"
         mc:Ignorable="d">
-    <controls:RadioPanel>
-        <controls:RadioPanel.Content>
-            <controls:CorrugatedButton Width="100" Height="30" />
-        </controls:RadioPanel.Content>
-        <controls:RadioPanel.RadioContent>
-            这是一个水波纹按钮
-        </controls:RadioPanel.RadioContent>
-    </controls:RadioPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="5,5,0,0" Background="#E740D5">
+            <TextBlock Text="CorrugatedButton" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+        </Border>
+        <controls:RadioPanel Grid.Row="1">
+            <controls:RadioPanel.Content>
+                <Grid>
+                    <controls:CorrugatedButton Width="100" Height="30"/>
+                </Grid>
+            </controls:RadioPanel.Content>
+            <controls:RadioPanel.RadioContent>
+                这是一个水波纹按钮
+            </controls:RadioPanel.RadioContent>
+        </controls:RadioPanel>
+    </Grid>
 </Border>
