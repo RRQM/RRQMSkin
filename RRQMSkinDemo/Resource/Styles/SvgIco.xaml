@@ -1,7 +1,10 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Border x:Key="SwitchIco">
-        <Viewbox Width="20" Height="20" HorizontalAlignment="Right">
+        <Viewbox
+            Width="20" Height="20"
+            HorizontalAlignment="Right">
             <Grid Width="1024" Height="1024">
                 <Path Data="M391.8848 945.1008h421.632c73.5232 0 133.12-59.5968 133.12-133.12V390.3488c0-73.5232-59.5968-133.12-133.12-133.12H391.8848c-73.5232 0-133.12 59.5968-133.12 133.12v421.632c0 73.5232 59.5968 133.12 133.12 133.12z" Fill="#A5ADF6" />
                 <Path Data="M207.0528 760.2688h421.632c73.5232 0 133.12-59.5968 133.12-133.12V205.4656c0-73.5232-59.5968-133.12-133.12-133.12H207.0528c-73.5232 0-133.12 59.5968-133.12 133.12v421.632c0 73.5744 59.648 133.1712 133.12 133.1712z" Fill="#A5ADF6" />

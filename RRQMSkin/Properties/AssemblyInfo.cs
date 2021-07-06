@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Markup;
 
+[assembly: XmlnsDefinitionAttribute("RRQM_MVVM", "RRQMSkin.MVVM")]
 [assembly: XmlnsDefinitionAttribute("RRQM_Windows", "RRQMSkin.Windows")]
 [assembly: XmlnsDefinitionAttribute("RRQM_Controls", "RRQMSkin.Controls")]
 [assembly: XmlnsDefinitionAttribute("RRQM_DragDrop", "RRQMSkin.DragDrop")]

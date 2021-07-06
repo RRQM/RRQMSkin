@@ -8,7 +8,7 @@
                     xmlns:primitives="RRQM_Primitives"
                     xmlns:windows="RRQM_Windows"
                     Title="123"
-                    Width="850"
+                    Width="900"
                     Height="600"
                     Background="#407EB0"
                     ResizeMode="CanResize"
@@ -22,6 +22,7 @@
             <display:CorrugatedButtonDisplay Width="200" Height="200" Margin="10" />
             <display:InputBoxDisplay Width="200" Height="200" Margin="10" />
             <display:DoubleEditTextBlockDisplay Width="200" Height="200" Margin="10" />
+            <display:SearchBoxDisplay Width="200" Height="200" Margin="10" />
         </WrapPanel>
     </ScrollViewer>
 

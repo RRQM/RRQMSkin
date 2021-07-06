@@ -63,6 +63,9 @@
     <Compile Include="Display\InputBoxDisplay.xaml.cs">
       <DependentUpon>InputBoxDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Display\SearchBoxDisplay.xaml.cs">
+      <DependentUpon>SearchBoxDisplay.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Display\SpeedDialDisplay.xaml.cs">
       <DependentUpon>SpeedDialDisplay.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,10 @@
     <Page Include="Display\MainPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Display\SearchBoxDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Display\SpeedDialDisplay.xaml">
       <SubType>Designer</SubType>
