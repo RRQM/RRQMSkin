@@ -1,4 +1,4 @@
-﻿<Border x:Class="RRQMSkinDemo.Display.SpeedDialDisplay"
+﻿<Border x:Class="RRQMSkinDemo.Display.DoubleEditTextBlockDisplay"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="RRQM_Controls"

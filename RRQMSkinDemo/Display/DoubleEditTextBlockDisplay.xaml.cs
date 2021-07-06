@@ -18,7 +18,7 @@ namespace RRQMSkinDemo.Display
     /// <summary>
     /// DoubleEditTextBlockDisplay.xaml 的交互逻辑
     /// </summary>
-    public partial class DoubleEditTextBlockDisplay : UserControl
+    public partial class DoubleEditTextBlockDisplay : Border
     {
         public DoubleEditTextBlockDisplay()
         {

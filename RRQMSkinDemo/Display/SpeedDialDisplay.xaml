@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:RRQMSkinDemo.Display"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        d:DesignHeight="200"
+        d:DesignHeight="250"
         d:DesignWidth="200"
         Background="{StaticResource displayBackColor}"
         BorderBrush="{StaticResource displayBorderColor}"
@@ -18,7 +18,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Border CornerRadius="5,5,0,0" Background="#E740D5">
-            <TextBlock Text="SpeedDial" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+            <Grid>
+                <TextBlock Text="SpeedDial" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+            </Grid>
         </Border>
         <controls:RadioPanel Grid.Row="1">
             <controls:RadioPanel.Content>

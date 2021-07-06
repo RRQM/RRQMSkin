@@ -3,6 +3,7 @@
                     xmlns:Custom="RRQM_Controls"
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/SvgIco.xaml" />
         <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/TabControl.xaml" />
         <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/PieChart.xaml" />
         <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/Windows.xaml" />
