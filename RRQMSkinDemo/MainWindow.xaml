@@ -1,22 +1,26 @@
-﻿<windows:RRQMWindow
-    x:Class="RRQMSkinDemo.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="RRQM_Controls"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:display="clr-namespace:RRQMSkinDemo.Display"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:primitives="RRQM_Primitives"
-    xmlns:windows="RRQM_Windows"
-    Title="123"
-    Width="1200"
-    Height="700"
-    ResizeMode="CanResize"
-    Background="White"
-    mc:Ignorable="d">
+﻿<windows:RRQMWindow x:Class="RRQMSkinDemo.MainWindow"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="RRQM_Controls"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:display="clr-namespace:RRQMSkinDemo.Display"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:primitives="RRQM_Primitives"
+                    xmlns:windows="RRQM_Windows"
+                    Title="123"
+                    Width="850"
+                    Height="600"
+                    Background="#407EB0"
+                    ResizeMode="CanResize"
+                    WindowStartupLocation="CenterScreen"
+                    mc:Ignorable="d">
 
-    <WrapPanel Orientation="Horizontal">
-        <display:SpeedDialPanel/>
-        <display:ClockPanel/>
-    </WrapPanel>
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <WrapPanel Orientation="Horizontal">
+            <display:SpeedDialDisplay Width="200" Height="200" Margin="10" />
+            <display:ClockDisplay Width="200" Height="200" Margin="10" />
+            <display:CorrugatedButtonDisplay Width="200" Height="200" Margin="10" />
+        </WrapPanel>
+    </ScrollViewer>
+
 </windows:RRQMWindow>

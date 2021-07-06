@@ -1,0 +1,23 @@
+﻿<Border x:Class="RRQMSkinDemo.Display.ClockDisplay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="RRQM_Controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:RRQMSkinDemo.Display"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         d:DesignHeight="200"
+        d:DesignWidth="200"
+        Background="{StaticResource displayBackColor}"
+        BorderBrush="{StaticResource displayBorderColor}"
+        BorderThickness="{StaticResource displayBorderThiness}"
+        CornerRadius="{StaticResource displayCornerRadius}"
+        mc:Ignorable="d">
+    <controls:RadioPanel>
+        <controls:RadioPanel.Content>
+            <controls:Clock Name="speedDial" Margin="10" />
+        </controls:RadioPanel.Content>
+        <controls:RadioPanel.RadioContent>
+            这是一个时钟表盘
+        </controls:RadioPanel.RadioContent>
+    </controls:RadioPanel>
+</Border>

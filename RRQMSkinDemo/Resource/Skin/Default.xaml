@@ -1,7 +1,6 @@
-﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:Custom="RRQM_Controls">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Custom="RRQM_Controls" xmlns:system="clr-namespace:System;assembly=mscorlib">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/TabControl.xaml" />
         <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/PieChart.xaml" />
@@ -11,4 +10,8 @@
     <SolidColorBrush x:Key="foreColor" Color="#ECE2E2" />
     <SolidColorBrush x:Key="backColor" Color="#443F3F" />
 
+    <SolidColorBrush x:Key="displayBackColor" Color="AliceBlue" />
+    <SolidColorBrush x:Key="displayBorderColor" Color="Beige" />
+    <Thickness x:Key="displayBorderThiness">3</Thickness>
+    <CornerRadius x:Key="displayCornerRadius">5</CornerRadius>
 </ResourceDictionary>

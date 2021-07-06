@@ -54,14 +54,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Display\ClockPanel.xaml.cs">
-      <DependentUpon>ClockPanel.xaml</DependentUpon>
+    <Compile Include="Display\ClockDisplay.xaml.cs">
+      <DependentUpon>ClockDisplay.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Display\SpeedDialPanel.xaml.cs">
-      <DependentUpon>SpeedDialPanel.xaml</DependentUpon>
+    <Compile Include="Display\SpeedDialDisplay.xaml.cs">
+      <DependentUpon>SpeedDialDisplay.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Page Include="Display\ButtonPanel.xaml">
+    <Page Include="Display\CorrugatedButtonDisplay.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -69,7 +69,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Display\ClockPanel.xaml">
+    <Page Include="Display\ClockDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -85,7 +85,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Display\SpeedDialPanel.xaml">
+    <Page Include="Display\SpeedDialDisplay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,8 +97,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Display\ButtonPanel.xaml.cs">
-      <DependentUpon>ButtonPanel.xaml</DependentUpon>
+    <Compile Include="Display\CorrugatedButtonDisplay.xaml.cs">
+      <DependentUpon>CorrugatedButtonDisplay.xaml</DependentUpon>
     </Compile>
     <Compile Include="Display\ChartsPanel.xaml.cs">
       <DependentUpon>ChartsPanel.xaml</DependentUpon>

@@ -18,9 +18,9 @@ namespace RRQMSkinDemo.Display
     /// <summary>
     /// ClockPanel.xaml 的交互逻辑
     /// </summary>
-    public partial class ClockPanel : UserControl
+    public partial class ClockDisplay : Border
     {
-        public ClockPanel()
+        public ClockDisplay()
         {
             InitializeComponent();
         }

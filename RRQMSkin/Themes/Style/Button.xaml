@@ -1,7 +1,6 @@
-﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:RRQMSkin.Controls">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:RRQMSkin.Controls">
 
     <Style x:Key="noneButton" TargetType="{x:Type Button}">
         <Setter Property="Template">
@@ -21,14 +20,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border
-                        Name="border" Width="25"
-                        Height="25" Margin="3,0"
-                        BorderThickness="1">
-                        <TextBlock
-                            HorizontalAlignment="Center" VerticalAlignment="Center"
-                            Foreground="{TemplateBinding Foreground}"
-                            Text="{TemplateBinding Content}" />
+                    <Border Name="border" Width="25" Height="25" Margin="3,0" BorderThickness="1">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   Text="{TemplateBinding Content}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
@@ -51,22 +46,18 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:CorrugatedButton}">
-                    <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="{TemplateBinding CornerRadius}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}">
                         <Grid Name="mainGrid">
                             <Canvas Panel.ZIndex="-1">
-                                <Ellipse
-                                    x:Name="CorrugatedEllipse" Width="1"
-                                    Height="1"
-                                    Fill="{TemplateBinding CorrugatedBrush}" />
+                                <Ellipse x:Name="CorrugatedEllipse" Width="1" Height="1"
+                                         Fill="{TemplateBinding CorrugatedBrush}" />
                             </Canvas>
-                            <ContentPresenter
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                Content="{TemplateBinding Content}" />
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              Content="{TemplateBinding Content}" />
                         </Grid>
                     </Border>
                 </ControlTemplate>

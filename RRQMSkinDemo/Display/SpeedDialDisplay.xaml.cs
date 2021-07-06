@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RRQMSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,9 @@ namespace RRQMSkinDemo.Display
     /// <summary>
     /// SpeedDialPanel.xaml 的交互逻辑
     /// </summary>
-    public partial class SpeedDialPanel : UserControl
+    public partial class SpeedDialDisplay : Border
     {
-        public SpeedDialPanel()
+        public SpeedDialDisplay()
         {
             InitializeComponent();
         }
