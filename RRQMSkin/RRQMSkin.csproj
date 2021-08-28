@@ -11,7 +11,7 @@
 修改依赖</Description>
     <PackageProjectUrl>https://gitee.com/RRQM_OS/RRQMSkin</PackageProjectUrl>
     <Copyright>Copyright © 2021 若汝棋茗</Copyright>
-    <Version>3.1.0</Version>
+    <Version>3.2.0</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
     <ApplicationIcon>RRQM.ico</ApplicationIcon>
