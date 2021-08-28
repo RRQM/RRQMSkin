@@ -63,6 +63,9 @@
     <Compile Include="Display\InputBoxDisplay.xaml.cs">
       <DependentUpon>InputBoxDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Display\RadioIco.xaml.cs">
+      <DependentUpon>RadioIco.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Display\SearchBoxDisplay.xaml.cs">
       <DependentUpon>SearchBoxDisplay.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,10 @@
     <Page Include="Display\MainPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Display\RadioIco.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Display\SearchBoxDisplay.xaml">
       <SubType>Designer</SubType>

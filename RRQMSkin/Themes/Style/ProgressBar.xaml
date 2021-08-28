@@ -1,8 +1,7 @@
-﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="clr-namespace:RRQMSkin.Controls"
-    xmlns:primitives="clr-namespace:RRQMSkin.Primitives">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:RRQMSkin.Controls"
+                    xmlns:primitives="clr-namespace:RRQMSkin.Primitives">
     <Style TargetType="{x:Type controls:RoundProgressBar}">
         <Setter Property="Background" Value="#CED0CF" />
         <Setter Property="Foreground">
@@ -18,24 +17,18 @@
                 <ControlTemplate TargetType="{x:Type controls:RoundProgressBar}">
                     <Viewbox>
                         <Grid Width="100" Height="100">
-                            <primitives:Sector
-                                EndAngle="360"
-                                Fill="{TemplateBinding Background}"
-                                MaxRadiusRatio="1" MinRadiusRatio="0.7"
-                                StartAngle="0" Stroke="Transparent" />
-                            <primitives:Sector
-                                x:Name="sector"
-                                Fill="{TemplateBinding Foreground}"
-                                MaxRadiusRatio="1" MinRadiusRatio="0.7"
-                                RoundStyle="Both" StartAngle="0"
-                                Stroke="Transparent" />
-                            <TextBlock
-                                HorizontalAlignment="Center" VerticalAlignment="Center"
-                                FontFamily="{TemplateBinding FontFamily}"
-                                FontSize="{TemplateBinding FontSize}"
-                                FontStyle="{TemplateBinding FontStyle}"
-                                FontWeight="{TemplateBinding FontWeight}"
-                                Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Value, StringFormat=0.00%}" />
+                            <primitives:Sector EndAngle="360"
+                                               Fill="{TemplateBinding Background}"
+                                               MaxRadiusRatio="1" MinRadiusRatio="0.7" StartAngle="0" Stroke="Transparent" />
+                            <primitives:Sector x:Name="sector"
+                                               Fill="{TemplateBinding Foreground}"
+                                               MaxRadiusRatio="1" MinRadiusRatio="0.7" RoundStyle="Both" StartAngle="0" Stroke="Transparent" />
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                                       FontFamily="{TemplateBinding FontFamily}"
+                                       FontSize="{TemplateBinding FontSize}"
+                                       FontStyle="{TemplateBinding FontStyle}"
+                                       FontWeight="{TemplateBinding FontWeight}"
+                                       Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Value, StringFormat=0.00%}" />
                         </Grid>
                     </Viewbox>
 
