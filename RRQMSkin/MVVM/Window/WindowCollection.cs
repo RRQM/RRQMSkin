@@ -31,6 +31,7 @@ namespace RRQMSkin.MVVM
         /// <param name="window"></param>
         internal void Add(string id, Window window)
         {
+            window.SetValue(WindowHelper.RRQMIDProperty, id);
             count++;
             window.Closed += Window_Closed;
             window.Activate();
@@ -63,7 +64,7 @@ namespace RRQMSkin.MVVM
                 window.Close();
             }
         }
-        
+
         internal void CloseAllWindow()
         {
             foreach (var key in windows.Keys)
@@ -79,7 +80,7 @@ namespace RRQMSkin.MVVM
         internal Window GetWindow(string id)
         {
             Window window;
-            windows.TryGetValue(id,out window);
+            windows.TryGetValue(id, out window);
             return window;
         }
         /// <summary>

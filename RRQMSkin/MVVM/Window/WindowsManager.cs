@@ -22,8 +22,6 @@ namespace RRQMSkin.MVVM
     /// </summary>
     public static class WindowsManager
     {
-
-
         private static WindowCollection windows = new WindowCollection();
         /// <summary>
         /// 获取已创建的窗口
@@ -38,7 +36,7 @@ namespace RRQMSkin.MVVM
         /// </summary>
         /// <param name="windowSetting"></param>
         /// <returns>窗口ID</returns>
-        public static string CreatWindow(WindowSetting windowSetting)
+        public static string CreateWindow(WindowSetting windowSetting)
         {
             Window window = Activator.CreateInstance(windowSetting.WindowType, windowSetting.Parameters) as Window;
             window.WindowState = windowSetting.WindowState;
@@ -64,12 +62,33 @@ namespace RRQMSkin.MVVM
         /// <param name="windowType"></param>
         /// <param name="parameters"></param>
         /// <returns>窗口ID</returns>
-        public static string CreatWindow(string id, Type windowType, params object[] parameters)
+        public static string CreateWindow(string id, Type windowType, params object[] parameters)
         {
             Window window = Activator.CreateInstance(windowType, parameters) as Window;
             windows.Add(id, window);
             window.Show();
             return id;
+        }
+        public static Window CreateWindow<T>(string id, params object[] parameters)where T:Window
+        {
+            Window window = Activator.CreateInstance(typeof(T), parameters) as Window;
+            if (string.IsNullOrEmpty(id))
+            {
+                id = windows.GetRandomID();
+            }
+            windows.Add(id, window);
+            window.Show();
+            return window;
+        }
+
+        public static Window CreateWindow<T>(string id) where T : Window
+        {
+            return CreateWindow<T>(id,null);
+        } 
+        
+        public static Window CreateWindow<T>() where T : Window
+        {
+            return CreateWindow<T>(null,null);
         }
 
         /// <summary>
@@ -78,7 +97,7 @@ namespace RRQMSkin.MVVM
         /// <param name="windowType"></param>
         /// <param name="parameters"></param>
         /// <returns>窗口ID</returns>
-        public static string CreatWindow(Type windowType, params object[] parameters)
+        public static string CreateWindow(Type windowType, params object[] parameters)
         {
             Window window = Activator.CreateInstance(windowType, parameters) as Window;
             string id = windows.GetRandomID();
@@ -93,7 +112,7 @@ namespace RRQMSkin.MVVM
         /// <param name="id"></param>
         /// <param name="windowType"></param>
         /// <param name="parameters"></param>
-        public static object CreatDialogWindow(string id, Type windowType, params object[] parameters)
+        public static object CreateDialogWindow(string id, Type windowType, params object[] parameters)
         {
             Window window = Activator.CreateInstance(windowType, parameters) as Window;
 
@@ -106,7 +125,7 @@ namespace RRQMSkin.MVVM
         /// </summary>
         /// <param name="windowType"></param>
         /// <param name="parameters"></param>
-        public static object CreatDialogWindow(Type windowType, params object[] parameters)
+        public static object CreateDialogWindow(Type windowType, params object[] parameters)
         {
             Window window = Activator.CreateInstance(windowType, parameters) as Window;
 
@@ -118,7 +137,7 @@ namespace RRQMSkin.MVVM
         /// 创建对话框窗体
         /// </summary>
         /// <param name="window"></param>
-        public static object CreatDialogWindow(Window window)
+        public static object CreateDialogWindow(Window window)
         {
             windows.Add(windows.GetRandomID(), window);
             return window.ShowDialog();
@@ -130,7 +149,7 @@ namespace RRQMSkin.MVVM
         /// <param name="id"></param>
         /// <param name="window"></param>
         /// <returns></returns>
-        public static object CreatDialogWindow(string id, Window window)
+        public static object CreateDialogWindow(string id, Window window)
         {
             windows.Add(id, window);
             return window.ShowDialog();
@@ -142,7 +161,7 @@ namespace RRQMSkin.MVVM
         /// <param name="id"></param>
         /// <param name="windowType"></param>
         /// <param name="showMode"></param>
-        public static void CreatWindow(string id, string windowType, ShowMode showMode)
+        public static void CreateWindow(string id, string windowType, ShowMode showMode)
         {
             var types = AppDomain.CurrentDomain.GetAssemblies()
                         .SelectMany(a => a.GetTypes().Where(t => t.Name == windowType))
@@ -178,7 +197,7 @@ namespace RRQMSkin.MVVM
         /// <param name="id"></param>
         /// <param name="window"></param>
         /// <param name="showMode"></param>
-        public static void CreatWindow(string id, Window window, ShowMode showMode)
+        public static void CreateWindow(string id, Window window, ShowMode showMode)
         {
             windows.Add(id, window);
             switch (showMode)
@@ -198,7 +217,7 @@ namespace RRQMSkin.MVVM
         /// <param name="window"></param>
         /// <param name="showMode"></param>
         /// <returns></returns>
-        public static string CreatWindow(Window window, ShowMode showMode)
+        public static string CreateWindow(Window window, ShowMode showMode)
         {
             string id = windows.GetRandomID();
             windows.Add(id, window);

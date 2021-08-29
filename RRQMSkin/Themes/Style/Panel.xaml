@@ -28,8 +28,10 @@
                             <EventTrigger.Actions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="UncheckedScale" Storyboard.TargetProperty="ScaleX" To="0" Duration="0:0:0.5" />
-                                        <DoubleAnimation BeginTime="0:0:0.5" Storyboard.TargetName="CheckedScale" Storyboard.TargetProperty="ScaleX" To="1" Duration="0:0:0.5" />
+                                        <DoubleAnimation Storyboard.TargetName="UncheckedScale" Storyboard.TargetProperty="ScaleX" To="0"
+                                                         Duration="0:0:0.5" />
+                                        <DoubleAnimation BeginTime="0:0:0.5" Storyboard.TargetName="CheckedScale" Storyboard.TargetProperty="ScaleX"
+                                                         To="1" Duration="0:0:0.5" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger.Actions>
@@ -38,8 +40,10 @@
                             <EventTrigger.Actions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation BeginTime="0:0:0.5" Storyboard.TargetName="UncheckedScale" Storyboard.TargetProperty="ScaleX" To="1" Duration="0:0:0.5" />
-                                        <DoubleAnimation Storyboard.TargetName="CheckedScale" Storyboard.TargetProperty="ScaleX" To="0" Duration="0:0:0.5" />
+                                        <DoubleAnimation BeginTime="0:0:0.5" Storyboard.TargetName="UncheckedScale" Storyboard.TargetProperty="ScaleX"
+                                                         To="1" Duration="0:0:0.5" />
+                                        <DoubleAnimation Storyboard.TargetName="CheckedScale" Storyboard.TargetProperty="ScaleX" To="0"
+                                                         Duration="0:0:0.5" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger.Actions>

@@ -19,10 +19,12 @@
                         <Grid Width="100" Height="100">
                             <primitives:Sector EndAngle="360"
                                                Fill="{TemplateBinding Background}"
-                                               MaxRadiusRatio="1" MinRadiusRatio="0.7" StartAngle="0" Stroke="Transparent" />
+                                               MaxRadiusRatio="1" MinRadiusRatio="0.7" StartAngle="0"
+                                               Stroke="Transparent" />
                             <primitives:Sector x:Name="sector"
                                                Fill="{TemplateBinding Foreground}"
-                                               MaxRadiusRatio="1" MinRadiusRatio="0.7" RoundStyle="Both" StartAngle="0" Stroke="Transparent" />
+                                               MaxRadiusRatio="1" MinRadiusRatio="0.7" RoundStyle="Both"
+                                               StartAngle="0" Stroke="Transparent" />
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                                        FontFamily="{TemplateBinding FontFamily}"
                                        FontSize="{TemplateBinding FontSize}"

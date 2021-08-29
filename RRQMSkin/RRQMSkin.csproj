@@ -170,6 +170,7 @@
     <Compile Include="MVVM\ViewModel\ObservableObject.cs" />
     <Compile Include="MVVM\ViewModel\ViewModelBase.cs" />
     <Compile Include="MVVM\Window\WindowCollection.cs" />
+    <Compile Include="MVVM\Window\WindowHelper.cs" />
     <Compile Include="MVVM\Window\WindowSetting.cs" />
     <Compile Include="MVVM\Window\WindowsManager.cs" />
     <Compile Include="Primitives\ContentThumb.cs" />
