@@ -8,22 +8,16 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:ValidationSlider}">
-                    <Border Background="{TemplateBinding ShadeBackground}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            SnapsToDevicePixels="True">
+                    <Border Background="{TemplateBinding ShadeBackground}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
                         <Grid>
                             <Grid x:Name="shadeGrid" Background="{TemplateBinding Background}" />
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
-                                              Content="{TemplateBinding Content}" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
                             <Track x:Name="PART_Track">
                                 <Track.Effect>
                                     <DropShadowEffect ShadowDepth="0" />
                                 </Track.Effect>
                                 <Track.Thumb>
-                                    <primitives:ContentThumb x:Name="Thumb" Width="50" VerticalAlignment="Stretch"
-                                                             Content="{TemplateBinding ThumbContent}"
-                                                             Focusable="False" />
+                                    <primitives:ContentThumb x:Name="Thumb" Width="50" VerticalAlignment="Stretch" Content="{TemplateBinding ThumbContent}" Focusable="False" />
                                 </Track.Thumb>
                             </Track>
                         </Grid>

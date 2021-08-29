@@ -8,13 +8,8 @@
                 <ControlTemplate TargetType="{x:Type charts:PieChartItem}">
                     <Viewbox>
                         <Grid Width="300" Height="300">
-                            <primitives:Sector x:Name="sector"
-                                               Fill="{TemplateBinding Foreground}"
-                                               MaxRadiusRatio="1" MinRadiusRatio="0.5" />
-                            <primitives:DialText x:Name="dialText"
-                                                 FontSize="{TemplateBinding FontSize}"
-                                                 Foreground="Black" RadiusRatio="0.8"
-                                                 Text="{TemplateBinding Text}" />
+                            <primitives:Sector x:Name="sector" Fill="{TemplateBinding Foreground}" MaxRadiusRatio="1" MinRadiusRatio="0.5" />
+                            <primitives:DialText x:Name="dialText" FontSize="{TemplateBinding FontSize}" Foreground="Black" RadiusRatio="0.8" Text="{TemplateBinding Text}" />
                         </Grid>
                     </Viewbox>
                 </ControlTemplate>

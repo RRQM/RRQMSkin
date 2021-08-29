@@ -13,16 +13,16 @@
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition/>
+            <RowDefinition Height="30" />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <Border CornerRadius="5,5,0,0" Background="#E740D5">
-            <TextBlock Text="CorrugatedButton" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+        <Border Background="#E740D5" CornerRadius="5,5,0,0">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Text="CorrugatedButton" />
         </Border>
         <controls:RadioPanel Grid.Row="1">
             <controls:RadioPanel.Content>
                 <Grid>
-                    <controls:CorrugatedButton Width="100" Height="30"/>
+                    <controls:CorrugatedButton Width="100" Height="30" />
                 </Grid>
             </controls:RadioPanel.Content>
             <controls:RadioPanel.RadioContent>

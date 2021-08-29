@@ -14,12 +14,12 @@
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition/>
+            <RowDefinition Height="30" />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <Border CornerRadius="5,5,0,0" Background="#E740D5">
+        <Border Background="#E740D5" CornerRadius="5,5,0,0">
             <Grid>
-                <TextBlock Text="SpeedDial" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Text="SpeedDial" />
             </Grid>
         </Border>
         <controls:RadioPanel Grid.Row="1">
@@ -31,5 +31,5 @@
             </controls:RadioPanel.RadioContent>
         </controls:RadioPanel>
     </Grid>
-    
+
 </Border>

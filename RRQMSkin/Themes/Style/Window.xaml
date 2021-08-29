@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:windows="clr-namespace:RRQMSkin.Windows">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="Button.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Button.xaml" />
     </ResourceDictionary.MergedDictionaries>
     <Style TargetType="{x:Type windows:RRQMEffectWindow}">
         <Setter Property="Foreground" Value="Black" />
@@ -10,11 +10,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type windows:RRQMEffectWindow}">
                     <Grid Name="windowGrid">
-                        <Border Name="mainBorder"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="{TemplateBinding CornerRadius}">
+                        <Border Name="mainBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="30" />
@@ -33,27 +29,16 @@
                                         <Image Name="ico" Width="20" Height="20" Margin="3,0" HorizontalAlignment="Center"
                                                VerticalAlignment="Center"
                                                Source="{TemplateBinding Icon}" />
-                                        <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                                                          Content="{TemplateBinding TitleContent}" />
+                                        <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="{TemplateBinding TitleContent}" />
                                     </Grid>
                                     <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                        <Button Name="minButton"
-                                                Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                Content="&#xe622;"
-                                                Style="{StaticResource iconButton}" />
-                                        <Button Name="maxOrNormalButton"
-                                                Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                Style="{StaticResource iconButton}" />
-                                        <Button Name="closeButton"
-                                                Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                Content="&#xe62c;"
-                                                Style="{StaticResource iconButton}" />
+                                        <Button Name="minButton" Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}" Content="&#xe622;" Style="{StaticResource iconButton}" />
+                                        <Button Name="maxOrNormalButton" Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}" Style="{StaticResource iconButton}" />
+                                        <Button Name="closeButton" Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}" Content="&#xe62c;" Style="{StaticResource iconButton}" />
                                     </StackPanel>
                                 </Grid>
                                 <AdornerDecorator x:Name="content" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                    <ContentPresenter Margin="{TemplateBinding Padding}"
-                                                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                                      Content="{TemplateBinding Content}" />
+                                    <ContentPresenter Margin="{TemplateBinding Padding}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="{TemplateBinding Content}" />
                                 </AdornerDecorator>
 
                             </Grid>
@@ -93,10 +78,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type windows:RRQMWindow}">
-                    <Border Name="mainBorder"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
+                    <Border Name="mainBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="30" />
@@ -115,21 +97,12 @@
                                     <Image Name="ico" Width="20" Height="20" Margin="3,0" HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
                                            Source="{TemplateBinding Icon}" />
-                                    <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                                                      Content="{TemplateBinding TitleContent}" />
+                                    <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="{TemplateBinding TitleContent}" />
                                 </Grid>
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                    <Button Name="minButton"
-                                            Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                            Content="&#xe622;"
-                                            Style="{StaticResource iconButton}" />
-                                    <Button Name="maxOrNormalButton"
-                                            Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                            Style="{StaticResource iconButton}" />
-                                    <Button Name="closeButton"
-                                            Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                            Content="&#xe62c;"
-                                            Style="{StaticResource iconButton}" />
+                                    <Button Name="minButton" Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}" Content="&#xe622;" Style="{StaticResource iconButton}" />
+                                    <Button Name="maxOrNormalButton" Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}" Style="{StaticResource iconButton}" />
+                                    <Button Name="closeButton" Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}" Content="&#xe62c;" Style="{StaticResource iconButton}" />
                                 </StackPanel>
                             </Grid>
                             <AdornerDecorator x:Name="content" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

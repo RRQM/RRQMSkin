@@ -12,8 +12,7 @@
                             <primitives:Sector EndAngle="230" Fill="#00BE8B" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="149" />
                             <primitives:Sector EndAngle="320" Fill="#14BEFF" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="230" />
                             <primitives:Sector EndAngle="391" Fill="#FF2975" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="320" />
-                            <primitives:Sector EndAngle="{TemplateBinding PointerAngle}"
-                                               Fill="Orange" MaxRadiusRatio="0.8" MinRadiusRatio="0.7" StartAngle="149" />
+                            <primitives:Sector EndAngle="{TemplateBinding PointerAngle}" Fill="Orange" MaxRadiusRatio="0.8" MinRadiusRatio="0.7" StartAngle="149" />
 
                             <primitives:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.7" StartAngle="150" Stroke="Black" StrokeThickness="3"
                                              TickAngle="30" TickCount="9" />
@@ -25,9 +24,7 @@
 
                             <primitives:DialText FontSize="12" RadiusRatio="0.7" StartAngle="165" Text="10,30,50,70,90,110,130,150" TickAngle="30" />
 
-                            <primitives:Pointer x:Name="pointer" PointerWidth="160"
-                                                RatioAngle="{TemplateBinding PointerAngle}"
-                                                RatioCenter="0.2,0.5">
+                            <primitives:Pointer x:Name="pointer" PointerWidth="160" RatioAngle="{TemplateBinding PointerAngle}" RatioCenter="0.2,0.5">
                                 <primitives:Pointer.Fill>
                                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                         <GradientStop Offset="0" Color="#FF3C57F5" />
