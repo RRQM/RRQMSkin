@@ -173,68 +173,6 @@ namespace RRQMSkin.Controls
             }
         }
 
-        protected override void OnRender(DrawingContext drawingContext)
-        {
-            base.OnRender(drawingContext);
-            if (this.TipText != null)
-            {
-                VisualBrush visualBrush = new VisualBrush();
-                if (grid == null)
-                {
-                    grid = new Grid();
-                    grid.Background = this.Background;
-                }
-
-                grid.Width = this.ActualWidth;
-                grid.Height = this.ActualHeight;
-
-                if (this.isShow)
-                {
-                    if (grid.Children.Count == 0)
-                    {
-                        grid.Children.Add(this.TipText);
-                    }
-                    else if (grid.Children.Contains(this.TipText))
-                    {
-                        grid.Children[0].Visibility = Visibility.Visible;
-                    }
-                    else
-                    {
-                        grid.Children.Clear();
-                        grid.Children.Add(this.TipText);
-                    }
-                }
-                else
-                {
-                    if (grid.Children.Count > 0)
-                    {
-                        grid.Children[0].Visibility = Visibility.Hidden;
-                    }
-                }
-
-                visualBrush.Visual = grid;
-
-                visualBrush.Stretch = Stretch.None;
-
-                this.Background = visualBrush;
-            }
-        }
-
-        protected override void OnTextChanged(TextChangedEventArgs e)
-        {
-            base.OnTextChanged(e);
-            if (this.Text.Length == 0)
-            {
-                this.isShow = true;
-            }
-            else
-            {
-                this.isShow = false;
-            }
-
-            this.InvalidateVisual();
-        }
-
         /// <summary>
         /// 提示文本
         /// </summary>
@@ -249,17 +187,24 @@ namespace RRQMSkin.Controls
         /// 提示文本属性
         /// </summary>
         public static readonly DependencyProperty TipTextProperty =
-            DependencyProperty.Register("TipText", typeof(TextBlock), typeof(InputBox), new PropertyMetadata(null, OnTipTextChanged));
+            DependencyProperty.Register("TipText", typeof(TextBlock), typeof(InputBox), new PropertyMetadata(null));
 
-        private static void OnTipTextChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        protected override void OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)
         {
-            InputBox inputBox = (InputBox)d;
-            if (inputBox.TipText != null)
+            base.OnGotKeyboardFocus(e);
+            if (this.TipText!=null)
             {
-                inputBox.TipText.Margin = new Thickness(inputBox.TipText.Margin.Left + 3, inputBox.TipText.Margin.Top + 3, inputBox.TipText.Margin.Right + 3, inputBox.TipText.Margin.Bottom + 3);
+                this.TipText.Visibility = Visibility.Hidden;
             }
+        }
 
-            inputBox.InvalidateVisual();
+        protected override void OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)
+        {
+            base.OnLostKeyboardFocus(e);
+            if (string.IsNullOrEmpty( this.Text)&&this.TipText!=null)
+            {
+                this.TipText.Visibility = Visibility.Visible;
+            }
         }
 
         /// <summary>
