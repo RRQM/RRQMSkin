@@ -188,7 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RRQMSkin\RRQMSkin.csproj">
-      <Project>{70c220cf-2a28-4547-aae0-e669cceaf9a1}</Project>
+      <Project>{a4d751b3-b54f-4f34-82b3-4b39a9cbd233}</Project>
       <Name>RRQMSkin</Name>
     </ProjectReference>
   </ItemGroup>

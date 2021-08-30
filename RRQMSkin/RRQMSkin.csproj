@@ -1,222 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{70C220CF-2A28-4547-AAE0-E669CCEAF9A1}</ProjectGuid>
-    <OutputType>library</OutputType>
-    <RootNamespace>RRQMSkin</RootNamespace>
-    <AssemblyName>RRQMSkin</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <WarningLevel>4</WarningLevel>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
+    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon />
     <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
     <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>RRQM.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xaml">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
+    <None Remove="Fonts\iconfont.ttf" />
+    <None Remove="Icons\RRQM.ico" />
   </ItemGroup>
+
   <ItemGroup>
-    <Page Include="Controls\Video\VideoPlayer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\Button.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\Clock.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\Label.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\Loading.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\Panel.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\PieChart.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\ProgressBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\SearchBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\Slider.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\SpeedDial.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\TextBlock.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\TextBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\Thumb.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\ToggleButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Style\Window.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Windows\DialogWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Charts\Models\PieChartModels\Fan.cs" />
-    <Compile Include="Charts\Models\PieChartModels\FanCollection.cs" />
-    <Compile Include="Charts\Pie\PieChart.cs" />
-    <Compile Include="Charts\Pie\PieChartItem.cs" />
-    <Compile Include="Charts\RRQMChart.cs" />
-    <Compile Include="Common\RRQMDialog.cs" />
-    <Compile Include="Controls\BorderControl\BorderImage.cs" />
-    <Compile Include="Controls\Button\CorrugatedButton.cs" />
-    <Compile Include="Controls\Enum\ControlsEnum.cs" />
-    <Compile Include="Controls\Label\LabelTag.cs" />
-    <Compile Include="Controls\ListBox\DragDropListBox.cs" />
-    <Compile Include="Controls\Others\Clock.cs" />
-    <Compile Include="Controls\Others\GifBox.cs" />
-    <Compile Include="Controls\Others\Loading.cs" />
-    <Compile Include="Controls\Others\RoundProgressBar.cs" />
-    <Compile Include="Controls\Others\RRQMControl.cs" />
-    <Compile Include="Controls\Others\RRQMResizeGrip.cs" />
-    <Compile Include="Controls\Others\SpeedDial.cs" />
-    <Compile Include="Controls\Panel\RadioPanel.cs" />
-    <Compile Include="Controls\Slider\ValidationSlider.cs" />
-    <Compile Include="Controls\TabControl\RRQMTabControl.cs" />
-    <Compile Include="Controls\TabControl\RRQMTabItem.cs" />
-    <Compile Include="Controls\TextBox\ClearSearchBox.cs" />
-    <Compile Include="Controls\TextBox\DoubleEditTextBlock.cs" />
-    <Compile Include="Controls\TextBox\InputBox.cs" />
-    <Compile Include="Controls\TextBox\SearchBox.cs" />
-    <Compile Include="Controls\Video\VideoPlayer.xaml.cs">
-      <DependentUpon>VideoPlayer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Converter\BoolConvertVisibility.cs" />
-    <Compile Include="Converter\TipTextBoxConverter.cs" />
-    <Compile Include="DragDrop\DragDropAdorner.cs" />
-    <Compile Include="DragDrop\Utils.cs" />
-    <Compile Include="MVVM\Command\ExecuteCommand.cs" />
-    <Compile Include="MVVM\Command\ExecuteCommands.cs" />
-    <Compile Include="MVVM\Enum\ShowMode.cs" />
-    <Compile Include="MVVM\Helper\PasswordBoxHelper.cs" />
-    <Compile Include="MVVM\IOC\SimpleIoc.cs" />
-    <Compile Include="MVVM\List\RRQMList.cs" />
-    <Compile Include="MVVM\ViewModel\ObservableObject.cs" />
-    <Compile Include="MVVM\ViewModel\ViewModelBase.cs" />
-    <Compile Include="MVVM\Window\WindowCollection.cs" />
-    <Compile Include="MVVM\Window\WindowHelper.cs" />
-    <Compile Include="MVVM\Window\WindowSetting.cs" />
-    <Compile Include="MVVM\Window\WindowsManager.cs" />
-    <Compile Include="Primitives\ContentThumb.cs" />
-    <Compile Include="Primitives\Dial.cs" />
-    <Compile Include="Primitives\DialText.cs" />
-    <Compile Include="Primitives\Pointer.cs" />
-    <Compile Include="Primitives\PrimitivesEnum.cs" />
-    <Compile Include="Primitives\RRQMShape.cs" />
-    <Compile Include="Primitives\Sector.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Tool\MetarnetRegex.cs" />
-    <Compile Include="Windows\DialogWindow.xaml.cs">
-      <DependentUpon>DialogWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\RRQMEffectWindow.cs" />
-    <Compile Include="Windows\RRQMWindow.cs" />
-    <Compile Include="Windows\WindowEnum.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Resource Include="Fonts\iconfont.ttf" />
-    <None Include="LICENSE" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
-    <None Include="RRQM.pfx" />
+    <None Include="RRQM.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
+
   <ItemGroup>
+    <Resource Include="Fonts\iconfont.ttf" />
     <Resource Include="Icons\RRQM.ico" />
-    <Resource Include="Icons\放大镜.png" />
-    <Resource Include="RRQM.ico" />
-    <Resource Include="RRQM.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>

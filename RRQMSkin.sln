@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RRQMSkinDemo", "RRQMSkinDemo\RRQMSkinDemo.csproj", "{B1BCE12C-4022-4C01-99C8-F675E21133F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RRQMSkin", "RRQMSkin\RRQMSkin.csproj", "{70C220CF-2A28-4547-AAE0-E669CCEAF9A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RRQMSkin", "RRQMSkin\RRQMSkin.csproj", "{A4D751B3-B54F-4F34-82B3-4B39A9CBD233}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B1BCE12C-4022-4C01-99C8-F675E21133F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1BCE12C-4022-4C01-99C8-F675E21133F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1BCE12C-4022-4C01-99C8-F675E21133F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70C220CF-2A28-4547-AAE0-E669CCEAF9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70C220CF-2A28-4547-AAE0-E669CCEAF9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70C220CF-2A28-4547-AAE0-E669CCEAF9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70C220CF-2A28-4547-AAE0-E669CCEAF9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D751B3-B54F-4F34-82B3-4B39A9CBD233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D751B3-B54F-4F34-82B3-4B39A9CBD233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D751B3-B54F-4F34-82B3-4B39A9CBD233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D751B3-B54F-4F34-82B3-4B39A9CBD233}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
