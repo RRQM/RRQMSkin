@@ -12,7 +12,7 @@ namespace RRQMSkin
 {
     public class RRQMDialog
     {
-        public RRQMDialog(Window window = null)
+        public RRQMDialog(Window window)
         {
             this.window = window;
             Timer timer = new Timer(10);

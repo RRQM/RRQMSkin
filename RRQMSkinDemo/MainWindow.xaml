@@ -11,10 +11,11 @@
                     Width="900"
                     Height="600"
                     Background="#407EB0"
+                    DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}"
                     ResizeMode="CanResize"
                     WindowStartupLocation="CenterScreen"
                     mc:Ignorable="d">
-    
+
 
     <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
         <WrapPanel Orientation="Horizontal">

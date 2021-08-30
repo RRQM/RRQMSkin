@@ -11,8 +11,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:RRQMTabControl}">
-                    <Grid x:Name="templateRoot" ClipToBounds="True" KeyboardNavigation.TabNavigation="Local"
-                          SnapsToDevicePixels="True">
+                    <Grid x:Name="templateRoot" ClipToBounds="True" KeyboardNavigation.TabNavigation="Local" SnapsToDevicePixels="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition x:Name="ColumnDefinition0" />
                             <ColumnDefinition x:Name="ColumnDefinition1" Width="0" />
@@ -22,16 +21,13 @@
                             <RowDefinition x:Name="RowDefinition1" Height="*" />
                         </Grid.RowDefinitions>
                         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-                            <VirtualizingStackPanel x:Name="HeaderPanel" Grid.Row="0" Grid.Column="0"
-                                                    Margin="2,2,2,0" Panel.ZIndex="1" Background="Transparent"
-                                                    IsItemsHost="True" KeyboardNavigation.TabIndex="1" Orientation="Vertical" />
+                            <VirtualizingStackPanel x:Name="HeaderPanel" Grid.Row="0" Grid.Column="0" Margin="2,2,2,0" Panel.ZIndex="1"
+                                                    Background="Transparent" IsItemsHost="True" KeyboardNavigation.TabIndex="1" Orientation="Vertical" />
                         </ScrollViewer>
-                        <Border x:Name="ContentPanel" Grid.Row="1" Grid.Column="0"
-                                Margin="3"
+                        <Border x:Name="ContentPanel" Grid.Row="1" Grid.Column="0" Margin="3"
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="2" KeyboardNavigation.DirectionalNavigation="Contained"
-                                KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+                                BorderThickness="2" KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
                             <ContentPresenter x:Name="PART_SelectedContentHost"
                                               Margin="{TemplateBinding Padding}"
                                               Content="{TemplateBinding SelectedContent}"
@@ -69,8 +65,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:RRQMTabItem}">
-                    <Border x:Name="border" Height="30" Margin="0,3"
-                            CornerRadius="5">
+                    <Border x:Name="border" Height="30" Margin="0,3" CornerRadius="5">
                         <Border.Background>
                             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                 <GradientStop Offset="0" Color="#FFF117E9" />
@@ -99,8 +94,7 @@
                             <EventTrigger.Actions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation Storyboard.TargetName="gradientStop" Storyboard.TargetProperty="Color" To="#35D3E3"
-                                                        Duration="0:0:0.3" />
+                                        <ColorAnimation Storyboard.TargetName="gradientStop" Storyboard.TargetProperty="Color" To="#35D3E3" Duration="0:0:0.3" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger.Actions>
@@ -109,8 +103,7 @@
                             <EventTrigger.Actions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ColorAnimation Storyboard.TargetName="gradientStop" Storyboard.TargetProperty="Color" To="#FFEDC717"
-                                                        Duration="0:0:0.3" />
+                                        <ColorAnimation Storyboard.TargetName="gradientStop" Storyboard.TargetProperty="Color" To="#FFEDC717" Duration="0:0:0.3" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger.Actions>

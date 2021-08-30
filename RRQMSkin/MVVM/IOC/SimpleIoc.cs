@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -48,19 +49,21 @@ namespace RRQMSkin.MVVM
             }
         }
 
-        private List<object> viewModelBases = new List<object>();
-        private Dictionary<string, object> viewModelKey = new Dictionary<string, object>();
+        private ConcurrentDictionary<ViewModelBase, FrameworkElement> viewModelBases = new ConcurrentDictionary<ViewModelBase, FrameworkElement>();
 
         /// <summary>
         /// 注册
         /// </summary>
         /// <param name="element"></param>
         /// <param name="viewModel"></param>
-        public void Register(FrameworkElement element, ViewModelBase viewModel)
+        public void Register(ViewModelBase viewModel, FrameworkElement element)
         {
-            element.DataContext = viewModel;
-            viewModel.View = element;
-            viewModelBases.Add(viewModel);
+            if (element!=null)
+            {
+                element.DataContext = viewModel;
+            }
+            viewModel.view = element;
+            viewModelBases.TryAdd(viewModel, element);
         }
 
         /// <summary>
@@ -69,30 +72,17 @@ namespace RRQMSkin.MVVM
         /// <param name="viewModel"></param>
         public void Register(ViewModelBase viewModel)
         {
-            viewModelBases.Add(viewModel);
+            this.Register(viewModel, null);
         }
 
-        /// <summary>
-        /// 注册
-        /// </summary>
-        /// <param name="key"></param>
-        /// <param name="viewModel"></param>
-        public void Register(string key, ViewModelBase viewModel)
+        public void Register<T>(FrameworkElement element) where T : ViewModelBase, new()
         {
-            viewModelBases.Add(viewModel);
+            this.Register((ViewModelBase)Activator.CreateInstance(typeof(T)), element);
         }
 
-        /// <summary>
-        /// 注册
-        /// </summary>
-        /// <param name="key"></param>
-        /// <param name="element"></param>
-        /// <param name="viewModel"></param>
-        public void Register(string key, FrameworkElement element, ViewModelBase viewModel)
+        public void Register<T>() where T : ViewModelBase, new()
         {
-            element.DataContext = viewModel;
-            viewModel.View = element;
-            viewModelKey.Add(key, viewModel);
+            this.Register((ViewModelBase)Activator.CreateInstance(typeof(T)), null);
         }
 
         /// <summary>
@@ -100,9 +90,9 @@ namespace RRQMSkin.MVVM
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T GetViewModelInstance<T>()
+        public T GetViewModelInstance<T>() where T : ViewModelBase
         {
-            foreach (var item in viewModelBases)
+            foreach (var item in viewModelBases.Keys)
             {
                 if (item.GetType() == typeof(T))
                 {
@@ -111,25 +101,5 @@ namespace RRQMSkin.MVVM
             }
             return default;
         }
-
-        /// <summary>
-        /// 获取ViewModel
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public T GetViewModelInstance<T>(string key)
-        {
-            try
-            {
-                return (T)viewModelKey[key];
-            }
-            catch (Exception)
-            {
-                return default;
-            }
-
-        }
-
     }
 }

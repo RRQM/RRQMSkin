@@ -31,18 +31,24 @@ namespace RRQMSkin.MVVM
             get { return DesignerProperties.GetIsInDesignMode(new DependencyObject()); }
         }
 
+        internal FrameworkElement view;
+
         /// <summary>
         /// 目标View
         /// </summary>
-        public FrameworkElement View { get; set; }
-       
+        public FrameworkElement View
+        {
+            get { return view; }
+        }
+
+
         /// <summary>
         /// UI线程调用
         /// </summary>
         /// <param name="action"></param>
         public void UIInvoke(Action action)
         {
-            this.View.Dispatcher.Invoke(action);
+            Application.Current.Dispatcher.Invoke(action);
         }
     }
 }
