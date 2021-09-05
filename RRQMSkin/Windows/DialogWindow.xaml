@@ -15,7 +15,7 @@
     WindowStyle="None"
     mc:Ignorable="d">
     <Grid>
-        <Border  Background="#D10078" CornerRadius="5" Opacity="0.4" />
+        <Border  Background="Black" CornerRadius="5" Opacity="0.4" />
         <TextBlock Name="Tb_Content" Margin="20,10" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" TextWrapping="Wrap" />
     </Grid>
 </Window>
