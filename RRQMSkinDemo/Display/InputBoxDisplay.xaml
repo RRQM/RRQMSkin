@@ -18,18 +18,16 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Border Background="#E740D5" CornerRadius="5,5,0,0">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"
-                       FontWeight="Bold" Text="InputBox" />
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Text="InputBox" />
         </Border>
         <controls:RadioPanel Grid.Row="1">
             <controls:RadioPanel.Content>
                 <Grid Background="{StaticResource displayBackColor}">
-                    <controls:InputBox Width="100" Height="30" Margin="10"
-                                       HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Green"
-                                       CornerRadius="5">
+                    <controls:InputBox Width="100" Height="30" Margin="10" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"
+                                       Background="Green" CornerRadius="5">
                         <controls:InputBox.TipText>
-                            <TextBlock VerticalAlignment="Center" FontSize="16" FontStyle="Italic"
-                                       FontWeight="Bold" Opacity="0.6" Text="七彩提示">
+                            <TextBlock VerticalAlignment="Center" FontSize="16" FontStyle="Italic" FontWeight="Bold" Opacity="0.6"
+                                       Text="七彩提示">
                                 <TextBlock.Foreground>
                                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                                         <GradientStop Offset="0" Color="#FF0715EF" />
