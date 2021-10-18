@@ -11,6 +11,7 @@
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using System.Windows;
 
 namespace RRQMSkin.MVVM
@@ -19,6 +20,7 @@ namespace RRQMSkin.MVVM
     /// <summary>
     /// 基类
     /// </summary>
+    [Serializable]
     public class ObservableObject : INotifyPropertyChanged
     {
 
@@ -36,6 +38,6 @@ namespace RRQMSkin.MVVM
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-       
+
     }
 }

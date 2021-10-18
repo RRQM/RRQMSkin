@@ -19,6 +19,7 @@ namespace RRQMSkin.MVVM
     /// <summary>
     /// ViewModel基类
     /// </summary>
+    [Serializable]
     public class ViewModelBase : ObservableObject
     {
 
