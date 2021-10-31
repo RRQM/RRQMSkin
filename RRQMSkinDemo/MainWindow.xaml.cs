@@ -23,6 +23,14 @@ namespace RRQMSkinDemo
         public MainWindow()
         {
             InitializeComponent();
+            RRQMEffectWindow window = new RRQMEffectWindow();
+            window.Width = 400;
+            window.Height = 500;
+            window.MinWidth = 300;
+            window.MinHeight = 400;
+            window.MaxWidth = 500;
+            window.MaxHeight = 600;
+            window.Show();
         }
     }
 }

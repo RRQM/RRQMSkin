@@ -30,11 +30,10 @@
                                             <ColumnDefinition Width="30" />
                                             <ColumnDefinition />
                                         </Grid.ColumnDefinitions>
-                                        <Image Name="ico" Width="20" Height="20"
-                                               Margin="3,0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                        <Image Name="ico" Width="20" Height="20" Margin="3,0" HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
                                                Source="{TemplateBinding Icon}" />
-                                        <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch"
-                                                          VerticalAlignment="Center"
+                                        <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                                                           Content="{TemplateBinding TitleContent}" />
                                     </Grid>
                                     <StackPanel Grid.Column="1" Orientation="Horizontal">
@@ -42,15 +41,16 @@
                                                 Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                                 Content="&#xe622;"
                                                 Style="{StaticResource iconButton}" />
-                                        <Button Name="maxOrNormalButton" Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}" Style="{StaticResource iconButton}" />
+                                        <Button Name="maxOrNormalButton"
+                                                Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                                Style="{StaticResource iconButton}" />
                                         <Button Name="closeButton"
                                                 Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                                 Content="&#xe62c;"
                                                 Style="{StaticResource iconButton}" />
                                     </StackPanel>
                                 </Grid>
-                                <AdornerDecorator x:Name="content" Grid.Row="1" Grid.RowSpan="2"
-                                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <AdornerDecorator x:Name="content" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                     <ContentPresenter Margin="{TemplateBinding Padding}"
                                                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                                       Content="{TemplateBinding Content}" />
@@ -112,11 +112,10 @@
                                         <ColumnDefinition Width="30" />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    <Image Name="ico" Width="20" Height="20"
-                                           Margin="3,0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                    <Image Name="ico" Width="20" Height="20" Margin="3,0" HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
                                            Source="{TemplateBinding Icon}" />
-                                    <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch"
-                                                      VerticalAlignment="Center"
+                                    <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center"
                                                       Content="{TemplateBinding TitleContent}" />
                                 </Grid>
                                 <StackPanel Grid.Column="1" Orientation="Horizontal">
@@ -124,15 +123,16 @@
                                             Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                             Content="&#xe622;"
                                             Style="{StaticResource iconButton}" />
-                                    <Button Name="maxOrNormalButton" Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}" Style="{StaticResource iconButton}" />
+                                    <Button Name="maxOrNormalButton"
+                                            Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                            Style="{StaticResource iconButton}" />
                                     <Button Name="closeButton"
                                             Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                             Content="&#xe62c;"
                                             Style="{StaticResource iconButton}" />
                                 </StackPanel>
                             </Grid>
-                            <AdornerDecorator x:Name="content" Grid.Row="1" Grid.RowSpan="2"
-                                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <AdornerDecorator x:Name="content" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                 <ContentPresenter Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" />
                             </AdornerDecorator>
 

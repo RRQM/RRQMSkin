@@ -9,30 +9,21 @@
                     <Viewbox>
                         <Grid Width="300" Height="300">
                             <Ellipse />
-                            <primitives:Sector EndAngle="230" Fill="#00BE8B" MaxRadiusRatio="0.98"
-                                               MinRadiusRatio="0.8" StartAngle="149" />
-                            <primitives:Sector EndAngle="320" Fill="#14BEFF" MaxRadiusRatio="0.98"
-                                               MinRadiusRatio="0.8" StartAngle="230" />
-                            <primitives:Sector EndAngle="391" Fill="#FF2975" MaxRadiusRatio="0.98"
-                                               MinRadiusRatio="0.8" StartAngle="320" />
+                            <primitives:Sector EndAngle="230" Fill="#00BE8B" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="149" />
+                            <primitives:Sector EndAngle="320" Fill="#14BEFF" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="230" />
+                            <primitives:Sector EndAngle="391" Fill="#FF2975" MaxRadiusRatio="0.98" MinRadiusRatio="0.8" StartAngle="320" />
                             <primitives:Sector EndAngle="{TemplateBinding PointerAngle}"
-                                               Fill="Orange" MaxRadiusRatio="0.8" MinRadiusRatio="0.7"
-                                               StartAngle="149" />
+                                               Fill="Orange" MaxRadiusRatio="0.8" MinRadiusRatio="0.7" StartAngle="149" />
 
-                            <primitives:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.7" StartAngle="150"
-                                             Stroke="Black" StrokeThickness="3" TickAngle="30"
-                                             TickCount="9" />
-                            <primitives:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="165"
-                                             Stroke="Black" StrokeThickness="2" TickAngle="30"
-                                             TickCount="8" />
-                            <primitives:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="157.5"
-                                             Stroke="Black" StrokeThickness="1" TickAngle="15"
-                                             TickCount="16" />
-                            <primitives:DialText FontSize="20" RadiusRatio="0.6" StartAngle="150"
-                                                 Text="0,20,40,60,80,100,120,140,160" TickAngle="30" />
+                            <primitives:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.7" StartAngle="150" Stroke="Black" StrokeThickness="3"
+                                             TickAngle="30" TickCount="9" />
+                            <primitives:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="165" Stroke="Black" StrokeThickness="2"
+                                             TickAngle="30" TickCount="8" />
+                            <primitives:Dial MaxRadiusRatio="0.95" MinRadiusRatio="0.8" StartAngle="157.5" Stroke="Black" StrokeThickness="1"
+                                             TickAngle="15" TickCount="16" />
+                            <primitives:DialText FontSize="20" RadiusRatio="0.6" StartAngle="150" Text="0,20,40,60,80,100,120,140,160" TickAngle="30" />
 
-                            <primitives:DialText FontSize="12" RadiusRatio="0.7" StartAngle="165"
-                                                 Text="10,30,50,70,90,110,130,150" TickAngle="30" />
+                            <primitives:DialText FontSize="12" RadiusRatio="0.7" StartAngle="165" Text="10,30,50,70,90,110,130,150" TickAngle="30" />
 
                             <primitives:Pointer x:Name="pointer" PointerWidth="160"
                                                 RatioAngle="{TemplateBinding PointerAngle}"
@@ -48,8 +39,7 @@
                                 </primitives:Pointer.Effect>
                             </primitives:Pointer>
                             <Ellipse Width="10" Height="10" Fill="White" />
-                            <Ellipse Width="8" Height="8" Stroke="DarkCyan"
-                                     StrokeThickness="1" />
+                            <Ellipse Width="8" Height="8" Stroke="DarkCyan" StrokeThickness="1" />
                         </Grid>
                     </Viewbox>
                 </ControlTemplate>

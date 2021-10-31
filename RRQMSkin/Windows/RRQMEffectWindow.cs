@@ -280,6 +280,7 @@ namespace RRQMSkin.Windows
             {
                 return;
             }
+            
             Rectangle rectangle = sender as Rectangle;
 
             if (rectangle != null)
