@@ -20,8 +20,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Name="border" Width="25" Height="25"
-                            Margin="3,0" BorderThickness="1">
+                    <Border Name="border" Width="25" Height="25" Margin="3,0" BorderThickness="1">
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                                    Foreground="{TemplateBinding Foreground}"
                                    Text="{TemplateBinding Content}" />
@@ -56,7 +55,9 @@
                                 <Ellipse x:Name="CorrugatedEllipse" Width="1" Height="1"
                                          Fill="{TemplateBinding CorrugatedBrush}" />
                             </Canvas>
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              Content="{TemplateBinding Content}" />
                         </Grid>
                     </Border>
                 </ControlTemplate>

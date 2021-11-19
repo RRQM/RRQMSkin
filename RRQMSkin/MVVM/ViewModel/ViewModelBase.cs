@@ -32,6 +32,7 @@ namespace RRQMSkin.MVVM
             get { return DesignerProperties.GetIsInDesignMode(new DependencyObject()); }
         }
 
+        [field: NonSerialized]
         internal FrameworkElement view;
 
         /// <summary>

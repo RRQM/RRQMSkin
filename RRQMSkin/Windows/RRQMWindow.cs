@@ -173,16 +173,29 @@ namespace RRQMSkin.Windows
             switch (this.WindowState)
             {
                 case WindowState.Maximized:
-                    this.MaxWidth = SystemParameters.WorkArea.Width + 16;
-                    this.MaxHeight = SystemParameters.WorkArea.Height + 16;
+                    if (double.IsInfinity(this.MaxWidth))
+                    {
+                        this.MaxWidth = SystemParameters.WorkArea.Width + 16;
+                    }
+                    if (double.IsInfinity(this.MaxHeight))
+                    {
+                        this.MaxHeight = SystemParameters.WorkArea.Height + 16;
+                    }
+                   
                     this.BorderThickness = new Thickness(5); //最大化后需要调整
 
                     break;
 
                 case WindowState.Normal:
                     this.BorderThickness = new Thickness(0);
-                    this.MaxWidth = SystemParameters.WorkArea.Width + 16;
-                    this.MaxHeight = SystemParameters.WorkArea.Height + 16;
+                    if (double.IsInfinity(this.MaxWidth))
+                    {
+                        this.MaxWidth = SystemParameters.WorkArea.Width + 16;
+                    }
+                    if (double.IsInfinity(this.MaxHeight))
+                    {
+                        this.MaxHeight = SystemParameters.WorkArea.Height + 16;
+                    }
                     break;
             }
         }

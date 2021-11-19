@@ -14,7 +14,8 @@
                             SnapsToDevicePixels="True">
                         <Grid>
                             <Grid x:Name="shadeGrid" Background="{TemplateBinding Background}" />
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
+                                              Content="{TemplateBinding Content}" />
                             <Track x:Name="PART_Track">
                                 <Track.Effect>
                                     <DropShadowEffect ShadowDepth="0" />
