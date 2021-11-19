@@ -27,6 +27,7 @@ namespace RRQMSkin.MVVM
         /// <summary>
         /// 
         /// </summary>
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
