@@ -32,5 +32,10 @@ namespace RRQMSkinDemo
             window.MaxHeight = 600;
             window.Show();
         }
+
+        private void SearchBoxDisplay_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

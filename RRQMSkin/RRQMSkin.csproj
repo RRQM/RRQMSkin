@@ -31,6 +31,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Cyjb">
+      <HintPath>..\..\..\MyStore\12_代码工具资源库\Cyjb-master\bin\Cyjb.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Fonts\iconfont.ttf" />
     <Resource Include="Icons\RRQM.ico" />
   </ItemGroup>

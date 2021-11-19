@@ -39,6 +39,25 @@ namespace RRQMSkin.MVVM
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        /// <summary>
+        /// 设置属性
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="field"></param>
+        /// <param name="newValue"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        protected bool SetProperty<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
+        {
+            if (!Equals(field, newValue))
+            {
+                field = newValue;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+                return true;
+            }
+
+            return false;
+        }
 
     }
 }

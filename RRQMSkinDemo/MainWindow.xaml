@@ -5,6 +5,7 @@
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                     xmlns:display="clr-namespace:RRQMSkinDemo.Display"
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:mvvm="RRQM_MVVM"
                     xmlns:primitives="RRQM_Primitives"
                     xmlns:windows="RRQM_Windows"
                     Title="123"
@@ -16,7 +17,6 @@
                     WindowStartupLocation="CenterScreen"
                     mc:Ignorable="d">
 
-
     <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
         <WrapPanel Orientation="Horizontal">
             <display:SpeedDialDisplay Width="200" Height="200" Margin="10" />
@@ -24,7 +24,8 @@
             <display:CorrugatedButtonDisplay Width="200" Height="200" Margin="10" />
             <display:InputBoxDisplay Width="200" Height="200" Margin="10" />
             <display:DoubleEditTextBlockDisplay Width="200" Height="200" Margin="10" />
-            <display:SearchBoxDisplay Width="200" Height="200" Margin="10" />
+            <display:SearchBoxDisplay mvvm:EventCommands.Events="{Binding TestEvents}" Width="200" Height="200" Margin="10">
+            </display:SearchBoxDisplay>
         </WrapPanel>
     </ScrollViewer>
 
