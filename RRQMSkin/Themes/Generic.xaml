@@ -17,5 +17,6 @@
         <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/ToggleButton.xaml" />
         <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Window.xaml" />
         <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Panel.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Popup.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
