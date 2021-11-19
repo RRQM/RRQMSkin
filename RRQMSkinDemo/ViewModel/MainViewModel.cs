@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace RRQMSkinDemo.ViewModel
 {
@@ -13,9 +14,9 @@ namespace RRQMSkinDemo.ViewModel
     {
         public MainViewModel()
         {
-            List<EventAction> actionInfos = new List<EventAction>();
-            actionInfos.Add(new EventAction("MouseDown", this.Test));
-            actionInfos.Add(new EventAction("MouseUp", this.Test));
+            List<IEventAction> actionInfos = new List<IEventAction>();
+            actionInfos.Add(new EventAction<object, MouseButtonEventArgs>("MouseDown", this.Test));
+            actionInfos.Add(new EventAction<object, MouseButtonEventArgs>("MouseUp", this.Test));
             this.testEvents = actionInfos;
         }
 
@@ -34,9 +35,9 @@ namespace RRQMSkinDemo.ViewModel
         #endregion
 
         #region 属性（Attribute）
-        private IEnumerable<EventAction> testEvents;
+        private IEnumerable<IEventAction> testEvents;
 
-        public IEnumerable<EventAction> TestEvents
+        public IEnumerable<IEventAction> TestEvents
         {
             get { return testEvents; }
             set { testEvents = value; }
@@ -48,7 +49,7 @@ namespace RRQMSkinDemo.ViewModel
         #endregion
 
         #region 私有方法（PrivateMethod）
-        private void Test(object sender,object e)
+        private void Test(object sender, MouseButtonEventArgs e)
         {
             Console.WriteLine(1);
         }
