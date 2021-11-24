@@ -12,30 +12,33 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using RRQMSkin.Windows;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace RRQMSkinDemo
 {  
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : RRQMWindow
+    public partial class MainWindow : RRQMEffectWindow
     {
         public MainWindow()
         {
             InitializeComponent();
-            RRQMEffectWindow window = new RRQMEffectWindow();
-            window.Width = 400;
-            window.Height = 500;
-            window.MinWidth = 300;
-            window.MinHeight = 400;
-            window.MaxWidth = 500;
-            window.MaxHeight = 600;
-            window.Show();
         }
 
-        private void SearchBoxDisplay_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void ListBox_MouseWheel(object sender, MouseWheelEventArgs e)
         {
-
+            if (!e.Handled)
+            {
+                e.Handled = true;
+                var eventArg = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
+                eventArg.RoutedEvent = Border.MouseWheelEvent;
+                eventArg.Source = sender;
+                var parent = ((System.Windows.Controls.Control)sender).Parent as UIElement;
+                parent.RaiseEvent(eventArg);
+            }
         }
     }
 }

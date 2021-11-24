@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<array>
+  <dict>
+    <key>png</key>
+    <array>
+      <a title="doge" class="png001">doge</a>
+    </array>
+  </dict>
+  <dict>
+    <key>png1</key>
+    <array>
+      <a title="doge" class="png001">doge</a>
+    </array>
+  </dict>
+</array>
