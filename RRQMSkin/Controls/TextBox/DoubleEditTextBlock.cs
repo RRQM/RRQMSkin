@@ -8,6 +8,7 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using System;
 using System.Windows;
 using System.Windows.Input;
 
@@ -19,6 +20,11 @@ namespace RRQMSkin.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DoubleEditTextBlock), new FrameworkPropertyMetadata(typeof(DoubleEditTextBlock)));
         }
+
+        /// <summary>
+        /// 编辑完成
+        /// </summary>
+        public event Action<DoubleEditTextBlock, string> EditFinished;
 
         public bool DoubleEditEnable
         {
@@ -87,6 +93,7 @@ namespace RRQMSkin.Controls
         private void DoubleEditTextBlock_PreviewLostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             this.IsReadOnly = true;
+            this.EditFinished?.Invoke(this,this.Text);
             if (this.EditFinishedCommand != null && this.EditFinishedCommand.CanExecute(this.CommandParameter))
             {
                 this.EditFinishedCommand.Execute(this.CommandParameter);
