@@ -59,5 +59,13 @@ namespace RRQMSkin.MVVM
             return false;
         }
 
+        /// <summary>
+        /// UI线程调用
+        /// </summary>
+        /// <param name="action"></param>
+        public void UIInvoke(Action action)
+        {
+            Application.Current.Dispatcher.Invoke(action);
+        }
     }
 }

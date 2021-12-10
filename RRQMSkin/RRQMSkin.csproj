@@ -10,7 +10,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>RRQM.png</PackageIcon>
     <PackageIconUrl />
-    <Version>3.7.0</Version>
+    <Version>3.7.1</Version>
     <Description>这是RRQMSkin</Description>
   </PropertyGroup>
 
