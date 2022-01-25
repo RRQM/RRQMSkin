@@ -1,66 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
-  <PropertyGroup>
-    <TargetFrameworks>net45;net461;netcoreapp3.1</TargetFrameworks>
-    <UseWPF>true</UseWPF>
-    <ApplicationIcon>RRQM.ico</ApplicationIcon>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageIcon>RRQM.png</PackageIcon>
-    <PackageIconUrl />
-    <Version>3.7.1</Version>
-    <Description>这是RRQMSkin</Description>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Fonts\iconfont.ttf" />
-    <None Remove="Icons\RRQM.ico" />
-    <None Include="RRQM.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Fonts\iconfont.ttf" />
-    <Resource Include="Icons\RRQM.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="RRQM.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
-		<DocumentationFile>bin\Debug\net461\RRQMSkin.xml</DocumentationFile>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
-		<DocumentationFile>bin\Release\net461\RRQMSkin.xml</DocumentationFile>
+	<PropertyGroup>
+		<Company>若汝棋茗</Company>
+		<Copyright>Copyright © 2021 若汝棋茗</Copyright>
+		<PackageTags>WPF</PackageTags>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<PackageIcon>RRQM.png</PackageIcon>
+		<Authors>若汝棋茗</Authors>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>RRQM.ico</ApplicationIcon>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageIcon>RRQM.png</PackageIcon>
+		<PackageIconUrl />
+		<Version>3.8.0</Version>
+		<Description>这是RRQMSkin</Description>
+		<PackageProjectUrl>https://gitee.com/RRQM_Home/RRQMSkin</PackageProjectUrl>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net45|AnyCPU'">
-		<DocumentationFile></DocumentationFile>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net45|AnyCPU'">
-		<DocumentationFile>bin\Release\net45\RRQMSkin.xml</DocumentationFile>
-	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Icons\RRQM.ico" />
+	  <None Include="LICENSE">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
+	  <None Include="RRQM.png">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
+	</ItemGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.1|AnyCPU'">
-		<DocumentationFile>bin\Debug\netcoreapp3.1\RRQMSkin.xml</DocumentationFile>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp3.1|AnyCPU'">
-		<DocumentationFile>bin\Release\netcoreapp3.1\RRQMSkin.xml</DocumentationFile>
-	</PropertyGroup>
-	
+	<ItemGroup>
+	  <Resource Include="Icons\RRQM.ico" />
+	</ItemGroup>
 </Project>
