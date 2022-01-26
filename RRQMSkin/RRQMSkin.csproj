@@ -23,6 +23,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Fonts\iconfont.ttf" />
 	  <None Remove="Icons\RRQM.ico" />
 	  <None Include="LICENSE">
 	    <Pack>True</Pack>
@@ -35,6 +36,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Resource Include="Fonts\iconfont.ttf" />
 	  <Resource Include="Icons\RRQM.ico" />
 	</ItemGroup>
 </Project>
