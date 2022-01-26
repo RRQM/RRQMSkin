@@ -35,6 +35,20 @@
 	  </None>
 	</ItemGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net45|AnyCPU'">
+		<DocumentationFile>D:\CodeOpen\RRQMSkin\RRQMSkin\RRQMSkin.xml</DocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net45|AnyCPU'">
+		<DocumentationFile>bin\Release\net45\RRQMSkin.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.1|AnyCPU'">
+		<DocumentationFile>bin\Debug\netcoreapp3.1\RRQMSkin.xml</DocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp3.1|AnyCPU'">
+		<DocumentationFile>bin\Release\netcoreapp3.1\RRQMSkin.xml</DocumentationFile>
+	</PropertyGroup>
+
 	<ItemGroup>
 	  <Resource Include="Fonts\iconfont.ttf" />
 	  <Resource Include="Icons\RRQM.ico" />

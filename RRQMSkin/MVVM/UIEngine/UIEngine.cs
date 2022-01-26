@@ -8,22 +8,49 @@ using System.Windows;
 
 namespace RRQMSkin.MVVM
 {
-    public class UIEngine<UI> where UI : UIElement
+    /// <summary>
+    /// UI引擎
+    /// </summary>
+    public class UIEngine
     {
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public UIEngine()
         {
-            this.uis = new ConcurrentDictionary<object, UI>();
+            this.uis = new Dictionary<object, UIElement>();
         }
-        private readonly ConcurrentDictionary<object, UI> uis;
-        public UI RegisterUI<TUI>(object[] args) where TUI : UI
+        private readonly Dictionary<object, UIElement> uis;
+
+        /// <summary>
+        /// 注册单例
+        /// </summary>
+        /// <typeparam name="TUI"></typeparam>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        public UIElement RegisterUI<TUI>(object[] args) where TUI : UIElement
         {
             TUI obj = (TUI)Activator.CreateInstance(typeof(TUI), args);
-            this.uis.add
+            this.uis.Add(obj,obj);
+            return obj;
         }
 
-        public UI GetUI<TUI>() where TUI : UI
+        /// <summary>
+        /// 获取单例
+        /// </summary>
+        /// <typeparam name="TUI"></typeparam>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        public UIElement GetSingleUI<TUI>(object[] args) where TUI : UIElement
         {
-
+            foreach (var item in this.uis.Values)
+            {
+                if (item.GetType()==typeof(TUI))
+                {
+                    return item;
+                }
+            }
+            return this.RegisterUI<TUI>(args);
         }
     }
 }

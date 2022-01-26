@@ -1,0 +1,1199 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RRQMSkin</name>
+    </assembly>
+    <members>
+        <member name="P:RRQMSkin.Controls.BorderImage.CornerRadius">
+            <summary>
+            圆角角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.BorderImage.CornerRadiusProperty">
+            <summary>
+            圆角角度属性
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Controls.CorrugatedButton">
+            <summary>
+            水波纹按钮
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Controls.CorrugatedButton.OnApplyTemplate">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.CorrugatedButton.CornerRadius">
+            <summary>
+            圆角角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.CorrugatedButton.CornerRadiusProperty">
+            <summary>
+            圆角角度属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.CorrugatedButton.CorrugatedBrush">
+            <summary>
+            波浪颜色
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.CorrugatedButton.CorrugatedBrushProperty">
+            <summary>
+            波浪颜色属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.CorrugatedButton.FlashDuration">
+            <summary>
+            动画时长
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.CorrugatedButton.FlashDurationProperty">
+            <summary>
+            动画时长属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.CorrugatedButton.FlashEnable">
+            <summary>
+            动画启用
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Controls.Clock">
+            <summary>
+            时钟
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.Clock.Time">
+            <summary>
+            显示时间
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.Clock.TimeProperty">
+            <summary>
+            显示时间属性
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Controls.GifBox.ShowGifByAnimate(System.String)">
+            <summary>
+            显示GIF动图
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Controls.Loading">
+            <summary>
+            正在加载
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Controls.Loading.OnApplyTemplate">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.Loading.Foreground">
+            <summary>
+            前景色
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.Loading.ForegroundProperty">
+            <summary>
+            前景色属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.Loading.Duration">
+            <summary>
+            周期时间
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.Loading.DurationProperty">
+            <summary>
+            周期时间属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.Loading.ArcLength">
+            <summary>
+            弧长比例
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.Loading.ArcLengthProperty">
+            <summary>
+            弧长比例属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.Loading.EndAngle">
+            <summary>
+            结束角
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.Loading.EndAngleProperty">
+            <summary>
+            结束角属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.Loading.IsLoading">
+            <summary>
+            正在加载
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.Loading.IsLoadingProperty">
+            <summary>
+            正在加载属性
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Controls.RoundProgressBar">
+            <summary>
+            环形进度条
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Controls.RoundProgressBar.OnValueChanged(System.Double,System.Double)">
+             <summary>
+            
+             </summary>
+             <param name="oldValue"></param>
+             <param name="newValue"></param>
+        </member>
+        <member name="M:RRQMSkin.Controls.RoundProgressBar.OnMaximumChanged(System.Double,System.Double)">
+             <summary>
+            
+             </summary>
+             <param name="oldMaximum"></param>
+             <param name="newMaximum"></param>
+        </member>
+        <member name="M:RRQMSkin.Controls.RoundProgressBar.OnMinimumChanged(System.Double,System.Double)">
+             <summary>
+            
+             </summary>
+             <param name="oldMinimum"></param>
+             <param name="newMinimum"></param>
+        </member>
+        <member name="P:RRQMSkin.Controls.RRQMControl.IsInDesignMode">
+            <summary>
+            是否在设计器模式
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Controls.SpeedDial">
+            <summary>
+            速度表盘
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Controls.SpeedDial.OnApplyTemplate">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.SpeedDial.PointerAngle">
+            <summary>
+            指针角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.SpeedDial.PointerAngleProperty">
+            <summary>
+            指针角度属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.SpeedDial.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.SpeedDial.MaxValueProperty">
+            <summary>
+            最大值属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.SpeedDial.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.SpeedDial.MinValueProperty">
+            <summary>
+            最小值属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.SpeedDial.EndAngle">
+            <summary>
+            结束角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.SpeedDial.EndAngleProperty">
+            <summary>
+            结束角属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.SpeedDial.StartAngle">
+            <summary>
+            开始角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.SpeedDial.StartAngleProperty">
+            <summary>
+            开始角度
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.SpeedDial.Speed">
+            <summary>
+            速度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.SpeedDial.SpeedProperty">
+            <summary>
+            速度属性
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Controls.RadioPanel">
+            <summary>
+            切换面板
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Controls.ValidationSlider">
+            <summary>
+            验证滑块
+            </summary>
+        </member>
+        <member name="E:RRQMSkin.Controls.DoubleEditTextBlock.EditFinished">
+            <summary>
+            编辑完成
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.InputBox.TipText">
+            <summary>
+            提示文本
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.InputBox.TipTextProperty">
+            <summary>
+            提示文本属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Controls.InputBox.IsComplies">
+            <summary>
+            输入是否合法
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Controls.VideoPlayer">
+            <summary>
+            VideoPlayer.xaml 的交互逻辑
+            </summary>
+            <summary>
+            VideoPlayer
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.VideoPlayer.VideoPause">
+            <summary>
+            视频暂停播放
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.VideoPlayer.VideoStart">
+            <summary>
+            视频开始播放
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.VideoPlayer.VideoEnd">
+            <summary>
+            视频播放完毕
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Controls.VideoPlayer.VideoMuted">
+            <summary>
+            视频禁音按钮触发
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Controls.VideoPlayer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.TipTextBoxConverter">
+            <summary>
+            文本转化器
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.TipTextBoxConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+             <summary>
+            
+             </summary>
+             <param name="context"></param>
+             <param name="sourceType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.TipTextBoxConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+             <summary>
+            
+             </summary>
+             <param name="context"></param>
+             <param name="culture"></param>
+             <param name="value"></param>
+             <returns></returns>
+        </member>
+        <member name="T:RRQMSkin.MVVM.DelegateCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.MVVM.ExecuteCommand">
+            <summary>
+            绑定命令
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.ExecuteCommand.#ctor(RRQMSkin.MVVM.DelegateCommand)">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="E:RRQMSkin.MVVM.ExecuteCommand.CanExecuteChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.ExecuteCommand.CanExecute(System.Object)">
+            <summary>
+            执行测试
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.ExecuteCommand.Execute(System.Object)">
+            <summary>
+            执行
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="T:RRQMSkin.MVVM.DelegateCommand`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parameter"></param>
+        </member>
+        <member name="T:RRQMSkin.MVVM.ExecuteCommand`1">
+            <summary>
+            绑定有参数命令
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:RRQMSkin.MVVM.ExecuteCommand`1.#ctor(RRQMSkin.MVVM.DelegateCommand{`0})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="E:RRQMSkin.MVVM.ExecuteCommand`1.CanExecuteChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.ExecuteCommand`1.CanExecute(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.ExecuteCommand`1.Execute(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="parameter"></param>
+        </member>
+        <member name="T:RRQMSkin.MVVM.ShowMode">
+            <summary>
+            显示类型
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.MVVM.ShowMode.Show">
+            <summary>
+            一般显示
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.MVVM.ShowMode.Dialog">
+            <summary>
+            对话框显示
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.MVVM.PasswordBoxHelper">
+            <summary>
+            该代码来自网络
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.MVVM.SimpleIoc">
+            <summary>
+            ViewModelLocator基类
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.MVVM.SimpleIoc.Default">
+            <summary>
+            默认单例实例
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.SimpleIoc.Register(RRQMSkin.MVVM.ViewModelBase,System.Windows.FrameworkElement)">
+            <summary>
+            注册
+            </summary>
+            <param name="element"></param>
+            <param name="viewModel"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.SimpleIoc.Register(RRQMSkin.MVVM.ViewModelBase)">
+            <summary>
+            注册
+            </summary>
+            <param name="viewModel"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.SimpleIoc.GetViewModelInstance``1">
+            <summary>
+            获取ViewModel
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:RRQMSkin.MVVM.RRQMList`1">
+            <summary>
+            继承ObservableCollection的集合
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:RRQMSkin.MVVM.RRQMList`1.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.RRQMList`1.#ctor(System.Collections.Generic.List{`0})">
+            <summary>
+            
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.RRQMList`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            
+            </summary>
+            <param name="collection"></param>
+        </member>
+        <member name="T:RRQMSkin.MVVM.UIEngine">
+            <summary>
+            UI引擎
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.UIEngine.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.UIEngine.RegisterUI``1(System.Object[])">
+            <summary>
+            注册单例
+            </summary>
+            <typeparam name="TUI"></typeparam>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.UIEngine.GetSingleUI``1(System.Object[])">
+            <summary>
+            获取单例
+            </summary>
+            <typeparam name="TUI"></typeparam>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RRQMSkin.MVVM.ObservableObject">
+            <summary>
+            基类
+            </summary>
+        </member>
+        <member name="E:RRQMSkin.MVVM.ObservableObject.PropertyChanged">
+            <summary>
+            事件
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.ObservableObject.OnPropertyChanged(System.String)">
+            <summary>
+            属性改变时
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.ObservableObject.SetProperty``1(``0@,``0,System.String)">
+            <summary>
+            设置属性
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="field"></param>
+            <param name="newValue"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.ObservableObject.UIInvoke(System.Action)">
+            <summary>
+            UI线程调用
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="T:RRQMSkin.MVVM.ViewModelBase">
+            <summary>
+            ViewModel基类
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.MVVM.ViewModelBase.IsInDesignMode">
+            <summary>
+            判断是不是设计器模式
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.MVVM.ViewModelBase.View">
+            <summary>
+            目标View
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.MVVM.WindowCollection">
+            <summary>
+            窗口集合
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowCollection.Add(System.String,System.Windows.Window)">
+            <summary>
+            添加
+            </summary>
+            <param name="id"></param>
+            <param name="window"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowCollection.GetWindows">
+            <summary>
+            获取所有窗口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:RRQMSkin.MVVM.WindowSetting">
+            <summary>
+            显示窗口设置
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.MVVM.WindowSetting.ID">
+            <summary>
+            窗口ID
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.MVVM.WindowSetting.WindowType">
+            <summary>
+            Window类型
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.MVVM.WindowSetting.WindowState">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.MVVM.WindowSetting.ShowMode">
+            <summary>
+            显示类型
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.MVVM.WindowSetting.Parameters">
+            <summary>
+            构造函数参数
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.MVVM.WindowsManager">
+            <summary>
+            窗口管理
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.MVVM.WindowsManager.Windows">
+            <summary>
+            获取已创建的窗口
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateWindow(RRQMSkin.MVVM.WindowSetting)">
+            <summary>
+            创建新窗体
+            </summary>
+            <param name="windowSetting"></param>
+            <returns>窗口ID</returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateWindow(System.String,System.Type,System.Object[])">
+            <summary>
+            创建新窗体
+            </summary>
+            <param name="id"></param>
+            <param name="windowType"></param>
+            <param name="parameters"></param>
+            <returns>窗口ID</returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateWindow(System.Type,System.Object[])">
+            <summary>
+            创建新窗体
+            </summary>
+            <param name="windowType"></param>
+            <param name="parameters"></param>
+            <returns>窗口ID</returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateDialogWindow(System.String,System.Type,System.Object[])">
+            <summary>
+            创建对话框窗体
+            </summary>
+            <param name="id"></param>
+            <param name="windowType"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateDialogWindow(System.Type,System.Object[])">
+            <summary>
+            创建对话框窗体
+            </summary>
+            <param name="windowType"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateDialogWindow(System.Windows.Window)">
+            <summary>
+            创建对话框窗体
+            </summary>
+            <param name="window"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateDialogWindow(System.String,System.Windows.Window)">
+            <summary>
+            创建对话框窗体
+            </summary>
+            <param name="id"></param>
+            <param name="window"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateWindow(System.String,System.String,RRQMSkin.MVVM.ShowMode)">
+            <summary>
+            创建新窗体
+            </summary>
+            <param name="id"></param>
+            <param name="windowType"></param>
+            <param name="showMode"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateWindow(System.String,System.Windows.Window,RRQMSkin.MVVM.ShowMode)">
+            <summary>
+            创建新窗体
+            </summary>
+            <param name="id"></param>
+            <param name="window"></param>
+            <param name="showMode"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CreateWindow(System.Windows.Window,RRQMSkin.MVVM.ShowMode)">
+            <summary>
+            创建新窗体
+            </summary>
+            <param name="window"></param>
+            <param name="showMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CloseWindow(System.Windows.Window)">
+            <summary>
+            关闭窗体
+            </summary>
+            <param name="window"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CloseWindow(System.String)">
+            <summary>
+            关闭窗体
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.GetWindow(System.String)">
+            <summary>
+            通过ID获取Window
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CloseTypeWindow(System.Type)">
+            <summary>
+            关闭查找到的第一个窗口
+            </summary>
+            <param name="windowType"></param>
+        </member>
+        <member name="M:RRQMSkin.MVVM.WindowsManager.CloseAllWindow">
+            <summary>
+            关闭所有窗口
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Primitives.Dial">
+            <summary>
+            刻度类型
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Primitives.Dial.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Dial.Stroke">
+            <summary>
+            线条颜色
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Dial.StrokeThickness">
+            <summary>
+            线条粗细
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Dial.MaxRadiusRatio">
+            <summary>
+            最大环比例
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Dial.MaxRadiusRatioProperty">
+            <summary>
+            最大环比例属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Dial.MinRadiusRatio">
+            <summary>
+            最小环比例
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Dial.MinRadiusRatioProperty">
+            <summary>
+            最小环比例属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Dial.TickAngle">
+            <summary>
+            单位角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Dial.TickAngleProperty">
+            <summary>
+            单位角度属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Dial.TickCount">
+            <summary>
+            单位数量
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Dial.TickCountProperty">
+            <summary>
+            单位数量属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Dial.StartAngle">
+            <summary>
+            开始角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Dial.StartAngleProperty">
+            <summary>
+            开始角度属性
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Primitives.Dial.CreatGeometry">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:RRQMSkin.Primitives.DialText">
+            <summary>
+            环形文字
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Primitives.DialText.OnRender(System.Windows.Media.DrawingContext)">
+             <summary>
+            
+             </summary>
+             <param name="drawingContext"></param>
+        </member>
+        <member name="P:RRQMSkin.Primitives.DialText.RadiusRatio">
+            <summary>
+            半径比例
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.DialText.RadiusRatioProperty">
+            <summary>
+            半径比例属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.DialText.TickAngle">
+            <summary>
+            单位角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.DialText.TickAngleProperty">
+            <summary>
+            单位角度属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.DialText.TextShowStyle">
+            <summary>
+            文字显示样式
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.DialText.TextShowStyleProperty">
+            <summary>
+            文字显示样式属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.DialText.Text">
+            <summary>
+            显示文本
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.DialText.TextProperty">
+            <summary>
+            显示文本属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.DialText.StartAngle">
+            <summary>
+            开始角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.DialText.StartAngleProperty">
+            <summary>
+            开始角度属性
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Primitives.Pointer">
+            <summary>
+            指针
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Primitives.Pointer.CreatGeometry">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Pointer.RatioAngle">
+            <summary>
+            半径旋转角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Pointer.RatioAngleProperty">
+            <summary>
+            半径旋转角度属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Pointer.PointerHeight">
+            <summary>
+            指针宽度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Pointer.PointerHeightProperty">
+            <summary>
+            指针宽度属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Pointer.PointerWidth">
+            <summary>
+            指针长度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Pointer.PointerWidthProperty">
+            <summary>
+            指针长度属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Pointer.RatioCenter">
+            <summary>
+            旋转中心点
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Pointer.RatioCenterProperty">
+            <summary>
+            旋转中心点属性
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Primitives.RoundStyle">
+            <summary>
+            圆角样式
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.RoundStyle.Nono">
+            <summary>
+            无样式
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.RoundStyle.Start">
+            <summary>
+            开端
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.RoundStyle.End">
+            <summary>
+            结束
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.RoundStyle.Both">
+            <summary>
+            首尾都圆角
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Primitives.TextShowStyle">
+            <summary>
+            文字显示样式
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.TextShowStyle.Split">
+            <summary>
+            分割类型显示
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.TextShowStyle.Every">
+            <summary>
+            按字符显示
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Primitives.RRQMShape">
+            <summary>
+            若汝棋茗绘图基础类
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Primitives.RRQMShape.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.RRQMShape.DefiningGeometry">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:RRQMSkin.Primitives.RRQMShape.CreatGeometry">
+             <summary>
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="T:RRQMSkin.Primitives.Sector">
+            <summary>
+            扇形环
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Sector.MaxRadiusRatio">
+            <summary>
+            最大环比例
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Sector.MaxRadiusRatioProperty">
+            <summary>
+            最大环比例属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Sector.MinRadiusRatio">
+            <summary>
+            最小环比例
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Sector.MinRadiusRatioProperty">
+            <summary>
+            最小环比例属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Sector.EndAngle">
+            <summary>
+            结束角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Sector.EndAngleProperty">
+            <summary>
+            结束角度属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Sector.RoundStyle">
+            <summary>
+            圆形样式
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Sector.RoundStyleProperty">
+            <summary>
+            圆形样式属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Sector.StartAngle">
+            <summary>
+            开始角度
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Sector.StartAngleProperty">
+            <summary>
+            开始角度属性
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Primitives.Sector.FillRule">
+            <summary>
+            填充类型
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Primitives.Sector.FillRuleProperty">
+            <summary>
+            填充类型属性
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Primitives.Sector.CreatGeometry">
+            <summary>
+            获取绘图类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsChineseCh(System.String)">
+            <summary>
+            判断输入的字符串只包含汉字
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsPhone(System.String)">
+            <summary>
+            匹配3位或4位区号的电话号码，其中区号可以用小括号括起来，
+            也可以不用，区号与本地号间可以用连字号或空格间隔，
+            也可以没有间隔
+            \(0\d{2}\)[- ]?\d{8}|0\d{2}[- ]?\d{8}|\(0\d{3}\)[- ]?\d{7}|0\d{3}[- ]?\d{7}
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsMobilePhone(System.String)">
+            <summary>
+            判断输入的字符串是否是一个合法的手机号
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsIDcard(System.String)">
+            <summary>
+            验证身份证合理性
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.CheckIDCard18(System.String)">
+            <summary>
+            18位身份证号码验证
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.CheckIDCard15(System.String)">
+            <summary>
+            16位身份证号码验证
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsNumber(System.String)">
+            <summary>
+            判断输入的字符串只包含数字
+            可以匹配整数和浮点数
+            ^-?\d+$|^(-?\d+)(\.\d+)?$
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsNotNagtive(System.String)">
+             <summary>
+             匹配非负整数
+            
+             </summary>
+             <param name="input"></param>
+             <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsUint(System.String)">
+            <summary>
+            匹配正整数
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsEnglisCh(System.String)">
+            <summary>
+            判断输入的字符串字包含英文字母
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsEmail(System.String)">
+            <summary>
+            判断输入的字符串是否是一个合法的Email地址
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsNumAndEnCh(System.String)">
+            <summary>
+            判断输入的字符串是否只包含数字和英文字母
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsURL(System.String)">
+            <summary>
+            判断输入的字符串是否是一个超链接
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsIPv4(System.String)">
+            <summary>
+            判断输入的字符串是否是表示一个IP地址
+            </summary>
+            <param name="input">被比较的字符串</param>
+            <returns>是IP地址则为True</returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.IsIPV6(System.String)">
+            <summary>
+            判断输入的字符串是否是合法的IPV6 地址
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RRQMSkin.MetarnetRegex.GetStringCount(System.String,System.String)">
+            <summary>
+            判断字符串compare 在 input字符串中出现的次数
+            </summary>
+            <param name="input">源字符串</param>
+            <param name="compare">用于比较的字符串</param>
+            <returns>字符串compare 在 input字符串中出现的次数</returns>
+        </member>
+        <member name="T:RRQMSkin.Windows.DialogWindow">
+            <summary>
+            DialogWindow.xaml 的交互逻辑
+            </summary>
+            <summary>
+            DialogWindow
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Windows.DialogWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:RRQMSkin.Windows.RRQMEffectWindow">
+            <summary>
+            自定义窗口
+            </summary>
+        </member>
+        <member name="F:RRQMSkin.Windows.RRQMEffectWindow.CornerRadiusProperty">
+            <summary>
+            圆角角度属性
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Windows.RRQMEffectWindow.#ctor">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:RRQMSkin.Windows.RRQMEffectWindow.CornerRadius">
+            <summary>
+            圆角角度
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Windows.RRQMEffectWindow.ShadowBlurRadius">
+            <summary>
+            阴影扩散度
+            </summary>
+        </member>
+        <member name="P:RRQMSkin.Windows.RRQMEffectWindow.ShadowColor">
+            <summary>
+            阴影颜色
+            </summary>
+        </member>
+        <member name="M:RRQMSkin.Windows.RRQMEffectWindow.OnApplyTemplate">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:RRQMSkin.Windows.RRQMWindow.TitleContent">
+            <summary>
+            窗口头信息
+            </summary>
+        </member>
+    </members>
+</doc>
