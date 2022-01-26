@@ -17,7 +17,7 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageIcon>RRQM.png</PackageIcon>
 		<PackageIconUrl />
-		<Version>3.8.0</Version>
+		<Version>3.8.1</Version>
 		<Description>这是RRQMSkin</Description>
 		<PackageProjectUrl>https://gitee.com/RRQM_Home/RRQMSkin</PackageProjectUrl>
 	</PropertyGroup>
