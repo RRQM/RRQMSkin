@@ -24,8 +24,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double MaxRadiusRatio
         {
-            get { return (double)GetValue(MaxRadiusRatioProperty); }
-            set { SetValue(MaxRadiusRatioProperty, value); }
+            get => (double)this.GetValue(MaxRadiusRatioProperty);
+            set => this.SetValue(MaxRadiusRatioProperty, value);
         }
 
         /// <summary>
@@ -40,8 +40,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double MinRadiusRatio
         {
-            get { return (double)GetValue(MinRadiusRatioProperty); }
-            set { SetValue(MinRadiusRatioProperty, value); }
+            get => (double)this.GetValue(MinRadiusRatioProperty);
+            set => this.SetValue(MinRadiusRatioProperty, value);
         }
 
         /// <summary>
@@ -55,8 +55,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double EndAngle
         {
-            get { return (double)GetValue(EndAngleProperty); }
-            set { SetValue(EndAngleProperty, value); }
+            get => (double)this.GetValue(EndAngleProperty);
+            set => this.SetValue(EndAngleProperty, value);
         }
 
         /// <summary>
@@ -70,8 +70,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public RoundStyle RoundStyle
         {
-            get { return (RoundStyle)GetValue(RoundStyleProperty); }
-            set { SetValue(RoundStyleProperty, value); }
+            get => (RoundStyle)this.GetValue(RoundStyleProperty);
+            set => this.SetValue(RoundStyleProperty, value);
         }
 
         /// <summary>
@@ -85,8 +85,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double StartAngle
         {
-            get { return (double)GetValue(StartAngleProperty); }
-            set { SetValue(StartAngleProperty, value); }
+            get => (double)this.GetValue(StartAngleProperty);
+            set => this.SetValue(StartAngleProperty, value);
         }
 
         /// <summary>
@@ -100,8 +100,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public FillRule FillRule
         {
-            get { return (FillRule)GetValue(FillRuleProperty); }
-            set { SetValue(FillRuleProperty, value); }
+            get => (FillRule)this.GetValue(FillRuleProperty);
+            set => this.SetValue(FillRuleProperty, value);
         }
 
         /// <summary>
@@ -112,8 +112,8 @@ namespace RRQMSkin.Primitives
 
         public double Offset
         {
-            get { return (double)GetValue(OffsetProperty); }
-            set { SetValue(OffsetProperty, value); }
+            get => (double)this.GetValue(OffsetProperty);
+            set => this.SetValue(OffsetProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Offset.  This enables animation, styling, binding, etc...
@@ -134,19 +134,19 @@ namespace RRQMSkin.Primitives
 
             double meanAngle = (this.EndAngle - this.StartAngle) / 2 + this.StartAngle;
 
-            double widthRadius = this.ActualWidth / 2 + (Offset * Math.Cos(meanAngle * Math.PI / 180));
-            double heightRadius = this.ActualHeight / 2 + (Offset * Math.Sin(meanAngle * Math.PI / 180));
+            double widthRadius = this.ActualWidth / 2 + (this.Offset * Math.Cos(meanAngle * Math.PI / 180));
+            double heightRadius = this.ActualHeight / 2 + (this.Offset * Math.Sin(meanAngle * Math.PI / 180));
 
             if (radius > 0 && this.EndAngle - this.StartAngle < 360)
             {
                 double minRadius = this.MinRadiusRatio * radius;
                 double maxRadius = this.MaxRadiusRatio * radius;
 
-                Point p1 = new Point(minRadius * Math.Cos(StartAngle * Math.PI / 180) + widthRadius, minRadius * Math.Sin(StartAngle * Math.PI / 180) + heightRadius);
-                Point p2 = new Point(minRadius * Math.Cos(EndAngle * Math.PI / 180) + widthRadius, minRadius * Math.Sin(EndAngle * Math.PI / 180) + heightRadius);
+                Point p1 = new Point(minRadius * Math.Cos(this.StartAngle * Math.PI / 180) + widthRadius, minRadius * Math.Sin(this.StartAngle * Math.PI / 180) + heightRadius);
+                Point p2 = new Point(minRadius * Math.Cos(this.EndAngle * Math.PI / 180) + widthRadius, minRadius * Math.Sin(this.EndAngle * Math.PI / 180) + heightRadius);
 
-                Point p3 = new Point(maxRadius * Math.Cos(StartAngle * Math.PI / 180) + widthRadius, maxRadius * Math.Sin(StartAngle * Math.PI / 180) + heightRadius);
-                Point p4 = new Point(maxRadius * Math.Cos(EndAngle * Math.PI / 180) + widthRadius, maxRadius * Math.Sin(EndAngle * Math.PI / 180) + heightRadius);
+                Point p3 = new Point(maxRadius * Math.Cos(this.StartAngle * Math.PI / 180) + widthRadius, maxRadius * Math.Sin(this.StartAngle * Math.PI / 180) + heightRadius);
+                Point p4 = new Point(maxRadius * Math.Cos(this.EndAngle * Math.PI / 180) + widthRadius, maxRadius * Math.Sin(this.EndAngle * Math.PI / 180) + heightRadius);
 
                 PathGeometry pathGeometry = new PathGeometry();
 

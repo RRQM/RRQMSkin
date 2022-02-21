@@ -31,9 +31,6 @@ namespace RRQMSkin.Controls
         /// <summary>
         /// 是否在设计器模式
         /// </summary>
-        public bool IsInDesignMode
-        {
-            get { return DesignerProperties.GetIsInDesignMode(this); }
-        }
+        public bool IsInDesignMode => DesignerProperties.GetIsInDesignMode(this);
     }
 }

@@ -261,7 +261,7 @@ namespace RRQMSkin
             {
                 return false;
             }
-            
+
         }
 
         /// <summary>

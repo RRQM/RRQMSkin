@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -25,8 +21,8 @@ namespace RRQMSkin.Controls
         [Browsable(false)]
         public bool IsHasText
         {
-            get { return (bool)GetValue(IsHasTextProperty); }
-            private set { SetValue(IsHasTextPropertyKey, value); }
+            get => (bool)this.GetValue(IsHasTextProperty);
+            private set => this.SetValue(IsHasTextPropertyKey, value);
         }
         private static readonly DependencyPropertyKey IsHasTextPropertyKey =
             DependencyProperty.RegisterReadOnly(
@@ -44,7 +40,7 @@ namespace RRQMSkin.Controls
         protected override void OnTextChanged(TextChangedEventArgs e)
         {
             base.OnTextChanged(e);
-            IsHasText = !String.IsNullOrEmpty(Text);
+            this.IsHasText = !String.IsNullOrEmpty(this.Text);
         }
 
         //模板化控件在加载ControlTemplate后会调用OnApplyTemplate
@@ -52,14 +48,14 @@ namespace RRQMSkin.Controls
         {
             base.OnApplyTemplate();
 
-            if (clearButtonHost != null)
+            if (this.clearButtonHost != null)
             {
-                clearButtonHost.Click -= HandleClearButtonClick;
+                this.clearButtonHost.Click -= this.HandleClearButtonClick;
             }
-            clearButtonHost = GetTemplateChild("PART_ClearButtonHost") as ButtonBase;
-            if (clearButtonHost != null)
+            this.clearButtonHost = this.GetTemplateChild("PART_ClearButtonHost") as ButtonBase;
+            if (this.clearButtonHost != null)
             {
-                clearButtonHost.Click += HandleClearButtonClick;
+                this.clearButtonHost.Click += this.HandleClearButtonClick;
             }
 
         }
@@ -70,12 +66,12 @@ namespace RRQMSkin.Controls
         //清除事件
         private void HandleClearButtonClick(object sender, RoutedEventArgs e)
         {
-            Reset();
+            this.Reset();
         }
 
         public void Reset()
         {
-            Text = string.Empty;
+            this.Text = string.Empty;
             clearbackground?.Invoke(this, null);
         }
         #endregion
@@ -84,8 +80,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public String InputHint
         {
-            get { return (String)GetValue(InputHintProperty); }
-            set { SetValue(InputHintProperty, value); }
+            get => (String)this.GetValue(InputHintProperty);
+            set => this.SetValue(InputHintProperty, value);
         }
 
         public static readonly DependencyProperty InputHintProperty =
@@ -94,8 +90,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public Brush InputForeground
         {
-            get { return (Brush)GetValue(InputForegroundProperty); }
-            set { SetValue(InputForegroundProperty, value); }
+            get => (Brush)this.GetValue(InputForegroundProperty);
+            set => this.SetValue(InputForegroundProperty, value);
         }
         public static readonly DependencyProperty InputForegroundProperty =
           DependencyProperty.Register("InputForeground", typeof(Brush), typeof(ClearSearchBox), new PropertyMetadata(Brushes.Black));
@@ -103,8 +99,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public HorizontalAlignment InputHorizontalContentAlignment
         {
-            get { return (HorizontalAlignment)GetValue(InputHorizontalContentAlignmentProperty); }
-            set { SetValue(InputHorizontalContentAlignmentProperty, value); }
+            get => (HorizontalAlignment)this.GetValue(InputHorizontalContentAlignmentProperty);
+            set => this.SetValue(InputHorizontalContentAlignmentProperty, value);
         }
         public static readonly DependencyProperty InputHorizontalContentAlignmentProperty =
           DependencyProperty.Register("InputHorizontalContentAlignment", typeof(HorizontalAlignment), typeof(ClearSearchBox), new PropertyMetadata(HorizontalAlignment.Left));
@@ -112,8 +108,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public VerticalAlignment InputVerticalContentAlignment
         {
-            get { return (VerticalAlignment)GetValue(InputVerticalContentAlignmentProperty); }
-            set { SetValue(InputVerticalContentAlignmentProperty, value); }
+            get => (VerticalAlignment)this.GetValue(InputVerticalContentAlignmentProperty);
+            set => this.SetValue(InputVerticalContentAlignmentProperty, value);
         }
 
 
@@ -123,8 +119,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public bool isClearBtn
         {
-            get { return (bool)GetValue(isClearBtnProperty); }
-            set { SetValue(isClearBtnProperty, value); }
+            get => (bool)this.GetValue(isClearBtnProperty);
+            set => this.SetValue(isClearBtnProperty, value);
         }
 
 
@@ -138,8 +134,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public CornerRadius CornerRadius
         {
-            get { return (CornerRadius)GetValue(CornerRadiusProperty); }
-            set { SetValue(CornerRadiusProperty, value); }
+            get => (CornerRadius)this.GetValue(CornerRadiusProperty);
+            set => this.SetValue(CornerRadiusProperty, value);
         }
         public static readonly DependencyProperty CornerRadiusProperty =
           DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(ClearSearchBox), new PropertyMetadata(new CornerRadius(0)));
@@ -147,8 +143,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public HorizontalAlignment TextHorizontalContentAlignment
         {
-            get { return (HorizontalAlignment)GetValue(TextHorizontalContentAlignmentProperty); }
-            set { SetValue(TextHorizontalContentAlignmentProperty, value); }
+            get => (HorizontalAlignment)this.GetValue(TextHorizontalContentAlignmentProperty);
+            set => this.SetValue(TextHorizontalContentAlignmentProperty, value);
         }
         public static readonly DependencyProperty TextHorizontalContentAlignmentProperty =
           DependencyProperty.Register("TextHorizontalContentAlignment", typeof(HorizontalAlignment), typeof(ClearSearchBox), new PropertyMetadata(HorizontalAlignment.Left));
@@ -156,8 +152,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public VerticalAlignment TextVerticalContentAlignment
         {
-            get { return (VerticalAlignment)GetValue(TextVerticalContentAlignmentProperty); }
-            set { SetValue(TextVerticalContentAlignmentProperty, value); }
+            get => (VerticalAlignment)this.GetValue(TextVerticalContentAlignmentProperty);
+            set => this.SetValue(TextVerticalContentAlignmentProperty, value);
         }
         public static readonly DependencyProperty TextVerticalContentAlignmentProperty =
           DependencyProperty.Register("TextVerticalContentAlignment", typeof(VerticalAlignment), typeof(ClearSearchBox), new PropertyMetadata(VerticalAlignment.Center));
@@ -166,8 +162,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public Brush BackForeground
         {
-            get { return (Brush)GetValue(BackForegroundProperty); }
-            set { SetValue(BackForegroundProperty, value); }
+            get => (Brush)this.GetValue(BackForegroundProperty);
+            set => this.SetValue(BackForegroundProperty, value);
         }
         public static readonly DependencyProperty BackForegroundProperty =
           DependencyProperty.Register("BackForeground", typeof(Brush), typeof(ClearSearchBox), new PropertyMetadata(Brushes.Black));

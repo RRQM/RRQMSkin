@@ -18,12 +18,12 @@ namespace RRQMSkin.Controls
     {
         public BorderImage()
         {
-            this.SizeChanged += BorderImage_SizeChanged; ;
+            this.SizeChanged += this.BorderImage_SizeChanged; ;
         }
 
         private void BorderImage_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            ClipBound();
+            this.ClipBound();
         }
 
         private void ClipBound()
@@ -94,8 +94,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public CornerRadius CornerRadius
         {
-            get { return (CornerRadius)GetValue(CornerRadiusProperty); }
-            set { SetValue(CornerRadiusProperty, value); }
+            get => (CornerRadius)this.GetValue(CornerRadiusProperty);
+            set => this.SetValue(CornerRadiusProperty, value);
         }
 
         /// <summary>
@@ -106,8 +106,8 @@ namespace RRQMSkin.Controls
 
         public bool IsEllipseClip
         {
-            get { return (bool)GetValue(IsEllipseClipProperty); }
-            set { SetValue(IsEllipseClipProperty, value); }
+            get => (bool)this.GetValue(IsEllipseClipProperty);
+            set => this.SetValue(IsEllipseClipProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for IsEllipseClip.  This enables animation, styling, binding, etc...

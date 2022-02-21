@@ -24,7 +24,7 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public Dial()
         {
-            this.SizeChanged += Dial_SizeChanged;
+            this.SizeChanged += this.Dial_SizeChanged;
         }
 
         private void Dial_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -47,8 +47,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double MaxRadiusRatio
         {
-            get { return (double)GetValue(MaxRadiusRatioProperty); }
-            set { SetValue(MaxRadiusRatioProperty, value); }
+            get => (double)this.GetValue(MaxRadiusRatioProperty);
+            set => this.SetValue(MaxRadiusRatioProperty, value);
         }
 
         /// <summary>
@@ -63,8 +63,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double MinRadiusRatio
         {
-            get { return (double)GetValue(MinRadiusRatioProperty); }
-            set { SetValue(MinRadiusRatioProperty, value); }
+            get => (double)this.GetValue(MinRadiusRatioProperty);
+            set => this.SetValue(MinRadiusRatioProperty, value);
         }
 
         /// <summary>
@@ -78,8 +78,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double TickAngle
         {
-            get { return (double)GetValue(TickAngleProperty); }
-            set { SetValue(TickAngleProperty, value); }
+            get => (double)this.GetValue(TickAngleProperty);
+            set => this.SetValue(TickAngleProperty, value);
         }
 
         /// <summary>
@@ -93,8 +93,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public int TickCount
         {
-            get { return (int)GetValue(TickCountProperty); }
-            set { SetValue(TickCountProperty, value); }
+            get => (int)this.GetValue(TickCountProperty);
+            set => this.SetValue(TickCountProperty, value);
         }
 
         /// <summary>
@@ -108,8 +108,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double StartAngle
         {
-            get { return (double)GetValue(StartAngleProperty); }
-            set { SetValue(StartAngleProperty, value); }
+            get => (double)this.GetValue(StartAngleProperty);
+            set => this.SetValue(StartAngleProperty, value);
         }
 
         /// <summary>
@@ -135,11 +135,11 @@ namespace RRQMSkin.Primitives
                 double maxHeightRadius = this.MaxRadiusRatio * this.ActualHeight / 2;
                 GeometryGroup geometryGroup = new GeometryGroup();
 
-                for (int i = 0; i < TickCount; i++)
+                for (int i = 0; i < this.TickCount; i++)
                 {
                     LineGeometry lineGeometry = new LineGeometry();
-                    lineGeometry.StartPoint = new Point(minWidthRadius * Math.Cos((StartAngle + i * TickAngle) * Math.PI / 180) + radius, minHeightRadius * Math.Sin((StartAngle + i * TickAngle) * Math.PI / 180) + radius);
-                    lineGeometry.EndPoint = new Point(maxWidthRadius * Math.Cos((StartAngle + i * TickAngle) * Math.PI / 180) + radius, maxHeightRadius * Math.Sin((StartAngle + i * TickAngle) * Math.PI / 180) + radius);
+                    lineGeometry.StartPoint = new Point(minWidthRadius * Math.Cos((this.StartAngle + i * this.TickAngle) * Math.PI / 180) + radius, minHeightRadius * Math.Sin((this.StartAngle + i * this.TickAngle) * Math.PI / 180) + radius);
+                    lineGeometry.EndPoint = new Point(maxWidthRadius * Math.Cos((this.StartAngle + i * this.TickAngle) * Math.PI / 180) + radius, maxHeightRadius * Math.Sin((this.StartAngle + i * this.TickAngle) * Math.PI / 180) + radius);
                     geometryGroup.Children.Add(lineGeometry);
                 }
 

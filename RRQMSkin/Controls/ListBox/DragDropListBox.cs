@@ -9,7 +9,6 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using System.Windows.Controls;
-using System.Linq;
 
 namespace RRQMSkin.Controls
 {
@@ -17,7 +16,7 @@ namespace RRQMSkin.Controls
     {
         public DragDropListBox()
         {
-         
+
         }
     }
 }

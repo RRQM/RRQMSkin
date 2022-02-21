@@ -11,7 +11,6 @@
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Runtime.Serialization;
 using System.Windows;
 
 namespace RRQMSkin.MVVM
@@ -27,7 +26,7 @@ namespace RRQMSkin.MVVM
         /// <summary>
         /// 事件
         /// </summary>
-        [field:NonSerialized]
+        [field: NonSerialized]
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>

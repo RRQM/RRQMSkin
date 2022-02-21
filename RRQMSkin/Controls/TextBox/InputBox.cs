@@ -14,7 +14,6 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
 
 namespace RRQMSkin.Controls
 {
@@ -27,8 +26,8 @@ namespace RRQMSkin.Controls
 
         public InputBox()
         {
-            this.PreviewTextInput += TipTextBox_PreviewTextInput;
-            this.TextChanged += InputBox_TextChanged;
+            this.PreviewTextInput += this.TipTextBox_PreviewTextInput;
+            this.TextChanged += this.InputBox_TextChanged;
         }
 
         private void InputBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -39,7 +38,7 @@ namespace RRQMSkin.Controls
                 case InputFilter.Nono:
                     this.IsComplies = true;
                     break;
-                    
+
                 case InputFilter.Uint:
                     this.IsComplies = MetarnetRegex.IsNotNagtive(textBox.Text);
                     break;
@@ -84,7 +83,7 @@ namespace RRQMSkin.Controls
 
         private bool isShow = true;
         private Grid grid;
-        public readonly static string[] number = new string[] { ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+        public static readonly string[] number = new string[] { ".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
         private void TipTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
@@ -179,8 +178,8 @@ namespace RRQMSkin.Controls
         [TypeConverter(typeof(TipTextBoxConverter))]
         public TextBlock TipText
         {
-            get { return (TextBlock)GetValue(TipTextProperty); }
-            set { SetValue(TipTextProperty, value); }
+            get => (TextBlock)this.GetValue(TipTextProperty);
+            set => this.SetValue(TipTextProperty, value);
         }
 
         /// <summary>
@@ -192,7 +191,7 @@ namespace RRQMSkin.Controls
         protected override void OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)
         {
             base.OnGotKeyboardFocus(e);
-            if (this.TipText!=null)
+            if (this.TipText != null)
             {
                 this.TipText.Visibility = Visibility.Hidden;
             }
@@ -201,7 +200,7 @@ namespace RRQMSkin.Controls
         protected override void OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)
         {
             base.OnLostKeyboardFocus(e);
-            if (string.IsNullOrEmpty( this.Text)&&this.TipText!=null)
+            if (string.IsNullOrEmpty(this.Text) && this.TipText != null)
             {
                 this.TipText.Visibility = Visibility.Visible;
             }
@@ -212,8 +211,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public bool IsComplies
         {
-            get { return (bool)GetValue(IsCompliesProperty); }
-            private set { SetValue(IsCompliesProperty, value); }
+            get => (bool)this.GetValue(IsCompliesProperty);
+            private set => this.SetValue(IsCompliesProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for IsComplies.  This enables animation, styling, binding, etc...
@@ -222,8 +221,8 @@ namespace RRQMSkin.Controls
 
         public InputFilter InputFilter
         {
-            get { return (InputFilter)GetValue(InputFilterProperty); }
-            set { SetValue(InputFilterProperty, value); }
+            get => (InputFilter)this.GetValue(InputFilterProperty);
+            set => this.SetValue(InputFilterProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for InputFilter.  This enables animation, styling, binding, etc...
@@ -245,8 +244,8 @@ namespace RRQMSkin.Controls
 
         public CornerRadius CornerRadius
         {
-            get { return (CornerRadius)GetValue(CornerRadiusProperty); }
-            set { SetValue(CornerRadiusProperty, value); }
+            get => (CornerRadius)this.GetValue(CornerRadiusProperty);
+            set => this.SetValue(CornerRadiusProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for CornerRadius.  This enables animation, styling, binding, etc...

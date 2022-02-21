@@ -8,10 +8,10 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System.Windows;
-using System.Windows.Controls;
 using RRQMSkin.DragDrop;
 using RRQMSkin.Primitives;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace RRQMSkin.Charts
 {
@@ -29,7 +29,7 @@ namespace RRQMSkin.Charts
 
         private void PieChartItem_Loaded(object sender, RoutedEventArgs e)
         {
-            UpdataValue();
+            this.UpdataValue();
         }
 
         internal Sector sector;
@@ -44,8 +44,8 @@ namespace RRQMSkin.Charts
 
         public double Value
         {
-            get { return (double)GetValue(ValueProperty); }
-            set { SetValue(ValueProperty, value); }
+            get => (double)this.GetValue(ValueProperty);
+            set => this.SetValue(ValueProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Value.  This enables animation, styling, binding, etc...
@@ -54,8 +54,8 @@ namespace RRQMSkin.Charts
 
         public string Text
         {
-            get { return (string)GetValue(TextProperty); }
-            set { SetValue(TextProperty, value); }
+            get => (string)this.GetValue(TextProperty);
+            set => this.SetValue(TextProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Text.  This enables animation, styling, binding, etc...

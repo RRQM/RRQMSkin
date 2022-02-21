@@ -54,8 +54,8 @@ namespace RRQMSkin.Controls
 
         public ICommand OnVerifyCommand
         {
-            get { return (ICommand)GetValue(OnVerifyCommandProperty); }
-            set { SetValue(OnVerifyCommandProperty, value); }
+            get => (ICommand)this.GetValue(OnVerifyCommandProperty);
+            set => this.SetValue(OnVerifyCommandProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for OnVerifyCommand.  This enables animation, styling, binding, etc...
@@ -64,8 +64,8 @@ namespace RRQMSkin.Controls
 
         public object Content
         {
-            get { return (object)GetValue(ContentProperty); }
-            set { SetValue(ContentProperty, value); }
+            get => (object)this.GetValue(ContentProperty);
+            set => this.SetValue(ContentProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Content.  This enables animation, styling, binding, etc...
@@ -77,8 +77,8 @@ namespace RRQMSkin.Controls
 
         public object ThumbContent
         {
-            get { return (object)GetValue(ThumbContentProperty); }
-            set { SetValue(ThumbContentProperty, value); }
+            get => (object)this.GetValue(ThumbContentProperty);
+            set => this.SetValue(ThumbContentProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for ThumbContent.  This enables animation, styling, binding, etc...
@@ -91,8 +91,8 @@ namespace RRQMSkin.Controls
 
         public Brush ShadeBackground
         {
-            get { return (Brush)GetValue(ShadeBackgroundProperty); }
-            set { SetValue(ShadeBackgroundProperty, value); }
+            get => (Brush)this.GetValue(ShadeBackgroundProperty);
+            set => this.SetValue(ShadeBackgroundProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for ShadeBackground.  This enables animation, styling, binding, etc...
@@ -104,8 +104,8 @@ namespace RRQMSkin.Controls
 
         public bool Verification
         {
-            get { return (bool)GetValue(VerificationProperty); }
-            private set { SetValue(VerificationProperty, value); }
+            get => (bool)this.GetValue(VerificationProperty);
+            private set => this.SetValue(VerificationProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Verification.  This enables animation, styling, binding, etc...

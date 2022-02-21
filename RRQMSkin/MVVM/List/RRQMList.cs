@@ -8,12 +8,8 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RRQMSkin.MVVM
 {
@@ -21,7 +17,7 @@ namespace RRQMSkin.MVVM
     /// 继承ObservableCollection的集合
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class RRQMList<T>: ObservableCollection<T>
+    public class RRQMList<T> : ObservableCollection<T>
     {
         /// <summary>
         /// 
@@ -39,7 +35,7 @@ namespace RRQMSkin.MVVM
         {
             foreach (var item in list)
             {
-                Add(item);
+                this.Add(item);
             }
         }
 
@@ -51,7 +47,7 @@ namespace RRQMSkin.MVVM
         {
             foreach (var item in collection)
             {
-                Add(item);
+                this.Add(item);
             }
         }
     }

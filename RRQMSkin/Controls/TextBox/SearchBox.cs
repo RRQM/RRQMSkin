@@ -27,7 +27,7 @@ namespace RRQMSkin.Controls
             Button commandButton = (Button)this.Template.FindName("commandButton", this);
             if (commandButton != null)
             {
-                commandButton.Click += CommandButton_Click;
+                commandButton.Click += this.CommandButton_Click;
             }
         }
 
@@ -45,8 +45,8 @@ namespace RRQMSkin.Controls
 
         public ICommand Command
         {
-            get { return (ICommand)GetValue(CommandProperty); }
-            set { SetValue(CommandProperty, value); }
+            get => (ICommand)this.GetValue(CommandProperty);
+            set => this.SetValue(CommandProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Command.  This enables animation, styling, binding, etc...
@@ -55,8 +55,8 @@ namespace RRQMSkin.Controls
 
         public object CommandParameter
         {
-            get { return (object)GetValue(CommandParameterProperty); }
-            set { SetValue(CommandParameterProperty, value); }
+            get => (object)this.GetValue(CommandParameterProperty);
+            set => this.SetValue(CommandParameterProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for CommandParameter.  This enables animation, styling, binding, etc...

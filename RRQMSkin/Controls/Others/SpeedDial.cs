@@ -35,8 +35,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public double PointerAngle
         {
-            get { return (double)GetValue(PointerAngleProperty); }
-            private set { SetValue(PointerAngleProperty, value); }
+            get => (double)this.GetValue(PointerAngleProperty);
+            private set => this.SetValue(PointerAngleProperty, value);
         }
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public double MaxValue
         {
-            get { return (double)GetValue(MaxValueProperty); }
-            set { SetValue(MaxValueProperty, value); }
+            get => (double)this.GetValue(MaxValueProperty);
+            set => this.SetValue(MaxValueProperty, value);
         }
 
         /// <summary>
@@ -65,8 +65,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public double MinValue
         {
-            get { return (double)GetValue(MinValueProperty); }
-            set { SetValue(MinValueProperty, value); }
+            get => (double)this.GetValue(MinValueProperty);
+            set => this.SetValue(MinValueProperty, value);
         }
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public double EndAngle
         {
-            get { return (double)GetValue(EndAngleProperty); }
-            set { SetValue(EndAngleProperty, value); }
+            get => (double)this.GetValue(EndAngleProperty);
+            set => this.SetValue(EndAngleProperty, value);
         }
 
         /// <summary>
@@ -95,8 +95,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public double StartAngle
         {
-            get { return (double)GetValue(StartAngleProperty); }
-            set { SetValue(StartAngleProperty, value); }
+            get => (double)this.GetValue(StartAngleProperty);
+            set => this.SetValue(StartAngleProperty, value);
         }
 
         /// <summary>
@@ -110,8 +110,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public double Speed
         {
-            get { return (double)GetValue(SpeedProperty); }
-            set { SetValue(SpeedProperty, value); }
+            get => (double)this.GetValue(SpeedProperty);
+            set => this.SetValue(SpeedProperty, value);
         }
 
         /// <summary>

@@ -8,10 +8,10 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using RRQMSkin.Primitives;
 using System;
 using System.ComponentModel;
 using System.Windows;
-using RRQMSkin.Primitives;
 
 namespace RRQMSkin.Controls
 {
@@ -33,9 +33,9 @@ namespace RRQMSkin.Controls
         {
             base.OnApplyTemplate();
 
-            secondPointer = (Pointer)this.Template.FindName("secondPointer", this);
-            minutePointer = (Pointer)this.Template.FindName("minutePointer", this);
-            hourPointer = (Pointer)this.Template.FindName("hourPointer", this);
+            this.secondPointer = (Pointer)this.Template.FindName("secondPointer", this);
+            this.minutePointer = (Pointer)this.Template.FindName("minutePointer", this);
+            this.hourPointer = (Pointer)this.Template.FindName("hourPointer", this);
         }
 
         /// <summary>
@@ -44,8 +44,8 @@ namespace RRQMSkin.Controls
         [Category("RRQM"), Description("显示时间")]
         public TimeSpan Time
         {
-            get { return (TimeSpan)GetValue(TimeProperty); }
-            set { SetValue(TimeProperty, value); }
+            get => (TimeSpan)this.GetValue(TimeProperty);
+            set => this.SetValue(TimeProperty, value);
         }
 
         /// <summary>

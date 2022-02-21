@@ -8,13 +8,13 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using RRQMSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using RRQMSkin.Controls;
 
 namespace RRQMSkin.Primitives
 {
@@ -69,8 +69,8 @@ namespace RRQMSkin.Primitives
                     textBlock.FontWeight = this.FontWeight;
                     textBlock.FontSize = this.FontSize;
                     textBlock.Text = texts[i];
-                    textBlock.SetValue(Canvas.LeftProperty, widthRadius * Math.Cos((StartAngle + TickAngle * i) * Math.PI / 180) + radius - width / 2);
-                    textBlock.SetValue(Canvas.TopProperty, heightRadius * Math.Sin((StartAngle + TickAngle * i) * Math.PI / 180) + radius - this.FontSize / 2);
+                    textBlock.SetValue(Canvas.LeftProperty, widthRadius * Math.Cos((this.StartAngle + this.TickAngle * i) * Math.PI / 180) + radius - width / 2);
+                    textBlock.SetValue(Canvas.TopProperty, heightRadius * Math.Sin((this.StartAngle + this.TickAngle * i) * Math.PI / 180) + radius - this.FontSize / 2);
                     canvas.Children.Add(textBlock);
                 }
 
@@ -92,8 +92,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double RadiusRatio
         {
-            get { return (double)GetValue(RadiusRatioProperty); }
-            set { SetValue(RadiusRatioProperty, value); }
+            get => (double)this.GetValue(RadiusRatioProperty);
+            set => this.SetValue(RadiusRatioProperty, value);
         }
 
         /// <summary>
@@ -107,8 +107,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double TickAngle
         {
-            get { return (double)GetValue(TickAngleProperty); }
-            set { SetValue(TickAngleProperty, value); }
+            get => (double)this.GetValue(TickAngleProperty);
+            set => this.SetValue(TickAngleProperty, value);
         }
 
         /// <summary>
@@ -122,8 +122,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public TextShowStyle TextShowStyle
         {
-            get { return (TextShowStyle)GetValue(TextShowStyleProperty); }
-            set { SetValue(TextShowStyleProperty, value); }
+            get => (TextShowStyle)this.GetValue(TextShowStyleProperty);
+            set => this.SetValue(TextShowStyleProperty, value);
         }
 
         /// <summary>
@@ -137,8 +137,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public string Text
         {
-            get { return (string)GetValue(TextProperty); }
-            set { SetValue(TextProperty, value); }
+            get => (string)this.GetValue(TextProperty);
+            set => this.SetValue(TextProperty, value);
         }
 
         /// <summary>
@@ -152,8 +152,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double StartAngle
         {
-            get { return (double)GetValue(StartAngleProperty); }
-            set { SetValue(StartAngleProperty, value); }
+            get => (double)this.GetValue(StartAngleProperty);
+            set => this.SetValue(StartAngleProperty, value);
         }
 
         /// <summary>

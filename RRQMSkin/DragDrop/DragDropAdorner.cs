@@ -20,8 +20,8 @@ namespace RRQMSkin.DragDrop
     {
         public DragDropAdorner(UIElement parent) : base(parent)
         {
-            IsHitTestVisible = false; // Seems Adorner is hit test visible?
-            mDraggedElement = parent as FrameworkElement;
+            this.IsHitTestVisible = false; // Seems Adorner is hit test visible?
+            this.mDraggedElement = parent as FrameworkElement;
         }
 
         public FrameworkElement[] DraggedElements { get; set; }
@@ -32,17 +32,17 @@ namespace RRQMSkin.DragDrop
         {
             base.OnRender(drawingContext);
 
-            if (DraggedElements != null)
+            if (this.DraggedElements != null)
             {
                 Win32.POINT screenPos = new Win32.POINT();
                 if (Win32.GetCursorPos(ref screenPos))
                 {
-                    Point pos = PointFromScreen(new Point(screenPos.X, screenPos.Y));
+                    Point pos = this.PointFromScreen(new Point(screenPos.X, screenPos.Y));
                     int i = 0;
-                    foreach (var item in DraggedElements)
+                    foreach (var item in this.DraggedElements)
                     {
                         i++;
-                        Rect rect = new Rect(pos.X - item.ActualWidth / 2 + i * HorizontalOffset, pos.Y - item.ActualHeight / 2 + i * VerticalOffset, item.ActualWidth, item.ActualHeight);
+                        Rect rect = new Rect(pos.X - item.ActualWidth / 2 + i * this.HorizontalOffset, pos.Y - item.ActualHeight / 2 + i * this.VerticalOffset, item.ActualWidth, item.ActualHeight);
                         drawingContext.PushOpacity(1);
                         // Brush highlight = item.TryFindResource(SystemColors.HighlightBrushKey) as Brush;
                         Brush highlight = Brushes.Transparent;
@@ -55,20 +55,20 @@ namespace RRQMSkin.DragDrop
                     }
                 }
             }
-            else if (mDraggedElement != null)
+            else if (this.mDraggedElement != null)
             {
                 Win32.POINT screenPos = new Win32.POINT();
                 if (Win32.GetCursorPos(ref screenPos))
                 {
-                    Point pos = PointFromScreen(new Point(screenPos.X, screenPos.Y));
+                    Point pos = this.PointFromScreen(new Point(screenPos.X, screenPos.Y));
 
-                    Rect rect = new Rect(pos.X - mDraggedElement.ActualWidth / 2, pos.Y - mDraggedElement.ActualHeight / 2, mDraggedElement.ActualWidth, mDraggedElement.ActualHeight);
+                    Rect rect = new Rect(pos.X - this.mDraggedElement.ActualWidth / 2, pos.Y - this.mDraggedElement.ActualHeight / 2, this.mDraggedElement.ActualWidth, this.mDraggedElement.ActualHeight);
                     drawingContext.PushOpacity(1);
                     Brush highlight = Brushes.Transparent;
                     if (highlight != null)
                     {
                         drawingContext.DrawRectangle(highlight, new Pen(Brushes.Transparent, 0), rect);
-                        drawingContext.DrawRectangle(new VisualBrush(mDraggedElement), new Pen(Brushes.Transparent, 0), rect);
+                        drawingContext.DrawRectangle(new VisualBrush(this.mDraggedElement), new Pen(Brushes.Transparent, 0), rect);
                         drawingContext.Pop();
                     }
                 }

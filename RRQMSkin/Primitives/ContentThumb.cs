@@ -14,8 +14,8 @@ namespace RRQMSkin.Primitives
 
         public object Content
         {
-            get { return (object)GetValue(ContentProperty); }
-            set { SetValue(ContentProperty, value); }
+            get => (object)this.GetValue(ContentProperty);
+            set => this.SetValue(ContentProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Content.  This enables animation, styling, binding, etc...

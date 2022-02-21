@@ -1,8 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -19,11 +17,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public string Source
         {
-            get { return (string)GetValue(SourceProperty); }
-            set
-            {
-                SetValue(SourceProperty, value);
-            }
+            get => (string)this.GetValue(SourceProperty);
+            set => this.SetValue(SourceProperty, value);
         }
 
         public static readonly DependencyProperty SourceProperty =
@@ -32,11 +27,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public bool LoadedStart
         {
-            get { return (bool)GetValue(LoadedStartProperty); }
-            set
-            {
-                SetValue(LoadedStartProperty, value);
-            }
+            get => (bool)this.GetValue(LoadedStartProperty);
+            set => this.SetValue(LoadedStartProperty, value);
         }
         public static readonly DependencyProperty LoadedStartProperty =
           DependencyProperty.Register("LoadedStart", typeof(bool), typeof(VideoPlayer), new PropertyMetadata(false));
@@ -44,11 +36,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public bool IsMuted
         {
-            get { return (bool)GetValue(IsMutedProperty); }
-            set
-            {
-                SetValue(IsMutedProperty, value);
-            }
+            get => (bool)this.GetValue(IsMutedProperty);
+            set => this.SetValue(IsMutedProperty, value);
         }
         public static readonly DependencyProperty IsMutedProperty =
           DependencyProperty.Register("IsMuted", typeof(bool), typeof(VideoPlayer), new PropertyMetadata(false));
@@ -90,7 +79,7 @@ namespace RRQMSkin.Controls
                 {
                     if (Paths.Length > 0)
                     {
-                        
+
                         path = $"{AppDomain.CurrentDomain.BaseDirectory}{Paths}";
                     }
                 }
@@ -102,19 +91,19 @@ namespace RRQMSkin.Controls
                 this.video.Play();
                 this.video.Pause();
                 DispatcherTimer time = new DispatcherTimer();
-                time.Interval = new TimeSpan(0, 0, 0,1);
-                time.Tick += Time_Tick;
+                time.Interval = new TimeSpan(0, 0, 0, 1);
+                time.Tick += this.Time_Tick;
                 time.Start();
 
                 DispatcherTimer timeControl = new DispatcherTimer();
                 timeControl.Interval = new TimeSpan(0, 0, 0, 1);
-                timeControl.Tick += TimeControl_Tick;
+                timeControl.Tick += this.TimeControl_Tick;
                 timeControl.Start();
 
-                VideoInit = true;
-                if (LoadedStart)
+                this.VideoInit = true;
+                if (this.LoadedStart)
                 {
-                    video.Play();
+                    this.video.Play();
                 }
             }
 
@@ -137,7 +126,7 @@ namespace RRQMSkin.Controls
 
         public VideoPlayer()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private bool IsDesignMode(Control ctl)
@@ -147,26 +136,26 @@ namespace RRQMSkin.Controls
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //播放器设置
-            if (IsMuted)
+            if (this.IsMuted)
             {
-                Muted.IsChecked = true;
+                this.Muted.IsChecked = true;
             }
-            if (LoadedStart)
+            if (this.LoadedStart)
             {
-                PlayCheck.IsChecked = true;
+                this.PlayCheck.IsChecked = true;
             }
             if (!this.IsDesignMode(this))
             {
                 this.control_bor.Visibility = Visibility.Collapsed;
                 this.control_btn.Visibility = Visibility.Collapsed;
-                SetSource(Source);
+                this.SetSource(this.Source);
             }
 
         }
 
         private void Time_Tick(object sender, EventArgs e)
         {
-            if (!Pause)
+            if (!this.Pause)
             {
                 this.Press.Value = Convert.ToInt32(this.video.Position.TotalMilliseconds);
             }
@@ -183,20 +172,20 @@ namespace RRQMSkin.Controls
             var temp = sender as CheckBox;
             if (temp.IsChecked.Value)
             {
-                if (this.Press.Value == Press.Maximum)
+                if (this.Press.Value == this.Press.Maximum)
                 {
                     this.Press.Value = 0;
                     this.video.Position = new TimeSpan(0);
                 }
                 this.video.Play();
-                if (VideoInit)
-                    VideoStart?.Invoke();
+                if (this.VideoInit)
+                    this.VideoStart?.Invoke();
             }
             else
             {
                 this.video.Pause();
-                if (VideoInit)
-                    VideoPause?.Invoke();
+                if (this.VideoInit)
+                    this.VideoPause?.Invoke();
             }
         }
 
@@ -205,13 +194,13 @@ namespace RRQMSkin.Controls
             var temp = sender as CheckBox;
             this.video.IsMuted = temp.IsChecked.Value;
 
-            if (VideoInit)
-                VideoMuted?.Invoke(temp.IsChecked.Value);
+            if (this.VideoInit)
+                this.VideoMuted?.Invoke(temp.IsChecked.Value);
         }
 
         private void video_MediaOpened(object sender, RoutedEventArgs e)
         {
-            var temp = video.NaturalDuration.TimeSpan;
+            var temp = this.video.NaturalDuration.TimeSpan;
             this.StartTimer.Text = "00:00";
             this.EndTimer.Text = $"-{temp.ToString(@"mm\:ss")}";
             this.Press.Maximum = Convert.ToInt32(temp.TotalMilliseconds);
@@ -226,8 +215,8 @@ namespace RRQMSkin.Controls
             {
                 this.PlayCheck.IsChecked = false;
                 this.video.Pause();
-                if (VideoInit)
-                    VideoEnd?.Invoke();
+                if (this.VideoInit)
+                    this.VideoEnd?.Invoke();
             }
 
         }
@@ -261,7 +250,7 @@ namespace RRQMSkin.Controls
 
         private void video_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            PlayCheck.IsChecked = !PlayCheck.IsChecked.Value;
+            this.PlayCheck.IsChecked = !this.PlayCheck.IsChecked.Value;
         }
     }
 }

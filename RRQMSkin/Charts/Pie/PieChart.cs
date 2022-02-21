@@ -8,10 +8,10 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using RRQMSkin.Primitives;
 using System;
 using System.Windows;
 using System.Windows.Media.Animation;
-using RRQMSkin.Primitives;
 
 namespace RRQMSkin.Charts
 {
@@ -38,14 +38,14 @@ namespace RRQMSkin.Charts
 
         public string PieBrushPath
         {
-            get { return (string)GetValue(PieBrushPathProperty); }
-            set { SetValue(PieBrushPathProperty, value); }
+            get => (string)this.GetValue(PieBrushPathProperty);
+            set => this.SetValue(PieBrushPathProperty, value);
         }
 
         public string ValuePath
         {
-            get { return (string)GetValue(ValuePathProperty); }
-            set { SetValue(ValuePathProperty, value); }
+            get => (string)this.GetValue(ValuePathProperty);
+            set => this.SetValue(ValuePathProperty, value);
         }
 
         protected override DependencyObject GetContainerForItemOverride()
@@ -65,7 +65,7 @@ namespace RRQMSkin.Charts
 
             if (element is PieChartItem pie)
             {
-                PreparePieItem(pie, item);
+                this.PreparePieItem(pie, item);
             }
         }
 
@@ -155,10 +155,10 @@ namespace RRQMSkin.Charts
                     double end = start + item.Value / sum * 360;
                     if (this.IsAnimation)
                     {
-                        AnimationDouble(item.sector, Sector.StartAngleProperty, start);
-                        AnimationDouble(item.sector, Sector.EndAngleProperty, end);
+                        this.AnimationDouble(item.sector, Sector.StartAngleProperty, start);
+                        this.AnimationDouble(item.sector, Sector.EndAngleProperty, end);
 
-                        AnimationDouble(item.dialText, DialText.StartAngleProperty, (end - start) / 2 + start);
+                        this.AnimationDouble(item.dialText, DialText.StartAngleProperty, (end - start) / 2 + start);
                     }
                     else
                     {
@@ -172,8 +172,8 @@ namespace RRQMSkin.Charts
                 {
                     if (this.IsAnimation)
                     {
-                        AnimationDouble(item.sector, Sector.EndAngleProperty, 0);
-                        AnimationDouble(item.sector, Sector.EndAngleProperty, 360);
+                        this.AnimationDouble(item.sector, Sector.EndAngleProperty, 0);
+                        this.AnimationDouble(item.sector, Sector.EndAngleProperty, 360);
                     }
                     else
                     {
@@ -186,8 +186,8 @@ namespace RRQMSkin.Charts
 
         public double StartAngle
         {
-            get { return (double)GetValue(StartAngleProperty); }
-            set { SetValue(StartAngleProperty, value); }
+            get => (double)this.GetValue(StartAngleProperty);
+            set => this.SetValue(StartAngleProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for StartAngle.  This enables animation, styling, binding, etc...
@@ -196,8 +196,8 @@ namespace RRQMSkin.Charts
 
         public bool IsAnimation
         {
-            get { return (bool)GetValue(IsAnimationProperty); }
-            set { SetValue(IsAnimationProperty, value); }
+            get => (bool)this.GetValue(IsAnimationProperty);
+            set => this.SetValue(IsAnimationProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for IsAnimation.  This enables animation, styling, binding, etc...

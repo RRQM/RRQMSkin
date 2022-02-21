@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace RRQMSkin.MVVM
 {
-   /// <summary>
-   /// 该代码来自网络
-   /// </summary>
+    /// <summary>
+    /// 该代码来自网络
+    /// </summary>
     public static class PasswordBoxHelper
     {
 

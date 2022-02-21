@@ -9,10 +9,6 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace RRQMSkin.MVVM
@@ -34,9 +30,9 @@ namespace RRQMSkin.MVVM
         /// 
         /// </summary>
         /// <param name="command"></param>
-        public ExecuteCommand (DelegateCommand<T> command)
+        public ExecuteCommand(DelegateCommand<T> command)
         {
-            delCommand = command;
+            this.delCommand = command;
         }
 
         DelegateCommand<T> delCommand;
@@ -53,8 +49,8 @@ namespace RRQMSkin.MVVM
         /// <returns></returns>
         public bool CanExecute(object parameter)
         {
-           
-            if (delCommand == null)
+
+            if (this.delCommand == null)
             {
                 return false;
             }
@@ -67,10 +63,10 @@ namespace RRQMSkin.MVVM
         public void Execute(object parameter)
         {
             T t = (T)parameter;
-            if (CanExecute(parameter))
+            if (this.CanExecute(parameter))
             {
                 CanExecuteChanged?.Invoke(this, null);
-                delCommand.Invoke(t);
+                this.delCommand.Invoke(t);
             }
         }
     }

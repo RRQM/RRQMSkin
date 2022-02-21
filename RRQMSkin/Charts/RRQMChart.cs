@@ -17,9 +17,6 @@ namespace RRQMSkin.Charts
     {
         public abstract void UpdataChart();
 
-        public bool IsInDesignMode
-        {
-            get { return DesignerProperties.GetIsInDesignMode(this); }
-        }
+        public bool IsInDesignMode => DesignerProperties.GetIsInDesignMode(this);
     }
 }

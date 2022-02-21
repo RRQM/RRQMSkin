@@ -9,10 +9,6 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace RRQMSkin.MVVM
@@ -21,11 +17,11 @@ namespace RRQMSkin.MVVM
     /// 
     /// </summary>
     public delegate void DelegateCommand();
-   
+
     /// <summary>
     /// 绑定命令
     /// </summary>
-    public class ExecuteCommand: ICommand
+    public class ExecuteCommand : ICommand
     {
         /// <summary>
         /// 
@@ -36,7 +32,7 @@ namespace RRQMSkin.MVVM
             this.delCommand = command;
         }
 
-        
+
         private DelegateCommand delCommand;
 
         /// <summary>
@@ -51,9 +47,9 @@ namespace RRQMSkin.MVVM
         /// <returns></returns>
         public bool CanExecute(object parameter)
         {
-          
 
-            if (delCommand == null)
+
+            if (this.delCommand == null)
             {
                 return false;
             }
@@ -66,10 +62,10 @@ namespace RRQMSkin.MVVM
         /// <param name="parameter"></param>
         public void Execute(object parameter)
         {
-            if (CanExecute(parameter))
+            if (this.CanExecute(parameter))
             {
                 CanExecuteChanged?.Invoke(this, null);
-                delCommand.Invoke();
+                this.delCommand.Invoke();
             }
         }
     }

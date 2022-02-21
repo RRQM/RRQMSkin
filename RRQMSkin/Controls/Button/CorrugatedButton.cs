@@ -32,10 +32,10 @@ namespace RRQMSkin.Controls
 
         public CorrugatedButton()
         {
-            this.Click += CorrugatedButton_Click;
-            this.Loaded += CorrugatedButton_Loaded;
-            this.SizeChanged += CorrugatedButton_SizeChanged;
-            this.MouseLeave += CorrugatedButton_MouseLeave;
+            this.Click += this.CorrugatedButton_Click;
+            this.Loaded += this.CorrugatedButton_Loaded;
+            this.SizeChanged += this.CorrugatedButton_SizeChanged;
+            this.MouseLeave += this.CorrugatedButton_MouseLeave;
             this.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#05BBFB"));
             this.Content = "按钮";
         }
@@ -47,12 +47,12 @@ namespace RRQMSkin.Controls
 
         private void CorrugatedButton_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            ClipBound();
+            this.ClipBound();
         }
 
         private void CorrugatedButton_Loaded(object sender, RoutedEventArgs e)
         {
-            ClipBound();
+            this.ClipBound();
         }
 
         private void ClipBound()
@@ -108,7 +108,7 @@ namespace RRQMSkin.Controls
 
             pathGeometry.Figures.Add(pathFigure);
 
-            mainGrid.Clip = pathGeometry;
+            this.mainGrid.Clip = pathGeometry;
         }
 
         private void CorrugatedButton_Click(object sender, RoutedEventArgs e)
@@ -130,7 +130,7 @@ namespace RRQMSkin.Controls
             DoubleAnimation doubleAnimation = new DoubleAnimation();
             doubleAnimation.From = 0;
             doubleAnimation.To = radius * 2.5;
-            doubleAnimation.Duration = FlashDuration;
+            doubleAnimation.Duration = this.FlashDuration;
             doubleAnimation.FillBehavior = FillBehavior.Stop;
             scale.BeginAnimation(ScaleTransform.ScaleXProperty, doubleAnimation);
             scale.BeginAnimation(ScaleTransform.ScaleYProperty, doubleAnimation);
@@ -144,8 +144,8 @@ namespace RRQMSkin.Controls
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-            ellipse = (Ellipse)this.Template.FindName("CorrugatedEllipse", this);
-            mainGrid = (Grid)this.Template.FindName("mainGrid", this);
+            this.ellipse = (Ellipse)this.Template.FindName("CorrugatedEllipse", this);
+            this.mainGrid = (Grid)this.Template.FindName("mainGrid", this);
         }
 
         private Ellipse ellipse;
@@ -155,8 +155,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public CornerRadius CornerRadius
         {
-            get { return (CornerRadius)GetValue(CornerRadiusProperty); }
-            set { SetValue(CornerRadiusProperty, value); }
+            get => (CornerRadius)this.GetValue(CornerRadiusProperty);
+            set => this.SetValue(CornerRadiusProperty, value);
         }
 
         /// <summary>
@@ -170,8 +170,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public Brush CorrugatedBrush
         {
-            get { return (Brush)GetValue(CorrugatedBrushProperty); }
-            set { SetValue(CorrugatedBrushProperty, value); }
+            get => (Brush)this.GetValue(CorrugatedBrushProperty);
+            set => this.SetValue(CorrugatedBrushProperty, value);
         }
 
         /// <summary>
@@ -185,8 +185,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public TimeSpan FlashDuration
         {
-            get { return (TimeSpan)GetValue(FlashDurationProperty); }
-            set { SetValue(FlashDurationProperty, value); }
+            get => (TimeSpan)this.GetValue(FlashDurationProperty);
+            set => this.SetValue(FlashDurationProperty, value);
         }
 
         /// <summary>
@@ -200,8 +200,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public bool FlashEnable
         {
-            get { return (bool)GetValue(FlashEnableProperty); }
-            set { SetValue(FlashEnableProperty, value); }
+            get => (bool)this.GetValue(FlashEnableProperty);
+            set => this.SetValue(FlashEnableProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for FlashEnable.  This enables animation, styling, binding, etc...

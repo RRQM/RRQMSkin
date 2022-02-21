@@ -58,8 +58,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double RatioAngle
         {
-            get { return (double)GetValue(RatioAngleProperty); }
-            set { SetValue(RatioAngleProperty, value); }
+            get => (double)this.GetValue(RatioAngleProperty);
+            set => this.SetValue(RatioAngleProperty, value);
         }
 
         /// <summary>
@@ -73,8 +73,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double PointerHeight
         {
-            get { return (double)GetValue(PointerHeightProperty); }
-            set { SetValue(PointerHeightProperty, value); }
+            get => (double)this.GetValue(PointerHeightProperty);
+            set => this.SetValue(PointerHeightProperty, value);
         }
 
         /// <summary>
@@ -88,8 +88,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public double PointerWidth
         {
-            get { return (double)GetValue(PointerWidthProperty); }
-            set { SetValue(PointerWidthProperty, value); }
+            get => (double)this.GetValue(PointerWidthProperty);
+            set => this.SetValue(PointerWidthProperty, value);
         }
 
         /// <summary>
@@ -103,8 +103,8 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public Point RatioCenter
         {
-            get { return (Point)GetValue(RatioCenterProperty); }
-            set { SetValue(RatioCenterProperty, value); }
+            get => (Point)this.GetValue(RatioCenterProperty);
+            set => this.SetValue(RatioCenterProperty, value);
         }
 
         /// <summary>

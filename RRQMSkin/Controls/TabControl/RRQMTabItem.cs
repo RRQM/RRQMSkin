@@ -18,7 +18,7 @@ namespace RRQMSkin.Controls
     {
         public RRQMTabItem()
         {
-            this.CloseItemCommand = new ExecuteCommand(CloseItem);
+            this.CloseItemCommand = new ExecuteCommand(this.CloseItem);
         }
 
         public ICommand CloseItemCommand { get; set; }

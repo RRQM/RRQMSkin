@@ -17,8 +17,8 @@ namespace RRQMSkin.Controls
     {
         public bool ResizeGripEnable
         {
-            get { return (bool)GetValue(ResizeGripEnableProperty); }
-            set { SetValue(ResizeGripEnableProperty, value); }
+            get => (bool)this.GetValue(ResizeGripEnableProperty);
+            set => this.SetValue(ResizeGripEnableProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for ResizeGripEnable.  This enables animation, styling, binding, etc...

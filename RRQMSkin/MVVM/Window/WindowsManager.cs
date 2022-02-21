@@ -9,10 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace RRQMSkin.MVVM
@@ -26,10 +23,7 @@ namespace RRQMSkin.MVVM
         /// <summary>
         /// 获取已创建的窗口
         /// </summary>
-        public static Window[] Windows
-        {
-            get { return windows.GetWindows(); }
-        }
+        public static Window[] Windows => windows.GetWindows();
 
         /// <summary>
         /// 创建新窗体
@@ -69,7 +63,7 @@ namespace RRQMSkin.MVVM
             window.Show();
             return id;
         }
-        public static Window CreateWindow<T>(string id, params object[] parameters)where T:Window
+        public static Window CreateWindow<T>(string id, params object[] parameters) where T : Window
         {
             Window window = Activator.CreateInstance(typeof(T), parameters) as Window;
             if (string.IsNullOrEmpty(id))
@@ -83,12 +77,12 @@ namespace RRQMSkin.MVVM
 
         public static Window CreateWindow<T>(string id) where T : Window
         {
-            return CreateWindow<T>(id,null);
-        } 
-        
+            return CreateWindow<T>(id, null);
+        }
+
         public static Window CreateWindow<T>() where T : Window
         {
-            return CreateWindow<T>(null,null);
+            return CreateWindow<T>(null, null);
         }
 
         /// <summary>

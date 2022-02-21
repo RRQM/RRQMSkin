@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace RRQMSkin.MVVM
@@ -31,7 +27,7 @@ namespace RRQMSkin.MVVM
         public UIElement RegisterUI<TUI>(object[] args) where TUI : UIElement
         {
             TUI obj = (TUI)Activator.CreateInstance(typeof(TUI), args);
-            this.uis.Add(obj,obj);
+            this.uis.Add(obj, obj);
             return obj;
         }
 
@@ -45,7 +41,7 @@ namespace RRQMSkin.MVVM
         {
             foreach (var item in this.uis.Values)
             {
-                if (item.GetType()==typeof(TUI))
+                if (item.GetType() == typeof(TUI))
                 {
                     return item;
                 }

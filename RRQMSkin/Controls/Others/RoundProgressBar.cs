@@ -8,9 +8,9 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using RRQMSkin.Primitives;
 using System.Windows;
 using System.Windows.Controls.Primitives;
-using RRQMSkin.Primitives;
 
 namespace RRQMSkin.Controls
 {
@@ -30,7 +30,7 @@ namespace RRQMSkin.Controls
         {
             base.OnApplyTemplate();
 
-            sector = (Sector)this.Template.FindName("sector", this);
+            this.sector = (Sector)this.Template.FindName("sector", this);
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace RRQMSkin.Controls
         protected override void OnValueChanged(double oldValue, double newValue)
         {
             base.OnValueChanged(oldValue, newValue);
-            OnChanged();
+            this.OnChanged();
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace RRQMSkin.Controls
         protected override void OnMaximumChanged(double oldMaximum, double newMaximum)
         {
             base.OnMaximumChanged(oldMaximum, newMaximum);
-            OnChanged();
+            this.OnChanged();
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace RRQMSkin.Controls
         protected override void OnMinimumChanged(double oldMinimum, double newMinimum)
         {
             base.OnMinimumChanged(oldMinimum, newMinimum);
-            OnChanged();
+            this.OnChanged();
         }
 
         private void OnChanged()

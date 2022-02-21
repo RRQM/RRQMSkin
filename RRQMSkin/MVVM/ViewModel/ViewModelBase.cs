@@ -10,7 +10,6 @@
 //------------------------------------------------------------------------------
 using System;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Windows;
 
 namespace RRQMSkin.MVVM
@@ -27,10 +26,7 @@ namespace RRQMSkin.MVVM
         /// <summary>
         /// 判断是不是设计器模式
         /// </summary>
-        public bool IsInDesignMode
-        {
-            get { return DesignerProperties.GetIsInDesignMode(new DependencyObject()); }
-        }
+        public bool IsInDesignMode => DesignerProperties.GetIsInDesignMode(new DependencyObject());
 
         [field: NonSerialized]
         internal FrameworkElement view;
@@ -38,9 +34,6 @@ namespace RRQMSkin.MVVM
         /// <summary>
         /// 目标View
         /// </summary>
-        public FrameworkElement View
-        {
-            get { return view; }
-        }
+        public FrameworkElement View => this.view;
     }
 }

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -11,7 +7,7 @@ using System.Windows.Media;
 
 namespace RRQMSkin.Controls
 {
-    public class LabelTag: Label
+    public class LabelTag : Label
     {
         private ButtonBase closeButtonHost;
         public event RoutedEventHandler CloseClick;
@@ -26,14 +22,14 @@ namespace RRQMSkin.Controls
         {
             base.OnApplyTemplate();
 
-            if (closeButtonHost != null)
+            if (this.closeButtonHost != null)
             {
-                closeButtonHost.Click -= HandleClearButtonClick;
+                this.closeButtonHost.Click -= this.HandleClearButtonClick;
             }
-            closeButtonHost = GetTemplateChild("PART_CloseButtonHost") as ButtonBase;
-            if (closeButtonHost != null)
+            this.closeButtonHost = this.GetTemplateChild("PART_CloseButtonHost") as ButtonBase;
+            if (this.closeButtonHost != null)
             {
-                closeButtonHost.Click += HandleClearButtonClick;
+                this.closeButtonHost.Click += this.HandleClearButtonClick;
             }
 
         }
@@ -49,8 +45,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public String Text
         {
-            get { return (String)GetValue(TextProperty); }
-            set { SetValue(TextProperty, value); }
+            get => (String)this.GetValue(TextProperty);
+            set => this.SetValue(TextProperty, value);
         }
 
         public static readonly DependencyProperty TextProperty =
@@ -59,8 +55,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public Brush TxtForeground
         {
-            get { return (Brush)GetValue(TxtForegroundProperty); }
-            set { SetValue(TxtForegroundProperty, value); }
+            get => (Brush)this.GetValue(TxtForegroundProperty);
+            set => this.SetValue(TxtForegroundProperty, value);
         }
         public static readonly DependencyProperty TxtForegroundProperty =
           DependencyProperty.Register("TxtForeground", typeof(Brush), typeof(LabelTag), new PropertyMetadata(Brushes.Black));
@@ -68,8 +64,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public ulong TagID
         {
-            get { return (ulong)GetValue(TagIDProperty); }
-            set { SetValue(TagIDProperty, value); }
+            get => (ulong)this.GetValue(TagIDProperty);
+            set => this.SetValue(TagIDProperty, value);
         }
         public static readonly DependencyProperty TagIDProperty =
           DependencyProperty.Register("TagID", typeof(ulong), typeof(LabelTag), new PropertyMetadata(new ulong()));
@@ -77,8 +73,8 @@ namespace RRQMSkin.Controls
         [Category("Extend Properties")]
         public Visibility CloseBtnVisibility
         {
-            get { return (Visibility)GetValue(CloseBtnVisibilityProperty); }
-            set { SetValue(CloseBtnVisibilityProperty, value); }
+            get => (Visibility)this.GetValue(CloseBtnVisibilityProperty);
+            set => this.SetValue(CloseBtnVisibilityProperty, value);
         }
         public static readonly DependencyProperty CloseBtnVisibilityProperty =
           DependencyProperty.Register("CloseBtnVisibility", typeof(Visibility), typeof(LabelTag), new PropertyMetadata(Visibility.Visible));

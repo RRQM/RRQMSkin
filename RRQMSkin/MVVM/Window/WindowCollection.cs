@@ -10,10 +10,7 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace RRQMSkin.MVVM
@@ -32,10 +29,10 @@ namespace RRQMSkin.MVVM
         internal void Add(string id, Window window)
         {
             window.SetValue(WindowHelper.RRQMIDProperty, id);
-            count++;
-            window.Closed += Window_Closed;
+            this.count++;
+            window.Closed += this.Window_Closed;
             window.Activate();
-            if (!windows.TryAdd(id, window))
+            if (!this.windows.TryAdd(id, window))
             {
                 throw new Exception("ID重复");
             }
@@ -43,14 +40,14 @@ namespace RRQMSkin.MVVM
 
         internal void CloseTypeWindow(Type type)
         {
-            foreach (var key in windows.Keys)
+            foreach (var key in this.windows.Keys)
             {
                 Window window;
-                if (windows.TryGetValue(key, out window))
+                if (this.windows.TryGetValue(key, out window))
                 {
                     if (window.GetType().FullName == type.FullName)
                     {
-                        windows.TryRemove(key, out _);
+                        this.windows.TryRemove(key, out _);
                     }
                 }
             }
@@ -59,7 +56,7 @@ namespace RRQMSkin.MVVM
         internal void CloseWindow(string id)
         {
             Window window;
-            if (windows.TryGetValue(id, out window))
+            if (this.windows.TryGetValue(id, out window))
             {
                 window.Close();
             }
@@ -67,10 +64,10 @@ namespace RRQMSkin.MVVM
 
         internal void CloseAllWindow()
         {
-            foreach (var key in windows.Keys)
+            foreach (var key in this.windows.Keys)
             {
                 Window window;
-                if (windows.TryGetValue(key, out window))
+                if (this.windows.TryGetValue(key, out window))
                 {
                     window.Close();
                 }
@@ -80,7 +77,7 @@ namespace RRQMSkin.MVVM
         internal Window GetWindow(string id)
         {
             Window window;
-            windows.TryGetValue(id, out window);
+            this.windows.TryGetValue(id, out window);
             return window;
         }
         /// <summary>
@@ -89,29 +86,29 @@ namespace RRQMSkin.MVVM
         /// <returns></returns>
         public Window[] GetWindows()
         {
-            return windows.Values.ToArray();
+            return this.windows.Values.ToArray();
         }
         int count;
         internal string GetRandomID()
         {
-            string key = "win" + count;
-            while (windows.ContainsKey(key))
+            string key = "win" + this.count;
+            while (this.windows.ContainsKey(key))
             {
-                count++;
-                key = "win" + count;
+                this.count++;
+                key = "win" + this.count;
             }
             return key;
         }
         private void Window_Closed(object sender, EventArgs e)
         {
-            foreach (var key in windows.Keys)
+            foreach (var key in this.windows.Keys)
             {
                 Window window;
-                if (windows.TryGetValue(key, out window))
+                if (this.windows.TryGetValue(key, out window))
                 {
                     if (window == sender)
                     {
-                        windows.TryRemove(key, out _);
+                        this.windows.TryRemove(key, out _);
                         break;
                     }
                 }

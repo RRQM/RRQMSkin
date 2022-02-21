@@ -28,8 +28,8 @@ namespace RRQMSkin.Controls
 
         public bool DoubleEditEnable
         {
-            get { return (bool)GetValue(DoubleEditEnableProperty); }
-            set { SetValue(DoubleEditEnableProperty, value); }
+            get => (bool)this.GetValue(DoubleEditEnableProperty);
+            set => this.SetValue(DoubleEditEnableProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for DoubleEditEnable.  This enables animation, styling, binding, etc...
@@ -38,8 +38,8 @@ namespace RRQMSkin.Controls
 
         public ICommand EditFinishedCommand
         {
-            get { return (ICommand)GetValue(EditFinishedCommandProperty); }
-            set { SetValue(EditFinishedCommandProperty, value); }
+            get => (ICommand)this.GetValue(EditFinishedCommandProperty);
+            set => this.SetValue(EditFinishedCommandProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for EditFinishedCommand.  This enables animation, styling, binding, etc...
@@ -48,8 +48,8 @@ namespace RRQMSkin.Controls
 
         public object CommandParameter
         {
-            get { return (object)GetValue(CommandParameterProperty); }
-            set { SetValue(CommandParameterProperty, value); }
+            get => (object)this.GetValue(CommandParameterProperty);
+            set => this.SetValue(CommandParameterProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for CommandParameter.  This enables animation, styling, binding, etc...
@@ -93,7 +93,7 @@ namespace RRQMSkin.Controls
         private void DoubleEditTextBlock_PreviewLostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             this.IsReadOnly = true;
-            this.EditFinished?.Invoke(this,this.Text);
+            this.EditFinished?.Invoke(this, this.Text);
             if (this.EditFinishedCommand != null && this.EditFinishedCommand.CanExecute(this.CommandParameter))
             {
                 this.EditFinishedCommand.Execute(this.CommandParameter);

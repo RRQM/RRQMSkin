@@ -8,11 +8,11 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using RRQMSkin.Primitives;
 using System;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using RRQMSkin.Primitives;
 
 namespace RRQMSkin.Controls
 {
@@ -44,8 +44,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public new Brush Foreground
         {
-            get { return (Brush)GetValue(ForegroundProperty); }
-            set { SetValue(ForegroundProperty, value); }
+            get => (Brush)this.GetValue(ForegroundProperty);
+            set => this.SetValue(ForegroundProperty, value);
         }
 
         /// <summary>
@@ -59,8 +59,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public TimeSpan Duration
         {
-            get { return (TimeSpan)GetValue(DurationProperty); }
-            set { SetValue(DurationProperty, value); }
+            get => (TimeSpan)this.GetValue(DurationProperty);
+            set => this.SetValue(DurationProperty, value);
         }
 
         /// <summary>
@@ -74,8 +74,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public double ArcLength
         {
-            get { return (double)GetValue(ArcLengthProperty); }
-            set { SetValue(ArcLengthProperty, value); }
+            get => (double)this.GetValue(ArcLengthProperty);
+            set => this.SetValue(ArcLengthProperty, value);
         }
 
         /// <summary>
@@ -89,8 +89,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public double EndAngle
         {
-            get { return (double)GetValue(EndAngleProperty); }
-            private set { SetValue(EndAngleProperty, value); }
+            get => (double)this.GetValue(EndAngleProperty);
+            private set => this.SetValue(EndAngleProperty, value);
         }
 
         /// <summary>
@@ -104,8 +104,8 @@ namespace RRQMSkin.Controls
         /// </summary>
         public bool IsLoading
         {
-            get { return (bool)GetValue(IsLoadingProperty); }
-            set { SetValue(IsLoadingProperty, value); }
+            get => (bool)this.GetValue(IsLoadingProperty);
+            set => this.SetValue(IsLoadingProperty, value);
         }
 
         /// <summary>

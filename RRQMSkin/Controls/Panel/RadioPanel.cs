@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace RRQMSkin.Controls
 {
@@ -32,8 +20,8 @@ namespace RRQMSkin.Controls
 
         public object RadioContent
         {
-            get { return (object)GetValue(RadioContentProperty); }
-            set { SetValue(RadioContentProperty, value); }
+            get => (object)this.GetValue(RadioContentProperty);
+            set => this.SetValue(RadioContentProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for RadioContent.  This enables animation, styling, binding, etc...

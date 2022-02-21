@@ -25,13 +25,10 @@ namespace RRQMSkin.Primitives
         /// </summary>
         public RRQMShape()
         {
-            this.SizeChanged += Sector_SizeChanged;
+            this.SizeChanged += this.Sector_SizeChanged;
         }
 
-        public bool IsInDesignMode
-        {
-            get { return DesignerProperties.GetIsInDesignMode(this); }
-        }
+        public bool IsInDesignMode => DesignerProperties.GetIsInDesignMode(this);
 
         private void Sector_SizeChanged(object sender, SizeChangedEventArgs e)
         {
@@ -41,7 +38,7 @@ namespace RRQMSkin.Primitives
         /// <summary>
         ///
         /// </summary>
-        protected override Geometry DefiningGeometry { get { return CreatGeometry(); } }
+        protected override Geometry DefiningGeometry => this.CreatGeometry();
 
         /// <summary>
         ///

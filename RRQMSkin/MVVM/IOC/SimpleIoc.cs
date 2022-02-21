@@ -10,11 +10,6 @@
 //------------------------------------------------------------------------------
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace RRQMSkin.MVVM
@@ -58,12 +53,12 @@ namespace RRQMSkin.MVVM
         /// <param name="viewModel"></param>
         public void Register(ViewModelBase viewModel, FrameworkElement element)
         {
-            if (element!=null)
+            if (element != null)
             {
                 element.DataContext = viewModel;
             }
             viewModel.view = element;
-            viewModelBases.TryAdd(viewModel, element);
+            this.viewModelBases.TryAdd(viewModel, element);
         }
 
         /// <summary>
@@ -92,7 +87,7 @@ namespace RRQMSkin.MVVM
         /// <returns></returns>
         public T GetViewModelInstance<T>() where T : ViewModelBase
         {
-            foreach (var item in viewModelBases.Keys)
+            foreach (var item in this.viewModelBases.Keys)
             {
                 if (item.GetType() == typeof(T))
                 {

@@ -8,93 +8,119 @@
 //  感谢您的下载和使用
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
+using RRQMSkin.MVVM;
 using System;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shell;
-using RRQMSkin.MVVM;
+using System.Windows.Shapes;
 
 namespace RRQMSkin.Windows
 {
-    public class RRQMWindow : System.Windows.Window
+    public enum RRQMResizeMode
     {
+        NoResize,
+        CanResize,
+    }
+
+    public enum RRQMWindowStyle
+    {
+        SingleBorderWindow,
+        ToolWindow,
+    }
+
+    /// <summary>
+    /// 自定义窗口
+    /// </summary>
+    public class RRQMWindow : Window
+    {
+        /// <summary>
+        /// 圆角属性
+        /// </summary>
+        public CornerRadius CornerRadius
+        {
+            get { return (CornerRadius)GetValue(CornerRadiusProperty); }
+            set { SetValue(CornerRadiusProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for CornerRadius.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CornerRadiusProperty =
+            DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(RRQMWindow), new PropertyMetadata(new CornerRadius(0)));
+
+
+
+        // Using a DependencyProperty as the backing store for ResizeMode.  This enables animation, styling, binding, etc...
+        public static new readonly DependencyProperty ResizeModeProperty =
+            DependencyProperty.Register("ResizeMode", typeof(RRQMResizeMode), typeof(RRQMWindow), new PropertyMetadata(RRQMResizeMode.CanResize, OnResizeChanged));
+
+
+        // Using a DependencyProperty as the backing store for TitleContent.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TitleContentProperty =
+            DependencyProperty.Register("TitleContent", typeof(object), typeof(RRQMWindow), new PropertyMetadata("若汝棋茗"));
+
+
+        private HwndSource _hwndSource;
+        private Border mainBorder;
+        private bool mRestoreForDragMove;
+        private Grid titleGrid;
+        private Grid windowGrid;
+
         static RRQMWindow()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(RRQMWindow), new FrameworkPropertyMetadata(typeof(RRQMWindow)));
         }
 
+        /// <summary>
+        ///构造函数
+        /// </summary>
         public RRQMWindow()
         {
-            this.Background = Brushes.White;
-            this.ResizeMode = RRQMResizeMode.CanResize;
-            base.WindowStyle = System.Windows.WindowStyle.None;
-            this.Loaded += Windows_Loaded;
+            this.BorderThickness = new Thickness(1.0);
             base.Icon = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/Icons/RRQM.ico", UriKind.RelativeOrAbsolute));
 
-            MinWindowCommand = new ExecuteCommand(() => { this.WindowState = WindowState.Minimized; });
-            MaxOrNormalWindowCommand = new ExecuteCommand(() => { WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized; });
-            CloseWindowCommand = new ExecuteCommand(() => { this.Close(); });
-
-            WindowChrome windowChrome = new WindowChrome();
-            windowChrome.CaptionHeight = 0;
-            windowChrome.ResizeBorderThickness = new Thickness(5);
-            this.SetValue(WindowChrome.WindowChromeProperty, windowChrome);
+            this.MinWindowCommand = new ExecuteCommand(() => { this.WindowState = WindowState.Minimized; });
+            this.MaxOrNormalWindowCommand = new ExecuteCommand(() => { WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized; });
+            this.CloseWindowCommand = new ExecuteCommand(() => { this.Close(); });
         }
 
-        private void Windows_Loaded(object sender, RoutedEventArgs e)
+        internal enum ResizeDirection
         {
-            OnStateChanged(e);
+            Left = 1,
+            Right = 2,
+            Top = 3,
+            TopLeft = 4,
+            TopRight = 5,
+            Bottom = 6,
+            BottomLeft = 7,
+            BottomRight = 8,
         }
 
-        private bool mRestoreForDragMove;
-        private Grid titleGrid;
-        private Border mainBorder;
+        /// <summary>
+        /// 关闭窗口
+        /// </summary>
+        public ICommand CloseWindowCommand { get; set; }
 
-        public override void OnApplyTemplate()
-        {
-            base.OnApplyTemplate();
-            titleGrid = (Grid)this.Template.FindName("title", this);
-            mainBorder = (Border)this.Template.FindName("mainBorder", this);
-            this.titleGrid.MouseLeftButtonDown += titleGrid_MouseLeftButtonDown;
-            this.titleGrid.MouseMove += titleGrid_MouseMove;
-            this.titleGrid.MouseLeftButtonUp += (s, e) => { mRestoreForDragMove = false; };
-        }
+        /// <summary>
+        /// 最大化切换
+        /// </summary>
+        public ICommand MaxOrNormalWindowCommand { get; set; }
 
-        private void titleGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.ClickCount == 2)
-            {
-                mRestoreForDragMove = false;
-                if (ResizeMode != RRQMResizeMode.CanResize) return;
-                WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
-            }
-            else
-            {
-                if (e.ButtonState == MouseButtonState.Pressed)
-                {
-                    mRestoreForDragMove = WindowState == WindowState.Maximized;
-                    DragMove();
-                }
-            }
-        }
+        /// <summary>
+        /// 最小化
+        /// </summary>
+        public ICommand MinWindowCommand { get; set; }
 
-        private void titleGrid_MouseMove(object sender, MouseEventArgs e)
+        /// <summary>
+        /// ResizeMode
+        /// </summary>
+        public new RRQMResizeMode ResizeMode
         {
-            if (mRestoreForDragMove)
-            {
-                mRestoreForDragMove = false;
-                WindowState = WindowState.Normal;
-                var point = e.MouseDevice.GetPosition(this);
-                Left = point.X - this.titleGrid.ActualWidth * point.X / SystemParameters.WorkArea.Width - this.mainBorder.Margin.Left;
-                Top = point.Y - this.titleGrid.ActualHeight * point.Y / SystemParameters.WorkArea.Height - this.mainBorder.Margin.Top;
-                if (e.LeftButton == MouseButtonState.Pressed)
-                {
-                    DragMove();
-                }
-            }
+            get => (RRQMResizeMode)GetValue(ResizeModeProperty);
+            set => SetValue(ResizeModeProperty, value);
         }
 
         /// <summary>
@@ -102,72 +128,76 @@ namespace RRQMSkin.Windows
         /// </summary>
         public object TitleContent
         {
-            get { return (object)GetValue(TitleContentProperty); }
-            set { SetValue(TitleContentProperty, value); }
+            get => (object)GetValue(TitleContentProperty);
+            set => SetValue(TitleContentProperty, value);
         }
 
-        // Using a DependencyProperty as the backing store for TitleContent.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty TitleContentProperty =
-            DependencyProperty.Register("TitleContent", typeof(object), typeof(RRQMWindow), new PropertyMetadata("若汝棋茗"));
-
-        public new RRQMWindowStyle WindowStyle
+        /// <summary>
+        /// OnApplyTemplate
+        /// </summary>
+        public override void OnApplyTemplate()
         {
-            get { return (RRQMWindowStyle)GetValue(WindowStyleProperty); }
-            set { SetValue(WindowStyleProperty, value); }
+            base.OnApplyTemplate();
+            this.mainBorder = (Border)this.Template.FindName("mainBorder", this);
+            this.titleGrid = (Grid)this.Template.FindName("title", this);
+            this.mainBorder = (Border)this.Template.FindName("mainBorder", this);
+            this.titleGrid.MouseLeftButtonDown += this.titleGrid_MouseLeftButtonDown;
+            this.titleGrid.MouseMove += this.titleGrid_MouseMove;
+            this.titleGrid.MouseLeftButtonUp += (s, e) => { this.mRestoreForDragMove = false; };
+            this.windowGrid = (Grid)this.Template.FindName("windowGrid", this);
+
+            RowDefinition row0 = new RowDefinition();
+            row0.Height = new GridLength(15);
+            RowDefinition row1 = new RowDefinition();
+            RowDefinition row2 = new RowDefinition();
+            row2.Height = new GridLength(15);
+
+            ColumnDefinition column0 = new ColumnDefinition();
+            column0.Width = new GridLength(15);
+            ColumnDefinition column1 = new ColumnDefinition();
+            ColumnDefinition column2 = new ColumnDefinition();
+            column2.Width = new GridLength(15);
+
+            this.windowGrid.RowDefinitions.Add(row0);
+            this.windowGrid.RowDefinitions.Add(row1);
+            this.windowGrid.RowDefinitions.Add(row2);
+            this.windowGrid.ColumnDefinitions.Add(column0);
+            this.windowGrid.ColumnDefinitions.Add(column1);
+            this.windowGrid.ColumnDefinitions.Add(column2);
+
+            this.mainBorder.SetValue(Grid.RowProperty, 0);
+            this.mainBorder.SetValue(Grid.ColumnProperty, 0);
+            this.mainBorder.SetValue(Grid.RowSpanProperty, 3);
+            this.mainBorder.SetValue(Grid.ColumnSpanProperty, 3);
+
+            this.AddResizeRectangle();
         }
 
-        // Using a DependencyProperty as the backing store for WindowStyle.  This enables animation, styling, binding, etc...
-        public static new readonly DependencyProperty WindowStyleProperty =
-            DependencyProperty.Register("WindowStyle", typeof(RRQMWindowStyle), typeof(RRQMWindow), new PropertyMetadata(RRQMWindowStyle.SingleBorderWindow));
-
-        public bool ContentFill
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnInitialized(EventArgs e)
         {
-            get { return (bool)GetValue(ContentFillProperty); }
-            set { SetValue(ContentFillProperty, value); }
+            this._hwndSource = (HwndSource)PresentationSource.FromVisual(this);
+            base.OnInitialized(e);
         }
 
-        // Using a DependencyProperty as the backing store for ContentFill.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty ContentFillProperty =
-            DependencyProperty.Register("ContentFill", typeof(bool), typeof(RRQMWindow), new PropertyMetadata(false));
-
-        public new RRQMResizeMode ResizeMode
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnPreviewMouseMove(MouseEventArgs e)
         {
-            get { return (RRQMResizeMode)GetValue(ResizeModeProperty); }
-            set { SetValue(ResizeModeProperty, value); }
+            base.OnPreviewMouseMove(e);
+            if (e.LeftButton != MouseButtonState.Pressed)
+                Cursor = Cursors.Arrow;
         }
 
-        // Using a DependencyProperty as the backing store for ResizeMode.  This enables animation, styling, binding, etc...
-        public static new readonly DependencyProperty ResizeModeProperty =
-            DependencyProperty.Register("ResizeMode", typeof(RRQMResizeMode), typeof(RRQMWindow), new PropertyMetadata(RRQMResizeMode.CanResize, OnResizeChanged));
-
-        private void SetBaseResizeMode(System.Windows.ResizeMode resizeMode)
-        {
-            base.ResizeMode = resizeMode;
-        }
-
-        private static void OnResizeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            RRQMWindow window = (RRQMWindow)d;
-            switch (window.ResizeMode)
-            {
-                case RRQMResizeMode.NoResize:
-                    window.SetBaseResizeMode(System.Windows.ResizeMode.NoResize);
-                    break;
-
-                case RRQMResizeMode.CanResize:
-                    window.SetBaseResizeMode(System.Windows.ResizeMode.CanResize);
-                    break;
-            }
-        }
-
-        #region Command
-
-        public ICommand MinWindowCommand { get; set; }
-        public ICommand MaxOrNormalWindowCommand { get; set; }
-        public ICommand CloseWindowCommand { get; set; }
-
-        #endregion Command
-
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnStateChanged(EventArgs e)
         {
             switch (this.WindowState)
@@ -181,9 +211,9 @@ namespace RRQMSkin.Windows
                     {
                         this.MaxHeight = SystemParameters.WorkArea.Height + 16;
                     }
-                   
-                    this.BorderThickness = new Thickness(5); //最大化后需要调整
 
+                    this.BorderThickness = new Thickness(5); //最大化后需要调整
+                    this.mainBorder.Margin = new Thickness(0);
                     break;
 
                 case WindowState.Normal:
@@ -197,6 +227,216 @@ namespace RRQMSkin.Windows
                         this.MaxHeight = SystemParameters.WorkArea.Height + 16;
                     }
                     break;
+            }
+        }
+
+        private static void OnResizeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+        }
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern IntPtr SendMessage(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam);
+
+        //    }
+        private void AddResizeRectangle()
+        {
+            Brush brush = Brushes.Transparent;
+            Rectangle rect1 = new Rectangle() { Name = "TopLeft", Fill = brush };
+            rect1.SetValue(Grid.RowProperty, 0);
+            rect1.SetValue(Grid.ColumnProperty, 0);
+
+            Rectangle rect2 = new Rectangle() { Name = "Top", Fill = brush };
+            rect2.SetValue(Grid.RowProperty, 0);
+            rect2.SetValue(Grid.ColumnProperty, 1);
+
+            Rectangle rect3 = new Rectangle() { Name = "TopRight", Fill = brush };
+            rect3.SetValue(Grid.RowProperty, 0);
+            rect3.SetValue(Grid.ColumnProperty, 2);
+
+            Rectangle rect4 = new Rectangle() { Name = "Right", Fill = brush };
+            rect4.SetValue(Grid.RowProperty, 1);
+            rect4.SetValue(Grid.ColumnProperty, 2);
+
+            Rectangle rect5 = new Rectangle() { Name = "BottomRight", Fill = brush };
+            rect5.SetValue(Grid.RowProperty, 2);
+            rect5.SetValue(Grid.ColumnProperty, 2);
+
+            Rectangle rect6 = new Rectangle() { Name = "Bottom", Fill = brush };
+            rect6.SetValue(Grid.RowProperty, 2);
+            rect6.SetValue(Grid.ColumnProperty, 1);
+
+            Rectangle rect7 = new Rectangle() { Name = "BottomLeft", Fill = brush };
+            rect7.SetValue(Grid.RowProperty, 2);
+            rect7.SetValue(Grid.ColumnProperty, 0);
+
+            Rectangle rect8 = new Rectangle() { Name = "Left", Fill = brush };
+            rect8.SetValue(Grid.RowProperty, 1);
+            rect8.SetValue(Grid.ColumnProperty, 0);
+
+            this.windowGrid.Children.Add(rect1);
+            this.windowGrid.Children.Add(rect2);
+            this.windowGrid.Children.Add(rect3);
+            this.windowGrid.Children.Add(rect4);
+            this.windowGrid.Children.Add(rect5);
+            this.windowGrid.Children.Add(rect6);
+            this.windowGrid.Children.Add(rect7);
+            this.windowGrid.Children.Add(rect8);
+
+            foreach (var item in this.windowGrid.Children)
+            {
+                if (item is Rectangle)
+                {
+                    Rectangle resizeRectangle = (Rectangle)item;
+                    resizeRectangle.PreviewMouseDown += this.ResizeRectangle_PreviewMouseDown;
+                    resizeRectangle.MouseMove += this.ResizeRectangle_MouseMove;
+                }
+            }
+        }
+
+        private void ResizeRectangle_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (this.ResizeMode == RRQMResizeMode.NoResize || this.WindowState == WindowState.Maximized)
+            {
+                return;
+            }
+
+            Rectangle rectangle = sender as Rectangle;
+
+            if (rectangle != null)
+            {
+                switch (rectangle.Name)
+                {
+                    case "Top":
+                        Cursor = Cursors.SizeNS;
+                        break;
+
+                    case "Bottom":
+                        Cursor = Cursors.SizeNS;
+                        break;
+
+                    case "Left":
+                        Cursor = Cursors.SizeWE;
+                        break;
+
+                    case "Right":
+                        Cursor = Cursors.SizeWE;
+                        break;
+
+                    case "TopLeft":
+                        Cursor = Cursors.SizeNWSE;
+                        break;
+
+                    case "TopRight":
+                        Cursor = Cursors.SizeNESW;
+                        break;
+
+                    case "BottomLeft":
+                        Cursor = Cursors.SizeNESW;
+                        break;
+
+                    case "BottomRight":
+                        Cursor = Cursors.SizeNWSE;
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void ResizeRectangle_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.ResizeMode == RRQMResizeMode.NoResize || this.WindowState == WindowState.Maximized)
+            {
+                return;
+            }
+            Rectangle rectangle = sender as Rectangle;
+
+            if (rectangle != null)
+            {
+                switch (rectangle.Name)
+                {
+                    case "Top":
+                        Cursor = Cursors.SizeNS;
+                        this.ResizeWindow(ResizeDirection.Top);
+                        break;
+
+                    case "Bottom":
+                        Cursor = Cursors.SizeNS;
+                        this.ResizeWindow(ResizeDirection.Bottom);
+                        break;
+
+                    case "Left":
+                        Cursor = Cursors.SizeWE;
+                        this.ResizeWindow(ResizeDirection.Left);
+                        break;
+
+                    case "Right":
+                        Cursor = Cursors.SizeWE;
+                        this.ResizeWindow(ResizeDirection.Right);
+                        break;
+
+                    case "TopLeft":
+                        Cursor = Cursors.SizeNWSE;
+                        this.ResizeWindow(ResizeDirection.TopLeft);
+                        break;
+
+                    case "TopRight":
+                        Cursor = Cursors.SizeNESW;
+                        this.ResizeWindow(ResizeDirection.TopRight);
+                        break;
+
+                    case "BottomLeft":
+                        Cursor = Cursors.SizeNESW;
+                        this.ResizeWindow(ResizeDirection.BottomLeft);
+                        break;
+
+                    case "BottomRight":
+                        Cursor = Cursors.SizeNWSE;
+                        this.ResizeWindow(ResizeDirection.BottomRight);
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void ResizeWindow(ResizeDirection direction)
+        {
+            SendMessage(this._hwndSource.Handle, 0x112, (IntPtr)(61440 + direction), IntPtr.Zero);
+        }
+
+        private void titleGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                this.mRestoreForDragMove = false;
+                if (this.ResizeMode != RRQMResizeMode.CanResize) return;
+                WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
+            }
+            else
+            {
+                if (e.ButtonState == MouseButtonState.Pressed)
+                {
+                    this.mRestoreForDragMove = WindowState == WindowState.Maximized;
+                    DragMove();
+                }
+            }
+        }
+        private void titleGrid_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (this.mRestoreForDragMove)
+            {
+                this.mRestoreForDragMove = false;
+                WindowState = WindowState.Normal;
+                var point = e.MouseDevice.GetPosition(this);
+                Left = point.X - this.titleGrid.ActualWidth * point.X / SystemParameters.WorkArea.Width - this.mainBorder.Margin.Left;
+                Top = point.Y - this.titleGrid.ActualHeight * point.Y / SystemParameters.WorkArea.Height - this.mainBorder.Margin.Top;
+                if (e.LeftButton == MouseButtonState.Pressed)
+                {
+                    DragMove();
+                }
             }
         }
     }
