@@ -5,8 +5,6 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/SvgIco.xaml" />
         <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/TabControl.xaml" />
-        <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/PieChart.xaml" />
-        <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/Windows.xaml" />
         <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/ScrollViewerStyle.xaml" />
         <ResourceDictionary Source="/RRQMSkinDemo;component/Resource/Styles/DemoStyle.xaml" />
         <ResourceDictionary Source="/RRQMSkinDemo;component/Control/ChatBox/ChatMessageContro.xaml" />

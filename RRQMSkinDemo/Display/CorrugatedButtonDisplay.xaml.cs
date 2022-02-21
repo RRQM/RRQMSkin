@@ -22,7 +22,7 @@ namespace RRQMSkinDemo.Display
     {
         public CorrugatedButtonDisplay()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

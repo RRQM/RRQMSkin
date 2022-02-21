@@ -43,8 +43,8 @@ namespace RRQMSkin.Windows
         /// </summary>
         public CornerRadius CornerRadius
         {
-            get { return (CornerRadius)GetValue(CornerRadiusProperty); }
-            set { SetValue(CornerRadiusProperty, value); }
+            get { return (CornerRadius)this.GetValue(CornerRadiusProperty); }
+            set { this.SetValue(CornerRadiusProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for CornerRadius.  This enables animation, styling, binding, etc...
@@ -79,12 +79,22 @@ namespace RRQMSkin.Windows
         /// </summary>
         public RRQMWindow()
         {
-            this.BorderThickness = new Thickness(1.0);
-            base.Icon = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/Icons/RRQM.ico", UriKind.RelativeOrAbsolute));
+            this.Background = Brushes.White;
+            this.Icon = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/Icons/RRQM.ico", UriKind.RelativeOrAbsolute));
 
             this.MinWindowCommand = new ExecuteCommand(() => { this.WindowState = WindowState.Minimized; });
-            this.MaxOrNormalWindowCommand = new ExecuteCommand(() => { WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized; });
+            this.MaxOrNormalWindowCommand = new ExecuteCommand(() => 
+            { 
+                this.WindowState = this.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
+            });
             this.CloseWindowCommand = new ExecuteCommand(() => { this.Close(); });
+
+            this.Loaded += this.RRQMWindow_Loaded;
+        }
+
+        private void RRQMWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            this._hwndSource = (HwndSource)PresentationSource.FromVisual(this);
         }
 
         internal enum ResizeDirection
@@ -119,8 +129,8 @@ namespace RRQMSkin.Windows
         /// </summary>
         public new RRQMResizeMode ResizeMode
         {
-            get => (RRQMResizeMode)GetValue(ResizeModeProperty);
-            set => SetValue(ResizeModeProperty, value);
+            get => (RRQMResizeMode)this.GetValue(ResizeModeProperty);
+            set => this.SetValue(ResizeModeProperty, value);
         }
 
         /// <summary>
@@ -128,8 +138,8 @@ namespace RRQMSkin.Windows
         /// </summary>
         public object TitleContent
         {
-            get => (object)GetValue(TitleContentProperty);
-            set => SetValue(TitleContentProperty, value);
+            get => (object)this.GetValue(TitleContentProperty);
+            set => this.SetValue(TitleContentProperty, value);
         }
 
         /// <summary>
@@ -140,23 +150,23 @@ namespace RRQMSkin.Windows
             base.OnApplyTemplate();
             this.mainBorder = (Border)this.Template.FindName("mainBorder", this);
             this.titleGrid = (Grid)this.Template.FindName("title", this);
-            this.mainBorder = (Border)this.Template.FindName("mainBorder", this);
+            this.windowGrid = (Grid)this.Template.FindName("windowGrid", this);
+
             this.titleGrid.MouseLeftButtonDown += this.titleGrid_MouseLeftButtonDown;
             this.titleGrid.MouseMove += this.titleGrid_MouseMove;
             this.titleGrid.MouseLeftButtonUp += (s, e) => { this.mRestoreForDragMove = false; };
-            this.windowGrid = (Grid)this.Template.FindName("windowGrid", this);
 
             RowDefinition row0 = new RowDefinition();
-            row0.Height = new GridLength(15);
+            row0.Height = new GridLength(5);
             RowDefinition row1 = new RowDefinition();
             RowDefinition row2 = new RowDefinition();
-            row2.Height = new GridLength(15);
+            row2.Height = new GridLength(5);
 
             ColumnDefinition column0 = new ColumnDefinition();
-            column0.Width = new GridLength(15);
+            column0.Width = new GridLength(5);
             ColumnDefinition column1 = new ColumnDefinition();
             ColumnDefinition column2 = new ColumnDefinition();
-            column2.Width = new GridLength(15);
+            column2.Width = new GridLength(5);
 
             this.windowGrid.RowDefinitions.Add(row0);
             this.windowGrid.RowDefinitions.Add(row1);
@@ -174,24 +184,14 @@ namespace RRQMSkin.Windows
         }
 
         /// <summary>
-        /// 初始化
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnInitialized(EventArgs e)
-        {
-            this._hwndSource = (HwndSource)PresentationSource.FromVisual(this);
-            base.OnInitialized(e);
-        }
-
-        /// <summary>
         /// <inheritdoc/>
         /// </summary>
         /// <param name="e"></param>
         protected override void OnPreviewMouseMove(MouseEventArgs e)
         {
-            base.OnPreviewMouseMove(e);
             if (e.LeftButton != MouseButtonState.Pressed)
-                Cursor = Cursors.Arrow;
+                this.Cursor = Cursors.Arrow;
+            base.OnPreviewMouseMove(e);
         }
 
         /// <summary>
@@ -211,13 +211,9 @@ namespace RRQMSkin.Windows
                     {
                         this.MaxHeight = SystemParameters.WorkArea.Height + 16;
                     }
-
-                    this.BorderThickness = new Thickness(5); //最大化后需要调整
-                    this.mainBorder.Margin = new Thickness(0);
                     break;
 
                 case WindowState.Normal:
-                    this.BorderThickness = new Thickness(0);
                     if (double.IsInfinity(this.MaxWidth))
                     {
                         this.MaxWidth = SystemParameters.WorkArea.Width + 16;
@@ -307,35 +303,35 @@ namespace RRQMSkin.Windows
                 switch (rectangle.Name)
                 {
                     case "Top":
-                        Cursor = Cursors.SizeNS;
+                        this.Cursor = Cursors.SizeNS;
                         break;
 
                     case "Bottom":
-                        Cursor = Cursors.SizeNS;
+                        this.Cursor = Cursors.SizeNS;
                         break;
 
                     case "Left":
-                        Cursor = Cursors.SizeWE;
+                        this.Cursor = Cursors.SizeWE;
                         break;
 
                     case "Right":
-                        Cursor = Cursors.SizeWE;
+                        this.Cursor = Cursors.SizeWE;
                         break;
 
                     case "TopLeft":
-                        Cursor = Cursors.SizeNWSE;
+                        this.Cursor = Cursors.SizeNWSE;
                         break;
 
                     case "TopRight":
-                        Cursor = Cursors.SizeNESW;
+                        this.Cursor = Cursors.SizeNESW;
                         break;
 
                     case "BottomLeft":
-                        Cursor = Cursors.SizeNESW;
+                        this.Cursor = Cursors.SizeNESW;
                         break;
 
                     case "BottomRight":
-                        Cursor = Cursors.SizeNWSE;
+                        this.Cursor = Cursors.SizeNWSE;
                         break;
 
                     default:
@@ -357,42 +353,42 @@ namespace RRQMSkin.Windows
                 switch (rectangle.Name)
                 {
                     case "Top":
-                        Cursor = Cursors.SizeNS;
+                        this.Cursor = Cursors.SizeNS;
                         this.ResizeWindow(ResizeDirection.Top);
                         break;
 
                     case "Bottom":
-                        Cursor = Cursors.SizeNS;
+                        this.Cursor = Cursors.SizeNS;
                         this.ResizeWindow(ResizeDirection.Bottom);
                         break;
 
                     case "Left":
-                        Cursor = Cursors.SizeWE;
+                        this.Cursor = Cursors.SizeWE;
                         this.ResizeWindow(ResizeDirection.Left);
                         break;
 
                     case "Right":
-                        Cursor = Cursors.SizeWE;
+                        this.Cursor = Cursors.SizeWE;
                         this.ResizeWindow(ResizeDirection.Right);
                         break;
 
                     case "TopLeft":
-                        Cursor = Cursors.SizeNWSE;
+                        this.Cursor = Cursors.SizeNWSE;
                         this.ResizeWindow(ResizeDirection.TopLeft);
                         break;
 
                     case "TopRight":
-                        Cursor = Cursors.SizeNESW;
+                        this.Cursor = Cursors.SizeNESW;
                         this.ResizeWindow(ResizeDirection.TopRight);
                         break;
 
                     case "BottomLeft":
-                        Cursor = Cursors.SizeNESW;
+                        this.Cursor = Cursors.SizeNESW;
                         this.ResizeWindow(ResizeDirection.BottomLeft);
                         break;
 
                     case "BottomRight":
-                        Cursor = Cursors.SizeNWSE;
+                        this.Cursor = Cursors.SizeNWSE;
                         this.ResizeWindow(ResizeDirection.BottomRight);
                         break;
 
@@ -413,14 +409,14 @@ namespace RRQMSkin.Windows
             {
                 this.mRestoreForDragMove = false;
                 if (this.ResizeMode != RRQMResizeMode.CanResize) return;
-                WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
+                this.WindowState = this.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
             }
             else
             {
                 if (e.ButtonState == MouseButtonState.Pressed)
                 {
-                    this.mRestoreForDragMove = WindowState == WindowState.Maximized;
-                    DragMove();
+                    this.mRestoreForDragMove = this.WindowState == WindowState.Maximized;
+                    this.DragMove();
                 }
             }
         }
@@ -429,13 +425,13 @@ namespace RRQMSkin.Windows
             if (this.mRestoreForDragMove)
             {
                 this.mRestoreForDragMove = false;
-                WindowState = WindowState.Normal;
+                this.WindowState = WindowState.Normal;
                 var point = e.MouseDevice.GetPosition(this);
-                Left = point.X - this.titleGrid.ActualWidth * point.X / SystemParameters.WorkArea.Width - this.mainBorder.Margin.Left;
-                Top = point.Y - this.titleGrid.ActualHeight * point.Y / SystemParameters.WorkArea.Height - this.mainBorder.Margin.Top;
+                this.Left = point.X - this.titleGrid.ActualWidth * point.X / SystemParameters.WorkArea.Width - this.mainBorder.Margin.Left;
+                this.Top = point.Y - this.titleGrid.ActualHeight * point.Y / SystemParameters.WorkArea.Height - this.mainBorder.Margin.Top;
                 if (e.LeftButton == MouseButtonState.Pressed)
                 {
-                    DragMove();
+                    this.DragMove();
                 }
             }
         }

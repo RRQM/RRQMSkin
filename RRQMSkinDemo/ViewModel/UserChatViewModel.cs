@@ -15,8 +15,8 @@ namespace RRQMSkinDemo.ViewModel
         public UserChatViewModel() 
         {
             List<IEventAction> actionInfos = new List<IEventAction>();
-            actionInfos.Add(new EventAction<object, RoutedEventArgs>("Loaded", Loaded));
-            MessBox = new ObservableCollection<string>();
+            actionInfos.Add(new EventAction<object, RoutedEventArgs>("Loaded", this.Loaded));
+            this.MessBox = new ObservableCollection<string>();
             this.testEvents = actionInfos;
         }
 
@@ -25,8 +25,8 @@ namespace RRQMSkinDemo.ViewModel
 
         public bool Emoji_Popup
         {
-            get { return emoji_Popup; }
-            set { SetProperty(ref emoji_Popup, value); }
+            get { return this.emoji_Popup; }
+            set { this.SetProperty(ref this.emoji_Popup, value); }
         }
 
 
@@ -34,30 +34,30 @@ namespace RRQMSkinDemo.ViewModel
 
         public IEnumerable<IEventAction> TestEvents
         {
-            get { return testEvents; }
-            set { testEvents = value; }
+            get { return this.testEvents; }
+            set { this.testEvents = value; }
         }
 
         private ObservableCollection<string> messBox;
         public ObservableCollection<string> MessBox
         {
-            get => messBox;
-            set => SetProperty(ref messBox, value);
+            get => this.messBox;
+            set => this.SetProperty(ref this.messBox, value);
         }
 
 
         ScrollViewerAnimation Scroll;
         private void Loaded(object sender, RoutedEventArgs e)
         {
-            MessBox.Add($"[doge]RRQMSkin");
-            MessBox.Add($"RRQMSkin[doge]");
-            MessBox.Add($"[doge]若汝棋茗");
-            MessBox.Add($"RRQMSkin[doge]");
-            MessBox.Add($"[doge]测试");
-            MessBox.Add($"[doge][doge][doge][doge][doge]");
-            MessBox.Add($"RRQMSkin[doge]RRQMSkin[doge]RRQMSkin[doge]");
+            this.MessBox.Add($"[doge]RRQMSkin");
+            this.MessBox.Add($"RRQMSkin[doge]");
+            this.MessBox.Add($"[doge]若汝棋茗");
+            this.MessBox.Add($"RRQMSkin[doge]");
+            this.MessBox.Add($"[doge]测试");
+            this.MessBox.Add($"[doge][doge][doge][doge][doge]");
+            this.MessBox.Add($"RRQMSkin[doge]RRQMSkin[doge]RRQMSkin[doge]");
             var temp = (RRQMSkinDemo.View.UserChat)sender;
-            Scroll = temp.Scroll;
+            this.Scroll = temp.Scroll;
         }
 
         
@@ -74,7 +74,7 @@ namespace RRQMSkinDemo.ViewModel
                         temp1.EmojiList = new ObservableCollection<ImageList>();
                         temp1.EmojiList.Add(temoEmoji);
                     }
-                    Emoji_Popup = true;
+                    this.Emoji_Popup = true;
                 }
             });
 
@@ -87,8 +87,8 @@ namespace RRQMSkinDemo.ViewModel
                     var str = share.GetSendMessage(temp);
                     if (!string.IsNullOrEmpty(str))
                     {
-                        MessBox.Add(str);
-                        Scroll?.GoToEnd();
+                        this.MessBox.Add(str);
+                        this.Scroll?.GoToEnd();
                         temp.Blocks.Clear();
                     }
                 }

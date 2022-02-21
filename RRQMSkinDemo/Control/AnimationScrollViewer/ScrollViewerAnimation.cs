@@ -18,11 +18,11 @@ namespace RRQMSkinDemo.Control.AnimationScrollViewer
         {
             get
             {
-                return (Orientation)GetValue(OrientationProperty);
+                return (Orientation)this.GetValue(OrientationProperty);
             }
             set
             {
-                SetValue(OrientationProperty, value);
+                this.SetValue(OrientationProperty, value);
             }
         }
         public static readonly DependencyProperty OrientationProperty = DependencyProperty.RegisterAttached(
@@ -37,11 +37,11 @@ namespace RRQMSkinDemo.Control.AnimationScrollViewer
         {
             get
             {
-                return (bool)GetValue(GoEndProperty);
+                return (bool)this.GetValue(GoEndProperty);
             }
             set
             {
-                SetValue(GoEndProperty, value);
+                this.SetValue(GoEndProperty, value);
             }
         }
         public static readonly DependencyProperty GoEndProperty = DependencyProperty.RegisterAttached(
@@ -50,47 +50,47 @@ namespace RRQMSkinDemo.Control.AnimationScrollViewer
 
         protected override void OnMouseWheel(MouseWheelEventArgs e)
         {
-            if (Orientation == Orientation.Vertical)
+            if (this.Orientation == Orientation.Vertical)
             {
-                if (GoEnd && LastLocation == -1)
+                if (this.GoEnd && this.LastLocation == -1)
                 {
-                    LastLocation = ScrollableHeight;
+                    this.LastLocation = this.ScrollableHeight;
                 }
                 double WheelChange = e.Delta;
                 //可以更改一次滚动的距离倍数 (WheelChange可能为正负数!)
-                double newOffset = LastLocation - (WheelChange * 2);
+                double newOffset = this.LastLocation - (WheelChange * 2);
                 //Animation并不会改变真正的VerticalOffset(只是它的依赖属性) 所以将VOffset设置到上一次的滚动位置 (相当于衔接上一个动画)
-                ScrollToVerticalOffset(LastLocation);
+                this.ScrollToVerticalOffset(this.LastLocation);
                 //碰到底部和顶部时的处理
                 if (newOffset < 0)
                     newOffset = 0;
-                if (newOffset > ScrollableHeight)
-                    newOffset = ScrollableHeight;
+                if (newOffset > this.ScrollableHeight)
+                    newOffset = this.ScrollableHeight;
 
-                AnimateScroll(newOffset);
-                LastLocation = newOffset;
+                this.AnimateScroll(newOffset);
+                this.LastLocation = newOffset;
                 //告诉ScrollViewer我们已经完成了滚动
                 e.Handled = true;
             }
             else
             {
-                if (GoEnd && LastLocation == -1)
+                if (this.GoEnd && this.LastLocation == -1)
                 {
-                    LastLocation = ScrollableWidth;
+                    this.LastLocation = this.ScrollableWidth;
                 }
                 double WheelChange = e.Delta;
                 //可以更改一次滚动的距离倍数 (WheelChange可能为正负数!)
-                double newOffset = LastLocation - (WheelChange * 2);
+                double newOffset = this.LastLocation - (WheelChange * 2);
                 //Animation并不会改变真正的VerticalOffset(只是它的依赖属性) 所以将VOffset设置到上一次的滚动位置 (相当于衔接上一个动画)
-                ScrollToHorizontalOffset(LastLocation);
+                this.ScrollToHorizontalOffset(this.LastLocation);
                 //碰到底部和顶部时的处理
                 if (newOffset < 0)
                     newOffset = 0;
-                if (newOffset > ScrollableWidth)
-                    newOffset = ScrollableWidth;
+                if (newOffset > this.ScrollableWidth)
+                    newOffset = this.ScrollableWidth;
 
-                AnimateHorizontalScroll(newOffset);
-                LastLocation = newOffset;
+                this.AnimateHorizontalScroll(newOffset);
+                this.LastLocation = newOffset;
                 //告诉ScrollViewer我们已经完成了滚动
                 e.Handled = true;
             }
@@ -99,66 +99,66 @@ namespace RRQMSkinDemo.Control.AnimationScrollViewer
         private void AnimateScroll(double ToValue)
         {
             //为了避免重复，先结束掉上一个动画
-            BeginAnimation(ScrollViewerBehavior.VerticalOffsetProperty, null);
+            this.BeginAnimation(ScrollViewerBehavior.VerticalOffsetProperty, null);
             DoubleAnimation Animation = new DoubleAnimation();
             Animation.EasingFunction = new CubicEase() { EasingMode = EasingMode.EaseOut };
-            Animation.From = VerticalOffset;
+            Animation.From = this.VerticalOffset;
             Animation.To = ToValue;
             //动画速度
             Animation.Duration = TimeSpan.FromMilliseconds(800);
             //考虑到性能，可以降低动画帧数
             //Timeline.SetDesiredFrameRate(Animation, 40);
-            BeginAnimation(ScrollViewerBehavior.VerticalOffsetProperty, Animation);
+            this.BeginAnimation(ScrollViewerBehavior.VerticalOffsetProperty, Animation);
         }
 
         private void AnimateHorizontalScroll(double ToValue)
         {
             //为了避免重复，先结束掉上一个动画
-            BeginAnimation(ScrollViewerBehavior.VerticalOffsetProperty, null);
+            this.BeginAnimation(ScrollViewerBehavior.VerticalOffsetProperty, null);
             DoubleAnimation Animation = new DoubleAnimation();
             Animation.EasingFunction = new CubicEase() { EasingMode = EasingMode.EaseOut };
-            Animation.From = HorizontalOffset;
+            Animation.From = this.HorizontalOffset;
             Animation.To = ToValue;
             //动画速度
             Animation.Duration = TimeSpan.FromMilliseconds(800);
             //考虑到性能，可以降低动画帧数
             //Timeline.SetDesiredFrameRate(Animation, 40);
-            BeginAnimation(ScrollViewerBehavior.VerticalOffsetProperty, Animation);
+            this.BeginAnimation(ScrollViewerBehavior.VerticalOffsetProperty, Animation);
         }
 
         public void GoToTop()
         {
-            LastLocation = 0;
+            this.LastLocation = 0;
             this.ScrollToTop();
         }
 
         public void GoToEnd()
         {
-            LastLocation = -1;
+            this.LastLocation = -1;
             this.ScrollToEnd();
         }
 
         public void SetVerticalOffset(double offset)
         {
-            LastLocation = offset;
+            this.LastLocation = offset;
             this.AnimateScroll(offset);
         }
 
         public void SetHorizontalOffset(double offset)
         {
-            LastLocation = offset;
+            this.LastLocation = offset;
             this.AnimateHorizontalScroll(offset);
         }
 
         public void GoToHorizontalTop()
         {
-            LastLocation = 0;
+            this.LastLocation = 0;
             this.ScrollToLeftEnd();
         }
 
         public void GoToHorizontalEnd()
         {
-            LastLocation = -1;
+            this.LastLocation = -1;
             this.ScrollToRightEnd();
         }
     }

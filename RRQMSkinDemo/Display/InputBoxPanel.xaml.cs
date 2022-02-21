@@ -22,7 +22,7 @@ namespace RRQMSkinDemo.Display
     {
         public InputBoxPanel()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace RRQM.Emoji
@@ -23,11 +17,11 @@ namespace RRQM.Emoji
         {
             get
             {
-                return _PNGCheck;
+                return this._PNGCheck;
             }
             set
             {
-                _PNGCheck = value;
+                this._PNGCheck = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("PNGCheck"));
             }
         }
@@ -37,11 +31,11 @@ namespace RRQM.Emoji
         {
             get
             {
-                return _EmojiList;
+                return this._EmojiList;
             }
             set
             {
-                _EmojiList = value;
+                this._EmojiList = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EmojiList"));
             }
         }
@@ -56,11 +50,11 @@ namespace RRQM.Emoji
         {
             get
             {
-                return _EmojiArray;
+                return this._EmojiArray;
             }
             set
             {
-                _EmojiArray = value;
+                this._EmojiArray = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EmojiArray"));
             }
         }
@@ -70,11 +64,11 @@ namespace RRQM.Emoji
         {
             get
             {
-                return _PNGEmojiArray;
+                return this._PNGEmojiArray;
             }
             set
             {
-                _PNGEmojiArray = value;
+                this._PNGEmojiArray = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("PNGEmojiArray"));
             }
         }
@@ -83,9 +77,9 @@ namespace RRQM.Emoji
 
         public void Init() 
         {
-            if (!OnLoadInit)
+            if (!this.OnLoadInit)
             {
-                OnLoadInit = true;
+                this.OnLoadInit = true;
                 try
                 {
                     var Emoji_temp = EmojiLoadingGIF.AnayXML("Emoji");
@@ -93,19 +87,19 @@ namespace RRQM.Emoji
                     {
                         item.CheckArray = (data) =>
                         {
-                            EmojiArray = new ObservableCollection<Emoji>(data.EmojiArray);
-                            PNGCheck = false;
+                            this.EmojiArray = new ObservableCollection<Emoji>(data.EmojiArray);
+                            this.PNGCheck = false;
                         };
                         if (item == Emoji_temp[0])
                         {
                             item.Check = true;
                         }
                     }
-                    EmojiList = new ObservableCollection<ImageList>(Emoji_temp);
+                    this.EmojiList = new ObservableCollection<ImageList>(Emoji_temp);
                 }
                 catch (Exception ex)
                 {
-                    OnLoadInit = false;
+                    this.OnLoadInit = false;
                     throw ex;
                 }
             }

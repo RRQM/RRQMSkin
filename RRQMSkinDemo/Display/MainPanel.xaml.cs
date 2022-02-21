@@ -21,14 +21,14 @@ namespace RRQMSkinDemo.Display
     {
         public MainPanel()
         {
-            InitializeComponent();
-            this.Loaded += MainWindow_Loaded;
+            this.InitializeComponent();
+            this.Loaded += this.MainWindow_Loaded;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             Timer timer = new Timer(1000);
-            timer.Elapsed += Timer_Elapsed;
+            timer.Elapsed += this.Timer_Elapsed;
             timer.Start();
         }
 

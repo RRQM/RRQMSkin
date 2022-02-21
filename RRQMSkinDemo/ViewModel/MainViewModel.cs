@@ -1,17 +1,10 @@
 ﻿using RRQMSkin.MVVM;
 using RRQMSkinDemo.View;
 using RRQMSkinDemo.ViewModel.Model;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace RRQMSkinDemo.ViewModel
 {
@@ -20,8 +13,8 @@ namespace RRQMSkinDemo.ViewModel
         public MainViewModel()
         {
             List<IEventAction> actionInfos = new List<IEventAction>();
-            actionInfos.Add(new EventAction<object, RoutedEventArgs>("Loaded", Loaded));
-            Left_Navigation = new ObservableCollection<UIControlsModel>();
+            actionInfos.Add(new EventAction<object, RoutedEventArgs>("Loaded", this.Loaded));
+            this.Left_Navigation = new ObservableCollection<UIControlsModel>();
             this.testEvents = actionInfos;
 
         }
@@ -43,15 +36,15 @@ namespace RRQMSkinDemo.ViewModel
 
         public IEnumerable<IEventAction> TestEvents
         {
-            get { return testEvents; }
-            set { testEvents = value; }
+            get { return this.testEvents; }
+            set { this.testEvents = value; }
         }
 
         private ObservableCollection<UIControlsModel> left_navigation;
         public ObservableCollection<UIControlsModel> Left_Navigation
         {
-            get => left_navigation;
-            set => SetProperty(ref left_navigation, value);
+            get => this.left_navigation;
+            set => this.SetProperty(ref this.left_navigation, value);
         }
 
         #endregion
@@ -63,7 +56,7 @@ namespace RRQMSkinDemo.ViewModel
         #region 私有方法（PrivateMethod）
         private void Loaded(object sender, RoutedEventArgs e)
         {
-            Left_Navigation.Add(new UIControlsModel
+            this.Left_Navigation.Add(new UIControlsModel
             {
                 Title = $"Emoji解析",
                 Child = new UserChat(),
@@ -71,7 +64,7 @@ namespace RRQMSkinDemo.ViewModel
             });
             for (int i = 0; i < 30; i++)
             {
-                Left_Navigation.Add(new UIControlsModel
+                this.Left_Navigation.Add(new UIControlsModel
                 {
                     Title = $"测试{i + 1}",
                     Child = new Border(),

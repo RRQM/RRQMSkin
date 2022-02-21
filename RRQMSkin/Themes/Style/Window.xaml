@@ -8,7 +8,7 @@
     <Style TargetType="{x:Type windows:RRQMWindow}">
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="0" GlassFrameThickness="-1" />
+                <WindowChrome CaptionHeight="0" GlassFrameThickness="-1" ResizeBorderThickness="0" UseAeroCaptionButtons="False" />
             </Setter.Value>
         </Setter>
         <Setter Property="Template">
@@ -19,7 +19,9 @@
                             <DropShadowEffect ShadowDepth="0" />
                         </Grid.Effect>
                         <Border Name="mainBorder">
-                            <Border Background="White" BorderBrush="Black" BorderThickness="1" ClipToBounds="True"
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
                                     CornerRadius="{TemplateBinding CornerRadius}">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -31,7 +33,7 @@
                                             <ColumnDefinition />
                                             <ColumnDefinition Width="auto" />
                                         </Grid.ColumnDefinitions>
-                                        <Grid Name="title" Background="Transparent">
+                                        <Grid Name="title">
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="30" />
                                                 <ColumnDefinition />
@@ -39,24 +41,24 @@
                                             <Image Name="ico" Width="20" Height="20" Margin="3,0" HorizontalAlignment="Center"
                                                    VerticalAlignment="Center"
                                                    Source="{TemplateBinding Icon}" />
-                                            <ContentPresenter Grid.Column="1" Margin="3,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                                                              Content="{TemplateBinding TitleContent}" />
+                                            <ContentPresenter Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                                              Content="{TemplateBinding TitleContent}"/>
                                         </Grid>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal">
                                             <Button Name="minButton"
                                                     Command="{Binding MinWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                    Content="&#xe622;"
+                                                    Content="&#xe60e;"
                                                     Style="{StaticResource iconButton}" />
                                             <Button Name="maxOrNormalButton"
                                                     Command="{Binding MaxOrNormalWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
                                                     Style="{StaticResource iconButton}" />
                                             <Button Name="closeButton"
                                                     Command="{Binding CloseWindowCommand, RelativeSource={RelativeSource Mode=TemplatedParent}}"
-                                                    Content="&#xe62c;"
+                                                    Content="&#xe723;"
                                                     Style="{StaticResource iconButton}" />
                                         </StackPanel>
                                     </Grid>
-                                    <AdornerDecorator x:Name="content" Grid.Row="1" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                    <AdornerDecorator x:Name="content" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                         <ContentPresenter Margin="{TemplateBinding Padding}"
                                                           HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                                           Content="{TemplateBinding Content}" />
@@ -68,28 +70,11 @@
 
                     </Grid>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="WindowStyle" Value="SingleBorderWindow">
-                            <Setter TargetName="minButton" Property="Visibility" Value="Visible" />
-                            <Setter TargetName="maxOrNormalButton" Property="Visibility" Value="Visible" />
-                            <Setter TargetName="closeButton" Property="Visibility" Value="Visible" />
-                        </Trigger>
-                        <Trigger Property="WindowStyle" Value="ToolWindow">
-                            <Setter TargetName="minButton" Property="Visibility" Value="Collapsed" />
-                            <Setter TargetName="maxOrNormalButton" Property="Visibility" Value="Collapsed" />
-                            <Setter TargetName="closeButton" Property="Visibility" Value="Visible" />
-                            <Setter TargetName="ico" Property="Visibility" Value="Collapsed" />
-                        </Trigger>
-                        <Trigger Property="ContentFill" Value="true">
-                            <Setter TargetName="content" Property="Grid.Row" Value="0" />
-                        </Trigger>
-                        <Trigger Property="ContentFill" Value="false">
-                            <Setter TargetName="content" Property="Grid.Row" Value="1" />
-                        </Trigger>
                         <Trigger Property="WindowState" Value="Normal">
-                            <Setter TargetName="maxOrNormalButton" Property="Content" Value="&#xe60d;" />
+                            <Setter TargetName="maxOrNormalButton" Property="Content" Value="&#xe645;" />
                         </Trigger>
                         <Trigger Property="WindowState" Value="Maximized">
-                            <Setter TargetName="maxOrNormalButton" Property="Content" Value="&#xe65b;" />
+                            <Setter TargetName="maxOrNormalButton" Property="Content" Value="&#xe623;" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

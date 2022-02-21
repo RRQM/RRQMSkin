@@ -1,12 +1,9 @@
 ﻿using RRQM.Emoji;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
-using System.Windows.Media.Imaging;
 
 namespace RRQMSkinDemo.Control.ChatBox
 {
@@ -31,15 +28,15 @@ namespace RRQMSkinDemo.Control.ChatBox
 
         public string Text
         {
-            get => (string)GetValue(TextProperty);
-            set => SetValue(TextProperty, value);
+            get => (string)this.GetValue(TextProperty);
+            set => this.SetValue(TextProperty, value);
         }
 
         public override void OnApplyTemplate()
         {
-            _textBlock = (TextBlock)GetTemplateChild(TextBlockTemplateName);
-            _richTextBox = (RichTextBox)GetTemplateChild(RichTextBoxTemplateName);
-            UpdateVisual();
+            this._textBlock = (TextBlock)this.GetTemplateChild(TextBlockTemplateName);
+            this._richTextBox = (RichTextBox)this.GetTemplateChild(RichTextBoxTemplateName);
+            this.UpdateVisual();
         }
 
         private static void OnTextChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -60,7 +57,7 @@ namespace RRQMSkinDemo.Control.ChatBox
                 switch (c)
                 {
                     case '[':
-                        _textBlock.Inlines.Add(buffer.ToString());
+                        this._textBlock.Inlines.Add(buffer.ToString());
                         paragraph.Inlines.Add(buffer.ToString());
                         buffer.Clear();
                         buffer.Append(c);
@@ -86,7 +83,7 @@ namespace RRQMSkinDemo.Control.ChatBox
                                     img.Width = 24;
                                     img.Height = 24;
                                     img.FocusVisualStyle = null;
-                                    _textBlock.Inlines.Add(new InlineUIContainer(img));
+                                    this._textBlock.Inlines.Add(new InlineUIContainer(img));
 
                                 }
                                 {
@@ -107,7 +104,7 @@ namespace RRQMSkinDemo.Control.ChatBox
                         }
 
 
-                        _textBlock.Inlines.Add(buffer.ToString());
+                        this._textBlock.Inlines.Add(buffer.ToString());
                         paragraph.Inlines.Add(buffer.ToString());
                         buffer.Clear();
                         break;
@@ -121,26 +118,26 @@ namespace RRQMSkinDemo.Control.ChatBox
 
         private void UpdateVisual()
         {
-            if (_textBlock == null || _richTextBox == null)
+            if (this._textBlock == null || this._richTextBox == null)
             {
                 return;
             }
 
-            _textBlock.Inlines.Clear();
-            _richTextBox.Document.Blocks.Clear();
+            this._textBlock.Inlines.Clear();
+            this._richTextBox.Document.Blocks.Clear();
 
             var paragraph = new Paragraph();
 
             var buffer = new StringBuilder();
 
-            Text_Msg(ref paragraph, ref buffer,Text);
+            this.Text_Msg(ref paragraph, ref buffer, this.Text);
 
 
-            _textBlock.Inlines.Add(buffer.ToString());
+            this._textBlock.Inlines.Add(buffer.ToString());
             paragraph.Inlines.Add(buffer.ToString());
 
 
-            _richTextBox.Document.Blocks.Add(paragraph);
+            this._richTextBox.Document.Blocks.Add(paragraph);
         }
 
         private void RoutedEventHandler(object sender, RoutedEventArgs e)

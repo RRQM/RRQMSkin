@@ -1,18 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace RRQM.Emoji
 {
@@ -24,7 +12,7 @@ namespace RRQM.Emoji
         public event EventHandler Close;
         public EmojiALL()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void Border_Loaded(object sender, RoutedEventArgs e)
@@ -35,12 +23,12 @@ namespace RRQM.Emoji
 
         private void RadioButton_Click(object sender, RoutedEventArgs e)
         {
-            EmojiList.ScrollIntoView(0);
+            this.EmojiList.ScrollIntoView(0);
         }
 
         public Emoji GetEmojiItem() 
         {
-            return EmojiItem;
+            return this.EmojiItem;
         }
 
         private Emoji EmojiItem;
@@ -48,7 +36,7 @@ namespace RRQM.Emoji
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var temp = sender as Button;
-            EmojiItem = temp.DataContext as Emoji;
+            this.EmojiItem = temp.DataContext as Emoji;
             Close?.Invoke(this, null);
         }
     }

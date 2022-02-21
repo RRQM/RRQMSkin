@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace RRQMSkinDemo.View
 {
@@ -21,7 +13,7 @@ namespace RRQMSkinDemo.View
     {
         public UserChat()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void ListBox_MouseWheel(object sender, MouseWheelEventArgs e)
@@ -39,15 +31,15 @@ namespace RRQMSkinDemo.View
 
         private void EmojiTabControlUC_Close(object sender, EventArgs e)
         {
-            var emoji = EmojiTabControlUC.GetEmojiItem();
+            var emoji = this.EmojiTabControlUC.GetEmojiItem();
             if (emoji != null)
             {
-                var container = new InlineUIContainer(new Image { Source = emoji.Image, Height = 25, Width = 25 }, rtb.CaretPosition);
-                rtb.CaretPosition = container.ElementEnd;
+                var container = new InlineUIContainer(new Image { Source = emoji.Image, Height = 25, Width = 25 }, this.rtb.CaretPosition);
+                this.rtb.CaretPosition = container.ElementEnd;
 
-                rtb.Focus();
+                this.rtb.Focus();
 
-                pop.IsOpen = false;
+                this.pop.IsOpen = false;
             }
         }
     }

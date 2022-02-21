@@ -4,8 +4,6 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Xml;
@@ -167,9 +165,9 @@ namespace RRQM.Emoji
         {
             get 
             {
-                if (EmojiArray.Count > 0)
+                if (this.EmojiArray.Count > 0)
                 {
-                    return EmojiArray[0].Image;
+                    return this.EmojiArray[0].Image;
                 }
                 return null;
             }
@@ -188,15 +186,15 @@ namespace RRQM.Emoji
         {
             get
             {
-                return _Check;
+                return this._Check;
             }
             set
             {
-                _Check = value;
+                this._Check = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Check"));
                 if (value)
                 {
-                    CheckArray?.Invoke(this);
+                    this.CheckArray?.Invoke(this);
                 }
             }
         }

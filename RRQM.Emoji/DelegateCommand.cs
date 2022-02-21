@@ -12,7 +12,7 @@ namespace RRQM.Emoji
 
         public bool FuncExecute(object param)
         {
-            if (FuncExecuteCommand != null) return FuncExecuteCommand(param);
+            if (this.FuncExecuteCommand != null) return this.FuncExecuteCommand(param);
             return false;
         }
 
@@ -23,7 +23,7 @@ namespace RRQM.Emoji
  
         public bool CanExecute(object parameter)
         {
-            if (CanExecuteCommand != null)
+            if (this.CanExecuteCommand != null)
             {
                 return this.CanExecuteCommand();
             }
