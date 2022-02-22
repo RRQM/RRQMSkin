@@ -8,6 +8,7 @@
                     Title="MainWindow"
                     Width="800"
                     Height="450"
+                    CornerRadius="5"
                     mc:Ignorable="d">
     <Grid />
 </windows:RRQMWindow>

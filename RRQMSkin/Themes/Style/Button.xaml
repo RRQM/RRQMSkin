@@ -20,7 +20,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Name="border" Width="25" Height="25" Margin="3,0" BorderThickness="1" CornerRadius="3">
+                    <Border Name="border" Width="25" Height="25" Margin="3,0" BorderThickness="1"
+                            CornerRadius="3">
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                                    Foreground="{TemplateBinding Foreground}"
                                    Text="{TemplateBinding Content}" />

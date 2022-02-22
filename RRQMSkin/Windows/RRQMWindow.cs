@@ -79,6 +79,8 @@ namespace RRQMSkin.Windows
         /// </summary>
         public RRQMWindow()
         {
+            base.ResizeMode = System.Windows.ResizeMode.NoResize;
+            base.WindowStyle = WindowStyle.None;
             this.Background = Brushes.White;
             this.Icon = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/Icons/RRQM.ico", UriKind.RelativeOrAbsolute));
 
@@ -88,7 +90,6 @@ namespace RRQMSkin.Windows
                 this.WindowState = this.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
             });
             this.CloseWindowCommand = new ExecuteCommand(() => { this.Close(); });
-
             this.Loaded += this.RRQMWindow_Loaded;
         }
 
@@ -147,7 +148,6 @@ namespace RRQMSkin.Windows
         /// </summary>
         public override void OnApplyTemplate()
         {
-            base.OnApplyTemplate();
             this.mainBorder = (Border)this.Template.FindName("mainBorder", this);
             this.titleGrid = (Grid)this.Template.FindName("title", this);
             this.windowGrid = (Grid)this.Template.FindName("windowGrid", this);
@@ -181,6 +181,8 @@ namespace RRQMSkin.Windows
             this.mainBorder.SetValue(Grid.ColumnSpanProperty, 3);
 
             this.AddResizeRectangle();
+
+            base.OnApplyTemplate();
         }
 
         /// <summary>
@@ -193,6 +195,13 @@ namespace RRQMSkin.Windows
                 this.Cursor = Cursors.Arrow;
             base.OnPreviewMouseMove(e);
         }
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        [DllImport("user32.dll")]
+        public static extern bool SendMessage(IntPtr hwnd, int wMsg, IntPtr wParam, IntPtr lParam);
+        public const int WM_SYSCOMMAND = 0x0112;
+        public const int WM_LBUTTONUP = 0x0202;
 
         /// <summary>
         /// <inheritdoc/>
@@ -211,6 +220,8 @@ namespace RRQMSkin.Windows
                     {
                         this.MaxHeight = SystemParameters.WorkArea.Height + 16;
                     }
+
+                    this.mainBorder.SetValue(PaddingProperty,new Thickness(0));
                     break;
 
                 case WindowState.Normal:
@@ -222,16 +233,15 @@ namespace RRQMSkin.Windows
                     {
                         this.MaxHeight = SystemParameters.WorkArea.Height + 16;
                     }
+                    this.mainBorder.SetValue(PaddingProperty, new Thickness(10));
                     break;
             }
+            base.OnStateChanged(e);
         }
 
         private static void OnResizeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
         }
-
-        [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        private static extern IntPtr SendMessage(IntPtr hWnd, UInt32 msg, IntPtr wParam, IntPtr lParam);
 
         //    }
         private void AddResizeRectangle()
@@ -422,17 +432,23 @@ namespace RRQMSkin.Windows
         }
         private void titleGrid_MouseMove(object sender, MouseEventArgs e)
         {
-            if (this.mRestoreForDragMove)
+            //if (this.mRestoreForDragMove)
+            //{
+
+            //    this.mRestoreForDragMove = false;
+            //    //this.WindowState = WindowState.Normal;
+            //    var point = e.MouseDevice.GetPosition(this);
+            //    this.Left = point.X - this.titleGrid.ActualWidth * point.X / SystemParameters.WorkArea.Width - 5;
+            //    this.Top = point.Y - this.titleGrid.ActualHeight * point.Y / SystemParameters.WorkArea.Height - 5;
+            //    if (e.LeftButton == MouseButtonState.Pressed)
+            //    {
+            //        this.DragMove();
+            //    }
+            //}
+
+            if (e.LeftButton == System.Windows.Input.MouseButtonState.Pressed)
             {
-                this.mRestoreForDragMove = false;
-                this.WindowState = WindowState.Normal;
-                var point = e.MouseDevice.GetPosition(this);
-                this.Left = point.X - this.titleGrid.ActualWidth * point.X / SystemParameters.WorkArea.Width - this.mainBorder.Margin.Left;
-                this.Top = point.Y - this.titleGrid.ActualHeight * point.Y / SystemParameters.WorkArea.Height - this.mainBorder.Margin.Top;
-                if (e.LeftButton == MouseButtonState.Pressed)
-                {
-                    this.DragMove();
-                }
+                SendMessage(new WindowInteropHelper(this).Handle, WM_SYSCOMMAND, (IntPtr)61458, IntPtr.Zero);
             }
         }
     }

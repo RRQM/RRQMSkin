@@ -8,20 +8,21 @@
     <Style TargetType="{x:Type windows:RRQMWindow}">
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
-                <WindowChrome CaptionHeight="0" GlassFrameThickness="-1" ResizeBorderThickness="0" UseAeroCaptionButtons="False" />
+                <WindowChrome CaptionHeight="0" GlassFrameThickness="-1" NonClientFrameEdges="None" ResizeBorderThickness="0" UseAeroCaptionButtons="False" />
             </Setter.Value>
         </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type windows:RRQMWindow}">
-                    <Grid Name="windowGrid">
-                        <Grid.Effect>
-                            <DropShadowEffect ShadowDepth="0" />
-                        </Grid.Effect>
-                        <Border Name="mainBorder">
+                    <Grid Name="windowGrid" Background="Transparent">
+                        <Border Name="mainBorder" Padding="5">
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="5" ShadowDepth="0" />
+                            </Border.Effect>
                             <Border Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
+                                    ClipToBounds="True"
                                     CornerRadius="{TemplateBinding CornerRadius}">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -42,7 +43,7 @@
                                                    VerticalAlignment="Center"
                                                    Source="{TemplateBinding Icon}" />
                                             <ContentPresenter Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                                                              Content="{TemplateBinding TitleContent}"/>
+                                                              Content="{TemplateBinding TitleContent}" />
                                         </Grid>
                                         <StackPanel Grid.Column="1" Orientation="Horizontal">
                                             <Button Name="minButton"
@@ -67,7 +68,6 @@
                                 </Grid>
                             </Border>
                         </Border>
-
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="WindowState" Value="Normal">
