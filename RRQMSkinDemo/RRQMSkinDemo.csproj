@@ -103,6 +103,9 @@
     <Compile Include="View\UserChat.xaml.cs">
       <DependentUpon>UserChat.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
     <Page Include="Control\ChatBox\ChatMessageContro.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -184,6 +187,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -222,16 +229,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RRQM.Emoji\RRQM.Emoji.csproj">
-      <Project>{A6ED4D45-95AF-4CFA-92AF-93E79B6B9842}</Project>
-      <Name>RRQM.Emoji</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RRQMSkin\RRQMSkin.csproj">
-      <Project>{a4d751b3-b54f-4f34-82b3-4b39a9cbd233}</Project>
-      <Name>RRQMSkin</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
@@ -243,6 +240,15 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\RRQM.Emoji\RRQM.Emoji.csproj">
+      <Project>{a6ed4d45-95af-4cfa-92af-93e79b6b9842}</Project>
+      <Name>RRQM.Emoji</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RRQMSkin\RRQMSkin.csproj">
+      <Project>{a4d751b3-b54f-4f34-82b3-4b39a9cbd233}</Project>
+      <Name>RRQMSkin</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

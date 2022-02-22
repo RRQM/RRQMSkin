@@ -1,12 +1,12 @@
 using System.Windows;
 using System.Windows.Markup;
 
-[assembly: XmlnsDefinitionAttribute("RRQM_MVVM", "RRQMSkin.MVVM")]
-[assembly: XmlnsDefinitionAttribute("RRQM_Windows", "RRQMSkin.Windows")]
-[assembly: XmlnsDefinitionAttribute("RRQM_Controls", "RRQMSkin.Controls")]
-[assembly: XmlnsDefinitionAttribute("RRQM_DragDrop", "RRQMSkin.DragDrop")]
-[assembly: XmlnsDefinitionAttribute("RRQM_Charts", "RRQMSkin.Charts")]
-[assembly: XmlnsDefinitionAttribute("RRQM_Primitives", "RRQMSkin.Primitives")]
+[assembly: XmlnsDefinition("RRQM_MVVM", "RRQMSkin.MVVM")]
+[assembly: XmlnsDefinition("RRQM_Windows", "RRQMSkin.Windows")]
+[assembly: XmlnsDefinition("RRQM_Controls", "RRQMSkin.Controls")]
+[assembly: XmlnsDefinition("RRQM_DragDrop", "RRQMSkin.DragDrop")]
+[assembly: XmlnsDefinition("RRQM_Charts", "RRQMSkin.Charts")]
+[assembly: XmlnsDefinition("RRQM_Primitives", "RRQMSkin.Primitives")]
 
 [assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
