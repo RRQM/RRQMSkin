@@ -159,9 +159,15 @@ namespace RRQMSkin.Windows
         public override void OnApplyTemplate()
         {
             this.mainBorder = (Border)this.Template.FindName("mainBorder", this);
+            
+
             this.titleGrid = (Grid)this.Template.FindName("title", this);
             this.windowGrid = (Grid)this.Template.FindName("windowGrid", this);
             this.headerBorder = (Border)this.Template.FindName("header", this);
+            if (this.CornerRadius != null)
+            {
+                headerBorder.CornerRadius = new CornerRadius(CornerRadius.TopLeft, CornerRadius.TopRight, 0, 0);
+            }
 
             this.titleGrid.MouseLeftButtonDown += this.titleGrid_MouseLeftButtonDown;
             this.titleGrid.MouseMove += this.titleGrid_MouseMove;
