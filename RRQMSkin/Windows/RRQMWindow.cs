@@ -49,13 +49,13 @@ namespace RRQMSkin.Windows
 
         // Using a DependencyProperty as the backing store for CornerRadius.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CornerRadiusProperty =
-            DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(RRQMWindow), new PropertyMetadata(new CornerRadius(0)));
+            DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(RRQMWindow), new PropertyMetadata(new CornerRadius(0), OnCornerRadiusChanged));
 
 
 
         // Using a DependencyProperty as the backing store for ResizeMode.  This enables animation, styling, binding, etc...
         public static new readonly DependencyProperty ResizeModeProperty =
-            DependencyProperty.Register("ResizeMode", typeof(RRQMResizeMode), typeof(RRQMWindow), new PropertyMetadata(RRQMResizeMode.CanResize, OnResizeChanged));
+            DependencyProperty.Register("ResizeMode", typeof(RRQMResizeMode), typeof(RRQMWindow), new PropertyMetadata(RRQMResizeMode.CanResize));
 
 
         // Using a DependencyProperty as the backing store for TitleContent.  This enables animation, styling, binding, etc...
@@ -65,13 +65,22 @@ namespace RRQMSkin.Windows
 
         private HwndSource _hwndSource;
         private Border mainBorder;
-        private bool mRestoreForDragMove;
+        private Border headerBorder;
         private Grid titleGrid;
         private Grid windowGrid;
 
         static RRQMWindow()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(RRQMWindow), new FrameworkPropertyMetadata(typeof(RRQMWindow)));
+        }
+
+        private static void OnCornerRadiusChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            RRQMWindow window=(RRQMWindow)d;
+            if (window.headerBorder!=null)
+            {
+                window.headerBorder.CornerRadius = new CornerRadius(window.CornerRadius.TopLeft, window.CornerRadius.TopRight, 0, 0);
+            }
         }
 
         /// <summary>
@@ -85,8 +94,8 @@ namespace RRQMSkin.Windows
             this.Icon = new BitmapImage(new Uri("pack://application:,,,/RRQMSkin;component/Icons/RRQM.ico", UriKind.RelativeOrAbsolute));
 
             this.MinWindowCommand = new ExecuteCommand(() => { this.WindowState = WindowState.Minimized; });
-            this.MaxOrNormalWindowCommand = new ExecuteCommand(() => 
-            { 
+            this.MaxOrNormalWindowCommand = new ExecuteCommand(() =>
+            {
                 this.WindowState = this.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
             });
             this.CloseWindowCommand = new ExecuteCommand(() => { this.Close(); });
@@ -96,6 +105,7 @@ namespace RRQMSkin.Windows
         private void RRQMWindow_Loaded(object sender, RoutedEventArgs e)
         {
             this._hwndSource = (HwndSource)PresentationSource.FromVisual(this);
+            this.OnStateChanged(null);
         }
 
         internal enum ResizeDirection
@@ -151,22 +161,22 @@ namespace RRQMSkin.Windows
             this.mainBorder = (Border)this.Template.FindName("mainBorder", this);
             this.titleGrid = (Grid)this.Template.FindName("title", this);
             this.windowGrid = (Grid)this.Template.FindName("windowGrid", this);
+            this.headerBorder = (Border)this.Template.FindName("header", this);
 
             this.titleGrid.MouseLeftButtonDown += this.titleGrid_MouseLeftButtonDown;
             this.titleGrid.MouseMove += this.titleGrid_MouseMove;
-            this.titleGrid.MouseLeftButtonUp += (s, e) => { this.mRestoreForDragMove = false; };
 
             RowDefinition row0 = new RowDefinition();
-            row0.Height = new GridLength(5);
+            row0.Height = new GridLength(8);
             RowDefinition row1 = new RowDefinition();
             RowDefinition row2 = new RowDefinition();
-            row2.Height = new GridLength(5);
+            row2.Height = new GridLength(8);
 
             ColumnDefinition column0 = new ColumnDefinition();
-            column0.Width = new GridLength(5);
+            column0.Width = new GridLength(8);
             ColumnDefinition column1 = new ColumnDefinition();
             ColumnDefinition column2 = new ColumnDefinition();
-            column2.Width = new GridLength(5);
+            column2.Width = new GridLength(8);
 
             this.windowGrid.RowDefinitions.Add(row0);
             this.windowGrid.RowDefinitions.Add(row1);
@@ -209,41 +219,35 @@ namespace RRQMSkin.Windows
         /// <param name="e"></param>
         protected override void OnStateChanged(EventArgs e)
         {
+            if (double.IsInfinity(this.MaxWidth))
+            {
+                this.MaxWidth = SystemParameters.WorkArea.Width;
+            }
+            if (double.IsInfinity(this.MaxHeight))
+            {
+                this.MaxHeight = SystemParameters.WorkArea.Height;
+            }
             switch (this.WindowState)
             {
                 case WindowState.Maximized:
-                    if (double.IsInfinity(this.MaxWidth))
-                    {
-                        this.MaxWidth = SystemParameters.WorkArea.Width + 16;
-                    }
-                    if (double.IsInfinity(this.MaxHeight))
-                    {
-                        this.MaxHeight = SystemParameters.WorkArea.Height + 16;
-                    }
-
-                    this.mainBorder.SetValue(PaddingProperty,new Thickness(0));
+                    this.corner = this.CornerRadius;
+                    this.CornerRadius = new CornerRadius(0);
+                    this.mainBorder.Padding = new Thickness(0.0);
                     break;
 
                 case WindowState.Normal:
-                    if (double.IsInfinity(this.MaxWidth))
+                    this.mainBorder.Padding = new Thickness(10.0);
+                    if (e!=null)
                     {
-                        this.MaxWidth = SystemParameters.WorkArea.Width + 16;
+                        this.CornerRadius = this.corner;
                     }
-                    if (double.IsInfinity(this.MaxHeight))
-                    {
-                        this.MaxHeight = SystemParameters.WorkArea.Height + 16;
-                    }
-                    this.mainBorder.SetValue(PaddingProperty, new Thickness(10));
                     break;
             }
             base.OnStateChanged(e);
         }
 
-        private static void OnResizeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-        }
+        private CornerRadius corner;
 
-        //    }
         private void AddResizeRectangle()
         {
             Brush brush = Brushes.Transparent;
@@ -417,38 +421,15 @@ namespace RRQMSkin.Windows
         {
             if (e.ClickCount == 2)
             {
-                this.mRestoreForDragMove = false;
                 if (this.ResizeMode != RRQMResizeMode.CanResize) return;
                 this.WindowState = this.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
-            }
-            else
-            {
-                if (e.ButtonState == MouseButtonState.Pressed)
-                {
-                    this.mRestoreForDragMove = this.WindowState == WindowState.Maximized;
-                    this.DragMove();
-                }
             }
         }
         private void titleGrid_MouseMove(object sender, MouseEventArgs e)
         {
-            //if (this.mRestoreForDragMove)
-            //{
-
-            //    this.mRestoreForDragMove = false;
-            //    //this.WindowState = WindowState.Normal;
-            //    var point = e.MouseDevice.GetPosition(this);
-            //    this.Left = point.X - this.titleGrid.ActualWidth * point.X / SystemParameters.WorkArea.Width - 5;
-            //    this.Top = point.Y - this.titleGrid.ActualHeight * point.Y / SystemParameters.WorkArea.Height - 5;
-            //    if (e.LeftButton == MouseButtonState.Pressed)
-            //    {
-            //        this.DragMove();
-            //    }
-            //}
-
-            if (e.LeftButton == System.Windows.Input.MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
-                SendMessage(new WindowInteropHelper(this).Handle, WM_SYSCOMMAND, (IntPtr)61458, IntPtr.Zero);
+                SendMessage(this._hwndSource.Handle, WM_SYSCOMMAND, (IntPtr)61458, IntPtr.Zero);
             }
         }
     }
