@@ -219,6 +219,7 @@ namespace RRQMSkin.Windows
         public const int WM_SYSCOMMAND = 0x0112;
         public const int WM_LBUTTONUP = 0x0202;
 
+
         /// <summary>
         /// <inheritdoc/>
         /// </summary>
@@ -235,9 +236,13 @@ namespace RRQMSkin.Windows
             }
             switch (this.WindowState)
             {
+                case WindowState.Minimized:
                 case WindowState.Maximized:
-                    this.corner = this.CornerRadius;
-                    this.CornerRadius = new CornerRadius(0);
+                    if (lastState== WindowState.Normal)
+                    {
+                        this.corner = this.CornerRadius;
+                    }
+                    this.CornerRadius = default;
                     this.mainBorder.Padding = new Thickness(0.0);
                     break;
 
@@ -249,9 +254,11 @@ namespace RRQMSkin.Windows
                     }
                     break;
             }
+            lastState = this.WindowState;
             base.OnStateChanged(e);
         }
 
+        private WindowState lastState;
         private CornerRadius corner;
 
         private void AddResizeRectangle()
