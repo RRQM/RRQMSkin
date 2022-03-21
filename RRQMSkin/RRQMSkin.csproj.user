@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Update="Controls\Video\VideoPlayer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\Button.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\Clock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\Label.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\Loading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\Panel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\PieChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\ProgressBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\SearchBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\Slider.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\SpeedDial.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\TextBlock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\TextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\Thumb.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\ToggleButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Style\Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DialogWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

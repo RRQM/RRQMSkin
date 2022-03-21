@@ -4,31 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B1BCE12C-4022-4C01-99C8-F675E21133F9}</ProjectGuid>
+    <ProjectGuid>{C775CA5A-25BC-4451-8D1F-8E8CF1D69A42}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>RRQMSkinDemo</RootNamespace>
     <AssemblyName>RRQMSkinDemo</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,7 +23,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -71,126 +54,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Control\AnimationScrollViewer\ScrollViewerAnimation.cs" />
-    <Compile Include="Control\AnimationScrollViewer\ScrollViewerBehavior.cs" />
-    <Compile Include="Control\ChatBox\ChatMessageControl.cs" />
-    <Compile Include="Display\ClockDisplay.xaml.cs">
-      <DependentUpon>ClockDisplay.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Display\DoubleEditTextBlockDisplay.xaml.cs">
-      <DependentUpon>DoubleEditTextBlockDisplay.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Display\InputBoxDisplay.xaml.cs">
-      <DependentUpon>InputBoxDisplay.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Display\RadioIco.xaml.cs">
-      <DependentUpon>RadioIco.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Display\SearchBoxDisplay.xaml.cs">
-      <DependentUpon>SearchBoxDisplay.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Display\SpeedDialDisplay.xaml.cs">
-      <DependentUpon>SpeedDialDisplay.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\Model\share.cs" />
-    <Compile Include="ViewModel\Model\UIControlsModel.cs" />
-    <Compile Include="ViewModel\UserChatViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="View\UserChat.xaml.cs">
-      <DependentUpon>UserChat.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Control\ChatBox\ChatMessageContro.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Display\CorrugatedButtonDisplay.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Display\ClockDisplay.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Display\DoubleEditTextBlockDisplay.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Display\InputBoxDisplay.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Display\InputBoxPanel.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Display\MainPanel.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Display\RadioIco.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Display\SearchBoxDisplay.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Display\SpeedDialDisplay.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Display\CorrugatedButtonDisplay.xaml.cs">
-      <DependentUpon>CorrugatedButtonDisplay.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Display\InputBoxPanel.xaml.cs">
-      <DependentUpon>InputBoxPanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Display\MainPanel.xaml.cs">
-      <DependentUpon>MainPanel.xaml</DependentUpon>
-    </Compile>
-    <Page Include="MainWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resource\Skin\Default.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resource\Styles\DemoStyle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resource\Styles\ScrollViewerStyle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resource\Styles\SvgIco.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resource\Styles\TabControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="View\UserChat.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Window1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -219,34 +94,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icon\表情.png" />
-    <Resource Include="Icon\RRQM.png" />
-    <Content Include="Video\DemoVideo.mp4">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RRQM.Emoji\RRQM.Emoji.csproj">
-      <Project>{a6ed4d45-95af-4cfa-92af-93e79b6b9842}</Project>
-      <Name>RRQM.Emoji</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RRQMSkin\RRQMSkin.csproj">
-      <Project>{a4d751b3-b54f-4f34-82b3-4b39a9cbd233}</Project>
+      <Project>{e52867c6-991a-41a3-bf06-e9d99693a7ff}</Project>
       <Name>RRQMSkin</Name>
     </ProjectReference>
   </ItemGroup>
