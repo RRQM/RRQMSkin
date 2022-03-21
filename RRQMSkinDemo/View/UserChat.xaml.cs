@@ -1,0 +1,46 @@
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Input;
+
+namespace RRQMSkinDemo.View
+{
+    /// <summary>
+    /// UserChat.xaml 的交互逻辑
+    /// </summary>
+    public partial class UserChat : Border
+    {
+        public UserChat()
+        {
+            this.InitializeComponent();
+        }
+
+        private void ListBox_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if (!e.Handled)
+            {
+                e.Handled = true;
+                var eventArg = new MouseWheelEventArgs(e.MouseDevice, e.Timestamp, e.Delta);
+                eventArg.RoutedEvent = Border.MouseWheelEvent;
+                eventArg.Source = sender;
+                var parent = ((System.Windows.Controls.Control)sender).Parent as UIElement;
+                parent.RaiseEvent(eventArg);
+            }
+        }
+
+        private void EmojiTabControlUC_Close(object sender, EventArgs e)
+        {
+            var emoji = this.EmojiTabControlUC.GetEmojiItem();
+            if (emoji != null)
+            {
+                var container = new InlineUIContainer(new Image { Source = emoji.Image, Height = 25, Width = 25 }, this.rtb.CaretPosition);
+                this.rtb.CaretPosition = container.ElementEnd;
+
+                this.rtb.Focus();
+
+                this.pop.IsOpen = false;
+            }
+        }
+    }
+}

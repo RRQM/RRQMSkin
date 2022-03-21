@@ -1,0 +1,19 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Button.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Clock.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Label.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Loading.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/PieChart.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/ProgressBar.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/SearchBox.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Slider.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/SpeedDial.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/TextBlock.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/TextBox.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Thumb.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/ToggleButton.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Panel.xaml" />
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Window.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,160 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:RRQMSkin.Controls"
+    xmlns:primitives="clr-namespace:RRQMSkin.Primitives">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/RRQMSkin;component/Themes/Style/Button.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type controls:ClearSearchBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:ClearSearchBox}">
+                    <Border x:Name="Bor" CornerRadius="{TemplateBinding CornerRadius}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!--  文本内容区域  -->
+                            <ScrollViewer
+                                x:Name="PART_ContentHost"
+                                Grid.Column="1"
+                                HorizontalAlignment="{TemplateBinding TextHorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding TextVerticalContentAlignment}" />
+
+                            <Image
+                                Width="12"
+                                Height="12"
+                                Margin="6,0,0,0"
+                                Source="/RRQMSkin;component/Icons/放大镜.png" />
+                            <Label
+                                x:Name="inputhint"
+                                Grid.Column="1"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Content="{TemplateBinding InputHint}"
+                                Foreground="{TemplateBinding InputForeground}"
+                                IsHitTestVisible="False"
+                                Visibility="Collapsed" />
+
+                            <!--  水印区域  -->
+
+                            <!--  清除按钮  -->
+                            <Button
+                                x:Name="PART_ClearButtonHost"
+                                Grid.Column="2"
+                                Height="Auto"
+                                Padding="2,-1,6,0"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                BorderThickness="0"
+                                IsHitTestVisible="False"
+                                Visibility="Collapsed">
+                                <Path Data="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" Fill="#10000000" />
+                            </Button>
+                        </Grid>
+
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="UIElement.IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="Bor" Property="Background" Value="#FFF" />
+                                <Setter TargetName="Bor" Property="BorderBrush" Value="#459EFF" />
+                                <Setter TargetName="Bor" Property="BorderThickness" Value="1" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="UIElement.IsEnabled" Value="True" />
+                                <Condition Property="UIElement.IsFocused" Value="False" />
+                                <Condition Property="TextBox.Text" Value="" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="Bor" Property="Background" Value="#FFFFFF" />
+                                <Setter TargetName="Bor" Property="BorderBrush" Value="#000000" />
+                                <Setter TargetName="Bor" Property="BorderThickness" Value="1" />
+                                <Setter TargetName="inputhint" Property="Visibility" Value="Visible" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="UIElement.IsEnabled" Value="True" />
+                                <Condition Property="IsHasText" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="PART_ClearButtonHost" Property="IsHitTestVisible" Value="True" />
+                                <Setter TargetName="PART_ClearButtonHost" Property="Visibility" Value="Visible" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="Bor" Property="Background" Value="#FFF" />
+                                <Setter TargetName="Bor" Property="BorderBrush" Value="#459EFF" />
+                                <Setter TargetName="Bor" Property="BorderThickness" Value="1" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+
+                    </ControlTemplate.Triggers>
+
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type controls:SearchBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:SearchBox}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="40" />
+                            </Grid.ColumnDefinitions>
+                            <controls:InputBox
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                InputFilter="{TemplateBinding InputFilter}"
+                                Text="{Binding Text, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
+                                TipText="{Binding TipText, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}, UpdateSourceTrigger=PropertyChanged}" />
+                            <Button
+                                x:Name="commandButton"
+                                Grid.Column="1"
+                                Width="25"
+                                Margin="0,-3,0,0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Style="{StaticResource noneButton}">
+                                <Viewbox>
+                                    <Path Data="M864 800l-179.2-179.2c32-44.8 51.2-99.2 51.2-156.8C736 313.6 614.4 192 464 192S192 313.6 192 464 313.6 736 464 736c57.6 0 112-19.2 156.8-51.2L800 864c16 16 44.8 16 64 0l0 0C883.2 844.8 883.2 819.2 864 800zM464 672C348.8 672 256 579.2 256 464S348.8 256 464 256s208 92.8 208 208S579.2 672 464 672z" Fill="#C2C3C9" />
+                                </Viewbox>
+                            </Button>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
