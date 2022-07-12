@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
+    <ApplicationIcon />
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>4.0.0</Version>
+    <Description>RRQM皮肤库。好用。</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Authors>若汝棋茗</Authors>
+    <PackageProjectUrl>https://gitee.com/RRQM_Home/RRQMSkin</PackageProjectUrl>
+    <PackageIcon>RRQM.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageTags>wpf,skin</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\iconfont.ttf" />
+    <None Remove="Icons\RRQM.ico" />
+    <None Remove="Icons\放大镜.png" />
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="RRQM.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\iconfont.ttf" />
+    <Resource Include="Icons\RRQM.ico" />
+    <Resource Include="Icons\放大镜.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Controls\Video\VideoPlayer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\Clock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\Label.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\Loading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\Panel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\PieChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\ProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\SearchBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\Slider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\SpeedDial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\TextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\Thumb.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\ToggleButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Themes\Style\Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Windows\DialogWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>
