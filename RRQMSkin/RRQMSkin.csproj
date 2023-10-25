@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>RRQM.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>RRQMSkin.snk</AssemblyOriginatorKeyFile>
     <ApplicationIcon />
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Version>4.0.0</Version>
